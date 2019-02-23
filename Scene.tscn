@@ -18,16 +18,21 @@ position = Vector2( 741.663, 514.86 )
 
 [node name="floor" parent="." index="2" instance=ExtResource( 3 )]
 
-position = Vector2( -6.22339, 91.9468 )
-scale = Vector2( 3.20968, 1.58729 )
+position = Vector2( 140.409, 545.108 )
+scale = Vector2( 4.60663, 1.58729 )
 
-[node name="Player" type="Node2D" parent="." index="3"]
+[node name="floor2" parent="." index="3" instance=ExtResource( 3 )]
 
-[node name="LevelComplete" parent="." index="4" instance=ExtResource( 4 )]
+position = Vector2( 1480.58, 552.164 )
+scale = Vector2( 6.53909, 1.58729 )
+
+[node name="Player" type="Node2D" parent="." index="4"]
+
+[node name="LevelComplete" parent="." index="5" instance=ExtResource( 4 )]
 
 change_level = "res://Scene2.tscn"
 
-[node name="Stick" parent="." index="5" instance=ExtResource( 5 )]
+[node name="Stick" parent="." index="6" instance=ExtResource( 5 )]
 
 position = Vector2( 355.194, 497.592 )
 

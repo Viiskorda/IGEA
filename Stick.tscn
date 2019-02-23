@@ -5,7 +5,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 18.2434, 10 )
+extents = Vector2( 39.6958, 6.7931 )
 
 [node name="Stick" type="RigidBody2D"]
 
@@ -29,19 +29,17 @@ linear_damp = -1.0
 angular_velocity = 0.0
 angular_damp = -1.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
-
-position = Vector2( -5.88402, 3.10118 )
-scale = Vector2( 2.07551, 0.886099 )
-shape = SubResource( 1 )
-_sections_unfolded = [ "Transform", "Z Index" ]
-
-[node name="Sprite" type="Sprite" parent="." index="1"]
+[node name="Sprite" type="Sprite" parent="." index="0"]
 
 position = Vector2( -6.901, 3.40771 )
 rotation = 0.523599
 scale = Vector2( 0.0542654, 0.0728743 )
 texture = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
+
+position = Vector2( -5.94572, 4.51874 )
+shape = SubResource( 1 )
 
 
