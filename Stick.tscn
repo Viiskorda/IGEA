@@ -1,0 +1,47 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://images/stick.png" type="Texture" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 18.2434, 10 )
+
+[node name="Stick" type="RigidBody2D"]
+
+position = Vector2( 4.89278, -12.9501 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+mode = 3
+mass = 1.0
+friction = 1.0
+bounce = 0.0
+gravity_scale = 1.0
+custom_integrator = false
+continuous_cd = 0
+contacts_reported = 0
+contact_monitor = false
+sleeping = false
+can_sleep = true
+linear_velocity = Vector2( 0, 0 )
+linear_damp = -1.0
+angular_velocity = 0.0
+angular_damp = -1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
+
+position = Vector2( -5.88402, 3.10118 )
+scale = Vector2( 2.07551, 0.886099 )
+shape = SubResource( 1 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+[node name="Sprite" type="Sprite" parent="." index="1"]
+
+position = Vector2( -6.901, 3.40771 )
+rotation = 0.523599
+scale = Vector2( 0.0542654, 0.0728743 )
+texture = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+

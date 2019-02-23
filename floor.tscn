@@ -7,7 +7,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 113.465, 110.583 )
 
-[node name="floor" type="Node2D" index="0"]
+[node name="floor" type="Node2D"]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." index="0"]
 

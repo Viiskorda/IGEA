@@ -1,73 +1,34 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Chara.gd" type="Script" id=1]
-[ext_resource path="res://Chara/Armature_Walk_6.png" type="Texture" id=2]
-[ext_resource path="res://Chara/Armature_Walk_5.png" type="Texture" id=3]
-[ext_resource path="res://Chara/Armature_Walk_0.png" type="Texture" id=4]
-[ext_resource path="res://Chara/Armature_Walk_1.png" type="Texture" id=5]
-[ext_resource path="res://Chara/Armature_Walk_2.png" type="Texture" id=6]
-[ext_resource path="res://Chara/Armature_Walk_3.png" type="Texture" id=7]
-[ext_resource path="res://Chara/Armature_Walk_4.png" type="Texture" id=8]
-[ext_resource path="res://Chara/Armature_Walk_7.png" type="Texture" id=9]
-[ext_resource path="res://floor.tscn" type="PackedScene" id=10]
-[ext_resource path="res://rock.tscn" type="PackedScene" id=11]
-
-[sub_resource type="SpriteFrames" id=1]
-
-animations = [ {
-"frames": [ ExtResource( 2 ) ],
-"loop": true,
-"name": "idle",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 3 ) ],
-"loop": true,
-"name": "jump",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 3 ), ExtResource( 2 ), ExtResource( 9 ) ],
-"loop": true,
-"name": "move",
-"speed": 10.0
-} ]
-
-[sub_resource type="RectangleShape2D" id=2]
-
-custom_solver_bias = 0.0
-extents = Vector2( 10, 11.2134 )
+[ext_resource path="res://Chara.tscn" type="PackedScene" id=1]
+[ext_resource path="res://rock.tscn" type="PackedScene" id=2]
+[ext_resource path="res://floor.tscn" type="PackedScene" id=3]
+[ext_resource path="res://LevelComplete.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Stick.tscn" type="PackedScene" id=5]
 
 [node name="Scene" type="Node2D" index="0"]
 
-[node name="Chara" type="KinematicBody2D" parent="." index="0"]
+[node name="Chara" parent="." index="0" instance=ExtResource( 1 )]
 
-position = Vector2( 79.0305, 438.428 )
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-collision/safe_margin = 0.08
-script = ExtResource( 1 )
+position = Vector2( 127.693, 434.898 )
 
-[node name="LiikuvChara" type="AnimatedSprite" parent="Chara" index="0"]
-
-position = Vector2( -19.4773, 2.66165 )
-frames = SubResource( 1 )
-animation = "idle"
-playing = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Chara" index="1"]
-
-position = Vector2( -17.2505, 0.829193 )
-scale = Vector2( 1.50005, 6.43012 )
-shape = SubResource( 2 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="floor" parent="." index="1" instance=ExtResource( 10 )]
-
-position = Vector2( -6.22342, 91.9468 )
-scale = Vector2( 3.20968, 1.58729 )
-
-[node name="Rockfloor" parent="." index="2" instance=ExtResource( 11 )]
+[node name="Rockfloor" parent="." index="1" instance=ExtResource( 2 )]
 
 position = Vector2( 741.663, 514.86 )
+
+[node name="floor" parent="." index="2" instance=ExtResource( 3 )]
+
+position = Vector2( -6.22339, 91.9468 )
+scale = Vector2( 3.20968, 1.58729 )
+
+[node name="Player" type="Node2D" parent="." index="3"]
+
+[node name="LevelComplete" parent="." index="4" instance=ExtResource( 4 )]
+
+change_level = "res://Scene2.tscn"
+
+[node name="Stick" parent="." index="5" instance=ExtResource( 5 )]
+
+position = Vector2( 355.194, 497.592 )
 
 

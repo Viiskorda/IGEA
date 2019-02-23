@@ -1,10 +1,10 @@
 extends KinematicBody2D
 
 const UP=Vector2(0,-1)
-const SPEED=200
+const SPEED=300
 const GRAV=30
 var motion=Vector2();
-const JUMP=-550
+const JUMP=-750
 var Throw=preload("res://Throw.tscn")
 var direction=0
 
@@ -12,7 +12,7 @@ func throw(x):
 	var rock=Throw.instance()
 	rock.position=position+Vector2(x,0)
 	var imp=get_global_mouse_position()-position
-	get_node('../').add_child(rock)
+	get_node('../../').add_child(rock)
 	rock.apply_impulse(Vector2(),imp)
 
 func _physics_process(delta):
