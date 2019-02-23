@@ -10,7 +10,6 @@ extents = Vector2( 10, 10 )
 
 [node name="Throw" type="RigidBody2D"]
 
-scale = Vector2( 0.339401, 0.339401 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -32,16 +31,14 @@ angular_damp = -1.0
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
+[node name="icon" type="Sprite" parent="." index="0"]
 
-position = Vector2( -1.80077, -1.90732 )
-scale = Vector2( 1.01699, 0.996549 )
-shape = SubResource( 1 )
-
-[node name="icon" type="Sprite" parent="." index="1"]
-
-position = Vector2( -1.70988, -1.97227 )
 scale = Vector2( 0.31379, 0.31379 )
 texture = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
+
+shape = SubResource( 1 )
 
 
