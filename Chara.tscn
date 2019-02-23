@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Chara.gd" type="Script" id=1]
 [ext_resource path="res://Chara/Armature_Walk_6.png" type="Texture" id=2]
@@ -9,10 +9,13 @@
 [ext_resource path="res://Chara/Armature_Walk_3.png" type="Texture" id=7]
 [ext_resource path="res://Chara/Armature_Walk_4.png" type="Texture" id=8]
 [ext_resource path="res://Chara/Armature_Walk_7.png" type="Texture" id=9]
-[ext_resource path="res://floor.tscn" type="PackedScene" id=10]
-[ext_resource path="res://rock.tscn" type="PackedScene" id=11]
 
-[sub_resource type="SpriteFrames" id=1]
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 15.4765, 69.3114 )
+
+[sub_resource type="SpriteFrames" id=2]
 
 animations = [ {
 "frames": [ ExtResource( 2 ) ],
@@ -27,47 +30,26 @@ animations = [ {
 }, {
 "frames": [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 3 ), ExtResource( 2 ), ExtResource( 9 ) ],
 "loop": true,
-"name": "move",
+"name": "walk",
 "speed": 10.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=2]
+[node name="player" type="KinematicBody2D"]
 
-custom_solver_bias = 0.0
-extents = Vector2( 10, 11.2134 )
-
-[node name="Scene" type="Node2D" index="0"]
-
-[node name="Chara" type="KinematicBody2D" parent="." index="0"]
-
-position = Vector2( 79.0305, 438.428 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
 
-[node name="LiikuvChara" type="AnimatedSprite" parent="Chara" index="0"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
 
-position = Vector2( -19.4773, 2.66165 )
-frames = SubResource( 1 )
+shape = SubResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="." index="1"]
+
+position = Vector2( -2.16145, 1.62108 )
+frames = SubResource( 2 )
 animation = "idle"
-playing = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Chara" index="1"]
-
-position = Vector2( -17.2505, 0.829193 )
-scale = Vector2( 1.50005, 6.43012 )
-shape = SubResource( 2 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="floor" parent="." index="1" instance=ExtResource( 10 )]
-
-position = Vector2( -6.22342, 91.9468 )
-scale = Vector2( 3.20968, 1.58729 )
-
-[node name="Rockfloor" parent="." index="2" instance=ExtResource( 11 )]
-
-position = Vector2( 741.663, 514.86 )
 
 
