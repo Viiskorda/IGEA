@@ -7,11 +7,12 @@
 [ext_resource path="res://Stick.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Enemy1.tscn" type="PackedScene" id=6]
 
-[node name="Scene" type="Node2D" index="0"]
+[node name="Scene" type="Node2D"]
 
 [node name="Chara" parent="." index="0" instance=ExtResource( 1 )]
 
-position = Vector2( 127.693, 434.898 )
+position = Vector2( 73.1627, 412.177 )
+health = 10
 
 [node name="Rockfloor" parent="." index="1" instance=ExtResource( 2 )]
 
@@ -19,8 +20,8 @@ position = Vector2( 741.663, 514.86 )
 
 [node name="floor" parent="." index="2" instance=ExtResource( 3 )]
 
-position = Vector2( 140.409, 545.108 )
-scale = Vector2( 4.60663, 1.58729 )
+position = Vector2( 265.078, 542.836 )
+scale = Vector2( 3.55084, 1.58729 )
 
 [node name="floor2" parent="." index="3" instance=ExtResource( 3 )]
 

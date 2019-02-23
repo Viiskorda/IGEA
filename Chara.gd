@@ -7,6 +7,8 @@ var motion=Vector2();
 const JUMP=-750
 var Throw=preload("res://Throw.tscn")
 var direction=0
+export(int) var health=10
+
 
 func throw(x):
 	var rock=Throw.instance()
@@ -52,6 +54,19 @@ func _physics_process(delta):
 	else:
 		$LiikuvChara.play("jump")
 		
-	
-		
+			
 	motion=move_and_slide(motion, UP)
+	
+func save():
+	var save_dict={
+		pos={
+			x=get_pos().x,
+			y=get_pos().y
+		},
+		health=health
+	}
+	return save_dict
+	
+	
+	
+	
