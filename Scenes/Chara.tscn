@@ -1,0 +1,149 @@
+[gd_scene load_steps=31 format=2]
+
+[ext_resource path="res://Scripts/Chara.gd" type="Script" id=1]
+[ext_resource path="res://Chara/Chara_Idle/Armature_Idle_0.png" type="Texture" id=2]
+[ext_resource path="res://Chara/Chara_Walk/Armature_Walk_7.png" type="Texture" id=3]
+[ext_resource path="res://Chara/Chara_Kneel/Armature_Kneel_00.png" type="Texture" id=4]
+[ext_resource path="res://Chara/Chara_Kneel/Armature_Kneel_01.png" type="Texture" id=5]
+[ext_resource path="res://Chara/Chara_Kneel/Armature_Kneel_02.png" type="Texture" id=6]
+[ext_resource path="res://Chara/Chara_Kneel/Armature_Kneel_03.png" type="Texture" id=7]
+[ext_resource path="res://Chara/Chara_Kneel/Armature_Kneel_04.png" type="Texture" id=8]
+[ext_resource path="res://Chara/Chara_Kneel/Armature_Kneel_05.png" type="Texture" id=9]
+[ext_resource path="res://Chara/Chara_Kneel/Armature_Kneel_06.png" type="Texture" id=10]
+[ext_resource path="res://Chara/Chara_Kneel/Armature_Kneel_07.png" type="Texture" id=11]
+[ext_resource path="res://Chara/Chara_Kneel/Armature_Kneel_08.png" type="Texture" id=12]
+[ext_resource path="res://Chara/Chara_Kneel/Armature_Kneel_09.png" type="Texture" id=13]
+[ext_resource path="res://Chara/Chara_Kneel/Armature_Kneel_10.png" type="Texture" id=14]
+[ext_resource path="res://Chara/Chara_Kneel/Armature_Kneel_11.png" type="Texture" id=15]
+[ext_resource path="res://Chara/Chara_Kneel/Armature_Kneel_12.png" type="Texture" id=16]
+[ext_resource path="res://Chara/Chara_Kneel/Armature_Kneel_13.png" type="Texture" id=17]
+[ext_resource path="res://Chara/Chara_Kneel/Armature_Kneel_14.png" type="Texture" id=18]
+[ext_resource path="res://Chara/Chara_Kneel/Armature_Kneel_15.png" type="Texture" id=19]
+[ext_resource path="res://Chara/Chara_Kneel/Armature_Kneel_16.png" type="Texture" id=20]
+[ext_resource path="res://Chara/Chara_Jump/Armature_Walk_5.png" type="Texture" id=21]
+[ext_resource path="res://Chara/Chara_Walk/Armature_Walk_0.png" type="Texture" id=22]
+[ext_resource path="res://Chara/Chara_Walk/Armature_Walk_1.png" type="Texture" id=23]
+[ext_resource path="res://Chara/Chara_Walk/Armature_Walk_2.png" type="Texture" id=24]
+[ext_resource path="res://Chara/Chara_Walk/Armature_Walk_3.png" type="Texture" id=25]
+[ext_resource path="res://Chara/Chara_Walk/Armature_Walk_4.png" type="Texture" id=26]
+[ext_resource path="res://Chara/Chara_Walk/Armature_Walk_5.png" type="Texture" id=27]
+[ext_resource path="res://Chara/Chara_Walk/Armature_Walk_6.png" type="Texture" id=28]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 14.9633, 71.5986 )
+
+[sub_resource type="SpriteFrames" id=2]
+
+animations = [ {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "dead",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ) ],
+"loop": false,
+"name": "kneel",
+"speed": 30.0
+}, {
+"frames": [ ExtResource( 21 ) ],
+"loop": true,
+"name": "jump",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "fall",
+"speed": 0.0
+}, {
+"frames": [ ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "move",
+"speed": 10.0
+} ]
+_sections_unfolded = [ "Resource" ]
+
+[node name="Chara" type="KinematicBody2D"]
+
+position = Vector2( 0, -1 )
+z_index = 1
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+__meta__ = {
+"_edit_group_": true
+}
+health = 10
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
+
+position = Vector2( 3.3309, 1.58887 )
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="LiikuvChara" type="AnimatedSprite" parent="." index="1"]
+
+position = Vector2( 1, 2 )
+frames = SubResource( 2 )
+animation = "idle"
+playing = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Position2D" type="Position2D" parent="." index="2"]
+
+position = Vector2( 40, 11 )
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Timer" type="Timer" parent="." index="3"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = true
+autostart = false
+
+[node name="Camera2D" type="Camera2D" parent="." index="4"]
+
+offset = Vector2( 100, 0 )
+anchor_mode = 1
+rotating = false
+current = true
+zoom = Vector2( 1, 1 )
+limit_left = -300
+limit_top = -10000000
+limit_right = 10000000
+limit_bottom = 10000000
+limit_smoothed = false
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+smoothing_enabled = false
+smoothing_speed = 5.0
+offset_v = 0.0
+offset_h = 0.0
+drag_margin_left = 0.2
+drag_margin_top = 0.2
+drag_margin_right = 0.2
+drag_margin_bottom = 0.2
+editor_draw_screen = true
+editor_draw_limits = false
+editor_draw_drag_margin = false
+_sections_unfolded = [ "Limit" ]
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+
+

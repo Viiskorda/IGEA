@@ -1,0 +1,155 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scenes/Chara.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/LevelComplete.tscn" type="PackedScene" id=2]
+[ext_resource path="res://floor.tscn" type="PackedScene" id=3]
+[ext_resource path="res://rock.tscn" type="PackedScene" id=4]
+
+[node name="Gate" type="Node" index="0"]
+
+[node name="Chara" parent="." index="0" instance=ExtResource( 1 )]
+
+position = Vector2( 405.039, 1524.92 )
+scale = Vector2( 1, 1 )
+
+[node name="LevelComplete" parent="." index="1" instance=ExtResource( 2 )]
+
+position = Vector2( 3372.11, 1720.8 )
+change_level = "res://Scenes/Scene3.tscn"
+
+[node name="floor" parent="." index="2" instance=ExtResource( 3 )]
+
+position = Vector2( 489.009, 1643.02 )
+scale = Vector2( 2.96705, 1 )
+
+[node name="floor2" parent="." index="3" instance=ExtResource( 3 )]
+
+position = Vector2( 510.594, 1125.84 )
+scale = Vector2( 2.26126, 1 )
+
+[node name="floor3" parent="." index="4" instance=ExtResource( 3 )]
+
+position = Vector2( 1425.69, 1397.5 )
+scale = Vector2( 4.32832, 1 )
+
+[node name="floor4" parent="." index="5" instance=ExtResource( 3 )]
+
+position = Vector2( 1700.69, 1776.7 )
+scale = Vector2( 2.86478, 1 )
+
+[node name="floor5" parent="." index="6" instance=ExtResource( 3 )]
+
+position = Vector2( 2277.16, 1457.51 )
+scale = Vector2( 1.46046, 1 )
+
+[node name="floor6" parent="." index="7" instance=ExtResource( 3 )]
+
+position = Vector2( 2833.49, 1628.45 )
+scale = Vector2( 2.15642, 1 )
+
+[node name="floor7" parent="." index="8" instance=ExtResource( 3 )]
+
+position = Vector2( 3222.97, 1789.67 )
+scale = Vector2( 2.37576, 1 )
+
+[node name="floor8" parent="." index="9" instance=ExtResource( 3 )]
+
+position = Vector2( 2861.02, 971.157 )
+scale = Vector2( 1.54908, 1 )
+
+[node name="floor12" parent="." index="10" instance=ExtResource( 3 )]
+
+position = Vector2( 2562.74, 780.554 )
+rotation = 0.577194
+scale = Vector2( 3.24427, 1 )
+
+[node name="floor13" parent="." index="11" instance=ExtResource( 3 )]
+
+position = Vector2( 3600.64, 754.432 )
+rotation = -3.64642
+scale = Vector2( 3.24427, 1 )
+
+[node name="floor14" parent="." index="12" instance=ExtResource( 3 )]
+
+position = Vector2( 3638.46, 253.049 )
+rotation = -4.5914
+scale = Vector2( 4.85857, 1 )
+
+[node name="floor15" parent="." index="13" instance=ExtResource( 3 )]
+
+position = Vector2( 2306.46, 145.743 )
+rotation = -4.82392
+scale = Vector2( 4.85857, 1 )
+
+[node name="floor10" parent="." index="14" instance=ExtResource( 3 )]
+
+position = Vector2( 3313.95, 409.009 )
+scale = Vector2( 1.5263, 1 )
+
+[node name="floor9" parent="." index="15" instance=ExtResource( 3 )]
+
+position = Vector2( 3049.3, 670.807 )
+scale = Vector2( 1.96377, 1 )
+
+[node name="floor11" parent="." index="16" instance=ExtResource( 3 )]
+
+position = Vector2( 2671.82, 433.912 )
+scale = Vector2( 1.79108, 1 )
+
+[node name="Node2D" parent="." index="17" instance=ExtResource( 4 )]
+
+position = Vector2( 806.421, 1508.99 )
+scale = Vector2( 0.693543, 0.698458 )
+
+[node name="Node2D3" parent="." index="18" instance=ExtResource( 4 )]
+
+position = Vector2( 935.286, 1364.9 )
+scale = Vector2( 0.693543, 0.698458 )
+
+[node name="Node2D5" parent="." index="19" instance=ExtResource( 4 )]
+
+position = Vector2( 766.879, 1212.49 )
+scale = Vector2( 0.693543, 0.698458 )
+
+[node name="Node2D6" parent="." index="20" instance=ExtResource( 4 )]
+
+position = Vector2( 1990.7, 1604.87 )
+scale = Vector2( 0.693543, 0.698458 )
+
+[node name="Node2D8" parent="." index="21" instance=ExtResource( 4 )]
+
+position = Vector2( 2534.66, 1537.92 )
+scale = Vector2( 0.693543, 0.698458 )
+
+[node name="Node2D9" parent="." index="22" instance=ExtResource( 4 )]
+
+position = Vector2( 3056.42, 1456.44 )
+scale = Vector2( 0.693543, 0.698458 )
+
+[node name="Node2D10" parent="." index="23" instance=ExtResource( 4 )]
+
+position = Vector2( 3186.64, 1346.41 )
+scale = Vector2( 0.693543, 0.698458 )
+
+[node name="Node2D11" parent="." index="24" instance=ExtResource( 4 )]
+
+position = Vector2( 3338.68, 1218.2 )
+scale = Vector2( 0.693543, 0.698458 )
+
+[node name="Node2D12" parent="." index="25" instance=ExtResource( 4 )]
+
+position = Vector2( 3130.27, 1103.59 )
+scale = Vector2( 0.693543, 0.698458 )
+
+[node name="Node2D7" parent="." index="26" instance=ExtResource( 4 )]
+
+position = Vector2( 1303.11, 1646.86 )
+scale = Vector2( 0.693543, 0.698458 )
+
+[node name="LevelComplete2" parent="." index="27" instance=ExtResource( 2 )]
+
+position = Vector2( 228.764, 1525.19 )
+scale = Vector2( 2.2706, 2.51949 )
+change_level = "res://Scenes/Scene.tscn"
+
+
