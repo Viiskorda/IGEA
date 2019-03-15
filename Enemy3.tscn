@@ -18,14 +18,14 @@ extents = Vector2( 59.05, 81.4212 )
 [sub_resource type="SpriteFrames" id=2]
 
 animations = [ {
-"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ) ],
-"loop": true,
-"name": "walk",
-"speed": 5.0
-}, {
 "frames": [  ],
 "loop": true,
 "name": "dead",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "walk",
 "speed": 5.0
 } ]
 
@@ -36,6 +36,9 @@ collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
+hp = 1
+grav = 30
+speed = 150
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
 
@@ -45,7 +48,7 @@ _sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="RayCast2D" type="RayCast2D" parent="." index="1"]
 
-position = Vector2( 19, 13 )
+position = Vector2( 106, 65 )
 enabled = true
 exclude_parent = true
 cast_to = Vector2( 0, 32 )

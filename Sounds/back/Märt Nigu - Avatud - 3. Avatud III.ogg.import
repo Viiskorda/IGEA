@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Märt Nigu - Avatud - 3. Avatud III.ogg-3488db3af73a49efe53daf36d5f17185.oggstr"
+
+[deps]
+
+source_file="res://Sounds/back/Märt Nigu - Avatud - 3. Avatud III.ogg"
+dest_files=[ "res://.import/Märt Nigu - Avatud - 3. Avatud III.ogg-3488db3af73a49efe53daf36d5f17185.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

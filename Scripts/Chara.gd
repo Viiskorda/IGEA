@@ -4,6 +4,7 @@ const UP=Vector2(0,-1)
 const SPEED=300
 const GRAV=30
 const JUMP=-750
+const DAMAGE_DELAY = 2
 
 const SHOOT = preload("res://Scenes/Shoot.tscn")
 
@@ -12,8 +13,10 @@ var Throw=preload("res://Throw.tscn")
 var direction=0
 var is_dead = false
 var on_ground = false
+var getDamage = 1
 
 export(int) var health=10
+	
 
 # Throw.tscn 
 #
@@ -29,6 +32,7 @@ func _physics_process(delta):
 	if is_dead == false:
 	
 		motion.y+=GRAV
+		$HP.text = str(health)
 
 		if position.y >= 5000:
 			get_tree().reload_current_scene()
@@ -41,7 +45,7 @@ func _physics_process(delta):
 			$LiikuvChara.flip_h=false
 			
 			motion.x =SPEED
-			$LiikuvChara.play("move")
+			$LiikuvChara.play("walk")
 			
 			if sign($Position2D.position.x) == -1:
 				 $Position2D.position.x *= -1
@@ -50,7 +54,6 @@ func _physics_process(delta):
 	
 		elif Input.is_action_pressed('ui_left'):
 			if position.x < -100:
-				print(position.x)
 				motion.x = 0
 			else:
 				direction=1
@@ -59,7 +62,7 @@ func _physics_process(delta):
 					$Position2D.position.x *= -1
 				
 			$LiikuvChara.flip_h=true
-			$LiikuvChara.play("move")
+			$LiikuvChara.play("walk")
 			
 			
 			if Input.is_action_just_pressed('ui_throw'):
@@ -132,14 +135,28 @@ func _physics_process(delta):
 	
 	
 func dead():
-	is_dead = true
-	motion = Vector2(0, 0)
-	$LiikuvChara.play("dead")
-	$CollisionShape2D.disabled = true
-	$Timer.start()
+	if getDamage == 1:
+		health -= 1
+		$HP.text = str(health)
+		if health <= 0:
+			is_dead = true
+			motion = Vector2(0, 0)
+			$LiikuvChara.play("dead")
+			$CollisionShape2D.disabled = true
+			$Timer.start()
+		else:
+			wait()
 	
 	
-	
+func wait():
+	getDamage = 0
+	var t = Timer.new()
+	t.set_wait_time(DAMAGE_DELAY)
+	t.set_one_shot(true)
+	self.add_child(t)
+	t.start()
+	yield(t, "timeout")
+	getDamage = 1
 	
 func _on_Timer_timeout():
 	get_tree().reload_current_scene()

@@ -1,7 +1,5 @@
 extends KinematicBody2D
 
-const GRAV = 0
-const SPEED = 150
 const FLOOR = Vector2(0, -1)
 
 var motion = Vector2()
@@ -10,21 +8,27 @@ var direction = 1
 
 var is_dead = false
 
+export(int) var hp = 1
+export(int) var grav = 0
+export(int) var speed = 150
+
 func _ready():
 	pass
 	
 	
 	
 func dead():
-	is_dead = true
-	motion = Vector2(0, 0)
-	$AnimatedSprite.play("dead")
-	$CollisionShape2D.disabled = true
-	$Timer.start()
+	hp -= 1
+	if hp <= 0:
+		is_dead = true
+		motion = Vector2(0, 0)
+		$AnimatedSprite.play("dead")
+		$CollisionShape2D.disabled = true
+		$Timer.start()
 
 func _physics_process(delta):
 	if is_dead == false:
-		motion.x = SPEED * direction
+		motion.x = speed * direction
 		
 		if direction == 1:
 			$AnimatedSprite.flip_h = false
@@ -33,10 +37,9 @@ func _physics_process(delta):
 			
 		$AnimatedSprite.play("walk")
 		
-		motion.y += GRAV
+		motion.y += grav
 		
 		motion = move_and_slide(motion, FLOOR)
-		print(position.x)
 		if position.x >= 3400:
 			direction = direction * -1
 			$RayCast2D.position.x *= -1
@@ -46,7 +49,6 @@ func _physics_process(delta):
 		if $RayCast2D.is_colliding() == false && position.x <= 2600:
 			direction = direction * -1
 			$RayCast2D.position.x *= -1
-			print($RayCast2D.position.x)
 			
 		if get_slide_count() > 0:
 			for i in range (get_slide_count()):
