@@ -13,7 +13,7 @@
 [ext_resource path="res://Enemy3.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Sounds/back/Märt Nigu - Avatud - 4. Avatud IV.ogg" type="AudioStream" id=12]
 
-[node name="Gate" type="Node" index="0"]
+[node name="Gate" type="Node"]
 
 [node name="level_2_test5" type="Sprite" parent="." index="0"]
 

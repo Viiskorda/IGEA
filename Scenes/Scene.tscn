@@ -14,7 +14,7 @@
 [ext_resource path="res://RockIndi.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Sounds/back/Märt Nigu - Avatud - 3. Avatud III.ogg" type="AudioStream" id=13]
 
-[node name="Scene" type="Node2D" index="0"]
+[node name="Scene" type="Node2D"]
 
 [node name="Background" type="Node2D" parent="." index="0"]
 
@@ -48,6 +48,7 @@ _sections_unfolded = [ "Material" ]
 
 [node name="GUI" type="MarginContainer" parent="." index="1"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
