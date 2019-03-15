@@ -4,7 +4,7 @@ const UP=Vector2(0,-1)
 const SPEED=300
 const GRAV=30
 const JUMP=-750
-const DAMAGE_DELAY = 2
+const DAMAGE_DELAY = 0.5
 
 const SHOOT = preload("res://Scenes/Shoot.tscn")
 

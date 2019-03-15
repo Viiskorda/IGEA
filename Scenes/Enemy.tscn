@@ -1,79 +1,56 @@
 [gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Scripts/Enemy.gd" type="Script" id=1]
-[ext_resource path="res://Enemy/Monster_1/Walk/Armature_flowmon_walk_0.png" type="Texture" id=2]
-[ext_resource path="res://Enemy/Monster_1/Walk/Armature_flowmon_walk_1.png" type="Texture" id=3]
-[ext_resource path="res://Enemy/Monster_1/Walk/Armature_flowmon_walk_2.png" type="Texture" id=4]
-[ext_resource path="res://Enemy/Monster_1/Walk/Armature_flowmon_walk_3.png" type="Texture" id=5]
-[ext_resource path="res://Enemy/Monster_1/Walk/Armature_flowmon_walk_4.png" type="Texture" id=6]
-[ext_resource path="res://Enemy/Monster_1/Walk/Armature_flowmon_walk_5.png" type="Texture" id=7]
-[ext_resource path="res://Enemy/Monster_1/Walk/Armature_flowmon_walk_6.png" type="Texture" id=8]
-[ext_resource path="res://Enemy/Monster_1/Walk/Armature_flowmon_walk_7.png" type="Texture" id=9]
-[ext_resource path="res://Enemy/Monster_1/Walk/Armature_flowmon_walk_8.png" type="Texture" id=10]
-[ext_resource path="res://Enemy/monster1_4_flip.png" type="Texture" id=11]
+[ext_resource path="res://Enemy/monster1_4_flip.png" type="Texture" id=2]
+[ext_resource path="res://Enemy/Monster_1/Walk/Armature_flowmon_walk_0.png" type="Texture" id=3]
+[ext_resource path="res://Enemy/Monster_1/Walk/Armature_flowmon_walk_1.png" type="Texture" id=4]
+[ext_resource path="res://Enemy/Monster_1/Walk/Armature_flowmon_walk_2.png" type="Texture" id=5]
+[ext_resource path="res://Enemy/Monster_1/Walk/Armature_flowmon_walk_3.png" type="Texture" id=6]
+[ext_resource path="res://Enemy/Monster_1/Walk/Armature_flowmon_walk_4.png" type="Texture" id=7]
+[ext_resource path="res://Enemy/Monster_1/Walk/Armature_flowmon_walk_5.png" type="Texture" id=8]
+[ext_resource path="res://Enemy/Monster_1/Walk/Armature_flowmon_walk_6.png" type="Texture" id=9]
+[ext_resource path="res://Enemy/Monster_1/Walk/Armature_flowmon_walk_7.png" type="Texture" id=10]
+[ext_resource path="res://Enemy/Monster_1/Walk/Armature_flowmon_walk_8.png" type="Texture" id=11]
 
 [sub_resource type="RectangleShape2D" id=1]
-
-custom_solver_bias = 0.0
 extents = Vector2( 14.6441, 32.5424 )
 
 [sub_resource type="SpriteFrames" id=2]
-
 animations = [ {
-"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ) ],
-"loop": true,
-"name": "walk",
-"speed": 10.0
-}, {
-"frames": [ ExtResource( 11 ) ],
+"frames": [ ExtResource( 2 ) ],
 "loop": true,
 "name": "dead",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "walk",
+"speed": 10.0
 } ]
-_sections_unfolded = [ "Resource" ]
 
-[node name="Enemy" type="KinematicBody2D" index="0"]
-
+[node name="Enemy" type="KinematicBody2D"]
 position = Vector2( -2, -5 )
 scale = Vector2( 1.84375, 1.84375 )
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-collision/safe_margin = 0.08
+collision/safe_margin = 0.008
 script = ExtResource( 1 )
-hp = 1
-grav = 30
-speed = 150
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
-
+[node name="EnemyCol" type="CollisionShape2D" parent="."]
 position = Vector2( 1.62712, 5.42374 )
 shape = SubResource( 1 )
-_sections_unfolded = [ "Material", "Transform" ]
 
-[node name="RayCast2D" type="RayCast2D" parent="." index="1"]
-
+[node name="RayCast2D" type="RayCast2D" parent="."]
 position = Vector2( 19.3823, 8.67801 )
 enabled = true
-exclude_parent = true
 cast_to = Vector2( 0, 32 )
-collision_mask = 1
-_sections_unfolded = [ "Material", "Transform", "Visibility" ]
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="." index="2"]
-
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 1.08475, 2.71186 )
 scale = Vector2( 0.2161, 0.2161 )
 frames = SubResource( 2 )
 animation = "walk"
 
-[node name="Timer" type="Timer" parent="." index="3"]
-
-process_mode = 1
+[node name="Timer" type="Timer" parent="."]
 wait_time = 2.0
 one_shot = true
-autostart = false
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
-
-

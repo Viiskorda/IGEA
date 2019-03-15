@@ -22,8 +22,7 @@ func dead():
 	if hp <= 0:
 		is_dead = true
 		motion = Vector2(0, 0)
-		$AnimatedSprite.play("dead")
-		$CollisionShape2D.disabled = true
+		$CollisionShape2D.set_disabled(true)
 		$Timer.start()
 
 func _physics_process(delta):

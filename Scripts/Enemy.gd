@@ -22,9 +22,11 @@ func dead():
 	if hp <= 0:
 		is_dead = true
 		motion = Vector2(0, 0)
+		$EnemyCol.set_disabled(true)
 		$AnimatedSprite.play("dead")
-		$CollisionShape2D.disabled = true
-		$Timer.start()
+		if $EnemyCol.is_disabled() == true:
+			print("a")
+			$Timer.start()
 
 func _physics_process(delta):
 	if is_dead == false:

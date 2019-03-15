@@ -11,12 +11,9 @@
 [ext_resource path="res://Enemy/Monster_3_Walk_ver1/Armature_SSmol_walk_ver1_12.png" type="Texture" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
-
-custom_solver_bias = 0.0
 extents = Vector2( 59.05, 81.4212 )
 
 [sub_resource type="SpriteFrames" id=2]
-
 animations = [ {
 "frames": [  ],
 "loop": true,
@@ -30,42 +27,24 @@ animations = [ {
 } ]
 
 [node name="Enemy3" type="KinematicBody2D"]
-
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-collision/safe_margin = 0.08
 script = ExtResource( 1 )
-hp = 1
-grav = 30
-speed = 150
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
-
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 1, 9 )
 shape = SubResource( 1 )
-_sections_unfolded = [ "Transform", "Z Index" ]
 
-[node name="RayCast2D" type="RayCast2D" parent="." index="1"]
-
+[node name="RayCast2D" type="RayCast2D" parent="."]
 position = Vector2( 106, 65 )
 enabled = true
-exclude_parent = true
 cast_to = Vector2( 0, 32 )
-collision_mask = 1
-_sections_unfolded = [ "Material", "Transform", "Visibility" ]
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="." index="2"]
-
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 2 )
 animation = "walk"
 frame = 6
 
-[node name="Timer" type="Timer" parent="." index="3"]
-
-process_mode = 1
+[node name="Timer" type="Timer" parent="."]
 wait_time = 2.0
 one_shot = true
-autostart = false
 
-
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
