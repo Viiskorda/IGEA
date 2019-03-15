@@ -3,37 +3,21 @@
 [ext_resource path="res://images/greensquare.png" type="Texture" id=1]
 
 [sub_resource type="RectangleShape2D" id=1]
-
-custom_solver_bias = 0.0
 extents = Vector2( 30.3889, 27.6758 )
 
 [node name="floor" type="Node2D"]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." index="0"]
-
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
 scale = Vector2( 3.12354, 0.605717 )
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-_sections_unfolded = [ "Collision", "Transform" ]
 
-[node name="Sprite" type="Sprite" parent="StaticBody2D" index="0"]
-
+[node name="Sprite" type="Sprite" parent="StaticBody2D"]
 position = Vector2( 0.938025, -3.15817 )
 scale = Vector2( 0.270101, 0.238546 )
 texture = ExtResource( 1 )
-_sections_unfolded = [ "Transform" ]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" index="1"]
-
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 0.965359, -2.72534 )
-rotation = 3.14159
 shape = SubResource( 1 )
 one_way_collision = true
-_sections_unfolded = [ "Transform" ]
-
+one_way_collision_margin = 0.0
 
