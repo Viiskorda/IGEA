@@ -1,5 +1,6 @@
 # IGEA
 järgmiseks korraks 29.03.19
+
 versiooniuuendus
 startscreen
 elude süsteem
