@@ -11,7 +11,7 @@ func _physics_process(delta):
 			rockMove = 0
 			rock.position.y += 1
 		elif rockMove == 1:
-			rock.position.y -= 0.5
+			rock.position.y -= .1
 
 func _on_TestRockMove_area_entered(area):
 	rockMove = 0

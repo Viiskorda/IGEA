@@ -128,6 +128,7 @@ func _physics_process(delta):
 		
 		motion=move_and_slide(motion, UP)
 		
+		# If enemy collides with Chara then Chara looses life
 		if get_slide_count() > 0:
 			for i in range(get_slide_count()):
 				if "Enemy" in get_slide_collision(i).collider.name:

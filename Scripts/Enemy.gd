@@ -30,6 +30,7 @@ func dead():
 
 func _physics_process(delta):
 	if is_dead == false:
+		$Label.text = str(hp)
 		motion.x = speed * direction
 		
 		if direction == 1:
@@ -51,10 +52,11 @@ func _physics_process(delta):
 			direction = direction * -1
 			$RayCast2D.position.x *= -1
 			
-		if get_slide_count() > 0:
-			for i in range (get_slide_count()):
-				if "Chara" in get_slide_collision(i).collider.name:
-					get_slide_collision(i).collider.dead()
+#		if get_slide_count() > 0:
+#			for i in range (get_slide_count()):
+#				if "Chara" in get_slide_collision(i).collider.name && is_dead==true:
+#					print(is_dead)
+#					get_slide_collision(i).collider.dead()
 
 func _on_Timer_timeout():
 	queue_free()

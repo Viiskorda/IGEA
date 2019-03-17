@@ -196,5 +196,4 @@ hp = 5
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 12 )
-autoplay = true
 

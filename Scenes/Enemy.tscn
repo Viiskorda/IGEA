@@ -50,7 +50,12 @@ frames = SubResource( 2 )
 animation = "walk"
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 2.0
 one_shot = true
+
+[node name="Label" type="Label" parent="."]
+margin_left = -19.5797
+margin_top = -63.6341
+margin_right = 20.4203
+margin_bottom = -49.6341
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
