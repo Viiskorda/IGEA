@@ -2,6 +2,7 @@ extends Node
 
 var current_scene = null
 var spawn_group_name=null
+var health=null
 
 func _ready():
     var root = get_tree().get_root()
@@ -9,6 +10,7 @@ func _ready():
 
 
 func _finished_loading_scene():
+	print(health)
 	if spawn_group_name:
 		var player = get_tree().get_nodes_in_group("player").front()
 		var spawn_target=get_tree().get_nodes_in_group(spawn_group_name).front()

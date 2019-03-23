@@ -1,5 +1,8 @@
 extends Node
 
+export(String, FILE, "*.tscn") var change_level
+export(String) var target_spawn_group
+
 func _ready():
 	$MarginContainer/VBoxContainer/VBoxContainer/TextureButton.grab_focus()
 	
@@ -15,6 +18,7 @@ func _physics_process(delta):
 
 func _on_TextureButton_pressed():
 	get_tree().change_scene("Scenes/Scene.tscn")
+	#Global.goto_scene(change_level,target_spawn_group)
 	
 
 func _on_TextureButton2_pressed():
