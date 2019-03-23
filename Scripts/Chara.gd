@@ -16,7 +16,7 @@ var on_ground = false
 var getDamage = 1
 
 export(int) var health=10
-	
+
 
 # Throw.tscn 
 #

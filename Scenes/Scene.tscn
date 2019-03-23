@@ -76,6 +76,7 @@ scale = Vector2( 6.53909, 1.58729 )
 [node name="LevelComplete" parent="." instance=ExtResource( 8 )]
 position = Vector2( 1870.25, 351.843 )
 change_level = "res://Scenes/Scene2.tscn"
+target_spawn_group = "second_spawn"
 
 [node name="TestRock" parent="." instance=ExtResource( 9 )]
 position = Vector2( 699.232, 506.059 )
@@ -91,4 +92,9 @@ position = Vector2( 692.99, 459.77 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 13 )
+
+[node name="SpawnPosition" type="Position2D" parent="." groups=[
+"second_spawned",
+]]
+position = Vector2( 1813.14, 426.577 )
 
