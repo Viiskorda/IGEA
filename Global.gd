@@ -12,6 +12,8 @@ func _finished_loading_scene():
 	if spawn_group_name:
 		var player = get_tree().get_nodes_in_group("player").front()
 		var spawn_target=get_tree().get_nodes_in_group(spawn_group_name).front()
+		print(spawn_target.position)
+		#print(player.position)
 		player.position=spawn_target.position
 
 
@@ -48,6 +50,9 @@ func _deferred_goto_scene(path):
 
     # Optionally, to make it compatible with the SceneTree.change_scene() API.
     get_tree().set_current_scene(current_scene)
+
+    _finished_loading_scene()
+
 
 
 

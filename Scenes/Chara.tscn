@@ -83,7 +83,9 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[node name="Chara" type="KinematicBody2D"]
+[node name="Chara" type="KinematicBody2D" groups=[
+"player",
+]]
 position = Vector2( 0, -1 )
 z_index = 1
 script = ExtResource( 1 )
