@@ -20,3 +20,6 @@ func new_game():
 	
 func game_over():
 	$Menu.game_over()
+	
+func _physics_process(delta):
+	print(Global.health)

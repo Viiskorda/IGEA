@@ -59,7 +59,9 @@ margin_right = 8.0
 position = Vector2( 1014.35, 424.096 )
 hp = 2
 
-[node name="Chara" parent="Characters" instance=ExtResource( 6 )]
+[node name="Chara" parent="Characters" groups=[
+"Persist",
+] instance=ExtResource( 6 )]
 position = Vector2( 48.738, 414.082 )
 
 [node name="floor" parent="." instance=ExtResource( 7 )]

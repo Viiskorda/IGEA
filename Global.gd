@@ -2,7 +2,9 @@ extends Node
 
 var current_scene = null
 var spawn_group_name=null
-var health=null
+var health=10
+
+
 
 func _ready():
     var root = get_tree().get_root()

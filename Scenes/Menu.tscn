@@ -13,8 +13,7 @@ change_level = "res://Scenes/Scene.tscn"
 target_spawn_group = "player"
 
 [node name="Sprite" type="Sprite" parent="."]
-modulate = Color( 0.145098, 0.266667, 0.188235, 1 )
-scale = Vector2( 0.5, 0.36 )
+scale = Vector2( 0.705703, 0.658599 )
 texture = ExtResource( 2 )
 centered = false
 
@@ -25,35 +24,36 @@ margin_top = 20.0
 margin_bottom = 20.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
-margin_left = 595.0
-margin_right = 905.0
+margin_left = 507.0
+margin_right = 1413.0
 margin_bottom = 768.0
-rect_scale = Vector2( 3, 2 )
 size_flags_horizontal = 4
 custom_constants/separation = 16
+alignment = 1
 
 [node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer"]
-margin_right = 310.0
-margin_bottom = 101.0
+margin_top = 110.0
+margin_right = 906.0
+margin_bottom = 402.0
 texture = ExtResource( 3 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
-margin_left = 93.0
-margin_top = 117.0
-margin_right = 217.0
-margin_bottom = 189.0
+margin_left = 236.0
+margin_top = 418.0
+margin_right = 669.0
+margin_bottom = 657.0
 size_flags_horizontal = 4
 
 [node name="TextureButton" type="TextureButton" parent="MarginContainer/VBoxContainer/VBoxContainer"]
-margin_right = 124.0
-margin_bottom = 36.0
+margin_right = 433.0
+margin_bottom = 126.0
 texture_normal = ExtResource( 4 )
 texture_focused = ExtResource( 5 )
 
 [node name="TextureButton2" type="TextureButton" parent="MarginContainer/VBoxContainer/VBoxContainer"]
-margin_top = 40.0
-margin_right = 124.0
-margin_bottom = 72.0
+margin_top = 130.0
+margin_right = 433.0
+margin_bottom = 239.0
 texture_normal = ExtResource( 6 )
 texture_focused = ExtResource( 5 )
 
