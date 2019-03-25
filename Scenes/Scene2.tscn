@@ -186,12 +186,12 @@ change_level = "res://Scenes/Scene.tscn"
 target_spawn_group = "second_spawn"
 
 [node name="Enemy2" parent="." instance=ExtResource( 10 )]
-position = Vector2( 2995.61, 267.961 )
+position = Vector2( 3020.22, 373.446 )
 scale = Vector2( 0.586775, 0.586775 )
 hp = 10
 
 [node name="Enemy3" parent="." instance=ExtResource( 11 )]
-position = Vector2( 1264.09, 1308.46 )
+position = Vector2( 1236.76, 1332.44 )
 scale = Vector2( 0.520737, 0.500101 )
 hp = 5
 
