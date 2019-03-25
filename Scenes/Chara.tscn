@@ -1,73 +1,74 @@
-[gd_scene load_steps=36 format=2]
+[gd_scene load_steps=37 format=2]
 
 [ext_resource path="res://Scripts/Chara.gd" type="Script" id=1]
-[ext_resource path="res://Chara/Chara_Idle/Armature_Idle_0.png" type="Texture" id=2]
-[ext_resource path="res://icon_flipped.png" type="Texture" id=3]
-[ext_resource path="res://Chara/Chara_Walk/Armature_Walk_duplication1_00.png" type="Texture" id=4]
-[ext_resource path="res://Chara/Chara_Walk/Armature_Walk_duplication1_01.png" type="Texture" id=5]
-[ext_resource path="res://Chara/Chara_Walk/Armature_Walk_duplication1_02.png" type="Texture" id=6]
-[ext_resource path="res://Chara/Chara_Walk/Armature_Walk_duplication1_03.png" type="Texture" id=7]
-[ext_resource path="res://Chara/Chara_Walk/Armature_Walk_duplication1_04.png" type="Texture" id=8]
-[ext_resource path="res://Chara/Chara_Walk/Armature_Walk_duplication1_05.png" type="Texture" id=9]
-[ext_resource path="res://Chara/Chara_Walk/Armature_Walk_duplication1_06.png" type="Texture" id=10]
-[ext_resource path="res://Chara/Chara_Walk/Armature_Walk_duplication1_07.png" type="Texture" id=11]
-[ext_resource path="res://Chara/Chara_Walk/Armature_Walk_duplication1_08.png" type="Texture" id=12]
-[ext_resource path="res://Chara/Chara_Walk/Armature_Walk_duplication1_09.png" type="Texture" id=13]
-[ext_resource path="res://Chara/Chara_Walk/Armature_Walk_duplication1_10.png" type="Texture" id=14]
-[ext_resource path="res://Chara/Chara_Walk/Armature_Walk_duplication1_11.png" type="Texture" id=15]
-[ext_resource path="res://Chara/Chara_Walk/Armature_Walk_duplication1_12.png" type="Texture" id=16]
-[ext_resource path="res://Chara/Chara_Walk/Armature_Walk_duplication1_13.png" type="Texture" id=17]
-[ext_resource path="res://Chara/Chara_Walk/Armature_Walk_duplication1_14.png" type="Texture" id=18]
-[ext_resource path="res://Chara/Chara_Walk/Armature_Walk_duplication1_15.png" type="Texture" id=19]
-[ext_resource path="res://Chara/Chara_Walk/Armature_Walk_duplication1_16.png" type="Texture" id=20]
-[ext_resource path="res://Chara/Chara_Kneel/Armature_Kneel_00.png" type="Texture" id=21]
-[ext_resource path="res://Chara/Chara_Kneel/Armature_Kneel_01.png" type="Texture" id=22]
-[ext_resource path="res://Chara/Chara_Kneel/Armature_Kneel_02.png" type="Texture" id=23]
-[ext_resource path="res://Chara/Chara_Kneel/Armature_Kneel_03.png" type="Texture" id=24]
-[ext_resource path="res://Chara/Chara_Kneel/Armature_Kneel_04.png" type="Texture" id=25]
-[ext_resource path="res://Chara/Chara_Kneel/Armature_Kneel_05.png" type="Texture" id=26]
-[ext_resource path="res://Chara/Chara_Kneel/Armature_Kneel_06.png" type="Texture" id=27]
-[ext_resource path="res://Chara/Chara_Kneel/Armature_Kneel_07.png" type="Texture" id=28]
-[ext_resource path="res://Chara/Chara_Kneel/Armature_Kneel_08.png" type="Texture" id=29]
-[ext_resource path="res://Chara/Chara_Kneel/Armature_Kneel_09.png" type="Texture" id=30]
-[ext_resource path="res://Chara/Chara_Kneel/Armature_Kneel_10.png" type="Texture" id=31]
-[ext_resource path="res://Chara/Chara_Kneel/Armature_Kneel_11.png" type="Texture" id=32]
-[ext_resource path="res://Chara/Chara_Jump/Armature_Walk_duplication1_10.png" type="Texture" id=33]
+[ext_resource path="res://images/lives.png" type="Texture" id=2]
+[ext_resource path="res://Chara/Chara_Idle/Armature_Idle_0.png" type="Texture" id=3]
+[ext_resource path="res://icon_flipped.png" type="Texture" id=4]
+[ext_resource path="res://Chara/Chara_Kneel/Armature_Kneel_00.png" type="Texture" id=5]
+[ext_resource path="res://Chara/Chara_Kneel/Armature_Kneel_01.png" type="Texture" id=6]
+[ext_resource path="res://Chara/Chara_Kneel/Armature_Kneel_02.png" type="Texture" id=7]
+[ext_resource path="res://Chara/Chara_Kneel/Armature_Kneel_03.png" type="Texture" id=8]
+[ext_resource path="res://Chara/Chara_Kneel/Armature_Kneel_04.png" type="Texture" id=9]
+[ext_resource path="res://Chara/Chara_Kneel/Armature_Kneel_05.png" type="Texture" id=10]
+[ext_resource path="res://Chara/Chara_Kneel/Armature_Kneel_06.png" type="Texture" id=11]
+[ext_resource path="res://Chara/Chara_Kneel/Armature_Kneel_07.png" type="Texture" id=12]
+[ext_resource path="res://Chara/Chara_Kneel/Armature_Kneel_08.png" type="Texture" id=13]
+[ext_resource path="res://Chara/Chara_Kneel/Armature_Kneel_09.png" type="Texture" id=14]
+[ext_resource path="res://Chara/Chara_Kneel/Armature_Kneel_10.png" type="Texture" id=15]
+[ext_resource path="res://Chara/Chara_Kneel/Armature_Kneel_11.png" type="Texture" id=16]
+[ext_resource path="res://Chara/Chara_Walk/Armature_Walk_duplication1_00.png" type="Texture" id=17]
+[ext_resource path="res://Chara/Chara_Walk/Armature_Walk_duplication1_01.png" type="Texture" id=18]
+[ext_resource path="res://Chara/Chara_Walk/Armature_Walk_duplication1_02.png" type="Texture" id=19]
+[ext_resource path="res://Chara/Chara_Walk/Armature_Walk_duplication1_03.png" type="Texture" id=20]
+[ext_resource path="res://Chara/Chara_Walk/Armature_Walk_duplication1_04.png" type="Texture" id=21]
+[ext_resource path="res://Chara/Chara_Walk/Armature_Walk_duplication1_05.png" type="Texture" id=22]
+[ext_resource path="res://Chara/Chara_Walk/Armature_Walk_duplication1_06.png" type="Texture" id=23]
+[ext_resource path="res://Chara/Chara_Walk/Armature_Walk_duplication1_07.png" type="Texture" id=24]
+[ext_resource path="res://Chara/Chara_Walk/Armature_Walk_duplication1_08.png" type="Texture" id=25]
+[ext_resource path="res://Chara/Chara_Walk/Armature_Walk_duplication1_09.png" type="Texture" id=26]
+[ext_resource path="res://Chara/Chara_Walk/Armature_Walk_duplication1_10.png" type="Texture" id=27]
+[ext_resource path="res://Chara/Chara_Walk/Armature_Walk_duplication1_11.png" type="Texture" id=28]
+[ext_resource path="res://Chara/Chara_Walk/Armature_Walk_duplication1_12.png" type="Texture" id=29]
+[ext_resource path="res://Chara/Chara_Walk/Armature_Walk_duplication1_13.png" type="Texture" id=30]
+[ext_resource path="res://Chara/Chara_Walk/Armature_Walk_duplication1_14.png" type="Texture" id=31]
+[ext_resource path="res://Chara/Chara_Walk/Armature_Walk_duplication1_15.png" type="Texture" id=32]
+[ext_resource path="res://Chara/Chara_Walk/Armature_Walk_duplication1_16.png" type="Texture" id=33]
+[ext_resource path="res://Chara/Chara_Jump/Armature_Walk_duplication1_10.png" type="Texture" id=34]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 14.9633, 71.5986 )
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
-"frames": [ ExtResource( 2 ) ],
+"frames": [ ExtResource( 3 ) ],
 "loop": true,
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 3 ), null ],
+"frames": [ ExtResource( 4 ), null ],
 "loop": true,
 "name": "dead",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ) ],
-"loop": true,
-"name": "walk",
-"speed": 25.0
-}, {
-"frames": [ ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ) ],
+"frames": [ ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ) ],
 "loop": false,
 "name": "kneel",
 "speed": 30.0
 }, {
-"frames": [ ExtResource( 33 ) ],
+"frames": [ ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ) ],
 "loop": true,
-"name": "jump",
-"speed": 5.0
+"name": "walk",
+"speed": 25.0
 }, {
-"frames": [ ExtResource( 2 ) ],
+"frames": [ ExtResource( 3 ) ],
 "loop": true,
 "name": "fall",
 "speed": 0.0
+}, {
+"frames": [ ExtResource( 34 ) ],
+"loop": true,
+"name": "jump",
+"speed": 5.0
 } ]
 
 [node name="Chara" type="KinematicBody2D" groups=[
@@ -76,6 +77,17 @@ animations = [ {
 position = Vector2( 0, -1 )
 z_index = 1
 script = ExtResource( 1 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+offset = Vector2( 100, 0 )
+current = true
+limit_left = -300
+limit_smoothed = true
+
+[node name="StatBar" type="Sprite" parent="Camera2D"]
+position = Vector2( -77.5018, -327.046 )
+scale = Vector2( 0.293481, 0.293481 )
+texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
@@ -102,11 +114,6 @@ __meta__ = {
 
 [node name="Timer" type="Timer" parent="."]
 one_shot = true
-
-[node name="Camera2D" type="Camera2D" parent="."]
-offset = Vector2( 100, 0 )
-current = true
-limit_left = -300
 
 [node name="HP" type="Label" parent="."]
 margin_left = -12.0
