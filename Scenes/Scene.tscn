@@ -31,7 +31,7 @@ scale = Vector2( 0.757342, 0.757342 )
 texture = ExtResource( 2 )
 
 [node name="level_1_bg_test4_smol" type="Sprite" parent="Background"]
-position = Vector2( 899.122, 380.646 )
+position = Vector2( 900.122, 380.646 )
 scale = Vector2( 0.757342, 0.757342 )
 texture = ExtResource( 3 )
 

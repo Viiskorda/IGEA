@@ -14,6 +14,8 @@ var direction=0
 var is_dead = false
 var on_ground = false
 var getDamage = 1
+var lastStep = 2
+
 
 export(int) var health=10
 
@@ -44,7 +46,10 @@ func _physics_process(delta):
 			$LiikuvChara.flip_h=false
 			
 			motion.x =SPEED
+			audioStep()
 			$LiikuvChara.play("walk")
+			
+			
 			
 			if sign($Position2D.position.x) == -1:
 				 $Position2D.position.x *= -1
@@ -61,6 +66,7 @@ func _physics_process(delta):
 					$Position2D.position.x *= -1
 				
 			$LiikuvChara.flip_h=true
+			audioStep()
 			$LiikuvChara.play("walk")
 			
 			
@@ -132,6 +138,34 @@ func _physics_process(delta):
 			for i in range(get_slide_count()):
 				if "Enemy" in get_slide_collision(i).collider.name:
 					dead()
+
+func audioStep():
+	var audioPlayer = AudioStreamPlayer.new()
+	self.add_child(audioPlayer)
+	if lastStep == 2:
+		lastStep = 0
+		audioPlayer.stream = load("res://Sounds/step1.wav")
+		audioPlayer.play()
+		var t = Timer.new()
+		t.set_wait_time(0.300)
+		t.set_one_shot(true)
+		self.add_child(t)
+		t.start()
+		yield(t, "timeout")
+		lastStep = 1
+	elif lastStep == 1: 
+		lastStep = 0
+		audioPlayer.stream = load("res://Sounds/step1.wav")
+		audioPlayer.play()
+		var t = Timer.new()
+		t.set_wait_time(0.323)
+		t.set_one_shot(true)
+		self.add_child(t)
+		t.start()
+		yield(t, "timeout")
+		lastStep = 2
+	
+	
 	
 	
 func dead():
