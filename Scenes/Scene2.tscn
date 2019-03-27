@@ -43,6 +43,7 @@ position = Vector2( 3372.11, 1720.8 )
 change_level = "res://Scenes/Scene3.tscn"
 
 [node name="Floor" type="Node2D" parent="."]
+editor/display_folded = true
 
 [node name="NormalFloor" type="Node2D" parent="Floor"]
 editor/display_folded = true
