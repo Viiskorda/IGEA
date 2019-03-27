@@ -1,5 +1,7 @@
 extends KinematicBody2D
 
+signal hp_changed
+
 const UP=Vector2(0,-1)
 const SPEED=300
 const GRAV=30
@@ -18,6 +20,9 @@ var lastStep = 2
 
 
 export(int) var health=10
+
+func _ready():
+	emit_signal("hp_changed", health)
 
 # Throw.tscn 
 #
@@ -171,6 +176,7 @@ func audioStep():
 func dead():
 	if getDamage == 1:
 		health -= 1
+		emit_signal("hp_changed", health)
 		$HP.text = str(health)
 		if health <= 0:
 			is_dead = true
