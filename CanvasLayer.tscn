@@ -1,0 +1,47 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://images/lives.png" type="Texture" id=1]
+[ext_resource path="res://images/bg - Copy.png" type="Texture" id=2]
+[ext_resource path="res://images/fill - Copy.png" type="Texture" id=3]
+
+[node name="HUD" type="CanvasLayer"]
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/margin_right = 20
+custom_constants/margin_top = 20
+custom_constants/margin_left = 20
+custom_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 1900.0
+margin_bottom = 748.0
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer"]
+visible = false
+margin_right = 808.0
+margin_bottom = 728.0
+texture = ExtResource( 1 )
+
+[node name="TextureProgress" type="TextureProgress" parent="MarginContainer/VBoxContainer"]
+margin_right = 1880.0
+margin_bottom = 53.0
+texture_over = ExtResource( 2 )
+texture_progress = ExtResource( 3 )
+fill_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="MarginContainer/VBoxContainer"]
+margin_top = 57.0
+margin_right = 1880.0
+margin_bottom = 57.0
+
+[node name="TextureProgress2" type="TextureProgress" parent="MarginContainer/VBoxContainer"]
+margin_top = 61.0
+margin_right = 1880.0
+margin_bottom = 114.0
+texture_over = ExtResource( 2 )
+texture_progress = ExtResource( 3 )
+
