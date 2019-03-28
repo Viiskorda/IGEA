@@ -1,6 +1,7 @@
 extends KinematicBody2D
 
 signal hp_changed
+signal mp_changed
 
 const UP=Vector2(0,-1)
 const SPEED=300
@@ -21,7 +22,9 @@ var lastStep = 2
 
 func _ready():
 	emit_signal("hp_changed", Global.health)
-
+	emit_signal("mp_changed", Global.mana)
+	
+	
 # Throw.tscn 
 #
 func throw(x):
@@ -175,6 +178,7 @@ func dead():
 	if getDamage == 1:
 		Global.health -= 1
 		emit_signal("hp_changed", Global.health)
+		emit_signal("mp_changed", Global.mana)
 		$HP.text = str(Global.health)
 		if Global.health <= 0:
 			is_dead = true

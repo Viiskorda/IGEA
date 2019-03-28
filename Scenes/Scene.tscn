@@ -44,7 +44,6 @@ scale = Vector2( 0.757342, 0.757342 )
 texture = ExtResource( 4 )
 
 [node name="Characters" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="Enemy" parent="Characters" instance=ExtResource( 5 )]
 position = Vector2( 1014.35, 424.096 )
