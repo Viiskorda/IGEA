@@ -14,6 +14,7 @@ func _ready():
 
 func _finished_loading_scene():
 	print(health)
+	print(mana)
 	if spawn_group_name:
 		var player = get_tree().get_nodes_in_group("player").front()
 		var spawn_target=get_tree().get_nodes_in_group(spawn_group_name).front()

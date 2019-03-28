@@ -22,15 +22,12 @@ func dead():
 	if hp <= 0:
 		is_dead = true
 		motion = Vector2(0, 0)
-		$EnemyCol.set_disabled(true)
+		$EnemyCol.call_deferred('free')
 		$AnimatedSprite.play("dead")
-		if $EnemyCol.is_disabled() == true:
-			print("a")
-			$Timer.start()
-			queue_free()
+		$Timer.start()
 			
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	if is_dead == false:
 		motion.x = speed * direction
 		

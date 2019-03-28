@@ -34,7 +34,7 @@ func throw(x):
 	get_node('../../').add_child(rock)
 	rock.apply_impulse(Vector2(),imp)
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	
 	if is_dead == false:
 	
