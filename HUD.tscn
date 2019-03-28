@@ -35,7 +35,7 @@ margin_top = 70.0
 margin_right = 1900.0
 margin_bottom = 768.0
 
-[node name="TextureProgress2" type="TextureProgress" parent="VContainer2"]
+[node name="ManaBar" type="TextureProgress" parent="VContainer2"]
 margin_right = 1800.0
 margin_bottom = 33.0
 max_value = 10.0

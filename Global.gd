@@ -3,6 +3,7 @@ extends Node
 var current_scene = null
 var spawn_group_name=null
 var health=10
+var mana=3
 
 
 
