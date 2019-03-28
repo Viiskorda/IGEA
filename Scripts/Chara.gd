@@ -18,13 +18,28 @@ var is_dead = false
 var on_ground = false
 var getDamage = 1
 var lastStep = 2
+var jump_count = 0
+var max_jump_count = 2
+var double_jump = true
 
 
 func _ready():
 	emit_signal("hp_changed", Global.health)
 	emit_signal("mp_changed", Global.mana)
 	
-	
+
+func _input(_event):
+	if Input.is_action_pressed("ui_jump"):
+		if jump_count == 1:
+			jump_count = 2
+		if jump_count < max_jump_count and double_jump == true:
+			motion.y = JUMP
+			jump_count += 1
+			on_ground = false
+			print(jump_count)
+		elif on_ground == true:
+			motion.y = JUMP
+			on_ground = false
 # Throw.tscn 
 #
 func throw(x):
@@ -90,21 +105,10 @@ func _physics_process(_delta):
 			if Input.is_action_just_pressed('ui_throw') && direction==1:
 				throw(-70)
 			
-			
-
-			
-			
-			
-		
-			
-		
-		if Input.is_action_pressed("ui_jump"):
-			if on_ground == true:
-				motion.y = JUMP
-				on_ground = false
 		
 		if is_on_floor():
 			on_ground = true
+			jump_count = 0
 		else:
 			on_ground = false
 			if motion.y < 0:
