@@ -19,10 +19,8 @@ var getDamage = 1
 var lastStep = 2
 
 
-export(int) var health=10
-
 func _ready():
-	emit_signal("hp_changed", health)
+	emit_signal("hp_changed", Global.health)
 
 # Throw.tscn 
 #
@@ -38,7 +36,7 @@ func _physics_process(delta):
 	if is_dead == false:
 	
 		motion.y+=GRAV
-		$HP.text = str(health)
+		$HP.text = str(Global.health)
 
 		if position.y >= 5000:
 			get_tree().reload_current_scene()
@@ -175,10 +173,10 @@ func audioStep():
 	
 func dead():
 	if getDamage == 1:
-		health -= 1
-		emit_signal("hp_changed", health)
-		$HP.text = str(health)
-		if health <= 0:
+		Global.health -= 1
+		emit_signal("hp_changed", Global.health)
+		$HP.text = str(Global.health)
+		if Global.health <= 0:
 			is_dead = true
 			motion = Vector2(0, 0)
 			$LiikuvChara.play("dead")
@@ -201,13 +199,13 @@ func wait():
 func _on_Timer_timeout():
 	get_tree().reload_current_scene()
 	
-func save():
-	var save_dict={
-		pos={
-			x=get_pos().x,
-			y=get_pos().y
-		},
-		health=health
-	}
-	return save_dict
+#func save():
+#	var save_dict={
+#		pos={
+#			x=get_pos().x,
+#			y=get_pos().y
+#		},
+#		Global.health=Global.health
+#	}
+#	return save_dict
 	
