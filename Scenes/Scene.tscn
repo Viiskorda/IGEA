@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Background/level_1_bg_taust_trees.png" type="Texture" id=1]
 [ext_resource path="res://Background/level_1_bg_taust_ground.png" type="Texture" id=2]
@@ -14,6 +14,8 @@
 [ext_resource path="res://RockIndi.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Sounds/back/Märt Nigu - Avatud - 3. Avatud III.ogg" type="AudioStream" id=13]
 [ext_resource path="res://HUD.tscn" type="PackedScene" id=14]
+[ext_resource path="res://icon.png" type="Texture" id=15]
+[ext_resource path="res://Flamefruite.tscn" type="PackedScene" id=16]
 
 [node name="Scene" type="Node2D"]
 
@@ -52,7 +54,7 @@ hp = 2
 [node name="Chara" parent="Characters" groups=[
 "Persist",
 ] instance=ExtResource( 6 )]
-position = Vector2( 48.738, 414.082 )
+position = Vector2( -113.035, 414.082 )
 
 [node name="floor" parent="." instance=ExtResource( 7 )]
 visible = false
@@ -72,7 +74,7 @@ change_level = "res://Scenes/Scene2.tscn"
 position = Vector2( 699.232, 506.059 )
 
 [node name="StartTekst" parent="." instance=ExtResource( 10 )]
-position = Vector2( 123.58, 331.885 )
+position = Vector2( 13.3479, 335.225 )
 
 [node name="ShootTut" parent="." instance=ExtResource( 11 )]
 position = Vector2( 414.205, 347.398 )
@@ -82,6 +84,7 @@ position = Vector2( 692.99, 459.77 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 13 )
+autoplay = true
 
 [node name="SpawnPosition" type="Position2D" parent="." groups=[
 "second_spawn",
@@ -90,4 +93,22 @@ position = Vector2( 1813.14, 426.577 )
 
 [node name="HUD" parent="." instance=ExtResource( 14 )]
 
+[node name="Sprite" type="Sprite" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 2054.41, -116.913 )
+scale = Vector2( 49.9345, 4.26493 )
+texture = ExtResource( 15 )
+offset = Vector2( -20.7919, -15.2497 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 2050.28, 1007.89 )
+scale = Vector2( 49.9345, 4.26493 )
+texture = ExtResource( 15 )
+offset = Vector2( -20.7919, -15.2497 )
+
+[node name="Flamefruite" parent="." instance=ExtResource( 16 )]
+position = Vector2( 175.843, 435.234 )
+
 [connection signal="hp_changed" from="Characters/Chara" to="HUD" method="update_healthbar"]
+[connection signal="mp_changed" from="Characters/Chara" to="HUD" method="update_manabar"]

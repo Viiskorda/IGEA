@@ -11,6 +11,9 @@ func _ready():
     var root = get_tree().get_root()
     current_scene = root.get_child(root.get_child_count() - 1)
 
+func _physics_process(_delta):
+#	print(current_scene.name)
+	pass
 
 func _finished_loading_scene():
 	print(health)
@@ -37,7 +40,7 @@ func goto_scene(path, spawn_group_name):
     # The solution is to defer the load to a later time, when
     # we can be sure that no code from the current scene is running:
 	
-
+	
 	call_deferred("_deferred_goto_scene", path)
 
 

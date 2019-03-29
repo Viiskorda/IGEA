@@ -43,7 +43,6 @@ position = Vector2( 3372.11, 1720.8 )
 change_level = "res://Scenes/Scene3.tscn"
 
 [node name="Floor" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="NormalFloor" type="Node2D" parent="Floor"]
 editor/display_folded = true
@@ -104,10 +103,10 @@ position = Vector2( 2666.2, 600.208 )
 scale = Vector2( 1.06935, 1 )
 
 [node name="CaveFloor" type="Node2D" parent="Floor"]
-editor/display_folded = true
 visible = false
 
 [node name="CaveFloor1" parent="Floor/CaveFloor" instance=ExtResource( 5 )]
+visible = false
 position = Vector2( 2568.75, 804.31 )
 rotation = 0.577704
 mode = 3
@@ -116,6 +115,7 @@ gravity_scale = 0.0
 can_sleep = false
 
 [node name="CaveFloor2" parent="Floor/CaveFloor" instance=ExtResource( 6 )]
+visible = false
 position = Vector2( 3636.75, 736.924 )
 rotation = 2.63719
 mode = 3
@@ -124,6 +124,7 @@ gravity_scale = 0.0
 can_sleep = false
 
 [node name="CaveFloor3" parent="Floor/CaveFloor" instance=ExtResource( 7 )]
+visible = false
 position = Vector2( 3694.48, 353.308 )
 rotation = 1.69122
 mode = 3
@@ -132,8 +133,27 @@ gravity_scale = 0.0
 can_sleep = false
 
 [node name="CaveFloor4" parent="Floor/CaveFloor" instance=ExtResource( 8 )]
+visible = false
 position = Vector2( 2282.9, 193.623 )
 rotation = 1.4591
+mode = 3
+physics_material_override = SubResource( 4 )
+gravity_scale = 0.0
+can_sleep = false
+
+[node name="CaveFloor5" parent="Floor/CaveFloor" instance=ExtResource( 8 )]
+visible = false
+position = Vector2( 2680.18, -241.325 )
+rotation = 3.17721
+mode = 3
+physics_material_override = SubResource( 4 )
+gravity_scale = 0.0
+can_sleep = false
+
+[node name="CaveFloor6" parent="Floor/CaveFloor" instance=ExtResource( 8 )]
+visible = false
+position = Vector2( 3474.73, -111.183 )
+rotation = 3.44838
 mode = 3
 physics_material_override = SubResource( 4 )
 gravity_scale = 0.0
@@ -195,7 +215,22 @@ scale = Vector2( 0.586775, 0.586775 )
 hp = 10
 
 [node name="Enemy3" parent="." instance=ExtResource( 11 )]
-position = Vector2( 1236.76, 1332.44 )
+position = Vector2( 1581.25, 1709.74 )
+scale = Vector2( 0.520737, 0.500101 )
+hp = 5
+
+[node name="Enemy5" parent="." instance=ExtResource( 11 )]
+position = Vector2( 2198.47, 1404.21 )
+scale = Vector2( 0.520737, 0.500101 )
+hp = 5
+
+[node name="Enemy6" parent="." instance=ExtResource( 11 )]
+position = Vector2( 2836.19, 1564.15 )
+scale = Vector2( 0.520737, 0.500101 )
+hp = 5
+
+[node name="Enemy4" parent="." instance=ExtResource( 11 )]
+position = Vector2( 566.232, 1065.87 )
 scale = Vector2( 0.520737, 0.500101 )
 hp = 5
 
@@ -203,10 +238,16 @@ hp = 5
 stream = ExtResource( 12 )
 
 [node name="Vanamees" parent="." instance=ExtResource( 13 )]
-position = Vector2( 1575.4, 1037.71 )
+position = Vector2( 1601.9, 1292.11 )
 
 [node name="Flamefruite" parent="." instance=ExtResource( 14 )]
 position = Vector2( 1254.81, 1556.53 )
+
+[node name="Flamefruite3" parent="." instance=ExtResource( 14 )]
+position = Vector2( 2511.79, 1466.31 )
+
+[node name="Flamefruite2" parent="." instance=ExtResource( 14 )]
+position = Vector2( 758.578, 1146.42 )
 
 [node name="HUD" parent="." instance=ExtResource( 15 )]
 
