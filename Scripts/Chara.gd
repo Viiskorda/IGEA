@@ -211,6 +211,8 @@ func wait():
 	
 func _on_Timer_timeout():
 	#get_tree().reload_current_scene()
+	Global.health =10
+	Global.mana =3
 	Global.goto_scene(change_level,target_spawn_group)
 	
 #func save():
