@@ -51,10 +51,10 @@ func _physics_process(_delta):
 			direction = direction * -1
 			$RayCast2D.position.x *= -1
 #
-#		if get_slide_count() > 0:
-#			for i in range (get_slide_count()):
-#				if "Chara" in get_slide_collision(i).collider.name:
-#					get_slide_collision(i).collider.dead()
+		if get_slide_count() > 0:
+			for i in range(get_slide_count()):
+				if "Chara" in get_slide_collision(i).collider.name:
+					Global.collidingWithChara=true
 
 func _on_Timer_timeout():
 	queue_free()

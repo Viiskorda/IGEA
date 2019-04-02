@@ -151,7 +151,7 @@ func _physics_process(_delta):
 		# If enemy collides with Chara then Chara looses life
 		if get_slide_count() > 0:
 			for i in range(get_slide_count()):
-				if "Enemy" in get_slide_collision(i).collider.name:
+				if "Enemy" in get_slide_collision(i).collider.name or Global.collidingWithChara==true:
 					dead()
 
 func audioStep():
@@ -187,7 +187,7 @@ func dead():
 	if getDamage == 1:
 		Global.health -= 1
 		emit_signal("hp_changed", Global.health)
-		
+		Global.collidingWithChara=false
 		$HP.text = str(Global.health)
 		if Global.health <= 0:
 			is_dead = true

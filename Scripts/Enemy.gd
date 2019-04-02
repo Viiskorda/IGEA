@@ -49,7 +49,13 @@ func _physics_process(_delta):
 		if $RayCast2D.is_colliding() == false:
 			direction = direction * -1
 			$RayCast2D.position.x *= -1
-			
+		
+		if get_slide_count() > 0:
+			for i in range(get_slide_count()):
+				if "Chara" in get_slide_collision(i).collider.name:
+					Global.collidingWithChara=true
+		
+		
 #		if get_slide_count() > 0:
 #			for i in range (get_slide_count()):
 #				if "Chara" in get_slide_collision(i).collider.name && is_dead==true:
