@@ -49,6 +49,7 @@ change_level = "res://Scenes/Scene2.tscn"
 [node name="Floor" type="Node2D" parent="."]
 
 [node name="NormalFloor" type="Node2D" parent="Floor"]
+editor/display_folded = true
 visible = false
 
 [node name="floor" parent="Floor/NormalFloor" instance=ExtResource( 4 )]
@@ -96,6 +97,7 @@ position = Vector2( 2666.2, 600.208 )
 scale = Vector2( 1.06935, 1 )
 
 [node name="CaveFloor" type="Node2D" parent="Floor"]
+editor/display_folded = true
 visible = false
 
 [node name="CaveFloor1" parent="Floor/CaveFloor" instance=ExtResource( 5 )]
@@ -147,6 +149,7 @@ gravity_scale = 0.0
 can_sleep = false
 
 [node name="Kivid" type="Node2D" parent="."]
+editor/display_folded = true
 
 [node name="TestRock" parent="Kivid" instance=ExtResource( 9 )]
 position = Vector2( 803.963, 1524.65 )

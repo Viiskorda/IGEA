@@ -30,5 +30,6 @@ func _on_VisibilityNotifier2D_screen_exited():
 
 func _on_Shoot_body_entered(body):
 		if "Enemy" in body.name:
+			print("pihtas")
 			body.dead()
 		queue_free()
