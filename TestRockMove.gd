@@ -2,9 +2,11 @@ extends Area2D
 
 onready var rock = get_node("..")
 
+
 var rockMove = 0
 
 func _physics_process(_delta):
+
 	var bodies= get_overlapping_bodies()
 	for body in bodies:
 		if body.name=="Chara":

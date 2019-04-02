@@ -8,7 +8,7 @@
 [ext_resource path="res://CaveFloor2.tscn" type="PackedScene" id=6]
 [ext_resource path="res://CaveFloor3.tscn" type="PackedScene" id=7]
 [ext_resource path="res://CaveFloor4.tscn" type="PackedScene" id=8]
-[ext_resource path="res://rock.tscn" type="PackedScene" id=9]
+[ext_resource path="res://FallingRock.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Falling.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Falling.gd" type="Script" id=11]
 [ext_resource path="res://Enemy2.tscn" type="PackedScene" id=12]
@@ -48,41 +48,33 @@ change_level = "res://Scenes/Scene2.tscn"
 [node name="Floor" type="Node2D" parent="."]
 
 [node name="NormalFloor" type="Node2D" parent="Floor"]
-editor/display_folded = true
 visible = false
 
 [node name="floor" parent="Floor/NormalFloor" instance=ExtResource( 4 )]
-visible = false
 position = Vector2( 489.009, 1643.02 )
 scale = Vector2( 2.96705, 1 )
 
 [node name="floor2" parent="Floor/NormalFloor" instance=ExtResource( 4 )]
-visible = false
 position = Vector2( 514.917, 1125.84 )
 scale = Vector2( 2.26126, 1 )
 
 [node name="floor3" parent="Floor/NormalFloor" instance=ExtResource( 4 )]
-visible = false
 position = Vector2( 1462.34, 1397.5 )
 scale = Vector2( 3.93129, 1 )
 
 [node name="floor4" parent="Floor/NormalFloor" instance=ExtResource( 4 )]
-visible = false
 position = Vector2( 1694.53, 1774.94 )
 scale = Vector2( 2.86478, 1 )
 
 [node name="floor5" parent="Floor/NormalFloor" instance=ExtResource( 4 )]
-visible = false
 position = Vector2( 2242.13, 1456.43 )
 scale = Vector2( 1.91354, 1 )
 
 [node name="floor6" parent="Floor/NormalFloor" instance=ExtResource( 4 )]
-visible = false
 position = Vector2( 2816.04, 1625.86 )
 scale = Vector2( 2.17728, 1 )
 
 [node name="floor7" parent="Floor/NormalFloor" instance=ExtResource( 4 )]
-visible = false
 position = Vector2( 3275.18, 1786.51 )
 scale = Vector2( 3.15195, 1 )
 
@@ -91,17 +83,14 @@ position = Vector2( 2833.94, 977.277 )
 scale = Vector2( 1.54908, 1 )
 
 [node name="floor9" parent="Floor/NormalFloor" instance=ExtResource( 4 )]
-visible = false
 position = Vector2( 3010.17, 754.279 )
 scale = Vector2( 1.99478, 1 )
 
 [node name="floor10" parent="Floor/NormalFloor" instance=ExtResource( 4 )]
-visible = false
 position = Vector2( 3360.48, 592.492 )
 scale = Vector2( 1.09192, 0.995075 )
 
 [node name="floor11" parent="Floor/NormalFloor" instance=ExtResource( 4 )]
-visible = false
 position = Vector2( 2666.2, 600.208 )
 scale = Vector2( 1.06935, 1 )
 
@@ -109,7 +98,6 @@ scale = Vector2( 1.06935, 1 )
 visible = false
 
 [node name="CaveFloor1" parent="Floor/CaveFloor" instance=ExtResource( 5 )]
-visible = false
 position = Vector2( 2568.75, 804.31 )
 rotation = 0.577704
 mode = 3
@@ -118,7 +106,6 @@ gravity_scale = 0.0
 can_sleep = false
 
 [node name="CaveFloor2" parent="Floor/CaveFloor" instance=ExtResource( 6 )]
-visible = false
 position = Vector2( 3636.75, 736.924 )
 rotation = 2.63719
 mode = 3
@@ -127,7 +114,6 @@ gravity_scale = 0.0
 can_sleep = false
 
 [node name="CaveFloor3" parent="Floor/CaveFloor" instance=ExtResource( 7 )]
-visible = false
 position = Vector2( 3694.48, 353.308 )
 rotation = 1.69122
 mode = 3
@@ -136,7 +122,6 @@ gravity_scale = 0.0
 can_sleep = false
 
 [node name="CaveFloor4" parent="Floor/CaveFloor" instance=ExtResource( 8 )]
-visible = false
 position = Vector2( 2282.9, 193.623 )
 rotation = 1.4591
 mode = 3
@@ -145,7 +130,6 @@ gravity_scale = 0.0
 can_sleep = false
 
 [node name="CaveFloor5" parent="Floor/CaveFloor" instance=ExtResource( 8 )]
-visible = false
 position = Vector2( 2680.18, -241.325 )
 rotation = 3.17721
 mode = 3
@@ -154,7 +138,6 @@ gravity_scale = 0.0
 can_sleep = false
 
 [node name="CaveFloor6" parent="Floor/CaveFloor" instance=ExtResource( 8 )]
-visible = false
 position = Vector2( 3474.73, -111.183 )
 rotation = 3.44838
 mode = 3
@@ -163,48 +146,42 @@ gravity_scale = 0.0
 can_sleep = false
 
 [node name="Kivid" type="Node2D" parent="."]
-editor/display_folded = true
-visible = false
 
-[node name="Node2D" parent="Kivid" instance=ExtResource( 9 )]
-position = Vector2( 806.421, 1507.56 )
-scale = Vector2( 0.693543, 0.698458 )
+[node name="TestRock" parent="Kivid" instance=ExtResource( 9 )]
+position = Vector2( 803.013, 1516.1 )
+scale = Vector2( 0.7, 0.7 )
 
-[node name="Node2D3" parent="Kivid" instance=ExtResource( 9 )]
-position = Vector2( 933.125, 1364.9 )
-scale = Vector2( 0.693543, 0.698458 )
+[node name="TestRock2" parent="Kivid" instance=ExtResource( 9 )]
+position = Vector2( 934.3, 1375.03 )
+scale = Vector2( 0.8, 0.8 )
 
-[node name="Node2D5" parent="Kivid" instance=ExtResource( 9 )]
-position = Vector2( 765.798, 1217.89 )
-scale = Vector2( 0.693543, 0.698458 )
+[node name="TestRock3" parent="Kivid" instance=ExtResource( 9 )]
+position = Vector2( 765.302, 1228.38 )
+scale = Vector2( 0.8, 0.7 )
 
-[node name="Node2D6" parent="Kivid" instance=ExtResource( 9 )]
-position = Vector2( 1965.93, 1603.11 )
-scale = Vector2( 1.30267, 0.698458 )
+[node name="TestRock4" parent="Kivid" instance=ExtResource( 9 )]
+position = Vector2( 1969.44, 1612.48 )
+scale = Vector2( 1.33207, 0.94 )
 
-[node name="Node2D8" parent="Kivid" instance=ExtResource( 9 )]
-position = Vector2( 2519.08, 1536.02 )
-scale = Vector2( 0.720915, 0.698458 )
+[node name="TestRock5" parent="Kivid" instance=ExtResource( 9 )]
+position = Vector2( 2519.03, 1550.33 )
+scale = Vector2( 0.772082, 0.902586 )
 
-[node name="Node2D9" parent="Kivid" instance=ExtResource( 9 )]
-position = Vector2( 3039.49, 1456.05 )
-scale = Vector2( 0.757602, 0.698458 )
+[node name="TestRock6" parent="Kivid" instance=ExtResource( 9 )]
+position = Vector2( 3040.69, 1462.34 )
+scale = Vector2( 0.732062, 0.782586 )
 
-[node name="Node2D10" parent="Kivid" instance=ExtResource( 9 )]
-position = Vector2( 3188.3, 1348.73 )
-scale = Vector2( 1.41217, 0.698458 )
+[node name="TestRock7" parent="Kivid" instance=ExtResource( 9 )]
+position = Vector2( 3190.83, 1358.98 )
+scale = Vector2( 1.36638, 0.884961 )
 
-[node name="Node2D11" parent="Kivid" instance=ExtResource( 9 )]
-position = Vector2( 3314.82, 1222.19 )
-scale = Vector2( 0.748747, 0.698458 )
+[node name="TestRock8" parent="Kivid" instance=ExtResource( 9 )]
+position = Vector2( 3317.93, 1233.28 )
+scale = Vector2( 0.905099, 0.884961 )
 
-[node name="Node2D12" parent="Kivid" instance=ExtResource( 9 )]
-position = Vector2( 3068.21, 1106.44 )
-scale = Vector2( 1.97593, 0.698458 )
-
-[node name="Node2D7" parent="Kivid" instance=ExtResource( 9 )]
-position = Vector2( 1263.86, 1646.86 )
-scale = Vector2( 1.88254, 0.698458 )
+[node name="TestRock9" parent="Kivid" instance=ExtResource( 9 )]
+position = Vector2( 3074.21, 1122.94 )
+scale = Vector2( 1.9451, 0.884961 )
 
 [node name="LevelComplete2" parent="." instance=ExtResource( 3 )]
 position = Vector2( 228.764, 1525.19 )

@@ -55,6 +55,7 @@ func _physics_process(_delta):
 			for i in range(get_slide_count()):
 				if "Chara" in get_slide_collision(i).collider.name:
 					Global.collidingWithChara=true
+					
 
 func _on_Timer_timeout():
 	queue_free()
