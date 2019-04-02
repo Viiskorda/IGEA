@@ -50,7 +50,7 @@ func throw(x):
 	rock.apply_impulse(Vector2(),imp)
 
 func _physics_process(_delta):
-	
+	emit_signal("mp_changed", Global.mana)
 	if is_dead == false:
 	
 		motion.y+=GRAV
@@ -130,16 +130,18 @@ func _physics_process(_delta):
 		
 		
 		if Input.is_action_just_pressed("ui_shoot"):
-			var shoot = SHOOT.instance()
-			
-			if sign($Position2D.position.x) == 1:
-				shoot.set_shoot_direction(1)
-			else:
-				shoot.set_shoot_direction(-1)
+			if Global.mana>0:
+				var shoot = SHOOT.instance()
+				Global.mana -= 1
+				
+				if sign($Position2D.position.x) == 1:
+					shoot.set_shoot_direction(1)
+				else:
+					shoot.set_shoot_direction(-1)
 	
-			get_parent().add_child(shoot)
-			shoot.position = $Position2D.global_position
-		
+				get_parent().add_child(shoot)
+				shoot.position = $Position2D.global_position
+			
 		
 		motion=move_and_slide(motion, UP)
 		
@@ -182,7 +184,7 @@ func dead():
 	if getDamage == 1:
 		Global.health -= 1
 		emit_signal("hp_changed", Global.health)
-		emit_signal("mp_changed", Global.mana)
+		
 		$HP.text = str(Global.health)
 		if Global.health <= 0:
 			is_dead = true

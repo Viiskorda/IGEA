@@ -18,6 +18,7 @@ func _physics_process(_delta):
 	for body in bodies:
 		if body.name=="Chara":
 			#get_tree().change_scene(change_level)
+			Global.mana+=3
 			queue_free()
 
 

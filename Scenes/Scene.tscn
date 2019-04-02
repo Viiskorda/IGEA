@@ -95,15 +95,15 @@ position = Vector2( 1813.14, 426.577 )
 
 [node name="Sprite" type="Sprite" parent="."]
 modulate = Color( 0, 0, 0, 1 )
-position = Vector2( 2054.41, -116.913 )
-scale = Vector2( 49.9345, 4.26493 )
+position = Vector2( 2504.34, -90.3568 )
+scale = Vector2( 74.5544, 4.26493 )
 texture = ExtResource( 15 )
 offset = Vector2( -20.7919, -15.2497 )
 
 [node name="Sprite2" type="Sprite" parent="."]
 modulate = Color( 0, 0, 0, 1 )
-position = Vector2( 2050.28, 1007.89 )
-scale = Vector2( 49.9345, 4.26493 )
+position = Vector2( 2599.48, 1007.89 )
+scale = Vector2( 77.2175, 4.26493 )
 texture = ExtResource( 15 )
 offset = Vector2( -20.7919, -15.2497 )
 

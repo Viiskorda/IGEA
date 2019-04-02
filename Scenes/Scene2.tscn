@@ -251,3 +251,4 @@ position = Vector2( 758.578, 1146.42 )
 [node name="HUD" parent="." instance=ExtResource( 15 )]
 
 [connection signal="hp_changed" from="Chara" to="HUD" method="update_healthbar"]
+[connection signal="mp_changed" from="Chara" to="HUD" method="update_manabar"]
