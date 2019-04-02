@@ -4,11 +4,11 @@ järgmiseks korraks 12-13.04 (või tulevikus)
 autosave 2 stseeni juures\
 - bug: hüppamise ajal on kõndimise heli\
 - kõndimise heli liiga vali, tulistamise heli, klikkimise heli, seadetes navigeerimise heli, bossile heli, koopa heli\
-- bugi parandus, et menu-st edasi minek oleks ilma vigadeta ning suremisel reload asendada muuga, et ei oleks kokku jooksmist\
-- Mana tööle saamine (samalaadselt healthiga). flamefruite annab 3 mana juurde\
+- TEHTUD bugi parandus, et menu-st edasi minek oleks ilma vigadeta ning suremisel reload asendada muuga, et ei oleks kokku jooksmist\
+- TEHTUD Mana tööle saamine (samalaadselt healthiga). flamefruite annab 3 mana juurde\
 - kokkupuude vaenlasega\
 - esimesse stseeni flamefruite + tekst. Manasid 12\
-- esimesse stseeni must äär\
+- TEHTUD esimesse stseeni must äär\
 - flamefruitele tekst juurde\
 - teise stseeni kivid panna (läbitavad)\
 - mana võiks olla väiksema raadiusega, ning tulistamine valgusega ja kerana\
