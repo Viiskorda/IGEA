@@ -6,7 +6,7 @@ autosave 2 stseeni juures\
 - kõndimise heli liiga vali, tulistamise heli, klikkimise heli, seadetes navigeerimise heli, bossile heli, koopa heli\
 - TEHTUD bugi parandus, et menu-st edasi minek oleks ilma vigadeta ning suremisel reload asendada muuga, et ei oleks kokku jooksmist\
 - TEHTUD Mana tööle saamine (samalaadselt healthiga). flamefruite annab 3 mana juurde\
-- kokkupuude vaenlasega\
+- TEHTUD kokkupuude vaenlasega\
 - esimesse stseeni flamefruite + tekst. Manasid 12\
 - TEHTUD esimesse stseeni must äär\
 - flamefruitele tekst juurde\
