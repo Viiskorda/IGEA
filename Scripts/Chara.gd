@@ -3,6 +3,9 @@ extends KinematicBody2D
 signal hp_changed
 signal mp_changed
 
+export(String, FILE, "*.tscn") var change_level
+export(String) var target_spawn_group
+
 const UP=Vector2(0,-1)
 const SPEED=300
 const GRAV=30
@@ -207,7 +210,8 @@ func wait():
 	getDamage = 1
 	
 func _on_Timer_timeout():
-	get_tree().reload_current_scene()
+	#get_tree().reload_current_scene()
+	Global.goto_scene(change_level,target_spawn_group)
 	
 #func save():
 #	var save_dict={
