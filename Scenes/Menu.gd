@@ -17,7 +17,8 @@ func _physics_process(delta):
 	
 
 func _on_TextureButton_pressed():
-	get_tree().change_scene("Scenes/Scene.tscn")
+	Global.goto_scene(change_level,target_spawn_group)
+	#get_tree().change_scene("Scenes/Scene.tscn")
 	#Global.goto_scene(change_level,target_spawn_group)
 	
 

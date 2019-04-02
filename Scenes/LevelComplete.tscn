@@ -9,6 +9,7 @@
 position = Vector2( 1841.93, 454.585 )
 scale = Vector2( 1.50685, 1.58729 )
 script = ExtResource( 1 )
+change_level = "res://Scenes/Scene.tscn"
 
 [node name="fire_blue_gate" type="Sprite" parent="."]
 position = Vector2( 20.3538, 9.43799 )
