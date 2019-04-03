@@ -104,8 +104,8 @@ offset = Vector2( -20.7919, -15.2497 )
 
 [node name="Sprite2" type="Sprite" parent="."]
 modulate = Color( 0, 0, 0, 1 )
-position = Vector2( 2599.48, 1007.89 )
-scale = Vector2( 77.2175, 4.26493 )
+position = Vector2( 2599.48, 1476.63 )
+scale = Vector2( 77.2175, 14.1855 )
 texture = ExtResource( 15 )
 offset = Vector2( -20.7919, -15.2497 )
 
@@ -113,8 +113,8 @@ offset = Vector2( -20.7919, -15.2497 )
 position = Vector2( 175.843, 435.234 )
 
 [node name="Falling" parent="." instance=ExtResource( 17 )]
-position = Vector2( 1101.86, 1021.43 )
-scale = Vector2( 77.2175, 4.26493 )
+position = Vector2( 803.068, 1365.22 )
+scale = Vector2( 1, 4.265 )
 script = ExtResource( 18 )
 change_level = "res://Scenes/Scene.tscn"
 

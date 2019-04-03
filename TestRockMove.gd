@@ -5,11 +5,25 @@ onready var rock = get_node("..")
 
 var rockMove = 0
 
-func _physics_process(_delta):
+func getallnodes(node):
+    for N in node.get_children():
+        if N.get_child_count() > 0:
+            print("["+N.get_name()+"]")
+            getallnodes(N)
+        else:
+            # Do something
+            print("- "+N.get_name())
 
-	var bodies= get_overlapping_bodies()
+func _physics_process(_delta):
+	#print_tree()
+
+	var bodies = get_overlapping_bodies()
+	
 	for body in bodies:
+		
 		if body.name=="Chara":
+			print(body.get_children()[6].position)
+			print(rock.position.y)
 			rockMove = 0
 			rock.position.y += 1
 		elif rockMove == 1:

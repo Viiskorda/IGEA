@@ -49,7 +49,6 @@ change_level = "res://Scenes/Scene2.tscn"
 [node name="Floor" type="Node2D" parent="."]
 
 [node name="NormalFloor" type="Node2D" parent="Floor"]
-editor/display_folded = true
 visible = false
 
 [node name="floor" parent="Floor/NormalFloor" instance=ExtResource( 4 )]
@@ -97,7 +96,6 @@ position = Vector2( 2666.2, 600.208 )
 scale = Vector2( 1.06935, 1 )
 
 [node name="CaveFloor" type="Node2D" parent="Floor"]
-editor/display_folded = true
 visible = false
 
 [node name="CaveFloor1" parent="Floor/CaveFloor" instance=ExtResource( 5 )]
@@ -224,7 +222,7 @@ scale = Vector2( 2.2706, 2.51949 )
 target_spawn_group = "second_spawn"
 
 [node name="Falling" parent="." instance=ExtResource( 11 )]
-position = Vector2( 2070.27, 2207.45 )
+position = Vector2( 2096.96, 2781.23 )
 scale = Vector2( 1.50685, 1.58729 )
 script = ExtResource( 12 )
 change_level = "res://Scenes/Scene2.tscn"
@@ -273,8 +271,8 @@ position = Vector2( 758.578, 1146.42 )
 
 [node name="Sprite" type="Sprite" parent="."]
 modulate = Color( 0, 0, 0, 1 )
-position = Vector2( 2195.51, 2483.81 )
-scale = Vector2( 112.737, 12.6743 )
+position = Vector2( 2242.36, 2964.57 )
+scale = Vector2( 112.737, 27.3725 )
 texture = ExtResource( 19 )
 
 [connection signal="hp_changed" from="Chara" to="HUD" method="update_healthbar"]
