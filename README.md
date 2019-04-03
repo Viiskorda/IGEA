@@ -10,7 +10,7 @@ autosave 2 stseeni juures\
 - esimesse stseeni flamefruite + tekst. Manasid 12\
 - TEHTUD esimesse stseeni must äär\
 - flamefruitele tekst juurde\
-- teise stseeni kivid panna (läbitavad)\
+- TEHTUD teise stseeni kivid panna (läbitavad)\
 - mana võiks olla väiksema raadiusega, ning tulistamine valgusega ja kerana\
 
 - bossi rünnak\
