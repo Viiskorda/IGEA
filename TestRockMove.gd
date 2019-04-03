@@ -22,12 +22,12 @@ func _physics_process(_delta):
 	for body in bodies:
 		
 		if body.name=="Chara":
-			print(body.get_children()[6].position)
-			print(rock.position.y)
-			rockMove = 0
-			rock.position.y += 1
+			if (body.position.y+80) < rock.position.y:
+
+				rockMove = 0
+				rock.position.y += 1
 		elif rockMove == 1:
-			rock.position.y -= .1
+			rock.position.y -= .2
 
 func _on_TestRockMove_area_entered(_area):
 	rockMove = 0

@@ -59,8 +59,8 @@ func _physics_process(_delta):
 		motion.y+=GRAV
 		$HP.text = str(Global.health)
 
-		if position.y >= 5000:
-			get_tree().reload_current_scene()
+#		if position.y >= 5000:
+#			get_tree().reload_current_scene()
 
 
 
