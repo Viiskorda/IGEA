@@ -116,7 +116,7 @@ wait_time = 3.0
 one_shot = true
 
 [node name="Position2D" type="Position2D" parent="."]
-position = Vector2( -2.57214, 136.323 )
+position = Vector2( -2.69413e-005, 195.482 )
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="timeout" from="Attack" to="." method="_on_Attack_timeout"]

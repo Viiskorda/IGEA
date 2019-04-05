@@ -32,8 +32,9 @@ func attack():
 	temp=position.y
 	$AnimatedSprite.play("attack")
 	position.y+=5
-	if position.y<(temp-200):
+	if position.y<(temp-100):
 		position.y-=6
+
 	$Attack.start()
 	
 
@@ -82,12 +83,12 @@ func _physics_process(_delta):
 	
 		if Global.charaPosition.x>2300 && Global.charaPosition.x<3700 && Global.charaPosition.y<850:
 	
-			if position.x <= Global.charaPosition.x+1 && position.x >= Global.charaPosition.x-1:
+			if position.x <= Global.charaPosition.x+2 && position.x >= Global.charaPosition.x-1:
 				print("kohal")
 				
 				attack()
 	
-			if position.x <= Global.charaPosition.x+100 && position.x >= Global.charaPosition.x-100:
+			elif position.x <= Global.charaPosition.x+100 && position.x >= Global.charaPosition.x-100:
 				var attackRandomly= randi() % 100
 				if attackRandomly==10:
 					spit()

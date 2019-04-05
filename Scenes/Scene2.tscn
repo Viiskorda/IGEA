@@ -40,7 +40,7 @@ scale = Vector2( 0.618106, 0.618106 )
 texture = ExtResource( 1 )
 
 [node name="Chara" parent="." instance=ExtResource( 2 )]
-position = Vector2( 2408.67, 534.487 )
+position = Vector2( 363.492, 1545.09 )
 
 [node name="LevelComplete" parent="." instance=ExtResource( 3 )]
 position = Vector2( 3372.11, 1720.8 )
