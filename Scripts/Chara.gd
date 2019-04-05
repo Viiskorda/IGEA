@@ -156,30 +156,31 @@ func _physics_process(_delta):
 					dead()
 
 func audioStep():
-	var audioPlayer = AudioStreamPlayer.new()
-	self.add_child(audioPlayer)
-	if lastStep == 2:
-		lastStep = 0
-		audioPlayer.stream = load("res://Sounds/step1.wav")
-		audioPlayer.play()
-		var t = Timer.new()
-		t.set_wait_time(0.300)
-		t.set_one_shot(true)
-		self.add_child(t)
-		t.start()
-		yield(t, "timeout")
-		lastStep = 1
-	elif lastStep == 1: 
-		lastStep = 0
-		audioPlayer.stream = load("res://Sounds/step1.wav")
-		audioPlayer.play()
-		var t = Timer.new()
-		t.set_wait_time(0.323)
-		t.set_one_shot(true)
-		self.add_child(t)
-		t.start()
-		yield(t, "timeout")
-		lastStep = 2
+	if on_ground == true:
+		var audioPlayer = AudioStreamPlayer.new()
+		self.add_child(audioPlayer)
+		if lastStep == 2:
+			lastStep = 0
+			audioPlayer.stream = load("res://Sounds/step1.wav")
+			audioPlayer.play()
+			var t = Timer.new()
+			t.set_wait_time(0.300)
+			t.set_one_shot(true)
+			self.add_child(t)
+			t.start()
+			yield(t, "timeout")
+			lastStep = 1
+		elif lastStep == 1: 
+			lastStep = 0
+			audioPlayer.stream = load("res://Sounds/step1.wav")
+			audioPlayer.play()
+			var t = Timer.new()
+			t.set_wait_time(0.323)
+			t.set_one_shot(true)
+			self.add_child(t)
+			t.start()
+			yield(t, "timeout")
+			lastStep = 2
 	
 	
 	
