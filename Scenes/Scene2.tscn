@@ -229,7 +229,7 @@ script = ExtResource( 12 )
 change_level = "res://Scenes/Scene2.tscn"
 
 [node name="SuperBoss" parent="." instance=ExtResource( 13 )]
-position = Vector2( 3020.22, 108.444 )
+position = Vector2( 2972.52, 111.094 )
 scale = Vector2( 0.586775, 0.586775 )
 hp = 10
 
