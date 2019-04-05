@@ -53,6 +53,7 @@ func throw(x):
 	rock.apply_impulse(Vector2(),imp)
 
 func _physics_process(_delta):
+	Global.charaPosition=position
 	emit_signal("mp_changed", Global.mana)
 	if is_dead == false:
 	

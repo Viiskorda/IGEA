@@ -1,95 +1,95 @@
 [gd_scene load_steps=73 format=2]
 
 [ext_resource path="res://Enemy2.gd" type="Script" id=1]
-[ext_resource path="res://icon_flipped.png" type="Texture" id=2]
-[ext_resource path="res://Enemy/Monster_2_Idle_ver1/Armature_Spidmon_idle_ver1_00.png" type="Texture" id=3]
-[ext_resource path="res://Enemy/Monster_2_Idle_ver1/Armature_Spidmon_idle_ver1_01.png" type="Texture" id=4]
-[ext_resource path="res://Enemy/Monster_2_Idle_ver1/Armature_Spidmon_idle_ver1_02.png" type="Texture" id=5]
-[ext_resource path="res://Enemy/Monster_2_Idle_ver1/Armature_Spidmon_idle_ver1_03.png" type="Texture" id=6]
-[ext_resource path="res://Enemy/Monster_2_Idle_ver1/Armature_Spidmon_idle_ver1_04.png" type="Texture" id=7]
-[ext_resource path="res://Enemy/Monster_2_Idle_ver1/Armature_Spidmon_idle_ver1_05.png" type="Texture" id=8]
-[ext_resource path="res://Enemy/Monster_2_Idle_ver1/Armature_Spidmon_idle_ver1_06.png" type="Texture" id=9]
-[ext_resource path="res://Enemy/Monster_2_Idle_ver1/Armature_Spidmon_idle_ver1_07.png" type="Texture" id=10]
-[ext_resource path="res://Enemy/Monster_2_Idle_ver1/Armature_Spidmon_idle_ver1_08.png" type="Texture" id=11]
-[ext_resource path="res://Enemy/Monster_2_Idle_ver1/Armature_Spidmon_idle_ver1_09.png" type="Texture" id=12]
-[ext_resource path="res://Enemy/Monster_2_Idle_ver1/Armature_Spidmon_idle_ver1_10.png" type="Texture" id=13]
-[ext_resource path="res://Enemy/Monster_2_Idle_ver1/Armature_Spidmon_idle_ver1_11.png" type="Texture" id=14]
-[ext_resource path="res://Enemy/Monster_2_Idle_ver1/Armature_Spidmon_idle_ver1_12.png" type="Texture" id=15]
-[ext_resource path="res://Enemy/Monster_2_Idle_ver1/Armature_Spidmon_idle_ver1_13.png" type="Texture" id=16]
-[ext_resource path="res://Enemy/Monster_2_Idle_ver1/Armature_Spidmon_idle_ver1_14.png" type="Texture" id=17]
-[ext_resource path="res://Enemy/Monster_2_Idle_ver1/Armature_Spidmon_idle_ver1_15.png" type="Texture" id=18]
-[ext_resource path="res://Enemy/Monster_2_Idle_ver1/Armature_Spidmon_idle_ver1_16.png" type="Texture" id=19]
-[ext_resource path="res://Enemy/Monster_2_Idle_ver1/Armature_Spidmon_idle_ver1_17.png" type="Texture" id=20]
-[ext_resource path="res://Enemy/Monster_2_Idle_ver1/Armature_Spidmon_idle_ver1_18.png" type="Texture" id=21]
-[ext_resource path="res://Enemy/Monster_2_Idle_ver1/Armature_Spidmon_idle_ver1_19.png" type="Texture" id=22]
-[ext_resource path="res://Enemy/Monster_2_Idle_ver1/Armature_Spidmon_idle_ver1_20.png" type="Texture" id=23]
-[ext_resource path="res://Enemy/Monster_2_Idle_ver1/Armature_Spidmon_idle_ver1_21.png" type="Texture" id=24]
-[ext_resource path="res://Enemy/Monster_2_Idle_ver1/Armature_Spidmon_idle_ver1_22.png" type="Texture" id=25]
-[ext_resource path="res://Enemy/Monster_2_Idle_ver1/Armature_Spidmon_idle_ver1_23.png" type="Texture" id=26]
-[ext_resource path="res://Enemy/Monster_2_Idle_ver1/Armature_Spidmon_idle_ver1_24.png" type="Texture" id=27]
-[ext_resource path="res://Enemy/Monster_2_Idle_attack/Armature_Spidmon_attack_ver1_00.png" type="Texture" id=28]
-[ext_resource path="res://Enemy/Monster_2_Idle_attack/Armature_Spidmon_attack_ver1_01.png" type="Texture" id=29]
-[ext_resource path="res://Enemy/Monster_2_Idle_attack/Armature_Spidmon_attack_ver1_02.png" type="Texture" id=30]
-[ext_resource path="res://Enemy/Monster_2_Idle_attack/Armature_Spidmon_attack_ver1_03.png" type="Texture" id=31]
-[ext_resource path="res://Enemy/Monster_2_Idle_attack/Armature_Spidmon_attack_ver1_04.png" type="Texture" id=32]
-[ext_resource path="res://Enemy/Monster_2_Idle_attack/Armature_Spidmon_attack_ver1_05.png" type="Texture" id=33]
-[ext_resource path="res://Enemy/Monster_2_Idle_attack/Armature_Spidmon_attack_ver1_06.png" type="Texture" id=34]
-[ext_resource path="res://Enemy/Monster_2_Idle_attack/Armature_Spidmon_attack_ver1_07.png" type="Texture" id=35]
-[ext_resource path="res://Enemy/Monster_2_Idle_attack/Armature_Spidmon_attack_ver1_08.png" type="Texture" id=36]
-[ext_resource path="res://Enemy/Monster_2_Idle_attack/Armature_Spidmon_attack_ver1_09.png" type="Texture" id=37]
-[ext_resource path="res://Enemy/Monster_2_Idle_attack/Armature_Spidmon_attack_ver1_10.png" type="Texture" id=38]
-[ext_resource path="res://Enemy/Monster_2_Idle_attack/Armature_Spidmon_attack_ver1_11.png" type="Texture" id=39]
-[ext_resource path="res://Enemy/Monster_2_Idle_attack/Armature_Spidmon_attack_ver1_12.png" type="Texture" id=40]
-[ext_resource path="res://Enemy/Monster_2_Idle_attack/Armature_Spidmon_attack_ver1_13.png" type="Texture" id=41]
-[ext_resource path="res://Enemy/Monster_2_Idle_attack/Armature_Spidmon_attack_ver1_14.png" type="Texture" id=42]
-[ext_resource path="res://Enemy/Monster_2_Idle_attack/Armature_Spidmon_attack_ver1_15.png" type="Texture" id=43]
-[ext_resource path="res://Enemy/Monster_2_Idle_attack/Armature_Spidmon_attack_ver1_16.png" type="Texture" id=44]
-[ext_resource path="res://Enemy/Monster_2_Idle_attack/Armature_Spidmon_attack_ver1_17.png" type="Texture" id=45]
-[ext_resource path="res://Enemy/Monster_2_Idle_attack/Armature_Spidmon_attack_ver1_18.png" type="Texture" id=46]
-[ext_resource path="res://Enemy/Monster_2_Idle_attack/Armature_Spidmon_attack_ver1_19.png" type="Texture" id=47]
-[ext_resource path="res://Enemy/Monster_2_Idle_attack/Armature_Spidmon_attack_ver1_20.png" type="Texture" id=48]
-[ext_resource path="res://Enemy/Monster_2_Idle_attack/Armature_Spidmon_attack_ver1_21.png" type="Texture" id=49]
-[ext_resource path="res://Enemy/Monster_2_Idle_attack/Armature_Spidmon_attack_ver1_22.png" type="Texture" id=50]
-[ext_resource path="res://Enemy/Monster_2_Idle_attack/Armature_Spidmon_attack_ver1_23.png" type="Texture" id=51]
-[ext_resource path="res://Enemy/Monster_2_Idle_attack/Armature_Spidmon_attack_ver1_24.png" type="Texture" id=52]
-[ext_resource path="res://Enemy/Monster_2_Idle_attack/Armature_Spidmon_attack_ver1_25.png" type="Texture" id=53]
-[ext_resource path="res://Enemy/Monster_2_Idle_attack/Armature_Spidmon_attack_ver1_26.png" type="Texture" id=54]
-[ext_resource path="res://Enemy/Monster_2_Idle_attack/Armature_Spidmon_attack_ver1_27.png" type="Texture" id=55]
-[ext_resource path="res://Enemy/Monster_2_Idle_attack/Armature_Spidmon_attack_ver1_28.png" type="Texture" id=56]
-[ext_resource path="res://Enemy/Monster_2_Idle_attack/Armature_Spidmon_attack_ver1_29.png" type="Texture" id=57]
-[ext_resource path="res://Enemy/Monster_2_Idle_attack/Armature_Spidmon_attack_ver1_30.png" type="Texture" id=58]
-[ext_resource path="res://Enemy/Monster_2_Idle_attack/Armature_Spidmon_attack_ver1_31.png" type="Texture" id=59]
-[ext_resource path="res://Enemy/Monster_2_Idle_attack/Armature_Spidmon_attack_ver1_32.png" type="Texture" id=60]
-[ext_resource path="res://Enemy/Monster_2_Idle_attack/Armature_Spidmon_attack_ver1_33.png" type="Texture" id=61]
-[ext_resource path="res://Enemy/Monster_2_Idle_attack/Armature_Spidmon_attack_ver1_34.png" type="Texture" id=62]
-[ext_resource path="res://Enemy/Monster_2_Idle_attack/Armature_Spidmon_attack_ver1_35.png" type="Texture" id=63]
-[ext_resource path="res://Enemy/Monster_2_Idle_attack/Armature_Spidmon_attack_ver1_36.png" type="Texture" id=64]
-[ext_resource path="res://Enemy/Monster_2_Idle_attack/Armature_Spidmon_attack_ver1_37.png" type="Texture" id=65]
-[ext_resource path="res://Enemy/Monster_2_Idle_attack/Armature_Spidmon_attack_ver1_38.png" type="Texture" id=66]
-[ext_resource path="res://Enemy/Monster_2_Idle_attack/Armature_Spidmon_attack_ver1_39.png" type="Texture" id=67]
-[ext_resource path="res://Enemy/Monster_2_Idle_attack/Armature_Spidmon_attack_ver1_40.png" type="Texture" id=68]
-[ext_resource path="res://Enemy/Monster_2_Idle_attack/Armature_Spidmon_attack_ver1_41.png" type="Texture" id=69]
-[ext_resource path="res://Enemy/Monster_2_Idle_attack/Armature_Spidmon_attack_ver1_42.png" type="Texture" id=70]
+[ext_resource path="res://Enemy/Monster_2_Idle_attack/Armature_Spidmon_attack_ver1_00.png" type="Texture" id=2]
+[ext_resource path="res://Enemy/Monster_2_Idle_attack/Armature_Spidmon_attack_ver1_01.png" type="Texture" id=3]
+[ext_resource path="res://Enemy/Monster_2_Idle_attack/Armature_Spidmon_attack_ver1_02.png" type="Texture" id=4]
+[ext_resource path="res://Enemy/Monster_2_Idle_attack/Armature_Spidmon_attack_ver1_03.png" type="Texture" id=5]
+[ext_resource path="res://Enemy/Monster_2_Idle_attack/Armature_Spidmon_attack_ver1_04.png" type="Texture" id=6]
+[ext_resource path="res://Enemy/Monster_2_Idle_attack/Armature_Spidmon_attack_ver1_05.png" type="Texture" id=7]
+[ext_resource path="res://Enemy/Monster_2_Idle_attack/Armature_Spidmon_attack_ver1_06.png" type="Texture" id=8]
+[ext_resource path="res://Enemy/Monster_2_Idle_attack/Armature_Spidmon_attack_ver1_07.png" type="Texture" id=9]
+[ext_resource path="res://Enemy/Monster_2_Idle_attack/Armature_Spidmon_attack_ver1_08.png" type="Texture" id=10]
+[ext_resource path="res://Enemy/Monster_2_Idle_attack/Armature_Spidmon_attack_ver1_09.png" type="Texture" id=11]
+[ext_resource path="res://Enemy/Monster_2_Idle_attack/Armature_Spidmon_attack_ver1_10.png" type="Texture" id=12]
+[ext_resource path="res://Enemy/Monster_2_Idle_attack/Armature_Spidmon_attack_ver1_11.png" type="Texture" id=13]
+[ext_resource path="res://Enemy/Monster_2_Idle_attack/Armature_Spidmon_attack_ver1_12.png" type="Texture" id=14]
+[ext_resource path="res://Enemy/Monster_2_Idle_attack/Armature_Spidmon_attack_ver1_13.png" type="Texture" id=15]
+[ext_resource path="res://Enemy/Monster_2_Idle_attack/Armature_Spidmon_attack_ver1_14.png" type="Texture" id=16]
+[ext_resource path="res://Enemy/Monster_2_Idle_attack/Armature_Spidmon_attack_ver1_15.png" type="Texture" id=17]
+[ext_resource path="res://Enemy/Monster_2_Idle_attack/Armature_Spidmon_attack_ver1_16.png" type="Texture" id=18]
+[ext_resource path="res://Enemy/Monster_2_Idle_attack/Armature_Spidmon_attack_ver1_17.png" type="Texture" id=19]
+[ext_resource path="res://Enemy/Monster_2_Idle_attack/Armature_Spidmon_attack_ver1_18.png" type="Texture" id=20]
+[ext_resource path="res://Enemy/Monster_2_Idle_attack/Armature_Spidmon_attack_ver1_19.png" type="Texture" id=21]
+[ext_resource path="res://Enemy/Monster_2_Idle_attack/Armature_Spidmon_attack_ver1_20.png" type="Texture" id=22]
+[ext_resource path="res://Enemy/Monster_2_Idle_attack/Armature_Spidmon_attack_ver1_21.png" type="Texture" id=23]
+[ext_resource path="res://Enemy/Monster_2_Idle_attack/Armature_Spidmon_attack_ver1_22.png" type="Texture" id=24]
+[ext_resource path="res://Enemy/Monster_2_Idle_attack/Armature_Spidmon_attack_ver1_23.png" type="Texture" id=25]
+[ext_resource path="res://Enemy/Monster_2_Idle_attack/Armature_Spidmon_attack_ver1_24.png" type="Texture" id=26]
+[ext_resource path="res://Enemy/Monster_2_Idle_attack/Armature_Spidmon_attack_ver1_25.png" type="Texture" id=27]
+[ext_resource path="res://Enemy/Monster_2_Idle_attack/Armature_Spidmon_attack_ver1_26.png" type="Texture" id=28]
+[ext_resource path="res://Enemy/Monster_2_Idle_attack/Armature_Spidmon_attack_ver1_27.png" type="Texture" id=29]
+[ext_resource path="res://Enemy/Monster_2_Idle_attack/Armature_Spidmon_attack_ver1_28.png" type="Texture" id=30]
+[ext_resource path="res://Enemy/Monster_2_Idle_attack/Armature_Spidmon_attack_ver1_29.png" type="Texture" id=31]
+[ext_resource path="res://Enemy/Monster_2_Idle_attack/Armature_Spidmon_attack_ver1_30.png" type="Texture" id=32]
+[ext_resource path="res://Enemy/Monster_2_Idle_attack/Armature_Spidmon_attack_ver1_31.png" type="Texture" id=33]
+[ext_resource path="res://Enemy/Monster_2_Idle_attack/Armature_Spidmon_attack_ver1_32.png" type="Texture" id=34]
+[ext_resource path="res://Enemy/Monster_2_Idle_attack/Armature_Spidmon_attack_ver1_33.png" type="Texture" id=35]
+[ext_resource path="res://Enemy/Monster_2_Idle_attack/Armature_Spidmon_attack_ver1_34.png" type="Texture" id=36]
+[ext_resource path="res://Enemy/Monster_2_Idle_attack/Armature_Spidmon_attack_ver1_35.png" type="Texture" id=37]
+[ext_resource path="res://Enemy/Monster_2_Idle_attack/Armature_Spidmon_attack_ver1_36.png" type="Texture" id=38]
+[ext_resource path="res://Enemy/Monster_2_Idle_attack/Armature_Spidmon_attack_ver1_37.png" type="Texture" id=39]
+[ext_resource path="res://Enemy/Monster_2_Idle_attack/Armature_Spidmon_attack_ver1_38.png" type="Texture" id=40]
+[ext_resource path="res://Enemy/Monster_2_Idle_attack/Armature_Spidmon_attack_ver1_39.png" type="Texture" id=41]
+[ext_resource path="res://Enemy/Monster_2_Idle_attack/Armature_Spidmon_attack_ver1_40.png" type="Texture" id=42]
+[ext_resource path="res://Enemy/Monster_2_Idle_attack/Armature_Spidmon_attack_ver1_41.png" type="Texture" id=43]
+[ext_resource path="res://Enemy/Monster_2_Idle_attack/Armature_Spidmon_attack_ver1_42.png" type="Texture" id=44]
+[ext_resource path="res://icon_flipped.png" type="Texture" id=45]
+[ext_resource path="res://Enemy/Monster_2_Idle_ver1/Armature_Spidmon_idle_ver1_00.png" type="Texture" id=46]
+[ext_resource path="res://Enemy/Monster_2_Idle_ver1/Armature_Spidmon_idle_ver1_01.png" type="Texture" id=47]
+[ext_resource path="res://Enemy/Monster_2_Idle_ver1/Armature_Spidmon_idle_ver1_02.png" type="Texture" id=48]
+[ext_resource path="res://Enemy/Monster_2_Idle_ver1/Armature_Spidmon_idle_ver1_03.png" type="Texture" id=49]
+[ext_resource path="res://Enemy/Monster_2_Idle_ver1/Armature_Spidmon_idle_ver1_04.png" type="Texture" id=50]
+[ext_resource path="res://Enemy/Monster_2_Idle_ver1/Armature_Spidmon_idle_ver1_05.png" type="Texture" id=51]
+[ext_resource path="res://Enemy/Monster_2_Idle_ver1/Armature_Spidmon_idle_ver1_06.png" type="Texture" id=52]
+[ext_resource path="res://Enemy/Monster_2_Idle_ver1/Armature_Spidmon_idle_ver1_07.png" type="Texture" id=53]
+[ext_resource path="res://Enemy/Monster_2_Idle_ver1/Armature_Spidmon_idle_ver1_08.png" type="Texture" id=54]
+[ext_resource path="res://Enemy/Monster_2_Idle_ver1/Armature_Spidmon_idle_ver1_09.png" type="Texture" id=55]
+[ext_resource path="res://Enemy/Monster_2_Idle_ver1/Armature_Spidmon_idle_ver1_10.png" type="Texture" id=56]
+[ext_resource path="res://Enemy/Monster_2_Idle_ver1/Armature_Spidmon_idle_ver1_11.png" type="Texture" id=57]
+[ext_resource path="res://Enemy/Monster_2_Idle_ver1/Armature_Spidmon_idle_ver1_12.png" type="Texture" id=58]
+[ext_resource path="res://Enemy/Monster_2_Idle_ver1/Armature_Spidmon_idle_ver1_13.png" type="Texture" id=59]
+[ext_resource path="res://Enemy/Monster_2_Idle_ver1/Armature_Spidmon_idle_ver1_14.png" type="Texture" id=60]
+[ext_resource path="res://Enemy/Monster_2_Idle_ver1/Armature_Spidmon_idle_ver1_15.png" type="Texture" id=61]
+[ext_resource path="res://Enemy/Monster_2_Idle_ver1/Armature_Spidmon_idle_ver1_16.png" type="Texture" id=62]
+[ext_resource path="res://Enemy/Monster_2_Idle_ver1/Armature_Spidmon_idle_ver1_17.png" type="Texture" id=63]
+[ext_resource path="res://Enemy/Monster_2_Idle_ver1/Armature_Spidmon_idle_ver1_18.png" type="Texture" id=64]
+[ext_resource path="res://Enemy/Monster_2_Idle_ver1/Armature_Spidmon_idle_ver1_19.png" type="Texture" id=65]
+[ext_resource path="res://Enemy/Monster_2_Idle_ver1/Armature_Spidmon_idle_ver1_20.png" type="Texture" id=66]
+[ext_resource path="res://Enemy/Monster_2_Idle_ver1/Armature_Spidmon_idle_ver1_21.png" type="Texture" id=67]
+[ext_resource path="res://Enemy/Monster_2_Idle_ver1/Armature_Spidmon_idle_ver1_22.png" type="Texture" id=68]
+[ext_resource path="res://Enemy/Monster_2_Idle_ver1/Armature_Spidmon_idle_ver1_23.png" type="Texture" id=69]
+[ext_resource path="res://Enemy/Monster_2_Idle_ver1/Armature_Spidmon_idle_ver1_24.png" type="Texture" id=70]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 198.414, 115.554 )
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
-"frames": [ ExtResource( 2 ) ],
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 44 ), ExtResource( 43 ), ExtResource( 42 ), ExtResource( 39 ), ExtResource( 41 ), ExtResource( 36 ), ExtResource( 31 ), ExtResource( 27 ), ExtResource( 26 ), ExtResource( 25 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 22 ) ],
+"loop": true,
+"name": "attack",
+"speed": 60.0
+}, {
+"frames": [ ExtResource( 45 ) ],
 "loop": true,
 "name": "dead",
 "speed": 1.0
 }, {
-"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ) ],
+"frames": [ ExtResource( 46 ), ExtResource( 47 ), ExtResource( 48 ), ExtResource( 49 ), ExtResource( 50 ), ExtResource( 51 ), ExtResource( 52 ), ExtResource( 53 ), ExtResource( 54 ), ExtResource( 55 ), ExtResource( 56 ), ExtResource( 57 ), ExtResource( 58 ), ExtResource( 59 ), ExtResource( 60 ), ExtResource( 61 ), ExtResource( 62 ), ExtResource( 63 ), ExtResource( 64 ), ExtResource( 65 ), ExtResource( 66 ), ExtResource( 67 ), ExtResource( 68 ), ExtResource( 69 ), ExtResource( 70 ) ],
 "loop": true,
 "name": "walk",
 "speed": 25.0
-}, {
-"frames": [ ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 46 ), ExtResource( 47 ), ExtResource( 48 ), ExtResource( 49 ), ExtResource( 50 ), ExtResource( 51 ), ExtResource( 52 ), ExtResource( 53 ), ExtResource( 54 ), ExtResource( 55 ), ExtResource( 56 ), ExtResource( 57 ), ExtResource( 58 ), ExtResource( 59 ), ExtResource( 60 ), ExtResource( 61 ), ExtResource( 62 ), ExtResource( 63 ), ExtResource( 64 ), ExtResource( 65 ), ExtResource( 66 ), ExtResource( 67 ), ExtResource( 68 ), ExtResource( 69 ), ExtResource( 70 ), ExtResource( 70 ), ExtResource( 69 ), ExtResource( 68 ), ExtResource( 65 ), ExtResource( 67 ), ExtResource( 62 ), ExtResource( 57 ), ExtResource( 53 ), ExtResource( 52 ), ExtResource( 51 ), ExtResource( 49 ), ExtResource( 50 ), ExtResource( 48 ) ],
-"loop": true,
-"name": "attack",
-"speed": 60.0
 } ]
 
 [node name="Enemy2" type="KinematicBody2D"]
@@ -105,10 +105,15 @@ position = Vector2( -2.18461, 30.7921 )
 scale = Vector2( 1.21571, 1.21571 )
 frames = SubResource( 2 )
 animation = "walk"
-frame = 7
+frame = 21
 playing = true
 
 [node name="Timer" type="Timer" parent="."]
 one_shot = true
 
+[node name="Attack" type="Timer" parent="."]
+wait_time = 20.0
+one_shot = true
+
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="Attack" to="." method="_on_Attack_timeout"]
