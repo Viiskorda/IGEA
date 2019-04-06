@@ -7,7 +7,7 @@ var is_dead = false
 const SHOOT = preload("res://BossShoot.tscn")
 
 
-export(int) var hp = 1
+
 export(int) var grav = 0
 export(int) var speed = 150
 
@@ -19,8 +19,9 @@ func attackRandomly():
 	return randi() % 3 
 	
 func dead():
-	hp -= 1
-	if hp <= 0:
+	Global.bossHealth -= 1
+	print(Global.bossHealth)
+	if Global.bossHealth <= 0:
 		is_dead = true
 		motion = Vector2(0, 0)
 		$EnemyCol.call_deferred('free')

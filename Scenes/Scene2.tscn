@@ -148,7 +148,6 @@ gravity_scale = 0.0
 can_sleep = false
 
 [node name="Kivid" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="TestRock" parent="Kivid" instance=ExtResource( 9 )]
 position = Vector2( 803.963, 1524.65 )
@@ -228,10 +227,9 @@ scale = Vector2( 1.50685, 1.58729 )
 script = ExtResource( 12 )
 change_level = "res://Scenes/Scene2.tscn"
 
-[node name="SuperBoss" parent="." instance=ExtResource( 13 )]
+[node name="Enemy2" parent="." instance=ExtResource( 13 )]
 position = Vector2( 2972.52, 111.094 )
 scale = Vector2( 0.586775, 0.586775 )
-hp = 10
 
 [node name="Enemy3" parent="." instance=ExtResource( 14 )]
 position = Vector2( 1581.25, 1709.74 )

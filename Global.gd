@@ -6,6 +6,7 @@ var health=10
 var mana=3
 var collidingWithChara=false
 var charaPosition;
+var bossHealth=10
 
 
 
