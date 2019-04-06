@@ -38,10 +38,12 @@ func _input(_event):
 		if jump_count < max_jump_count and double_jump == true:
 			motion.y = JUMP
 			jump_count += 1
+			audioJump()
 			on_ground = false
 			print(jump_count)
 		elif on_ground == true:
 			motion.y = JUMP
+			audioJump()
 			on_ground = false
 # Throw.tscn 
 #
@@ -172,7 +174,7 @@ func audioStep():
 			lastStep = 1
 		elif lastStep == 1: 
 			lastStep = 0
-			audioPlayer.stream = load("res://Sounds/step1.wav")
+			audioPlayer.stream = load("res://Sounds/step2.wav")
 			audioPlayer.play()
 			var t = Timer.new()
 			t.set_wait_time(0.323)
@@ -181,8 +183,30 @@ func audioStep():
 			t.start()
 			yield(t, "timeout")
 			lastStep = 2
+
+func audioJump():
+	var audioPlayer = AudioStreamPlayer.new()
+	self.add_child(audioPlayer)
+	audioPlayer.stream = load("res://Sounds/mana.wav")
+	audioPlayer.play()
+	var t = Timer.new()
+	t.set_wait_time(0.300)
+	t.set_one_shot(true)
+	self.add_child(t)
+	t.start()
+	yield(t, "timeout")
 	
-	
+func audioMana():
+	var audioPlayer = AudioStreamPlayer.new()
+	self.add_child(audioPlayer)
+	audioPlayer.stream = load("res://Sounds/mana.wav")
+	audioPlayer.play()
+	var t = Timer.new()
+	t.set_wait_time(0.300)
+	t.set_one_shot(true)
+	self.add_child(t)
+	t.start()
+	yield(t, "timeout")
 	
 	
 func dead():
