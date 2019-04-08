@@ -139,6 +139,7 @@ func _physics_process(_delta):
 			if Global.mana>0:
 				var shoot = SHOOT.instance()
 				Global.mana -= 1
+				audioShoot()
 				
 				if sign($Position2D.position.x) == 1:
 					shoot.set_shoot_direction(1)
@@ -164,6 +165,7 @@ func audioStep():
 		if lastStep == 2:
 			lastStep = 0
 			audioPlayer.stream = load("res://Sounds/step1.wav")
+			print("step1.wav")
 			audioPlayer.play()
 			var t = Timer.new()
 			t.set_wait_time(0.300)
@@ -175,6 +177,7 @@ func audioStep():
 		elif lastStep == 1: 
 			lastStep = 0
 			audioPlayer.stream = load("res://Sounds/step2.wav")
+			print("step2.wav")
 			audioPlayer.play()
 			var t = Timer.new()
 			t.set_wait_time(0.323)
@@ -189,6 +192,22 @@ func audioJump():
 	self.add_child(audioPlayer)
 	audioPlayer.stream = load("res://Sounds/mana.wav")
 	audioPlayer.play()
+	print("play mana.wav")
+	print(audioPlayer.stream)
+	var t = Timer.new()
+	t.set_wait_time(0.500)
+	t.set_one_shot(true)
+	self.add_child(t)
+	t.start()
+	yield(t, "timeout")
+	
+func audioShoot():
+	var audioPlayer = AudioStreamPlayer.new()
+	self.add_child(audioPlayer)
+	audioPlayer.stream = load("res://Sounds/mana.wav")
+	audioPlayer.play()
+	print("play mana.wav")
+	print(audioPlayer.stream)
 	var t = Timer.new()
 	t.set_wait_time(0.300)
 	t.set_one_shot(true)
@@ -196,11 +215,13 @@ func audioJump():
 	t.start()
 	yield(t, "timeout")
 	
-func audioMana():
+func audioDamage():
 	var audioPlayer = AudioStreamPlayer.new()
 	self.add_child(audioPlayer)
 	audioPlayer.stream = load("res://Sounds/mana.wav")
 	audioPlayer.play()
+	print("play mana.wav")
+	print(audioPlayer.stream)
 	var t = Timer.new()
 	t.set_wait_time(0.300)
 	t.set_one_shot(true)
@@ -212,6 +233,7 @@ func audioMana():
 func dead():
 	if getDamage == 1:
 		Global.health -= 1
+		audioDamage()
 		emit_signal("hp_changed", Global.health)
 		Global.collidingWithChara=false
 		$HP.text = str(Global.health)
