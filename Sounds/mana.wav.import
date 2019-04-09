@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/mana.wav-ece517b6cdd3f690ff2fbab30cb2cd51.sample"
+
+[deps]
+
+source_file="res://Sounds/mana.wav"
+dest_files=[ "res://.import/mana.wav-ece517b6cdd3f690ff2fbab30cb2cd51.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
