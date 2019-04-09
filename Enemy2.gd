@@ -2,10 +2,10 @@ extends KinematicBody2D
 const FLOOR = Vector2(0, -1)
 var motion = Vector2()
 var direction = 1
+var directiony = 1
 var temp=1
 var is_dead = false
 const SHOOT = preload("res://BossShoot.tscn")
-
 
 
 export(int) var grav = 0
@@ -31,10 +31,16 @@ func dead():
 func attack():
 	direction=0
 	temp=position.y
+	print(temp)
 	$AnimatedSprite.play("attack")
-	position.y+=5
-	if position.y<(temp-100):
-		position.y-=6
+	
+	if position.y<Global.charaPosition.y -100:
+		
+		position.y+=10
+	elif position.y>650:
+		position.y-=1
+	else:
+		position.y-=1
 
 	$Attack.start()
 	
@@ -48,7 +54,9 @@ func spit():
 
 func _physics_process(_delta):
 	if is_dead == false:
+		
 		motion.x = speed * -direction
+		motion.y = speed * -directiony
 		#print(position)
 		
 #		if direction == 1:
@@ -56,7 +64,9 @@ func _physics_process(_delta):
 #		else:
 #			$AnimatedSprite.flip_h = true
 			
-		
+		if position.y>900:
+			print("liiga all!!!")
+			position.y-=20
 		
 		#attack(attackRandomly())
 		motion.y += grav
@@ -68,28 +78,40 @@ func _physics_process(_delta):
 		motion = move_and_slide(motion, FLOOR)
 		
 		if position.x >= Global.charaPosition.x+150:
-			#print("suurem")
+			
 			direction = abs(direction) * 1
 			
 			$RayCast2D.position.x *= 1
 
 
 		if $RayCast2D.is_colliding() == false && position.x <= Global.charaPosition.x-150:
-			#print("väiksem")
+			
 			direction = abs(direction) * -1
 			
 			$RayCast2D.position.x *= -1
-	
-		
+
+		#Kui Chara on liiga üleval, siis koletis liigub üles
+		if position.y >= Global.charaPosition.y-100:
+
+
+			directiony = abs(directiony) * 1
+			$RayCast2D.position.y *= 1
+
+
+		if $RayCast2D.is_colliding() == false && position.y <= Global.charaPosition.y-500:
+			
+			directiony = abs(directiony) * -1
+			$RayCast2D.position.y *= -1	
+
 	
 		if Global.charaPosition.x>2300 && Global.charaPosition.x<3700 && Global.charaPosition.y<850:
 	
 			if position.x <= Global.charaPosition.x+2 && position.x >= Global.charaPosition.x-1:
-				print("kohal")
+				#print("kohal")
 				
 				attack()
-	
-			elif position.x <= Global.charaPosition.x+100 && position.x >= Global.charaPosition.x-100:
+		
+			elif position.x <= Global.charaPosition.x+200 && position.x >= Global.charaPosition.x-100:
 				var attackRandomly= randi() % 100
 				if attackRandomly==10:
 					spit()
