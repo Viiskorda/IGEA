@@ -91,21 +91,24 @@ func _physics_process(_delta):
 			$RayCast2D.position.x *= -1
 
 		#Kui Chara on liiga üleval, siis koletis liigub üles
-		if position.y >= Global.charaPosition.y-100:
-
-
-			directiony = abs(directiony) * 1
-			$RayCast2D.position.y *= 1
-
-
-		if $RayCast2D.is_colliding() == false && position.y <= Global.charaPosition.y-500:
-			
-			directiony = abs(directiony) * -1
-			$RayCast2D.position.y *= -1	
+		
 
 	
 		if Global.charaPosition.x>2300 && Global.charaPosition.x<3700 && Global.charaPosition.y<850:
-	
+			
+			
+			if position.y >= Global.charaPosition.y-100:
+
+
+				directiony = abs(directiony) * 1
+				$RayCast2D.position.y *= 1
+
+
+			if $RayCast2D.is_colliding() == false && position.y <= Global.charaPosition.y-500:
+			
+				directiony = abs(directiony) * -1
+				$RayCast2D.position.y *= -1	
+			
 			if position.x <= Global.charaPosition.x+2 && position.x >= Global.charaPosition.x-1:
 				#print("kohal")
 				
