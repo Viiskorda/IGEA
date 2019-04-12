@@ -20,10 +20,12 @@ func _physics_process(_delta):
 	for body in bodies:
 		if body.name=="Chara":
 			#get_tree().change_scene(change_level)
-			if onFlamefruit == false:
+			if onFlamefruit == false && Global.mana<12:
 				onFlamefruit = true
 				audioMana()
 				Global.mana+=3
+				if Global.mana>12:
+					Global.mana=12
 				#Flamefruite.hide()
 
 				for child in get_children():

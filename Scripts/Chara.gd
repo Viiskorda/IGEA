@@ -64,8 +64,9 @@ func _physics_process(_delta):
 
 #		if position.y >= 5000:
 #			get_tree().reload_current_scene()
-
-
+		if Global.generateHealt==true:
+			emit_signal("hp_changed", Global.health)
+			Global.generateHealt=false
 
 		
 		if Input.is_action_pressed('ui_right'):
@@ -231,7 +232,7 @@ func audioDamage():
 	
 	
 func dead():
-	if getDamage == 1:
+	if getDamage == 1 :
 		Global.health -= 1
 		audioDamage()
 		emit_signal("hp_changed", Global.health)

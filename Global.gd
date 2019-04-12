@@ -8,6 +8,7 @@ var collidingWithChara=false
 var charaPosition;
 var bossHealth=10
 var double_jump=false
+var generateHealt=false
 
 
 

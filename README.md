@@ -4,11 +4,12 @@ järgmiseks korraks 26.04
 
 - plönn korda/ helid leida
 - kõndimise heli liiga vali, tulistamise heli, klikkimise heli, seadetes navigeerimise heli, bossile heli, koopa heli\
-- Flamefruite peaks kaduma kohe
+- TEHTUD Flamefruite peaks kaduma kohe
 - esimesse stseeni flamefruite tekst! \
 - Manasid max 12
 - mana võiks olla väiksema raadiusega, ning tulistamine valgusega ja kerana\
 - jutumull, et esimesest stseenist ei saa välja kõndida\
+- elude taastamine värava juures
 
 - kui chara ei ole koopas, siis ämblik läheb tagasi üles
 - kui Chara on koopas, siis ümberringi mustaks ning uks sulgeb jälle
