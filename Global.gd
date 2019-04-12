@@ -9,6 +9,19 @@ var charaPosition;
 var bossHealth=10
 var double_jump=false
 var generateHealt=false
+var enemy1isalive=true
+var enemy2isalive=true
+
+var enemy3isalive=true
+var enemy4isalive=true
+var enemy5isalive=true
+var enemy6isalive=true
+var enemy2path
+var enemy3path
+var enemy4path
+var enemy5path
+var enemy6path
+
 
 
 

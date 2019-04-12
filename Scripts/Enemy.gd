@@ -13,7 +13,9 @@ export(int) var grav = 30
 export(int) var speed = 150
 
 func _ready():
-	pass
+	if Global.enemy1isalive==false:
+		queue_free()
+
 	
 	
 	
@@ -63,4 +65,5 @@ func _physics_process(_delta):
 #					get_slide_collision(i).collider.dead()
 
 func _on_Timer_timeout():
+	Global.enemy1isalive=false
 	queue_free()

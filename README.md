@@ -9,7 +9,7 @@ järgmiseks korraks 26.04
 - Manasid max 12
 - mana võiks olla väiksema raadiusega, ning tulistamine valgusega ja kerana\
 - jutumull, et esimesest stseenist ei saa välja kõndida\
-- elude taastamine värava juures
+- TEHTUD elude taastamine värava juures
 
 - kui chara ei ole koopas, siis ämblik läheb tagasi üles
 - kui Chara on koopas, siis ümberringi mustaks ning uks sulgeb jälle

@@ -15,7 +15,8 @@ func _ready():
 	var attackRandomly= attackRandomly()
 	print(attackRandomly)
 	beginningposition=position
-	
+	if Global.enemy2isalive==false:
+		queue_free()	
 	
 	
 func attackRandomly():
@@ -134,6 +135,7 @@ func _physics_process(_delta):
 					Global.collidingWithChara=true
 
 func _on_Timer_timeout():
+	Global.enemy2isalive=false
 	queue_free()
 
 func _on_Attack_timeout():
