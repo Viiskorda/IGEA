@@ -24,6 +24,7 @@ func _physics_process(_delta):
 				onFlamefruit = true
 				audioMana()
 				Global.mana+=3
+				#Flamefruite.hide()
 				var t = Timer.new()
 				t.set_wait_time(0.50)
 				t.set_one_shot(true)

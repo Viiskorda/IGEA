@@ -28,9 +28,9 @@ func _physics_process(_delta):
 			if (body.position.y+80) < rock.position.y:
 
 				rockMove = 0
-				rock.position.y += 1
+				rock.position.y += .5
 		elif rockMove == 1 && fisrPosition<rock.position:
-			rock.position.y -= .2
+			rock.position.y -= .5
 
 func _on_TestRockMove_area_entered(_area):
 	rockMove = 0
