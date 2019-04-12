@@ -23,6 +23,8 @@ järgmiseks korraks 26.04
 - kaamera sisse suumida ning taust panna vastavalt liikuma
 - kui elu läheb 0, siis viimases save-s ilmub nähtavale\
 - valgusvihud
+- kui kõik vaenlased on tapetud, alles siis ilmub koobas nähtavale (ehk must pilt selle kohal kaob ära)
+- koopa sisse teha area, millele vastu minnes hakkab boss alles tegutsema ning ümberringi läheb mustaks
 
 
 
