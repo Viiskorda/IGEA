@@ -4,19 +4,25 @@ järgmiseks korraks 26.04
 
 - plönn korda/ helid leida
 - kõndimise heli liiga vali, tulistamise heli, klikkimise heli, seadetes navigeerimise heli, bossile heli, koopa heli\
-- Mana peaks kaduma kohe
-- esimesse stseeni flamefruite + tekst. Manasid 12\
+- Flamefruite peaks kaduma kohe
+- esimesse stseeni flamefruite tekst! \
+- Manasid max 12
 - mana võiks olla väiksema raadiusega, ning tulistamine valgusega ja kerana\
 - jutumull, et esimesest stseenist ei saa välja kõndida\
+
+- kui chara ei ole koopas, siis ämblik läheb tagasi üles
+- kui Chara on koopas, siis ümberringi mustaks ning uks sulgeb jälle
+
+- vanamees fadein kui chara kohale jõuab, ning fadeout siis kui ämblik on tapetud kui teistkordne tekst on edastatud 
+- vanamehe dialoog
+- Level2 jõudes on mustpilt hajusate äärtega koopa kohal, ning koopas olles on ülejäänud must hajusate äärtega 
+- TEHTUD double jump alguses välja lülitada ja aktiveerida siis kui Boss on eemaldatud
+- koopa suu on kinni kuni kõik teised vaenlased on alles
+- Kui manasid on 12, siis flamefruidid manasid ei anna ning jäävad alles (flamefruidid) 
+- mustad ilusadpiirid
+- kaamera sisse suumida ning taust panna vastavalt liikuma
 - kui elu läheb 0, siis viimases save-s ilmub nähtavale\
 - valgusvihud
-
-- kaamera sisse suumida ning taust panna vastavalt liikuma
-- kui chara ei ole koopas, siis ämblik läheb tagasi üles
-- vanamees fadein kui chara kohale jõuab, ning fadeout kui chara minema läheb. 
-- vanamehe dialoog
-- uus pilt kera
-- TEHTUD double jump alguses välja lülitada ja aktiveerida siis kui Boss on eemaldatud
 
 
 

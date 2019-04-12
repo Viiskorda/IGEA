@@ -6,7 +6,7 @@ var directiony = 1
 var temp=1
 var is_dead = false
 const SHOOT = preload("res://BossShoot.tscn")
-
+var beginningposition
 
 export(int) var grav = 0
 export(int) var speed = 150
@@ -14,6 +14,9 @@ export(int) var speed = 150
 func _ready():
 	var attackRandomly= attackRandomly()
 	print(attackRandomly)
+	beginningposition=position
+	
+	
 	
 func attackRandomly():
 	return randi() % 3 
@@ -65,12 +68,13 @@ func _physics_process(_delta):
 #		else:
 #			$AnimatedSprite.flip_h = true
 			
-		if position.y>900:
+		if position.y>750:
 			print("liiga all!!!")
-			position.y-=20
+			directiony = abs(directiony) * -1
+			$RayCast2D.position.y *= -10	
 		
 		#attack(attackRandomly())
-		motion.y += grav
+		#motion.y += grav
 		
 #		if attackRandomly()==0:
 #			print(11111)
@@ -115,13 +119,15 @@ func _physics_process(_delta):
 				
 				attack()
 		
-			elif position.x <= Global.charaPosition.x+200 && position.x >= Global.charaPosition.x-100:
-				var attackRandomly= randi() % 100
+			elif position.x <= Global.charaPosition.x+300 && position.x >= Global.charaPosition.x-300:
+				var attackRandomly= randi() % 50
 				if attackRandomly==10:
 					spit()
 			else:
 				$AnimatedSprite.play("walk")
-
+		
+		elif Global.charaPosition.y>1500:
+			position=beginningposition
 		if get_slide_count() > 0:
 			for i in range(get_slide_count()):
 				if "Chara" in get_slide_collision(i).collider.name:
