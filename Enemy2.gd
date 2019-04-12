@@ -24,6 +24,7 @@ func dead():
 	if Global.bossHealth <= 0:
 		is_dead = true
 		motion = Vector2(0, 0)
+		Global.double_jump=true
 		$EnemyCol.call_deferred('free')
 		$AnimatedSprite.play("dead")
 		$Timer.start()

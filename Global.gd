@@ -7,6 +7,7 @@ var mana=3
 var collidingWithChara=false
 var charaPosition;
 var bossHealth=10
+var double_jump=false
 
 
 

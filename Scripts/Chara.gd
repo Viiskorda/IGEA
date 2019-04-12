@@ -23,7 +23,7 @@ var getDamage = 1
 var lastStep = 2
 var jump_count = 0
 var max_jump_count = 2
-var double_jump = true
+
 
 
 func _ready():
@@ -35,7 +35,7 @@ func _input(_event):
 	if Input.is_action_pressed("ui_jump"):
 		if jump_count == 1:
 			jump_count = 2
-		if jump_count < max_jump_count and double_jump == true:
+		if jump_count < max_jump_count and Global.double_jump == true:
 			motion.y = JUMP
 			jump_count += 1
 			audioJump()

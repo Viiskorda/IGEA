@@ -15,7 +15,9 @@ järgmiseks korraks 26.04
 - kui chara ei ole koopas, siis ämblik läheb tagasi üles
 - vanamees fadein kui chara kohale jõuab, ning fadeout kui chara minema läheb. 
 - vanamehe dialoog
-- 
+- uus pilt kera
+- TEHTUD double jump alguses välja lülitada ja aktiveerida siis kui Boss on eemaldatud
+
 
 
 

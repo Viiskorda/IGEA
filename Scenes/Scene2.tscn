@@ -148,6 +148,7 @@ gravity_scale = 0.0
 can_sleep = false
 
 [node name="Kivid" type="Node2D" parent="."]
+editor/display_folded = true
 
 [node name="TestRock" parent="Kivid" instance=ExtResource( 9 )]
 position = Vector2( 803.963, 1524.65 )
