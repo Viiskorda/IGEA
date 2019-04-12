@@ -1,6 +1,6 @@
 [gd_scene load_steps=24 format=2]
 
-[ext_resource path="res://Background/level_2_test6.png" type="Texture" id=1]
+[ext_resource path="res://images/level_2_test7.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/Chara.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/LevelComplete.tscn" type="PackedScene" id=3]
 [ext_resource path="res://floor.tscn" type="PackedScene" id=4]
@@ -48,6 +48,7 @@ change_level = "res://Scenes/Scene2.tscn"
 
 [node name="Floor" type="Node2D" parent="."]
 editor/display_folded = true
+visible = false
 
 [node name="NormalFloor" type="Node2D" parent="Floor"]
 editor/display_folded = true
