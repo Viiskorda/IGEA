@@ -29,7 +29,7 @@ var max_jump_count = 2
 func _ready():
 	emit_signal("hp_changed", Global.health)
 	emit_signal("mp_changed", Global.mana)
-	
+	add_to_group('Persist')
 
 func _input(_event):
 	if Input.is_action_pressed("ui_jump"):
@@ -264,13 +264,14 @@ func _on_Timer_timeout():
 	Global.mana =3
 	Global.goto_scene(change_level,target_spawn_group)
 	
-#func save():
-#	var save_dict={
-#		pos={
-#			x=get_pos().x,
-#			y=get_pos().y
-#		},
-#		Global.health=Global.health
-#	}
-#	return save_dict
+func save():
+	var save_dict={
+		pos={
+			x=position.x,
+			y=position.y
+		},
+		"Global.health" : Global.health,
+		"Global.mana" : Global.mana
+	}	
+	return save_dict
 	

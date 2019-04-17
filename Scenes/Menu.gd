@@ -8,7 +8,7 @@ func _ready():
 	
 	
 	
-func _physics_process(delta):
+func _physics_process(_delta):
 	if $VBoxContainer2/TextureButton.is_hovered()==true:
 		$VBoxContainer2/TextureButton.grab_focus()
 	if $VBoxContainer2/TextureButton2.is_hovered()==true:
