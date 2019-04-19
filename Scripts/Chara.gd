@@ -13,6 +13,7 @@ const JUMP=-800
 const DAMAGE_DELAY = 0.5
 
 const SHOOT = preload("res://Scenes/Shoot.tscn")
+const SAVE_PATH = "res://save.json"
 
 var motion=Vector2();
 var Throw=preload("res://Throw.tscn")
@@ -260,9 +261,24 @@ func wait():
 	
 func _on_Timer_timeout():
 	#get_tree().reload_current_scene()
-	Global.health =10
-	Global.mana =3
-	Global.goto_scene(change_level,target_spawn_group)
+	var save_file = File.new()
+	if not save_file.file_exists(SAVE_PATH):
+		return
+	save_file.open(SAVE_PATH, File.READ)
+	var data = {}
+	data = parse_json(save_file.get_as_text())
+	for node_path in data.keys():
+		var node = get_node(node_path)
+		
+		for attribute in data[node_path]:
+			if attribute == "pos":
+				node.set_position(Vector2(data[node_path]['pos']['x'], data[node_path]['pos']['y']))
+			else:
+				#node.set(attribute, data[node_path][attribute])
+				Global.health = data[node_path]['Global.health']
+				Global.mana = data[node_path]['Global.mana']
+				
+		Global.goto_scene(change_level,target_spawn_group)
 	
 func save():
 	var save_dict={

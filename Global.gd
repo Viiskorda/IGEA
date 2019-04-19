@@ -42,7 +42,6 @@ func _finished_loading_scene():
 		print(spawn_target.position)
 		#print(player.position)
 		player.position=spawn_target.position
-	print("SAVESIN MÄNGU")
 	save_game()
 
 
