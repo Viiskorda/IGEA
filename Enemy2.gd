@@ -12,6 +12,8 @@ export(int) var grav = 0
 export(int) var speed = 150
 
 func _ready():
+	if Global.enemy2isalive==false:
+		queue_free()
 	var attackRandomly= attackRandomly()
 	print(attackRandomly)
 	beginningposition=position
@@ -27,6 +29,7 @@ func dead():
 	print(Global.bossHealth)
 	if Global.bossHealth <= 0:
 		is_dead = true
+		Global.firstConversationWithChara=2
 		motion = Vector2(0, 0)
 		Global.double_jump=true
 		$EnemyCol.call_deferred('free')

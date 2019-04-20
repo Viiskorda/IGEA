@@ -9,6 +9,9 @@ var charaPosition;
 var bossHealth=10
 var double_jump=false
 var generateHealt=false
+var firstConversationWithChara=0
+
+
 var enemy1isalive=true
 var enemy2isalive=true
 
@@ -21,6 +24,28 @@ var enemy3path
 var enemy4path
 var enemy5path
 var enemy6path
+
+
+var flamefruit0=true
+var flamefruit1=true
+var flamefruit2=true
+var flamefruit3=true
+var flamefruit4=true
+var flamefruit5=true
+var flamefruit6=true
+var flamefruit7=true
+var flamefruit8=true
+
+var flamefruit0path
+var flamefruit1path
+var flamefruit2path
+var flamefruit3path
+var flamefruit4path
+var flamefruit5path
+var flamefruit6path
+var flamefruit7path
+var flamefruit8path
+
 
 
 const SAVE_PATH = "res://save.json"

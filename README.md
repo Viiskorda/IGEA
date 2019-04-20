@@ -12,10 +12,10 @@ järgmiseks korraks 26.04
 - TEHTUD elude taastamine värava juures
 - TEHTUD otsa saanud vaenlased ei ilmu enam stseeni vahetamisel
 
-- kui chara ei ole koopas, siis ämblik läheb tagasi üles
+- ENAM-VÄHEM kui chara ei ole koopas, siis ämblik läheb tagasi üles
 - kui Chara on koopas, siis ümberringi mustaks ning uks sulgeb jälle
 
-- vanamees fadein kui chara kohale jõuab, ning fadeout siis kui ämblik on tapetud kui teistkordne tekst on edastatud 
+- POOLELI vanamees fadein kui chara kohale jõuab, ning fadeout siis kui ämblik on tapetud kui teistkordne tekst on edastatud 
 - vanamehe dialoog
 - Level2 jõudes on mustpilt hajusate äärtega koopa kohal, ning koopas olles on ülejäänud must hajusate äärtega 
 - TEHTUD double jump alguses välja lülitada ja aktiveerida siis kui Boss on eemaldatud

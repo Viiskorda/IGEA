@@ -56,6 +56,7 @@ func throw(x):
 	rock.apply_impulse(Vector2(),imp)
 
 func _physics_process(_delta):
+	
 	Global.charaPosition=position
 	emit_signal("mp_changed", Global.mana)
 	if is_dead == false:
@@ -277,6 +278,13 @@ func _on_Timer_timeout():
 				#node.set(attribute, data[node_path][attribute])
 				Global.health = data[node_path]['Global.health']
 				Global.mana = data[node_path]['Global.mana']
+				Global.enemy1isalive = data[node_path]['Global.enemy1isalive']
+				Global.enemy2isalive = data[node_path]['Global.enemy2isalive']
+				Global.enemy3isalive = data[node_path]['Global.enemy3isalive']
+				Global.enemy4isalive = data[node_path]['Global.enemy4isalive']
+				Global.enemy5isalive = data[node_path]['Global.enemy5isalive']
+				Global.enemy6isalive = data[node_path]['Global.enemy6isalive']
+
 				
 		Global.goto_scene(change_level,target_spawn_group)
 	
@@ -287,7 +295,23 @@ func save():
 			y=position.y
 		},
 		"Global.health" : Global.health,
-		"Global.mana" : Global.mana
+		"Global.mana" : Global.mana,
+		"Global.enemy1isalive" : Global.enemy1isalive,
+		"Global.enemy2isalive" : Global.enemy2isalive,
+		"Global.enemy3isalive" : Global.enemy3isalive,
+		"Global.enemy4isalive" : Global.enemy4isalive,
+		"Global.enemy5isalive" : Global.enemy5isalive,
+		"Global.enemy6isalive" : Global.enemy6isalive,
+		"Global.flamefruit0" : Global.flamefruit0,
+		"Global.flamefruit1" : Global.flamefruit1,
+		"Global.flamefruit2" : Global.flamefruit2,
+		"Global.flamefruit3" : Global.flamefruit3,
+		"Global.flamefruit4" : Global.flamefruit4,
+		"Global.flamefruit5" : Global.flamefruit5,
+		"Global.flamefruit6" : Global.flamefruit6,
+		"Global.flamefruit7" : Global.flamefruit7,
+		"Global.flamefruit8" : Global.flamefruit8
+		
 	}	
 	return save_dict
 	

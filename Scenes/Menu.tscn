@@ -1,11 +1,12 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scenes/Menu.gd" type="Script" id=1]
 [ext_resource path="res://images/Title screen/title_screen_background.png" type="Texture" id=2]
 [ext_resource path="res://images/Title screen/name.png" type="Texture" id=3]
 [ext_resource path="res://images/Title screen/newgame.png" type="Texture" id=4]
 [ext_resource path="res://images/Title screen/selection.png" type="Texture" id=5]
-[ext_resource path="res://images/Title screen/exit.png" type="Texture" id=6]
+[ext_resource path="res://images/continue.png" type="Texture" id=6]
+[ext_resource path="res://images/Title screen/exit.png" type="Texture" id=7]
 
 [node name="Menu" type="Node"]
 script = ExtResource( 1 )
@@ -48,12 +49,20 @@ margin_bottom = 126.0
 texture_normal = ExtResource( 4 )
 texture_focused = ExtResource( 5 )
 
-[node name="TextureButton2" type="TextureButton" parent="VBoxContainer2"]
+[node name="TextureButton3" type="TextureButton" parent="VBoxContainer2"]
 margin_top = 130.0
 margin_right = 433.0
-margin_bottom = 239.0
+margin_bottom = 244.0
 texture_normal = ExtResource( 6 )
 texture_focused = ExtResource( 5 )
 
+[node name="TextureButton2" type="TextureButton" parent="VBoxContainer2"]
+margin_top = 248.0
+margin_right = 433.0
+margin_bottom = 357.0
+texture_normal = ExtResource( 7 )
+texture_focused = ExtResource( 5 )
+
 [connection signal="pressed" from="VBoxContainer2/TextureButton" to="." method="_on_TextureButton_pressed"]
+[connection signal="pressed" from="VBoxContainer2/TextureButton3" to="." method="_on_TextureButton3_pressed"]
 [connection signal="pressed" from="VBoxContainer2/TextureButton2" to="." method="_on_TextureButton2_pressed"]

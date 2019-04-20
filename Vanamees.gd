@@ -13,3 +13,25 @@ func _ready():
 #	pass
 func _physics_process(_delta):
 	$AnimatedSprite.play("idle")
+	if Global.charaPosition.x  < 1700 and Global.charaPosition.x  > 1400 and Global.charaPosition.y  < 1310:
+		$AnimatedSprite.modulate.a = 1
+		Global.firstConversationWithChara=1
+	elif Global.firstConversationWithChara>1:
+		$AnimatedSprite.modulate.a = 1
+	else:
+		$AnimatedSprite.modulate.a = .1
+		
+	
+	
+	
+func _if_chara_is_near(body):
+		if "Chara" in body.name:
+			if Global.firstConversationWithChara==1:
+				#Esimene jutuajamine Charaga
+				pass
+			if Global.firstConversationWithChara==2:
+				#Teine jutuajamine Charaga
+				pass
+			
+
+			

@@ -33,6 +33,22 @@ func load_game():
 				#node.set(attribute, data[node_path][attribute])
 				Global.health = data[node_path]['Global.health']
 				Global.mana = data[node_path]['Global.mana']
+				Global.enemy1isalive = data[node_path]['Global.enemy1isalive']
+				Global.enemy2isalive = data[node_path]['Global.enemy2isalive']
+				Global.enemy3isalive = data[node_path]['Global.enemy3isalive']
+				Global.enemy4isalive = data[node_path]['Global.enemy4isalive']
+				Global.enemy5isalive = data[node_path]['Global.enemy5isalive']
+				Global.enemy6isalive = data[node_path]['Global.enemy6isalive']
+				
+				Global.flamefruit0 = data[node_path]['Global.flamefruit0']
+				Global.flamefruit1 = data[node_path]['Global.flamefruit1']
+				Global.flamefruit2 = data[node_path]['Global.flamefruit2']
+				Global.flamefruit3 = data[node_path]['Global.flamefruit3']
+				Global.flamefruit4 = data[node_path]['Global.flamefruit4']
+				Global.flamefruit5 = data[node_path]['Global.flamefruit5']
+				Global.flamefruit6 = data[node_path]['Global.flamefruit6']
+				Global.flamefruit7 = data[node_path]['Global.flamefruit7']
+				Global.flamefruit8 = data[node_path]['Global.flamefruit8']
 				
 		Global.goto_scene(change_level,target_spawn_group)
 
