@@ -19,6 +19,7 @@ onready var flamefruite8=get_node("Flamefruite8")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	Global.prevScene=Global.current_scene
 	#print_tree()
 	Global.enemy2path=enemy2
 	Global.enemy3path=enemy3

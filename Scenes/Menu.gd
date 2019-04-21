@@ -9,6 +9,11 @@ func _ready():
 	
 	
 func _physics_process(_delta):
+	if Input.is_action_pressed('ui_cancel'):
+		get_tree().paused = false
+		print("cancel")
+	
+	
 	if $VBoxContainer2/TextureButton.is_hovered()==true:
 		$VBoxContainer2/TextureButton.grab_focus()
 	if $VBoxContainer2/TextureButton2.is_hovered()==true:
@@ -26,7 +31,7 @@ func _on_TextureButton2_pressed():
 	get_tree().quit()
 
 func _on_TextureButton3_pressed():
-	pass
+	get_tree().change_scene(Global.prevScene.name)
 
 
 

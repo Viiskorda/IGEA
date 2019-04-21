@@ -69,7 +69,7 @@ func _physics_process(_delta):
 		if Global.generateHealt==true:
 			emit_signal("hp_changed", Global.health)
 			Global.generateHealt=false
-
+						
 		
 		if Input.is_action_pressed('ui_right'):
 			direction=0

@@ -10,6 +10,7 @@ var bossHealth=10
 var double_jump=false
 var generateHealt=false
 var firstConversationWithChara=0
+var prevScene
 
 
 var enemy1isalive=true
@@ -55,7 +56,8 @@ func _ready():
     current_scene = root.get_child(root.get_child_count() - 1)
 
 func _physics_process(_delta):
-#	print(current_scene.name)
+
+	#print(prevScene.name)
 	pass
 
 func _finished_loading_scene():
