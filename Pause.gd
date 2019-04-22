@@ -1,4 +1,4 @@
-extends Node
+extends Control
 
 export(String, FILE, "*.tscn") var change_level
 export(String) var target_spawn_group
@@ -9,10 +9,7 @@ func _ready():
 	
 	
 func _physics_process(_delta):
-	if Input.is_action_pressed('ui_cancel'):
-		get_tree().paused = false
-		print("cancel")
-	
+
 	
 	if $VBoxContainer2/TextureButton.is_hovered()==true:
 		$VBoxContainer2/TextureButton.grab_focus()
@@ -21,53 +18,35 @@ func _physics_process(_delta):
 	if $VBoxContainer2/TextureButton3.is_hovered()==true:
 		$VBoxContainer2/TextureButton3.grab_focus()
 		
-	
+
+func _input(event):	
+	if event.is_action_pressed('ui_cancel'):
+		$VBoxContainer2/TextureButton.grab_focus()
+		get_tree().paused = not get_tree().paused
+		visible= not visible
+
+
 
 func _on_TextureButton_pressed():
+	get_tree().paused = not get_tree().paused
+	visible= not visible
 	Global.goto_scene(change_level,target_spawn_group)
 	#get_tree().change_scene("Scenes/Scene.tscn")
 	#Global.goto_scene(change_level,target_spawn_group)
 	
 
 func _on_TextureButton2_pressed():
-	get_tree().quit()
+	get_tree().paused = not get_tree().paused
+	visible= not visible
 
 func _on_TextureButton3_pressed():
-	get_tree().change_scene(Global.prevScene.name)
+	#get_tree().change_scene(Global.prevScene.name)
+	get_tree().quit()
 
 
 
 
 
-
-
-
-#extends CanvasLayer
-#
-#signal start_game
-#
-#func show_message(text):
-#	$MessageLabel.text=text
-#	$MessageLabel.show()
-#	$MessageTimer.start()
-#
-#func game_over():
-#	show_message("Game Over")
-#	yield($MessageTimer, "timeout")
-#	$StartButton.show()
-#	$MessageLabel.text="Chara The Manana"
-#	$MessageLabel.show()
-#
-#func update_score(mana):
-#	$Mana.text=str(mana)
-#
-#func _on_MessageTimer_timeout():
-#	$MessageLabel.hide()
-#
-#
-#func _on_StartButton_pressed():
-#	$StartButton.hide()
-#	emit_signal("start_game")
 
 
 

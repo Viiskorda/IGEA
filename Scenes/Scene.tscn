@@ -19,7 +19,7 @@
 [ext_resource path="res://Flamefruite.tscn" type="PackedScene" id=17]
 [ext_resource path="res://Falling.tscn" type="PackedScene" id=18]
 [ext_resource path="res://Falling.gd" type="Script" id=19]
-[ext_resource path="res://Scenes/Pause.gd" type="Script" id=20]
+[ext_resource path="res://Pause.tscn" type="PackedScene" id=20]
 
 [node name="Scene" type="Node2D"]
 script = ExtResource( 1 )
@@ -121,13 +121,10 @@ scale = Vector2( 1, 4.265 )
 script = ExtResource( 19 )
 change_level = "res://Scenes/Scene.tscn"
 
-[node name="Pause" type="Sprite" parent="."]
-pause_mode = 2
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Pause" parent="CanvasLayer" instance=ExtResource( 20 )]
 visible = false
-position = Vector2( 918.397, 405.386 )
-scale = Vector2( 33.5863, 13.9673 )
-texture = ExtResource( 16 )
-script = ExtResource( 20 )
 
 [connection signal="hp_changed" from="Characters/Chara" to="HUD" method="update_healthbar"]
 [connection signal="mp_changed" from="Characters/Chara" to="HUD" method="update_manabar"]
