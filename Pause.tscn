@@ -1,12 +1,13 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Pause.gd" type="Script" id=1]
 [ext_resource path="res://images/Title screen/title_screen_background.png" type="Texture" id=2]
 [ext_resource path="res://images/Title screen/name.png" type="Texture" id=3]
-[ext_resource path="res://images/Title screen/newgame.png" type="Texture" id=4]
+[ext_resource path="res://images/titles/newgame.png" type="Texture" id=4]
 [ext_resource path="res://images/Title screen/selection.png" type="Texture" id=5]
-[ext_resource path="res://images/Title screen/continue.png" type="Texture" id=6]
-[ext_resource path="res://images/Title screen/exit.png" type="Texture" id=7]
+[ext_resource path="res://images/titles/continue.png" type="Texture" id=6]
+[ext_resource path="res://images/titles/settings_g.png" type="Texture" id=7]
+[ext_resource path="res://images/titles/exit.png" type="Texture" id=8]
 
 [node name="Pause" type="Control"]
 pause_mode = 2
@@ -25,13 +26,13 @@ centered = false
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 margin_left = 770.0
 margin_top = 224.0
-margin_right = 2158.0
+margin_right = 1676.0
 margin_bottom = 516.0
-rect_scale = Vector2( 0.5, 0.6 )
+rect_scale = Vector2( 0.6, 0.6 )
 alignment = 1
 
 [node name="TextureRect" type="TextureRect" parent="VBoxContainer"]
-margin_right = 1388.0
+margin_right = 906.0
 margin_bottom = 292.0
 texture = ExtResource( 3 )
 
@@ -44,26 +45,34 @@ rect_scale = Vector2( 0.5, 0.5 )
 alignment = 1
 
 [node name="TextureButton" type="TextureButton" parent="VBoxContainer2"]
-margin_top = 79.0
-margin_right = 433.0
-margin_bottom = 205.0
+margin_top = 26.0
+margin_right = 434.0
+margin_bottom = 139.0
 texture_normal = ExtResource( 4 )
 texture_focused = ExtResource( 5 )
 
 [node name="TextureButton2" type="TextureButton" parent="VBoxContainer2"]
-margin_top = 209.0
-margin_right = 433.0
-margin_bottom = 323.0
+margin_top = 143.0
+margin_right = 434.0
+margin_bottom = 256.0
 texture_normal = ExtResource( 6 )
 texture_focused = ExtResource( 5 )
 
-[node name="TextureButton3" type="TextureButton" parent="VBoxContainer2"]
-margin_top = 327.0
-margin_right = 433.0
-margin_bottom = 436.0
+[node name="TextureButton4" type="TextureButton" parent="VBoxContainer2"]
+margin_top = 260.0
+margin_right = 434.0
+margin_bottom = 373.0
 texture_normal = ExtResource( 7 )
+texture_focused = ExtResource( 5 )
+
+[node name="TextureButton3" type="TextureButton" parent="VBoxContainer2"]
+margin_top = 377.0
+margin_right = 434.0
+margin_bottom = 490.0
+texture_normal = ExtResource( 8 )
 texture_focused = ExtResource( 5 )
 
 [connection signal="pressed" from="VBoxContainer2/TextureButton" to="." method="_on_TextureButton_pressed"]
 [connection signal="pressed" from="VBoxContainer2/TextureButton2" to="." method="_on_TextureButton2_pressed"]
+[connection signal="pressed" from="VBoxContainer2/TextureButton4" to="." method="_on_TextureButton3_pressed"]
 [connection signal="pressed" from="VBoxContainer2/TextureButton3" to="." method="_on_TextureButton3_pressed"]
