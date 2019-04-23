@@ -57,6 +57,15 @@ texture = ExtResource( 4 )
 [node name="Chara" parent="." instance=ExtResource( 5 )]
 position = Vector2( 441.553, 1522.28 )
 
+[node name="Camera2D" type="Camera2D" parent="Chara"]
+offset = Vector2( 100, 0 )
+current = true
+zoom = Vector2( 0.7, 0.7 )
+limit_left = 100
+limit_right = 3800
+editor_draw_limits = true
+editor_draw_drag_margin = true
+
 [node name="LevelComplete" parent="." instance=ExtResource( 6 )]
 position = Vector2( 3521.82, 1674.34 )
 change_level = "res://Scenes/Scene2.tscn"

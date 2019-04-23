@@ -85,11 +85,22 @@ hp = 2
 ] instance=ExtResource( 10 )]
 position = Vector2( -113.035, 414.082 )
 
+[node name="Camera2D2" type="Camera2D" parent="Characters/Chara"]
+scale = Vector2( 1, 1 )
+offset = Vector2( 100, 0 )
+current = true
+zoom = Vector2( 0.7, 0.7 )
+limit_left = -300
+limit_right = 2000
+limit_smoothed = true
+editor_draw_limits = true
+editor_draw_drag_margin = true
+
 [node name="sky" type="ParallaxBackground" parent="Characters/Chara"]
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="Characters/Chara/sky"]
 position = Vector2( -113.035, 414.082 )
-motion_scale = Vector2( 0.5, 0.5 )
+motion_scale = Vector2( 0.7, 0.7 )
 
 [node name="Sprite" type="Sprite" parent="Characters/Chara/sky/ParallaxLayer"]
 position = Vector2( -761.815, -892.389 )
@@ -131,8 +142,6 @@ position = Vector2( -105.177, -462.349 )
 scale = Vector2( 0.757, 0.757 )
 texture = ExtResource( 12 )
 centered = false
-
-[node name="Camera2D2" type="Camera2D" parent="Characters/Chara"]
 
 [node name="floor" parent="." instance=ExtResource( 13 )]
 visible = false

@@ -81,17 +81,6 @@ z_index = 1
 script = ExtResource( 1 )
 change_level = "res://Scenes/Menu.tscn"
 
-[node name="Camera2D" type="Camera2D" parent="."]
-visible = false
-position = Vector2( 2, 0 )
-offset = Vector2( 100, 0 )
-current = true
-zoom = Vector2( 0.7, 0.7 )
-limit_left = -300
-limit_smoothed = true
-editor_draw_limits = true
-editor_draw_drag_margin = true
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
 position = Vector2( 3.3309, 1.58887 )
