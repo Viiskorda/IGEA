@@ -18,8 +18,8 @@ change_level = "res://Scenes/Scene.tscn"
 target_spawn_group = "player"
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 6.06702, 0 )
-scale = Vector2( 0.512739, 0.504625 )
+position = Vector2( -3.45561, 0 )
+scale = Vector2( 0.515219, 0.504625 )
 texture = ExtResource( 2 )
 centered = false
 
