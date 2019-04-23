@@ -20,7 +20,7 @@ func _physics_process(_delta):
 	if isEaten==false:
 		var bodies= get_overlapping_bodies()
 		for body in bodies:
-			print(self)
+		
 			if body.name=="Chara":
 				#get_tree().change_scene(change_level)
 				if onFlamefruit == false && Global.mana<12:

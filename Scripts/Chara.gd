@@ -96,9 +96,9 @@ func _physics_process(_delta):
 				 $Position2D.position.x *= -1
 			if Input.is_action_just_pressed('ui_throw'):
 				throw(20)
-	
+		
 		elif Input.is_action_pressed('ui_left'):
-			if position.x < -100:
+			if position.x < -150:
 				motion.x = 0
 			else:
 				direction=1

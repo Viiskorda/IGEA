@@ -4,7 +4,7 @@ export(String, FILE, "*.tscn") var change_level
 export(String) var target_spawn_group
 
 func _ready():
-	$VBoxContainer2/TextureButton.grab_focus()
+	$VBoxContainer2/TextureButton2.grab_focus()
 	
 	
 	
@@ -21,7 +21,7 @@ func _physics_process(_delta):
 
 func _input(event):	
 	if event.is_action_pressed('ui_cancel'):
-		$VBoxContainer2/TextureButton.grab_focus()
+		$VBoxContainer2/TextureButton2.grab_focus()
 		get_tree().paused = not get_tree().paused
 		visible= not visible
 

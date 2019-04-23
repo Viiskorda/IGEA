@@ -3,9 +3,9 @@
 [ext_resource path="res://Pause.gd" type="Script" id=1]
 [ext_resource path="res://images/Title screen/title_screen_background.png" type="Texture" id=2]
 [ext_resource path="res://images/Title screen/name.png" type="Texture" id=3]
-[ext_resource path="res://images/titles/newgame.png" type="Texture" id=4]
+[ext_resource path="res://images/titles/continue.png" type="Texture" id=4]
 [ext_resource path="res://images/Title screen/selection.png" type="Texture" id=5]
-[ext_resource path="res://images/titles/continue.png" type="Texture" id=6]
+[ext_resource path="res://images/titles/newgame.png" type="Texture" id=6]
 [ext_resource path="res://images/titles/settings_g.png" type="Texture" id=7]
 [ext_resource path="res://images/titles/exit.png" type="Texture" id=8]
 
@@ -18,8 +18,8 @@ change_level = "res://Scenes/Scene.tscn"
 target_spawn_group = "player"
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 3.79492, 0 )
-scale = Vector2( 0.510372, 0.499366 )
+position = Vector2( 6.06702, 0 )
+scale = Vector2( 0.512739, 0.504625 )
 texture = ExtResource( 2 )
 centered = false
 
@@ -44,14 +44,14 @@ margin_bottom = 880.0
 rect_scale = Vector2( 0.5, 0.5 )
 alignment = 1
 
-[node name="TextureButton" type="TextureButton" parent="VBoxContainer2"]
+[node name="TextureButton2" type="TextureButton" parent="VBoxContainer2"]
 margin_top = 26.0
 margin_right = 434.0
 margin_bottom = 139.0
 texture_normal = ExtResource( 4 )
 texture_focused = ExtResource( 5 )
 
-[node name="TextureButton2" type="TextureButton" parent="VBoxContainer2"]
+[node name="TextureButton" type="TextureButton" parent="VBoxContainer2"]
 margin_top = 143.0
 margin_right = 434.0
 margin_bottom = 256.0
@@ -72,7 +72,7 @@ margin_bottom = 490.0
 texture_normal = ExtResource( 8 )
 texture_focused = ExtResource( 5 )
 
-[connection signal="pressed" from="VBoxContainer2/TextureButton" to="." method="_on_TextureButton_pressed"]
 [connection signal="pressed" from="VBoxContainer2/TextureButton2" to="." method="_on_TextureButton2_pressed"]
+[connection signal="pressed" from="VBoxContainer2/TextureButton" to="." method="_on_TextureButton_pressed"]
 [connection signal="pressed" from="VBoxContainer2/TextureButton4" to="." method="_on_TextureButton3_pressed"]
 [connection signal="pressed" from="VBoxContainer2/TextureButton3" to="." method="_on_TextureButton3_pressed"]

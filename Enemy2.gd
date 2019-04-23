@@ -40,7 +40,18 @@ func attack():
 	direction=0
 	temp=position.y
 	print(temp)
-	$AnimatedSprite.play("attack")
+	if Global.bossHealth<3:
+		$AnimatedSprite.play("attack4")
+	elif Global.bossHealth<5:
+		$AnimatedSprite.play("attack3")
+		
+	elif Global.bossHealth<7:
+		$AnimatedSprite.play("attack2")
+	elif Global.bossHealth<9:
+		$AnimatedSprite.play("attack1")
+	else:
+		$AnimatedSprite.play("attack")
+
 	
 	if position.y<Global.charaPosition.y -100:
 		
@@ -127,8 +138,20 @@ func _physics_process(_delta):
 				var attackRandomly= randi() % 50
 				if attackRandomly==10:
 					spit()
+			elif Global.bossHealth<3:
+				$AnimatedSprite.play("walk4")
+			elif Global.bossHealth<5:
+				$AnimatedSprite.play("walk3")
+				
+			elif Global.bossHealth<7:
+				$AnimatedSprite.play("walk2")
+			elif Global.bossHealth<9:
+				$AnimatedSprite.play("walk1")
 			else:
 				$AnimatedSprite.play("walk")
+				
+			
+			
 		
 		elif Global.charaPosition.y>1500:
 			position=beginningposition

@@ -57,7 +57,7 @@ scale = Vector2( 0.618, 0.618 )
 texture = ExtResource( 4 )
 
 [node name="Chara" parent="." instance=ExtResource( 5 )]
-position = Vector2( 441.553, 1522.28 )
+position = Vector2( 300, 1530 )
 
 [node name="Camera2D" type="Camera2D" parent="Chara"]
 offset = Vector2( 100, 0 )
@@ -85,6 +85,7 @@ change_level = "res://Scenes/Scene2.tscn"
 
 [node name="Floor" type="Node2D" parent="."]
 editor/display_folded = true
+visible = false
 
 [node name="NormalFloor" type="Node2D" parent="Floor"]
 editor/display_folded = true
@@ -278,16 +279,16 @@ autoplay = true
 position = Vector2( 1601.9, 1292.11 )
 
 [node name="Flamefruite" parent="." instance=ExtResource( 18 )]
-position = Vector2( 1254.81, 1556.53 )
+position = Vector2( 1259.94, 1571.93 )
 
 [node name="Flamefruite3" parent="." instance=ExtResource( 18 )]
 position = Vector2( 2511.79, 1466.31 )
 
 [node name="Flamefruite2" parent="." instance=ExtResource( 18 )]
-position = Vector2( 758.578, 1146.42 )
+position = Vector2( 763.711, 1160.28 )
 
 [node name="Flamefruite8" parent="." instance=ExtResource( 18 )]
-position = Vector2( 1970.82, 1516.7 )
+position = Vector2( 1969.28, 1528.51 )
 
 [node name="HUD" parent="." instance=ExtResource( 19 )]
 
@@ -318,18 +319,22 @@ position = Vector2( 298.674, 1498.96 )
 visible = false
 
 [node name="RockFloor" parent="." instance=ExtResource( 23 )]
+visible = false
 position = Vector2( 2538.98, 803.694 )
 rotation = 0.610388
 
 [node name="RockFloor2" parent="." instance=ExtResource( 23 )]
+visible = false
 position = Vector2( 2279.9, 339.189 )
 rotation = 1.43108
 
 [node name="RockFloor3" parent="." instance=ExtResource( 23 )]
+visible = false
 position = Vector2( 3697.47, 452.076 )
 rotation = 1.69508
 
 [node name="RockFloor4" parent="." instance=ExtResource( 23 )]
+visible = false
 position = Vector2( 3606.79, 783.337 )
 rotation = 2.66437
 

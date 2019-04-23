@@ -78,13 +78,13 @@ texture = ExtResource( 8 )
 [node name="Characters" type="Node2D" parent="."]
 
 [node name="Enemy" parent="Characters" instance=ExtResource( 9 )]
-position = Vector2( 1014.35, 424.096 )
+position = Vector2( 1014.35, 450 )
 hp = 2
 
 [node name="Chara" parent="Characters" groups=[
 "Persist",
 ] instance=ExtResource( 10 )]
-position = Vector2( -113.035, 414.082 )
+position = Vector2( -113.035, 440 )
 
 [node name="Camera2D2" type="Camera2D" parent="Characters/Chara"]
 offset = Vector2( 100, 0 )
@@ -115,8 +115,8 @@ position = Vector2( -113.035, 414.082 )
 motion_scale = Vector2( 0.8, 0.8 )
 
 [node name="Sprite" type="Sprite" parent="Characters/Chara/Parallaxbacktrees/ParallaxLayer"]
-position = Vector2( -85.1766, -546.244 )
-scale = Vector2( 0.799494, 0.828337 )
+position = Vector2( -46.4987, -646.378 )
+scale = Vector2( 0.677818, 0.98013 )
 texture = ExtResource( 4 )
 centered = false
 
@@ -127,8 +127,8 @@ position = Vector2( -113.035, 414.082 )
 motion_scale = Vector2( 0.95, 0.95 )
 
 [node name="Sprite" type="Sprite" parent="Characters/Chara/ParallaxBackground4/ParallaxLayer"]
-position = Vector2( -160.695, -513.18 )
-scale = Vector2( 0.775794, 0.826516 )
+position = Vector2( -160.695, -608.991 )
+scale = Vector2( 0.775794, 0.96127 )
 texture = ExtResource( 11 )
 centered = false
 
@@ -138,19 +138,19 @@ centered = false
 position = Vector2( -113.035, 414.082 )
 
 [node name="Sprite" type="Sprite" parent="Characters/Chara/Parallaxgrass/ParallaxLayer"]
-position = Vector2( -105.177, -473.349 )
-scale = Vector2( 0.757, 0.773872 )
+position = Vector2( -105.177, -527.349 )
+scale = Vector2( 0.757, 0.853374 )
 texture = ExtResource( 12 )
 centered = false
 
 [node name="floor" parent="." instance=ExtResource( 13 )]
 visible = false
-position = Vector2( 94.6757, 537.937 )
+position = Vector2( 94.6757, 540.937 )
 scale = Vector2( 4.1267, 1.58729 )
 
 [node name="floor2" parent="." instance=ExtResource( 13 )]
 visible = false
-position = Vector2( 1488.13, 536.536 )
+position = Vector2( 1488.13, 542.536 )
 scale = Vector2( 6.53909, 1.58729 )
 
 [node name="LevelComplete" parent="." instance=ExtResource( 14 )]
@@ -185,7 +185,7 @@ position = Vector2( 1813.14, 426.577 )
 
 [node name="Sprite" type="Sprite" parent="."]
 modulate = Color( 0, 0, 0, 1 )
-position = Vector2( 2523.87, -229.832 )
+position = Vector2( 2532.1, -303.077 )
 scale = Vector2( 74.5544, 4.26493 )
 texture = ExtResource( 22 )
 offset = Vector2( -20.7919, -15.2497 )
@@ -210,6 +210,8 @@ change_level = "res://Scenes/Scene.tscn"
 
 [node name="Pause" parent="CanvasLayer" instance=ExtResource( 26 )]
 visible = false
+margin_left = -8.0
+margin_top = -2.0
 
 [connection signal="hp_changed" from="Characters/Chara" to="HUD" method="update_healthbar"]
 [connection signal="mp_changed" from="Characters/Chara" to="HUD" method="update_manabar"]

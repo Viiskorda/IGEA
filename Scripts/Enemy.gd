@@ -30,7 +30,7 @@ func dead():
 
 func _physics_process(_delta):
 	if is_dead == false:
-		$Label.text = str(hp)
+		#$Label.text = str(hp)
 		motion.x = speed * direction
 		
 		if direction == 1:
