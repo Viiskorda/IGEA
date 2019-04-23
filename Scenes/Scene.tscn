@@ -89,7 +89,7 @@ position = Vector2( -113.035, 414.082 )
 scale = Vector2( 1, 1 )
 offset = Vector2( 100, 0 )
 current = true
-zoom = Vector2( 0.7, 0.7 )
+zoom = Vector2( 0.75, 0.75 )
 limit_left = -300
 limit_right = 2000
 limit_smoothed = true
@@ -127,8 +127,8 @@ position = Vector2( -113.035, 414.082 )
 motion_scale = Vector2( 0.95, 0.95 )
 
 [node name="Sprite" type="Sprite" parent="Characters/Chara/ParallaxBackground4/ParallaxLayer"]
-position = Vector2( -160.695, -462.349 )
-scale = Vector2( 0.775794, 0.757 )
+position = Vector2( -160.695, -513.18 )
+scale = Vector2( 0.775794, 0.826516 )
 texture = ExtResource( 11 )
 centered = false
 
@@ -138,8 +138,8 @@ centered = false
 position = Vector2( -113.035, 414.082 )
 
 [node name="Sprite" type="Sprite" parent="Characters/Chara/Parallaxgrass/ParallaxLayer"]
-position = Vector2( -105.177, -462.349 )
-scale = Vector2( 0.757, 0.757 )
+position = Vector2( -105.177, -473.349 )
+scale = Vector2( 0.757, 0.773872 )
 texture = ExtResource( 12 )
 centered = false
 
@@ -154,7 +154,7 @@ position = Vector2( 1488.13, 536.536 )
 scale = Vector2( 6.53909, 1.58729 )
 
 [node name="LevelComplete" parent="." instance=ExtResource( 14 )]
-position = Vector2( 1870.25, 351.843 )
+position = Vector2( 1923.27, 288.187 )
 change_level = "res://Scenes/Scene2.tscn"
 
 [node name="TestRock" parent="." instance=ExtResource( 15 )]

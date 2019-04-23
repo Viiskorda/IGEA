@@ -44,6 +44,7 @@ scale = Vector2( 0.618106, 0.618106 )
 texture = ExtResource( 2 )
 
 [node name="Mountains" type="Sprite" parent="Background"]
+visible = false
 position = Vector2( 0, -517.319 )
 scale = Vector2( 0.668283, 0.668283 )
 texture = ExtResource( 3 )
@@ -60,11 +61,22 @@ position = Vector2( 441.553, 1522.28 )
 [node name="Camera2D" type="Camera2D" parent="Chara"]
 offset = Vector2( 100, 0 )
 current = true
-zoom = Vector2( 0.7, 0.7 )
+zoom = Vector2( 0.8, 0.8 )
 limit_left = 100
 limit_right = 3800
 editor_draw_limits = true
 editor_draw_drag_margin = true
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="Chara"]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Chara/ParallaxBackground"]
+motion_scale = Vector2( 0.7, 0.7 )
+
+[node name="Mountains2" type="Sprite" parent="Chara/ParallaxBackground/ParallaxLayer"]
+position = Vector2( -367.602, -606.05 )
+scale = Vector2( 0.758884, 0.740867 )
+texture = ExtResource( 3 )
+centered = false
 
 [node name="LevelComplete" parent="." instance=ExtResource( 6 )]
 position = Vector2( 3521.82, 1674.34 )
@@ -180,6 +192,7 @@ gravity_scale = 0.0
 can_sleep = false
 
 [node name="Kivid" type="Node2D" parent="."]
+editor/display_folded = true
 
 [node name="TestRock" parent="Kivid" instance=ExtResource( 11 )]
 position = Vector2( 803.963, 1524.65 )
@@ -279,7 +292,7 @@ position = Vector2( 1970.82, 1516.7 )
 
 [node name="Sprite" type="Sprite" parent="."]
 modulate = Color( 0, 0, 0, 1 )
-position = Vector2( 2232.04, 2959.41 )
+position = Vector2( 2257.39, 2978.42 )
 scale = Vector2( 112.737, 27.3725 )
 texture = ExtResource( 20 )
 

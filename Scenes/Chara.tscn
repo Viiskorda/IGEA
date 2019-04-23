@@ -76,7 +76,7 @@ animations = [ {
 "player",
 ]]
 position = Vector2( 0, -1 )
-scale = Vector2( 0.8, 0.8 )
+scale = Vector2( 0.9, 0.9 )
 z_index = 1
 script = ExtResource( 1 )
 change_level = "res://Scenes/Menu.tscn"
