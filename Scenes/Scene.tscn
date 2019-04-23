@@ -1,25 +1,30 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://Scenes/Scene.gd" type="Script" id=1]
-[ext_resource path="res://Background/level_1_bg_taust_trees.png" type="Texture" id=2]
-[ext_resource path="res://Background/level_1_bg_taust_ground.png" type="Texture" id=3]
-[ext_resource path="res://Background/level_1_bg_test4_smol.png" type="Texture" id=4]
-[ext_resource path="res://Background/level_1_bg_taust_light.png" type="Texture" id=5]
-[ext_resource path="res://Scenes/Enemy.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Scenes/Chara.tscn" type="PackedScene" id=7]
-[ext_resource path="res://floor.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Scenes/LevelComplete.tscn" type="PackedScene" id=9]
-[ext_resource path="res://FallingRock.tscn" type="PackedScene" id=10]
-[ext_resource path="res://StartTekst.tscn" type="PackedScene" id=11]
-[ext_resource path="res://ShootTut.tscn" type="PackedScene" id=12]
-[ext_resource path="res://RockIndi.tscn" type="PackedScene" id=13]
-[ext_resource path="res://Sounds/back/Märt Nigu - Avatud - 3. Avatud III.ogg" type="AudioStream" id=14]
-[ext_resource path="res://HUD.tscn" type="PackedScene" id=15]
-[ext_resource path="res://icon.png" type="Texture" id=16]
-[ext_resource path="res://Flamefruite.tscn" type="PackedScene" id=17]
-[ext_resource path="res://Falling.tscn" type="PackedScene" id=18]
-[ext_resource path="res://Falling.gd" type="Script" id=19]
-[ext_resource path="res://Pause.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Background/level_1_mountains.png" type="Texture" id=2]
+[ext_resource path="res://Background/level_1_final10.png" type="Texture" id=3]
+[ext_resource path="res://Background/level_1_final10_v2_trees.png" type="Texture" id=4]
+[ext_resource path="res://Background/level_1_final10_v2.png" type="Texture" id=5]
+[ext_resource path="res://Background/level_1_bg_taust_ground.png" type="Texture" id=6]
+[ext_resource path="res://Background/level_1_bg_test4_smol.png" type="Texture" id=7]
+[ext_resource path="res://Background/level_1_bg_taust_light.png" type="Texture" id=8]
+[ext_resource path="res://Scenes/Enemy.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/Chara.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Background/level_1_mainBG.png" type="Texture" id=11]
+[ext_resource path="res://Background/level_1_ground.png" type="Texture" id=12]
+[ext_resource path="res://floor.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Scenes/LevelComplete.tscn" type="PackedScene" id=14]
+[ext_resource path="res://FallingRock.tscn" type="PackedScene" id=15]
+[ext_resource path="res://StartTekst.tscn" type="PackedScene" id=16]
+[ext_resource path="res://ShootTut.tscn" type="PackedScene" id=17]
+[ext_resource path="res://RockIndi.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Sounds/back/Märt Nigu - Avatud - 3. Avatud III.ogg" type="AudioStream" id=19]
+[ext_resource path="res://HUD.tscn" type="PackedScene" id=20]
+[ext_resource path="res://icon.png" type="Texture" id=21]
+[ext_resource path="res://Flamefruite.tscn" type="PackedScene" id=22]
+[ext_resource path="res://Falling.tscn" type="PackedScene" id=23]
+[ext_resource path="res://Falling.gd" type="Script" id=24]
+[ext_resource path="res://Pause.tscn" type="PackedScene" id=25]
 
 [node name="Scene" type="Node2D"]
 script = ExtResource( 1 )
@@ -33,62 +38,130 @@ position = Vector2( 899.853, 381.308 )
 scale = Vector2( 0.757342, 0.757342 )
 texture = ExtResource( 2 )
 
+[node name="level_1_bg_taust_trees3" type="Sprite" parent="Background"]
+visible = false
+position = Vector2( 899.853, 381.308 )
+scale = Vector2( 0.757342, 0.757342 )
+texture = ExtResource( 3 )
+
+[node name="level_1_bg_taust_blue_trees" type="Sprite" parent="Background"]
+visible = false
+position = Vector2( 899.853, 381.308 )
+scale = Vector2( 0.757342, 0.757342 )
+texture = ExtResource( 4 )
+
+[node name="level_1_bg_taust_trees2" type="Sprite" parent="Background"]
+visible = false
+position = Vector2( 899.853, 381.308 )
+scale = Vector2( 0.757342, 0.757342 )
+texture = ExtResource( 5 )
+
 [node name="level_1_bg_taust_ground" type="Sprite" parent="Background"]
 visible = false
 position = Vector2( 899.642, 379.07 )
 scale = Vector2( 0.757342, 0.757342 )
-texture = ExtResource( 3 )
+texture = ExtResource( 6 )
 
 [node name="level_1_bg_test4_smol" type="Sprite" parent="Background"]
+visible = false
 position = Vector2( 900.122, 380.646 )
 scale = Vector2( 0.757342, 0.757342 )
-texture = ExtResource( 4 )
+texture = ExtResource( 7 )
 
 [node name="level_1_bg_taust_light" type="Sprite" parent="Background"]
 visible = false
 position = Vector2( 896.654, 382.555 )
 scale = Vector2( 0.757342, 0.757342 )
-texture = ExtResource( 5 )
+texture = ExtResource( 8 )
 
 [node name="Characters" type="Node2D" parent="."]
 
-[node name="Enemy" parent="Characters" instance=ExtResource( 6 )]
+[node name="Enemy" parent="Characters" instance=ExtResource( 9 )]
 position = Vector2( 1014.35, 424.096 )
 hp = 2
 
 [node name="Chara" parent="Characters" groups=[
 "Persist",
-] instance=ExtResource( 7 )]
+] instance=ExtResource( 10 )]
 position = Vector2( -113.035, 414.082 )
 
-[node name="floor" parent="." instance=ExtResource( 8 )]
+[node name="sky" type="ParallaxBackground" parent="Characters/Chara"]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Characters/Chara/sky"]
+position = Vector2( -113.035, 414.082 )
+motion_scale = Vector2( 0.5, 0.5 )
+
+[node name="Sprite" type="Sprite" parent="Characters/Chara/sky/ParallaxLayer"]
+position = Vector2( -761.815, -892.389 )
+scale = Vector2( 1, 1.25774 )
+texture = ExtResource( 2 )
+centered = false
+
+[node name="Parallaxbacktrees" type="ParallaxBackground" parent="Characters/Chara"]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Characters/Chara/Parallaxbacktrees"]
+position = Vector2( -113.035, 414.082 )
+motion_scale = Vector2( 0.8, 0.8 )
+
+[node name="Sprite" type="Sprite" parent="Characters/Chara/Parallaxbacktrees/ParallaxLayer"]
+position = Vector2( -85.1766, -546.244 )
+scale = Vector2( 0.799494, 0.828337 )
+texture = ExtResource( 4 )
+centered = false
+
+[node name="ParallaxBackground4" type="ParallaxBackground" parent="Characters/Chara"]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Characters/Chara/ParallaxBackground4"]
+position = Vector2( -113.035, 414.082 )
+motion_scale = Vector2( 0.95, 0.95 )
+
+[node name="Sprite" type="Sprite" parent="Characters/Chara/ParallaxBackground4/ParallaxLayer"]
+position = Vector2( -160.695, -462.349 )
+scale = Vector2( 0.775794, 0.757 )
+texture = ExtResource( 11 )
+centered = false
+
+[node name="Parallaxgrass" type="ParallaxBackground" parent="Characters/Chara"]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Characters/Chara/Parallaxgrass"]
+position = Vector2( -113.035, 414.082 )
+
+[node name="Sprite" type="Sprite" parent="Characters/Chara/Parallaxgrass/ParallaxLayer"]
+position = Vector2( -105.177, -462.349 )
+scale = Vector2( 0.757, 0.757 )
+texture = ExtResource( 12 )
+centered = false
+
+[node name="Camera2D2" type="Camera2D" parent="Characters/Chara"]
+
+[node name="floor" parent="." instance=ExtResource( 13 )]
 visible = false
 position = Vector2( 94.6757, 537.937 )
 scale = Vector2( 4.1267, 1.58729 )
 
-[node name="floor2" parent="." instance=ExtResource( 8 )]
+[node name="floor2" parent="." instance=ExtResource( 13 )]
 visible = false
 position = Vector2( 1488.13, 536.536 )
 scale = Vector2( 6.53909, 1.58729 )
 
-[node name="LevelComplete" parent="." instance=ExtResource( 9 )]
+[node name="LevelComplete" parent="." instance=ExtResource( 14 )]
 position = Vector2( 1870.25, 351.843 )
 change_level = "res://Scenes/Scene2.tscn"
 
-[node name="TestRock" parent="." instance=ExtResource( 10 )]
+[node name="TestRock" parent="." instance=ExtResource( 15 )]
 position = Vector2( 699.232, 506.059 )
 
-[node name="StartTekst" parent="." instance=ExtResource( 11 )]
+[node name="StartTekst" parent="." instance=ExtResource( 16 )]
 position = Vector2( 13.3479, 335.225 )
 
-[node name="ShootTut" parent="." instance=ExtResource( 12 )]
+[node name="ShootTut" parent="." instance=ExtResource( 17 )]
 position = Vector2( 414.205, 347.398 )
 
-[node name="RockIndi" parent="." instance=ExtResource( 13 )]
+[node name="RockIndi" parent="." instance=ExtResource( 18 )]
 position = Vector2( 692.99, 459.77 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 14 )
+stream = ExtResource( 19 )
 autoplay = true
 
 [node name="SpawnPosition" type="Position2D" parent="." groups=[
@@ -96,34 +169,34 @@ autoplay = true
 ]]
 position = Vector2( 1813.14, 426.577 )
 
-[node name="HUD" parent="." instance=ExtResource( 15 )]
+[node name="HUD" parent="." instance=ExtResource( 20 )]
 
 [node name="Sprite" type="Sprite" parent="."]
 modulate = Color( 0, 0, 0, 1 )
-position = Vector2( 2504.34, -90.3568 )
+position = Vector2( 2523.87, -229.832 )
 scale = Vector2( 74.5544, 4.26493 )
-texture = ExtResource( 16 )
+texture = ExtResource( 21 )
 offset = Vector2( -20.7919, -15.2497 )
 
 [node name="Sprite2" type="Sprite" parent="."]
 modulate = Color( 0, 0, 0, 1 )
-position = Vector2( 2599.48, 1476.63 )
+position = Vector2( 2639.14, 1692.93 )
 scale = Vector2( 77.2175, 14.1855 )
-texture = ExtResource( 16 )
+texture = ExtResource( 21 )
 offset = Vector2( -20.7919, -15.2497 )
 
-[node name="Flamefruite" parent="." instance=ExtResource( 17 )]
+[node name="Flamefruite" parent="." instance=ExtResource( 22 )]
 position = Vector2( 175.843, 435.234 )
 
-[node name="Falling" parent="." instance=ExtResource( 18 )]
+[node name="Falling" parent="." instance=ExtResource( 23 )]
 position = Vector2( 803.068, 1365.22 )
 scale = Vector2( 1, 4.265 )
-script = ExtResource( 19 )
+script = ExtResource( 24 )
 change_level = "res://Scenes/Scene.tscn"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="Pause" parent="CanvasLayer" instance=ExtResource( 20 )]
+[node name="Pause" parent="CanvasLayer" instance=ExtResource( 25 )]
 visible = false
 
 [connection signal="hp_changed" from="Characters/Chara" to="HUD" method="update_healthbar"]

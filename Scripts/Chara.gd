@@ -2,9 +2,16 @@ extends KinematicBody2D
 
 signal hp_changed
 signal mp_changed
+signal left_camera
+signal right_camera
+signal top_camera
 
 export(String, FILE, "*.tscn") var change_level
 export(String) var target_spawn_group
+
+export(int) var Eleft_camera
+export(int) var Eright_camera
+export(int) var Etop_camera
 
 const UP=Vector2(0,-1)
 const SPEED=300
@@ -30,6 +37,10 @@ var max_jump_count = 2
 func _ready():
 	emit_signal("hp_changed", Global.health)
 	emit_signal("mp_changed", Global.mana)
+	emit_signal("left_camera", Eleft_camera)
+	emit_signal("right_camera", Eright_camera)
+	emit_signal("top_camera", Etop_camera)
+
 	add_to_group('Persist')
 
 func _input(_event):
@@ -315,3 +326,6 @@ func save():
 	}	
 	return save_dict
 	
+
+
+
