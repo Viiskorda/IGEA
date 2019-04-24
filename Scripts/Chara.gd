@@ -209,7 +209,7 @@ func audioJump():
 	audioPlayer.stream = load("res://Sounds/jump.wav")
 	audioPlayer.set_volume_db(Global.soundFXvolume+10)
 	audioPlayer.play()
-	print("play mana.wav")
+	print("play jump.wav")
 	print(audioPlayer.stream)
 	var t = Timer.new()
 	t.set_wait_time(0.500)
