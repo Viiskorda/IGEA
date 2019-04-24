@@ -180,6 +180,7 @@ func audioStep():
 			lastStep = 0
 			audioPlayer.stream = load("res://Sounds/step1.wav")
 			print("step1.wav")
+			audioPlayer.set_volume_db(Global.soundFXvolume)
 			audioPlayer.play()
 			var t = Timer.new()
 			t.set_wait_time(0.300)
@@ -192,6 +193,7 @@ func audioStep():
 			lastStep = 0
 			audioPlayer.stream = load("res://Sounds/step2.wav")
 			print("step2.wav")
+			audioPlayer.set_volume_db(Global.soundFXvolume)
 			audioPlayer.play()
 			var t = Timer.new()
 			t.set_wait_time(0.323)
@@ -204,7 +206,8 @@ func audioStep():
 func audioJump():
 	var audioPlayer = AudioStreamPlayer.new()
 	self.add_child(audioPlayer)
-	audioPlayer.stream = load("res://Sounds/mana.wav")
+	audioPlayer.stream = load("res://Sounds/jump.wav")
+	audioPlayer.set_volume_db(Global.soundFXvolume+10)
 	audioPlayer.play()
 	print("play mana.wav")
 	print(audioPlayer.stream)
@@ -219,6 +222,7 @@ func audioShoot():
 	var audioPlayer = AudioStreamPlayer.new()
 	self.add_child(audioPlayer)
 	audioPlayer.stream = load("res://Sounds/mana.wav")
+	audioPlayer.set_volume_db(Global.soundFXvolume)
 	audioPlayer.play()
 	print("play mana.wav")
 	print(audioPlayer.stream)
@@ -233,6 +237,7 @@ func audioDamage():
 	var audioPlayer = AudioStreamPlayer.new()
 	self.add_child(audioPlayer)
 	audioPlayer.stream = load("res://Sounds/mana.wav")
+	audioPlayer.set_volume_db(Global.soundFXvolume)
 	audioPlayer.play()
 	print("play mana.wav")
 	print(audioPlayer.stream)

@@ -47,6 +47,10 @@ var flamefruit6path
 var flamefruit7path
 var flamefruit8path
 
+var soundvolume=-10
+var soundFXvolume=-30
+
+
 
 
 const SAVE_PATH = "res://save.json"
