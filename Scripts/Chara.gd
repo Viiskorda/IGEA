@@ -221,7 +221,7 @@ func audioJump():
 func audioShoot():
 	var audioPlayer = AudioStreamPlayer.new()
 	self.add_child(audioPlayer)
-	audioPlayer.stream = load("res://Sounds/mana.wav")
+	audioPlayer.stream = load("res://Sounds/shoot.wav")
 	audioPlayer.set_volume_db(Global.soundFXvolume)
 	audioPlayer.play()
 	print("play mana.wav")

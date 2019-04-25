@@ -273,6 +273,7 @@ hp = 4
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 16 )
+volume_db = -30.0
 autoplay = true
 
 [node name="Vanamees" parent="." instance=ExtResource( 17 )]
