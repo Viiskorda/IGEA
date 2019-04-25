@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://RichTextLabel.gd" type="Script" id=1]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+color = Color( 0, 0, 0, 1 )
+polygon = PoolVector2Array( 352, 880, 352, 1008, 1680, 1008, 1680, 880 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Polygon2D"]
+margin_left = 400.0
+margin_top = 912.0
+margin_right = 1632.0
+margin_bottom = 976.0
+bbcode_enabled = true
+bbcode_text = "Hello, sup?"
+text = "Hello, sup?"
+script = ExtResource( 1 )
+
+[node name="Timer" type="Timer" parent="Polygon2D"]
+wait_time = 0.05
+autostart = true
+
+[connection signal="timeout" from="Polygon2D/Timer" to="Polygon2D/RichTextLabel" method="_on_Timer_timeout"]
