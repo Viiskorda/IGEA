@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Dialoog.gd" type="Script" id=1]
+[ext_resource path="res://Dialoogid/Level1/Dialogue_1_1.png" type="Texture" id=2]
+
+[node name="Dialoog" type="CanvasLayer"]
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 980, 960 )
+texture = ExtResource( 2 )
+

@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://Scenes/Scene.gd" type="Script" id=1]
 [ext_resource path="res://Background/level_1_mountains.png" type="Texture" id=2]
@@ -16,16 +16,19 @@
 [ext_resource path="res://Scenes/LevelComplete.tscn" type="PackedScene" id=14]
 [ext_resource path="res://HealthGate.tscn" type="PackedScene" id=15]
 [ext_resource path="res://FallingRock.tscn" type="PackedScene" id=16]
-[ext_resource path="res://StartTekst.tscn" type="PackedScene" id=17]
-[ext_resource path="res://ShootTut.tscn" type="PackedScene" id=18]
-[ext_resource path="res://RockIndi.tscn" type="PackedScene" id=19]
-[ext_resource path="res://Sounds/back/Märt Nigu - Avatud - 3. Avatud III.ogg" type="AudioStream" id=20]
-[ext_resource path="res://HUD.tscn" type="PackedScene" id=21]
-[ext_resource path="res://icon.png" type="Texture" id=22]
-[ext_resource path="res://Flamefruite.tscn" type="PackedScene" id=23]
-[ext_resource path="res://Falling.tscn" type="PackedScene" id=24]
-[ext_resource path="res://Falling.gd" type="Script" id=25]
-[ext_resource path="res://Pause.tscn" type="PackedScene" id=26]
+[ext_resource path="res://ShootTut.tscn" type="PackedScene" id=17]
+[ext_resource path="res://StartTekst.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Flamefruit Tutorial.tscn" type="PackedScene" id=19]
+[ext_resource path="res://btv_tut.tscn" type="PackedScene" id=20]
+[ext_resource path="res://RockIndi.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Sounds/back/Märt Nigu - Avatud - 3. Avatud III.ogg" type="AudioStream" id=22]
+[ext_resource path="res://HUD.tscn" type="PackedScene" id=23]
+[ext_resource path="res://Dialoog.tscn" type="PackedScene" id=24]
+[ext_resource path="res://icon.png" type="Texture" id=25]
+[ext_resource path="res://Flamefruite.tscn" type="PackedScene" id=26]
+[ext_resource path="res://Falling.tscn" type="PackedScene" id=27]
+[ext_resource path="res://Falling.gd" type="Script" id=28]
+[ext_resource path="res://Pause.tscn" type="PackedScene" id=29]
 
 [node name="Scene" type="Node2D"]
 script = ExtResource( 1 )
@@ -84,6 +87,7 @@ hp = 2
 [node name="Chara" parent="Characters" groups=[
 "Persist",
 ] instance=ExtResource( 10 )]
+editor/display_folded = true
 position = Vector2( -113.035, 440 )
 
 [node name="Camera2D2" type="Camera2D" parent="Characters/Chara"]
@@ -163,17 +167,25 @@ position = Vector2( 1919.97, 390.677 )
 [node name="TestRock" parent="." instance=ExtResource( 16 )]
 position = Vector2( 699.232, 506.059 )
 
-[node name="StartTekst" parent="." instance=ExtResource( 17 )]
-position = Vector2( 13.3479, 335.225 )
+[node name="Tutorial tekstid" type="Node2D" parent="."]
 
-[node name="ShootTut" parent="." instance=ExtResource( 18 )]
-position = Vector2( 414.205, 347.398 )
+[node name="ShootTut" parent="Tutorial tekstid" instance=ExtResource( 17 )]
+position = Vector2( 428.205, 347.398 )
 
-[node name="RockIndi" parent="." instance=ExtResource( 19 )]
+[node name="StartTekst" parent="Tutorial tekstid" instance=ExtResource( 18 )]
+position = Vector2( -62.6521, 335.225 )
+
+[node name="Flamefruit Tutorial" parent="Tutorial tekstid" instance=ExtResource( 19 )]
+position = Vector2( 100, 354.549 )
+
+[node name="Back to village tutorial" parent="Tutorial tekstid" instance=ExtResource( 20 )]
+position = Vector2( -176, 349 )
+
+[node name="RockIndi" parent="." instance=ExtResource( 21 )]
 position = Vector2( 692.99, 459.77 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 20 )
+stream = ExtResource( 22 )
 autoplay = true
 
 [node name="SpawnPosition" type="Position2D" parent="." groups=[
@@ -181,37 +193,42 @@ autoplay = true
 ]]
 position = Vector2( 1813.14, 426.577 )
 
-[node name="HUD" parent="." instance=ExtResource( 21 )]
+[node name="HUD" parent="." instance=ExtResource( 23 )]
+
+[node name="Dialoog" parent="." instance=ExtResource( 24 )]
 
 [node name="Sprite" type="Sprite" parent="."]
 modulate = Color( 0, 0, 0, 1 )
 position = Vector2( 2532.1, -303.077 )
 scale = Vector2( 74.5544, 4.26493 )
-texture = ExtResource( 22 )
+texture = ExtResource( 25 )
 offset = Vector2( -20.7919, -15.2497 )
 
 [node name="Sprite2" type="Sprite" parent="."]
 modulate = Color( 0, 0, 0, 1 )
 position = Vector2( 2639.14, 1692.93 )
 scale = Vector2( 77.2175, 14.1855 )
-texture = ExtResource( 22 )
+texture = ExtResource( 25 )
 offset = Vector2( -20.7919, -15.2497 )
 
-[node name="Flamefruite" parent="." instance=ExtResource( 23 )]
+[node name="Flamefruite" parent="." instance=ExtResource( 26 )]
 position = Vector2( 175.843, 435.234 )
 
-[node name="Falling" parent="." instance=ExtResource( 24 )]
+[node name="Falling" parent="." instance=ExtResource( 27 )]
 position = Vector2( 803.068, 1365.22 )
 scale = Vector2( 1, 4.265 )
-script = ExtResource( 25 )
+script = ExtResource( 28 )
 change_level = "res://Scenes/Scene.tscn"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+editor/display_folded = true
 
-[node name="Pause" parent="CanvasLayer" instance=ExtResource( 26 )]
+[node name="Pause" parent="CanvasLayer" instance=ExtResource( 29 )]
 visible = false
 margin_left = -8.0
 margin_top = -2.0
 
 [connection signal="hp_changed" from="Characters/Chara" to="HUD" method="update_healthbar"]
 [connection signal="mp_changed" from="Characters/Chara" to="HUD" method="update_manabar"]
+[connection signal="body_entered" from="Tutorial tekstid/Back to village tutorial" to="Dialoog" method="_on_Back_to_village_tutorial_body_entered"]
+[connection signal="body_exited" from="Tutorial tekstid/Back to village tutorial" to="Dialoog" method="_on_Back_to_village_tutorial_body_exited"]

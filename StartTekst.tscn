@@ -3,7 +3,7 @@
 [ext_resource path="res://StartTekst.gd" type="Script" id=1]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 194, 18.3793 )
+extents = Vector2( 62.0018, 18.3793 )
 
 [node name="StartTekst" type="Area2D"]
 script = ExtResource( 1 )
