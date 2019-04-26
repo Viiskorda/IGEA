@@ -5,10 +5,10 @@ järgmiseks korraks 26.04
 - plönn korda/ helid leida
 - kõndimise heli liiga vali, tulistamise heli, klikkimise heli, seadetes navigeerimise heli, bossile heli, koopa heli\
 - TEHTUD Flamefruite peaks kaduma kohe
-- esimesse stseeni flamefruite tekst! \
+- TEHTUD esimesse stseeni flamefruite tekst! \
 - TEHTUD Manasid max 12
 - TEHTUD mana võiks olla väiksema raadiusega, ning tulistamine valgusega ja kerana\
-- jutumull, et esimesest stseenist ei saa välja kõndida\
+- TEHTUD jutumull, et esimesest stseenist ei saa välja kõndida\
 - TEHTUD elude taastamine värava juures
 - TEHTUD otsa saanud vaenlased ei ilmu enam stseeni vahetamisel
 
@@ -16,7 +16,7 @@ järgmiseks korraks 26.04
 - kui Chara on koopas, siis ümberringi mustaks ning uks sulgeb jälle
 
 - POOLELI vanamees fadein kui chara kohale jõuab, ning fadeout siis kui ämblik on tapetud kui teistkordne tekst on edastatud 
-- vanamehe dialoog
+- POOLELI vanamehe dialoog
 - Level2 jõudes on mustpilt hajusate äärtega koopa kohal, ning koopas olles on ülejäänud must hajusate äärtega 
 - TEHTUD double jump alguses välja lülitada ja aktiveerida siis kui Boss on eemaldatud
 - koopa suu on kinni kuni kõik teised vaenlased on alles
