@@ -80,7 +80,6 @@ scale = Vector2( 0.757342, 0.757342 )
 texture = ExtResource( 8 )
 
 [node name="Characters" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="Enemy" parent="Characters" instance=ExtResource( 9 )]
 position = Vector2( 1014.35, 450 )
@@ -96,9 +95,9 @@ position = Vector2( 1.11111, 0 )
 offset = Vector2( 100, 0 )
 current = true
 zoom = Vector2( 0.75, 0.75 )
-limit_left = -300
+limit_left = -315
 limit_top = -190
-limit_right = 2020
+limit_right = 2015
 limit_bottom = 850
 limit_smoothed = true
 editor_draw_limits = true
@@ -162,11 +161,12 @@ position = Vector2( 1488.13, 542.536 )
 scale = Vector2( 6.53909, 1.58729 )
 
 [node name="LevelComplete" parent="." instance=ExtResource( 14 )]
-position = Vector2( 1919.93, 388.398 )
+position = Vector2( 1919.93, 423.895 )
 change_level = "res://Scenes/Scene2.tscn"
 
-[node name="Area2D" parent="." instance=ExtResource( 15 )]
-position = Vector2( 1919.97, 390.677 )
+[node name="Area2D" parent="LevelComplete" instance=ExtResource( 15 )]
+position = Vector2( -16.0212, -49.9282 )
+scale = Vector2( 1.42857, 1.42857 )
 
 [node name="TestRock" parent="." instance=ExtResource( 16 )]
 position = Vector2( 699.232, 506.059 )
