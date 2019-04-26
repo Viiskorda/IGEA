@@ -41,8 +41,7 @@ func _ready():
 	emit_signal("top_camera", Etop_camera)
 
 	add_to_group('Persist')
-	
-	Global.double_jump=true
+
 
 func _input(_event):
 	if Input.is_action_pressed("ui_jump"):
