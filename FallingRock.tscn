@@ -17,6 +17,7 @@ contact_monitor = true
 can_sleep = false
 
 [node name="Sprite" type="Sprite" parent="."]
+visible = false
 position = Vector2( 0, -1.90735e-006 )
 scale = Vector2( 0.662502, 0.662502 )
 texture = ExtResource( 1 )

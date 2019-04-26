@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=36 format=2]
 
 [ext_resource path="res://Scenes/Scene2.gd" type="Script" id=1]
 [ext_resource path="res://DialogTest.tscn" type="PackedScene" id=2]
@@ -13,22 +13,25 @@
 [ext_resource path="res://CaveFloor3.tscn" type="PackedScene" id=11]
 [ext_resource path="res://CaveFloor4.tscn" type="PackedScene" id=12]
 [ext_resource path="res://FallingRock.tscn" type="PackedScene" id=13]
-[ext_resource path="res://images/kivid/level_2_rock6.png" type="Texture" id=14]
-[ext_resource path="res://images/kivid/level_2_rock7.png" type="Texture" id=15]
-[ext_resource path="res://images/kivid/level_2_rock9.png" type="Texture" id=16]
-[ext_resource path="res://Falling.tscn" type="PackedScene" id=17]
-[ext_resource path="res://Falling.gd" type="Script" id=18]
-[ext_resource path="res://Enemy2.tscn" type="PackedScene" id=19]
-[ext_resource path="res://Enemy3.tscn" type="PackedScene" id=20]
-[ext_resource path="res://Sounds/back/Märt Nigu - Avatud - 4. Avatud IV.ogg" type="AudioStream" id=21]
-[ext_resource path="res://Vanamees.tscn" type="PackedScene" id=22]
-[ext_resource path="res://Flamefruite.tscn" type="PackedScene" id=23]
-[ext_resource path="res://HUD.tscn" type="PackedScene" id=24]
-[ext_resource path="res://icon.png" type="Texture" id=25]
-[ext_resource path="res://HealthGate.tscn" type="PackedScene" id=26]
-[ext_resource path="res://Pause.tscn" type="PackedScene" id=27]
-[ext_resource path="res://RockFloor.tscn" type="PackedScene" id=28]
-[ext_resource path="res://ElderTalk.tscn" type="PackedScene" id=29]
+[ext_resource path="res://images/kivid/level_2_rock1.png" type="Texture" id=14]
+[ext_resource path="res://images/kivid/level_2_rock4.png" type="Texture" id=15]
+[ext_resource path="res://images/kivid/level_2_rock5.png" type="Texture" id=16]
+[ext_resource path="res://images/kivid/level_2_rock6.png" type="Texture" id=17]
+[ext_resource path="res://images/kivid/level_2_rock7.png" type="Texture" id=18]
+[ext_resource path="res://images/kivid/level_2_rock9.png" type="Texture" id=19]
+[ext_resource path="res://Falling.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Falling.gd" type="Script" id=21]
+[ext_resource path="res://Enemy2.tscn" type="PackedScene" id=22]
+[ext_resource path="res://Enemy3.tscn" type="PackedScene" id=23]
+[ext_resource path="res://Sounds/back/Märt Nigu - Avatud - 4. Avatud IV.ogg" type="AudioStream" id=24]
+[ext_resource path="res://Vanamees.tscn" type="PackedScene" id=25]
+[ext_resource path="res://Flamefruite.tscn" type="PackedScene" id=26]
+[ext_resource path="res://HUD.tscn" type="PackedScene" id=27]
+[ext_resource path="res://icon.png" type="Texture" id=28]
+[ext_resource path="res://HealthGate.tscn" type="PackedScene" id=29]
+[ext_resource path="res://Pause.tscn" type="PackedScene" id=30]
+[ext_resource path="res://RockFloor.tscn" type="PackedScene" id=31]
+[ext_resource path="res://ElderTalk.tscn" type="PackedScene" id=32]
 
 [sub_resource type="PhysicsMaterial" id=1]
 friction = 0.0
@@ -212,29 +215,49 @@ can_sleep = false
 position = Vector2( 803.963, 1524.65 )
 scale = Vector2( 0.7, 0.7 )
 
+[node name="Sprite2" type="Sprite" parent="Kivid/TestRock"]
+scale = Vector2( 0.65, 0.65 )
+texture = ExtResource( 14 )
+
 [node name="TestRock2" parent="Kivid" instance=ExtResource( 13 )]
 position = Vector2( 934.3, 1388.33 )
 scale = Vector2( 0.8, 0.8 )
+
+[node name="Sprite3" type="Sprite" parent="Kivid/TestRock2"]
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 14 )
 
 [node name="TestRock3" parent="Kivid" instance=ExtResource( 13 )]
 position = Vector2( 765.302, 1243.58 )
 scale = Vector2( 0.8, 0.7 )
 
+[node name="Sprite4" type="Sprite" parent="Kivid/TestRock3"]
+scale = Vector2( 0.7, 0.65 )
+texture = ExtResource( 14 )
+
 [node name="TestRock4" parent="Kivid" instance=ExtResource( 13 )]
 position = Vector2( 1972.29, 1627.68 )
 scale = Vector2( 1.33207, 0.94 )
 
+[node name="Sprite2" type="Sprite" parent="Kivid/TestRock4"]
+scale = Vector2( 0.4, 0.5 )
+texture = ExtResource( 15 )
+
 [node name="TestRock5" parent="Kivid" instance=ExtResource( 13 )]
 position = Vector2( 2516.18, 1556.98 )
 scale = Vector2( 0.772082, 0.902586 )
+
+[node name="Sprite3" type="Sprite" parent="Kivid/TestRock5"]
+scale = Vector2( 0.7, 0.6 )
+texture = ExtResource( 16 )
 
 [node name="TestRock6" parent="Kivid" instance=ExtResource( 13 )]
 position = Vector2( 3037.84, 1484.19 )
 scale = Vector2( 0.732062, 0.782586 )
 
 [node name="Sprite2" type="Sprite" parent="Kivid/TestRock6"]
-scale = Vector2( 0.956203, 0.89447 )
-texture = ExtResource( 14 )
+scale = Vector2( 0.7, 0.6 )
+texture = ExtResource( 17 )
 
 [node name="TestRock7" parent="Kivid" instance=ExtResource( 13 )]
 position = Vector2( 3194.63, 1379.88 )
@@ -243,16 +266,16 @@ scale = Vector2( 1.36638, 0.884961 )
 [node name="Sprite3" type="Sprite" parent="Kivid/TestRock7"]
 position = Vector2( 0, 5 )
 scale = Vector2( 0.4, 0.45 )
-texture = ExtResource( 15 )
+texture = ExtResource( 18 )
 
 [node name="TestRock8" parent="Kivid" instance=ExtResource( 13 )]
 position = Vector2( 3321.73, 1247.53 )
 scale = Vector2( 0.905099, 0.884961 )
 
 [node name="Sprite3" type="Sprite" parent="Kivid/TestRock8"]
-position = Vector2( 0, 8 )
+position = Vector2( 0, -5 )
 scale = Vector2( 0.7, 0.5 )
-texture = ExtResource( 14 )
+texture = ExtResource( 17 )
 
 [node name="TestRock9" parent="Kivid" instance=ExtResource( 13 )]
 position = Vector2( 3074.21, 1137.19 )
@@ -261,112 +284,112 @@ scale = Vector2( 1.9451, 0.884961 )
 [node name="Sprite4" type="Sprite" parent="Kivid/TestRock9"]
 position = Vector2( 0, 5 )
 scale = Vector2( 0.3, 0.4 )
-texture = ExtResource( 16 )
+texture = ExtResource( 19 )
 
 [node name="LevelComplete2" parent="." instance=ExtResource( 8 )]
 position = Vector2( 299.312, 1492.41 )
 scale = Vector2( -1, 1 )
 target_spawn_group = "second_spawn"
 
-[node name="Falling" parent="." instance=ExtResource( 17 )]
+[node name="Falling" parent="." instance=ExtResource( 20 )]
 position = Vector2( 2096.96, 2781.23 )
 scale = Vector2( 1.50685, 1.58729 )
-script = ExtResource( 18 )
+script = ExtResource( 21 )
 change_level = "res://Scenes/Scene2.tscn"
 
-[node name="Enemy2" parent="." instance=ExtResource( 19 )]
+[node name="Enemy2" parent="." instance=ExtResource( 22 )]
 position = Vector2( 2972.52, 111.094 )
 scale = Vector2( 0.586775, 0.586775 )
 
-[node name="Enemy3" parent="." instance=ExtResource( 20 )]
+[node name="Enemy3" parent="." instance=ExtResource( 23 )]
 position = Vector2( 1581.25, 1709.74 )
 scale = Vector2( 0.520737, 0.500101 )
 hp = 4
 
-[node name="Enemy5" parent="." instance=ExtResource( 20 )]
+[node name="Enemy5" parent="." instance=ExtResource( 23 )]
 position = Vector2( 2198.47, 1404.21 )
 scale = Vector2( 0.520737, 0.500101 )
 hp = 4
 
-[node name="Enemy6" parent="." instance=ExtResource( 20 )]
+[node name="Enemy6" parent="." instance=ExtResource( 23 )]
 position = Vector2( 2836.19, 1564.15 )
 scale = Vector2( 0.520737, 0.500101 )
 hp = 4
 
-[node name="Enemy4" parent="." instance=ExtResource( 20 )]
+[node name="Enemy4" parent="." instance=ExtResource( 23 )]
 position = Vector2( 566.232, 1065.87 )
 scale = Vector2( 0.520737, 0.500101 )
 hp = 4
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 21 )
+stream = ExtResource( 24 )
 volume_db = -20.0
 autoplay = true
 
-[node name="Vanamees" parent="." instance=ExtResource( 22 )]
+[node name="Vanamees" parent="." instance=ExtResource( 25 )]
 position = Vector2( 1601.9, 1292.11 )
 
-[node name="Flamefruite" parent="." instance=ExtResource( 23 )]
+[node name="Flamefruite" parent="." instance=ExtResource( 26 )]
 position = Vector2( 1259.94, 1571.93 )
 
-[node name="Flamefruite3" parent="." instance=ExtResource( 23 )]
+[node name="Flamefruite3" parent="." instance=ExtResource( 26 )]
 position = Vector2( 2511.79, 1466.31 )
 
-[node name="Flamefruite2" parent="." instance=ExtResource( 23 )]
+[node name="Flamefruite2" parent="." instance=ExtResource( 26 )]
 position = Vector2( 763.711, 1160.28 )
 
-[node name="Flamefruite8" parent="." instance=ExtResource( 23 )]
+[node name="Flamefruite8" parent="." instance=ExtResource( 26 )]
 position = Vector2( 1969.28, 1528.51 )
 
-[node name="HUD" parent="." instance=ExtResource( 24 )]
+[node name="HUD" parent="." instance=ExtResource( 27 )]
 
 [node name="Sprite" type="Sprite" parent="."]
 modulate = Color( 0, 0, 0, 1 )
 position = Vector2( 2257.39, 2978.42 )
 scale = Vector2( 112.737, 27.3725 )
-texture = ExtResource( 25 )
+texture = ExtResource( 28 )
 
-[node name="Flamefruite5" parent="." instance=ExtResource( 23 )]
+[node name="Flamefruite5" parent="." instance=ExtResource( 26 )]
 position = Vector2( 3192.58, 1283.68 )
 
-[node name="Flamefruite6" parent="." instance=ExtResource( 23 )]
+[node name="Flamefruite6" parent="." instance=ExtResource( 26 )]
 position = Vector2( 3322.05, 1159.47 )
 
-[node name="Flamefruite7" parent="." instance=ExtResource( 23 )]
+[node name="Flamefruite7" parent="." instance=ExtResource( 26 )]
 position = Vector2( 3062.47, 1038.07 )
 
-[node name="Flamefruite4" parent="." instance=ExtResource( 23 )]
+[node name="Flamefruite4" parent="." instance=ExtResource( 26 )]
 position = Vector2( 3037.33, 1372.8 )
 
-[node name="Area2D" parent="." instance=ExtResource( 26 )]
+[node name="Area2D" parent="." instance=ExtResource( 29 )]
 position = Vector2( 298.674, 1498.96 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="Pause" parent="CanvasLayer" instance=ExtResource( 27 )]
+[node name="Pause" parent="CanvasLayer" instance=ExtResource( 30 )]
 visible = false
 
-[node name="RockFloor" parent="." instance=ExtResource( 28 )]
+[node name="RockFloor" parent="." instance=ExtResource( 31 )]
 visible = false
 position = Vector2( 2538.98, 803.694 )
 rotation = 0.610388
 
-[node name="RockFloor2" parent="." instance=ExtResource( 28 )]
+[node name="RockFloor2" parent="." instance=ExtResource( 31 )]
 visible = false
 position = Vector2( 2279.9, 339.189 )
 rotation = 1.43108
 
-[node name="RockFloor3" parent="." instance=ExtResource( 28 )]
+[node name="RockFloor3" parent="." instance=ExtResource( 31 )]
 visible = false
 position = Vector2( 3697.47, 452.076 )
 rotation = 1.69508
 
-[node name="RockFloor4" parent="." instance=ExtResource( 28 )]
+[node name="RockFloor4" parent="." instance=ExtResource( 31 )]
 visible = false
 position = Vector2( 3606.79, 783.337 )
 rotation = 2.66437
 
-[node name="ElderTalk" parent="." instance=ExtResource( 29 )]
+[node name="ElderTalk" parent="." instance=ExtResource( 32 )]
 position = Vector2( 1535.19, 1274.71 )
 
 [connection signal="hp_changed" from="Chara" to="HUD" method="update_healthbar"]
