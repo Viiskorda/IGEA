@@ -88,6 +88,7 @@ hp = 2
 [node name="Chara" parent="Characters" groups=[
 "Persist",
 ] instance=ExtResource( 10 )]
+editor/display_folded = true
 position = Vector2( -113.035, 440 )
 
 [node name="Camera2D2" type="Camera2D" parent="Characters/Chara"]

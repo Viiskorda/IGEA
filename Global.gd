@@ -20,6 +20,8 @@ var enemy3isalive=true
 var enemy4isalive=true
 var enemy5isalive=true
 var enemy6isalive=true
+
+var enemy1path
 var enemy2path
 var enemy3path
 var enemy4path

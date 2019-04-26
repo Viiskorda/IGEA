@@ -3,18 +3,13 @@ extends Area2D
 var onFlamefruit = false
 
 var isEaten=false
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
-
 
 func _physics_process(_delta):
 	if isEaten==false:
@@ -60,11 +55,6 @@ func _physics_process(_delta):
 						Global.flamefruit8=false
 										
 					queue_free()
-				
-			
-				
-		
-				#onFlamefruit = false
 
 
 
