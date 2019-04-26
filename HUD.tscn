@@ -1,19 +1,30 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://HUD.gd" type="Script" id=1]
-[ext_resource path="res://images/Stat bar/stat_bg.png" type="Texture" id=2]
-[ext_resource path="res://images/Stat bar/life_bg.png" type="Texture" id=3]
-[ext_resource path="res://images/Stat bar/full_bar.png" type="Texture" id=4]
+[ext_resource path="res://images/Stat bar/lives_v3.png" type="Texture" id=2]
+[ext_resource path="res://images/Stat bar/lives_v4.png" type="Texture" id=3]
+[ext_resource path="res://images/Stat bar/life_bg.png" type="Texture" id=4]
+[ext_resource path="res://images/Stat bar/full_bar.png" type="Texture" id=5]
 
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource( 1 )
 
 [node name="TextureRect" type="TextureRect" parent="."]
-margin_left = 20.0
-margin_top = 20.0
-margin_right = 1900.0
-margin_bottom = 768.0
+margin_left = -46.0
+margin_top = -27.0
+margin_right = 1834.0
+margin_bottom = 721.0
+rect_scale = Vector2( 0.6, 0.6 )
 texture = ExtResource( 2 )
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+visible = false
+margin_left = -46.0
+margin_top = -27.0
+margin_right = 1834.0
+margin_bottom = 721.0
+rect_scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 3 )
 
 [node name="VContainer" type="VBoxContainer" parent="."]
 margin_left = 100.0
@@ -26,8 +37,8 @@ margin_right = 1889.0
 margin_bottom = 33.0
 max_value = 10.0
 value = 10.0
-texture_under = ExtResource( 3 )
-texture_progress = ExtResource( 4 )
+texture_under = ExtResource( 4 )
+texture_progress = ExtResource( 5 )
 
 [node name="VContainer2" type="VBoxContainer" parent="."]
 margin_left = 100.0
@@ -40,6 +51,6 @@ margin_right = 1800.0
 margin_bottom = 33.0
 max_value = 12.0
 value = 5.0
-texture_under = ExtResource( 3 )
-texture_progress = ExtResource( 4 )
+texture_under = ExtResource( 4 )
+texture_progress = ExtResource( 5 )
 

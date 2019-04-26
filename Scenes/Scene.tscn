@@ -186,7 +186,7 @@ position = Vector2( 692.99, 459.77 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 22 )
-volume_db = -30.0
+volume_db = -20.0
 autoplay = true
 
 [node name="SpawnPosition" type="Position2D" parent="." groups=[
@@ -222,7 +222,6 @@ script = ExtResource( 28 )
 change_level = "res://Scenes/Scene.tscn"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-editor/display_folded = true
 
 [node name="Pause" parent="CanvasLayer" instance=ExtResource( 29 )]
 visible = false

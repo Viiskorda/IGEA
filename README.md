@@ -1,5 +1,16 @@
 # IGEA
 
+järgmiseks korraks 10.05
+- settingute alt: heli efektide valjudus - taustaheli ning muude helide slaider. 
+- stseenide vahel loading screen
+- udu lisamine
+- load game pausi lisada
+- HUD-i vahetada siis, kui tekib double jump
+- 
+
+
+
+
 järgmiseks korraks 26.04
 
 - plönn korda/ helid leida
@@ -23,7 +34,7 @@ järgmiseks korraks 26.04
 - TEHTUD Kui manasid on 12, siis flamefruidid manasid ei anna ning jäävad alles (flamefruidid) 
 - mustad ilusad piirid level1
 - kaamera sisse suumida ning taust panna vastavalt liikuma
-- kui elu läheb 0, siis viimases save-s ilmub nähtavale\
+- kui elu läheb 0, siis viimases save-s ilmub nähtavale
 - valgusvihud
 - kui kõik vaenlased on tapetud, alles siis ilmub koobas nähtavale (ehk must pilt selle kohal kaob ära)
 - koopa sisse teha area, millele vastu minnes hakkab boss alles tegutsema ning ümberringi läheb mustaks
