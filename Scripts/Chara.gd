@@ -40,7 +40,7 @@ func _ready():
 	emit_signal("left_camera", Eleft_camera)
 	emit_signal("right_camera", Eright_camera)
 	emit_signal("top_camera", Etop_camera)
-	Global.double_jump = true
+
 	add_to_group('Persist')
 
 func _input(_event):
