@@ -5,8 +5,7 @@
 [ext_resource path="res://RichTextLabel.gd" type="Script" id=3]
 
 [sub_resource type="DynamicFont" id=1]
-size = 20
-extra_spacing_bottom = 8
+size = 24
 font_data = ExtResource( 2 )
 
 [node name="Dialoog" type="CanvasLayer"]
@@ -21,10 +20,10 @@ color = Color( 1, 1, 1, 0 )
 polygon = PoolVector2Array( -352, -48, -352, 80, 336, 80, 336, -48 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Sprite/Polygon2D"]
-margin_left = -336.0
-margin_top = -32.0
-margin_right = 336.0
-margin_bottom = 80.0
+margin_left = -338.793
+margin_top = -43.1734
+margin_right = 333.207
+margin_bottom = 68.8266
 custom_fonts/normal_font = SubResource( 1 )
 bbcode_enabled = true
 script = ExtResource( 3 )

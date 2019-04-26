@@ -90,6 +90,7 @@ hp = 2
 position = Vector2( -113.035, 440 )
 
 [node name="Camera2D2" type="Camera2D" parent="Characters/Chara"]
+position = Vector2( 1.11111, 0 )
 offset = Vector2( 100, 0 )
 current = true
 zoom = Vector2( 0.75, 0.75 )
