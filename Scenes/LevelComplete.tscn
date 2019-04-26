@@ -14,7 +14,7 @@ change_level = "res://Scenes/Scene.tscn"
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 54.8319, 1.89075 )
+position = Vector2( 37.8151, 1.89075 )
 scale = Vector2( 1, 1.51544 )
 shape = SubResource( 1 )
 
