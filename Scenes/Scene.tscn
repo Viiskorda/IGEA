@@ -79,6 +79,7 @@ scale = Vector2( 0.757342, 0.757342 )
 texture = ExtResource( 8 )
 
 [node name="Characters" type="Node2D" parent="."]
+editor/display_folded = true
 
 [node name="Enemy" parent="Characters" instance=ExtResource( 9 )]
 position = Vector2( 1014.35, 450 )
@@ -170,6 +171,7 @@ position = Vector2( 1919.97, 390.677 )
 position = Vector2( 699.232, 506.059 )
 
 [node name="Tutorial tekstid" type="Node2D" parent="."]
+editor/display_folded = true
 
 [node name="ShootTut" parent="Tutorial tekstid" instance=ExtResource( 17 )]
 position = Vector2( 428.205, 347.398 )
