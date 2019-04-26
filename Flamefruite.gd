@@ -53,6 +53,10 @@ func _physics_process(_delta):
 						Global.flamefruit7=false
 					if Global.flamefruit8path==self:
 						Global.flamefruit8=false
+					if Global.flamefruit9path==self:
+						Global.flamefruit9=false
+					if Global.flamefruit10path==self:
+						Global.flamefruit10=false
 										
 					queue_free()
 

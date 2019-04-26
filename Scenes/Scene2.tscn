@@ -384,6 +384,12 @@ scale = Vector2( 1.25, -1.25 )
 [node name="Flamefruite7" parent="." instance=ExtResource( 25 )]
 position = Vector2( 3062.47, 1038.07 )
 
+[node name="Flamefruite9" parent="." instance=ExtResource( 25 )]
+position = Vector2( 2671.67, 540.487 )
+
+[node name="Flamefruite10" parent="." instance=ExtResource( 25 )]
+position = Vector2( 3371.47, 531.398 )
+
 [node name="Flamefruite4" parent="." instance=ExtResource( 25 )]
 position = Vector2( 3037.33, 1372.8 )
 

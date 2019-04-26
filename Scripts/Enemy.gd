@@ -26,6 +26,12 @@ func dead():
 		motion = Vector2(0, 0)
 		$EnemyCol.call_deferred('free')
 		$AnimatedSprite.play("dead")
+		
+		$Modulate.start()
+		
+		
+		
+		Global.enemy1isalive=false
 		$Timer.start()
 
 func _physics_process(_delta):
@@ -65,5 +71,9 @@ func _physics_process(_delta):
 #					get_slide_collision(i).collider.dead()
 
 func _on_Timer_timeout():
-	Global.enemy1isalive=false
+	
 	queue_free()
+
+
+func _on_Modulate_timeout():
+	$AnimatedSprite.modulate.a-=.1

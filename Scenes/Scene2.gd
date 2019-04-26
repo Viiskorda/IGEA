@@ -14,6 +14,8 @@ onready var flamefruite5=get_node("Flamefruite5")
 onready var flamefruite6=get_node("Flamefruite6")
 onready var flamefruite7=get_node("Flamefruite7")
 onready var flamefruite8=get_node("Flamefruite8")
+onready var flamefruite9=get_node("Flamefruite9")
+onready var flamefruite10=get_node("Flamefruite10")
 
 
 
@@ -35,6 +37,8 @@ func _ready():
 	Global.flamefruit6path=flamefruite6
 	Global.flamefruit7path=flamefruite7
 	Global.flamefruit8path=flamefruite8
+	Global.flamefruit7path=flamefruite9
+	Global.flamefruit8path=flamefruite10
 
 	
 
@@ -54,6 +58,10 @@ func _ready():
 		flamefruite7.queue_free()
 	if Global.flamefruit8==false:
 		flamefruite8.queue_free()
+	if Global.flamefruit9==false:
+		flamefruite9.queue_free()
+	if Global.flamefruit10==false:
+		flamefruite10.queue_free()
 	
 	if Global.enemy2isalive==false:
 		enemy2.queue_free()

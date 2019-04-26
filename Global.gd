@@ -12,10 +12,9 @@ var generateHealt=false
 var firstConversationWithChara=0
 var prevScene
 
-
 var enemy1isalive=true
-var enemy2isalive=true
 
+var enemy2isalive=true
 var enemy3isalive=true
 var enemy4isalive=true
 var enemy5isalive=true
@@ -28,7 +27,6 @@ var enemy4path
 var enemy5path
 var enemy6path
 
-
 var flamefruit0=true
 var flamefruit1=true
 var flamefruit2=true
@@ -38,6 +36,8 @@ var flamefruit5=true
 var flamefruit6=true
 var flamefruit7=true
 var flamefruit8=true
+var flamefruit9=true
+var flamefruit10=true
 
 var flamefruit0path
 var flamefruit1path
@@ -48,6 +48,8 @@ var flamefruit5path
 var flamefruit6path
 var flamefruit7path
 var flamefruit8path
+var flamefruit9path
+var flamefruit10path
 
 var soundvolume=-10
 var soundFXvolume=-30
