@@ -5,8 +5,9 @@ var manascore
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	Global.prevScene=Global.current_scene
-	print(Global.prevScene.name)
+#	Global.prevScene=Global.current_scene
+#	print(Global.prevScene.name)
+	pass
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

@@ -72,6 +72,7 @@ func spit():
 
 
 func _physics_process(_delta):
+	print(Global.enemy2isalive)
 	if is_dead == false:
 		
 		motion.x = speed * -direction

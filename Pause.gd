@@ -45,6 +45,60 @@ func _input(event):
 func _on_TextureButton_pressed():
 	get_tree().paused = not get_tree().paused
 	visible= not visible
+	#get_tree().reload_current_scene()
+	#get_tree().change_scene(change_level)
+
+
+
+	Global.health=10
+	Global.mana=3
+	Global.collidingWithChara=false
+	Global.charaPosition;
+	Global.bossHealth=10
+	Global.double_jump=false
+	Global.generateHealt=false
+	Global.firstConversationWithChara=0
+	
+	
+	Global.enemy1isalive=true
+	Global.enemy2isalive=true
+	
+	Global.enemy3isalive=true
+	Global.enemy4isalive=true
+	Global.enemy5isalive=true
+	Global.enemy6isalive=true
+	Global.enemy2path
+	Global.enemy3path
+	Global.enemy4path
+	Global.enemy5path
+	Global.enemy6path
+	
+	
+	Global.flamefruit0=true
+	Global.flamefruit1=true
+	Global.flamefruit2=true
+	Global.flamefruit3=true
+	Global.flamefruit4=true
+	Global.flamefruit5=true
+	Global.flamefruit6=true
+	Global.flamefruit7=true
+	Global.flamefruit8=true
+	
+	Global.flamefruit0path
+	Global.flamefruit1path
+	Global.flamefruit2path
+	Global.flamefruit3path
+	Global.flamefruit4path
+	Global.flamefruit5path
+	Global.flamefruit6path
+	Global.flamefruit7path
+	Global.flamefruit8path
+	
+	Global.soundvolume=-10
+	Global.soundFXvolume=-30
+
+
+
 	Global.goto_scene(change_level,target_spawn_group)
 	#get_tree().change_scene("Scenes/Scene.tscn")
 	#Global.goto_scene(change_level,target_spawn_group)

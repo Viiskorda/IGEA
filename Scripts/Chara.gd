@@ -292,6 +292,7 @@ func _on_Timer_timeout():
 				node.set_position(Vector2(data[node_path]['pos']['x'], data[node_path]['pos']['y']))
 			else:
 				#node.set(attribute, data[node_path][attribute])
+				
 				Global.health = data[node_path]['Global.health']
 				Global.mana = data[node_path]['Global.mana']
 				Global.enemy1isalive = data[node_path]['Global.enemy1isalive']
