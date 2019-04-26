@@ -33,6 +33,8 @@ func load_game():
 				#node.set(attribute, data[node_path][attribute])
 				Global.health = data[node_path]['Global.health']
 				Global.mana = data[node_path]['Global.mana']
+				Global.bossHealth = data[node_path]['Global.bossHealth']
+				Global.double_jump = data[node_path]['Global.double_jump']
 				Global.enemy1isalive = data[node_path]['Global.enemy1isalive']
 				Global.enemy2isalive = data[node_path]['Global.enemy2isalive']
 				Global.enemy3isalive = data[node_path]['Global.enemy3isalive']

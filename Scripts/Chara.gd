@@ -313,6 +313,9 @@ func save():
 		},
 		"Global.health" : Global.health,
 		"Global.mana" : Global.mana,
+		"Global.bossHealth" : Global.bossHealth,		
+		"Global.double_jump" : Global.double_jump,		
+		
 		"Global.enemy1isalive" : Global.enemy1isalive,
 		"Global.enemy2isalive" : Global.enemy2isalive,
 		"Global.enemy3isalive" : Global.enemy3isalive,
