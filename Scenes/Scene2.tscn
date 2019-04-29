@@ -99,8 +99,6 @@ texture = ExtResource( 5 )
 centered = false
 
 [node name="Floor" type="Node2D" parent="."]
-editor/display_folded = true
-visible = false
 
 [node name="NormalFloor" type="Node2D" parent="Floor"]
 editor/display_folded = true
@@ -448,7 +446,6 @@ visible = false
 position = Vector2( 1535.19, 1274.71 )
 
 [node name="Close cave" type="Area2D" parent="."]
-editor/display_folded = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Close cave"]
 position = Vector2( 3015.33, 622.816 )
