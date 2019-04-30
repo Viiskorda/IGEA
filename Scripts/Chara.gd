@@ -252,6 +252,8 @@ func audioDamage():
 func dead():
 	if getDamage == 1 :
 		Global.health -= 1
+		$LiikuvChara.modulate.a=0.5
+		position.y-=1
 		audioDamage()
 		emit_signal("hp_changed", Global.health)
 		Global.collidingWithChara=false
@@ -264,7 +266,18 @@ func dead():
 			$Timer.start()
 		else:
 			wait()
-	
+			fadeAway()
+
+
+func fadeAway():
+
+	var t = Timer.new()
+	t.set_wait_time(0.05)
+	t.set_one_shot(true)
+	self.add_child(t)
+	t.start()
+	yield(t, "timeout")
+	$LiikuvChara.modulate.a=1
 	
 func wait():
 	getDamage = 0
@@ -275,6 +288,7 @@ func wait():
 	t.start()
 	yield(t, "timeout")
 	getDamage = 1
+	$LiikuvChara.modulate.a=1
 	
 func _on_Timer_timeout():
 	#get_tree().reload_current_scene()

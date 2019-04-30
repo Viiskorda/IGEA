@@ -43,7 +43,6 @@ position = Vector2( -16.0212, -49.9282 )
 scale = Vector2( 1.42857, 1.42857 )
 
 [node name="Background" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="level_1_bg_taust_trees" type="Sprite" parent="Background"]
 visible = false
@@ -87,6 +86,12 @@ position = Vector2( 896.654, 382.555 )
 scale = Vector2( 0.757342, 0.757342 )
 texture = ExtResource( 10 )
 
+[node name="Light2D" type="Light2D" parent="Background"]
+position = Vector2( 896.654, 382.555 )
+scale = Vector2( 0.757342, 0.757342 )
+texture = ExtResource( 10 )
+energy = 1.1
+
 [node name="Characters" type="Node2D" parent="."]
 
 [node name="Enemy" parent="Characters" instance=ExtResource( 11 )]
@@ -96,7 +101,6 @@ hp = 2
 [node name="Chara" parent="Characters" groups=[
 "Persist",
 ] instance=ExtResource( 12 )]
-editor/display_folded = true
 position = Vector2( -113.035, 440 )
 
 [node name="Camera2D2" type="Camera2D" parent="Characters/Chara"]

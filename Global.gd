@@ -7,6 +7,7 @@ var mana=3
 var collidingWithChara=false
 var charaPosition;
 var bossHealth=10
+var BossIsFreed=false
 var double_jump=false
 var generateHealt=false
 var firstConversationWithChara=0

@@ -7,18 +7,20 @@ var temp=1
 var is_dead = false
 const SHOOT = preload("res://BossShoot.tscn")
 var beginningposition
-
+var color=1
 export(int) var grav = 0
 export(int) var speed = 150
 
 func _ready():
 	if Global.enemy2isalive==false:
 		queue_free()
-	var attackRandomly= attackRandomly()
-	print(attackRandomly)
-	beginningposition=position
-	if Global.enemy2isalive==false:
-		queue_free()	
+	else:
+
+		$AnimatedSprite.modulate.a=0
+		var attackRandomly= attackRandomly()
+		print(attackRandomly)
+		beginningposition=position
+
 	
 	
 func attackRandomly():
@@ -26,15 +28,23 @@ func attackRandomly():
 	
 func dead():
 	Global.bossHealth -= 1
+	
+	$AnimatedSprite.modulate.a=0
+	fadeAway(color)
+	#color-=.1
+	
 	print(Global.bossHealth)
 	if Global.bossHealth <= 0:
+		
 		is_dead = true
 		Global.firstConversationWithChara=2
 		motion = Vector2(0, 0)
 		Global.double_jump=true
 		$EnemyCol.call_deferred('free')
 		$AnimatedSprite.play("dead")
+		$Modulate.start()
 		$Timer.start()
+
 
 func attack():
 	direction=0
@@ -73,8 +83,8 @@ func spit():
 
 func _physics_process(_delta):
 	
-	if is_dead == false:
-		
+	if is_dead == false and Global.BossIsFreed==true:
+		$AnimatedSprite.modulate.a=1
 		motion.x = speed * -direction
 		motion.y = speed * -directiony
 		#print(position)
@@ -161,6 +171,19 @@ func _physics_process(_delta):
 				if "Chara" in get_slide_collision(i).collider.name:
 					Global.collidingWithChara=true
 
+func fadeAway(color):
+
+	var t = Timer.new()
+	t.set_wait_time(0.05)
+	t.set_one_shot(true)
+	self.add_child(t)
+	t.start()
+	yield(t, "timeout")
+	$AnimatedSprite.modulate.a=1
+	$AnimatedSprite.modulate = Color(color, color, color)
+
+
+
 func _on_Timer_timeout():
 	Global.enemy2isalive=false
 	queue_free()
@@ -168,3 +191,5 @@ func _on_Timer_timeout():
 func _on_Attack_timeout():
 	direction=1
 	
+func _on_Modulate_timeout():
+	$AnimatedSprite.modulate.a-=.1

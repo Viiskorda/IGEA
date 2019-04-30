@@ -5,7 +5,7 @@ const FLOOR = Vector2(0, -1)
 var motion = Vector2()
 
 var direction = 1
-
+var color=.7
 var is_dead = false
 
 export(int) var hp = 1
@@ -15,12 +15,13 @@ export(int) var speed = 150
 func _ready():
 	if Global.enemy1isalive==false:
 		queue_free()
-
-	
-	
 	
 func dead():
 	hp -= 1
+	$AnimatedSprite.modulate.a=0
+	fadeAway(color)
+	color-=.2
+	
 	if hp <= 0:
 		is_dead = true
 		motion = Vector2(0, 0)
@@ -69,6 +70,20 @@ func _physics_process(_delta):
 #				if "Chara" in get_slide_collision(i).collider.name && is_dead==true:
 #					print(is_dead)
 #					get_slide_collision(i).collider.dead()
+		
+
+
+func fadeAway(color):
+
+	var t = Timer.new()
+	t.set_wait_time(0.05)
+	t.set_one_shot(true)
+	self.add_child(t)
+	t.start()
+	yield(t, "timeout")
+	$AnimatedSprite.modulate.a=1
+	$AnimatedSprite.modulate = Color(color, color, color)
+
 
 func _on_Timer_timeout():
 	

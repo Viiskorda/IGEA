@@ -3,7 +3,7 @@ extends KinematicBody2D
 const FLOOR = Vector2(0, -1)
 
 var motion = Vector2()
-
+var color=.8
 var direction = 1
 
 var is_dead = false
@@ -24,6 +24,11 @@ func _ready():
 	
 func dead():
 	hp -= 1
+	
+	$AnimatedSprite.modulate.a=0
+	fadeAway(color)
+	color-=.2
+	
 	if hp <= 0:
 		is_dead = true
 		motion = Vector2(0, 0)
@@ -60,6 +65,8 @@ func _physics_process(_delta):
 					Global.collidingWithChara=true
 
 func _on_Timer_timeout():
+	print(self)
+	print(Global.enemy3path)
 	if Global.enemy3path==self:
 		Global.enemy3isalive=false
 	if Global.enemy4path==self:
@@ -77,5 +84,16 @@ func deadEnemy():
 	
 func _on_Modulate_timeout():
 	$AnimatedSprite.modulate.a-=.1
+
+func fadeAway(color):
+
+	var t = Timer.new()
+	t.set_wait_time(0.05)
+	t.set_one_shot(true)
+	self.add_child(t)
+	t.start()
+	yield(t, "timeout")
+	$AnimatedSprite.modulate.a=1
+	$AnimatedSprite.modulate = Color(color, color, color)
 
 

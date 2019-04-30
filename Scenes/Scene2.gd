@@ -1,21 +1,21 @@
 extends Node
-onready var enemy2=get_node("Enemy2")
-onready var enemy3=get_node("Enemy3")
-onready var enemy4=get_node("Enemy4")
-onready var enemy5=get_node("Enemy5")
-onready var enemy6=get_node("Enemy6")
+onready var enemy2=get_node("Enemies/Enemy2")
+onready var enemy3=get_node("Enemies/Enemy3")
+onready var enemy4=get_node("Enemies/Enemy4")
+onready var enemy5=get_node("Enemies/Enemy5")
+onready var enemy6=get_node("Enemies/Enemy6")
 
 
-onready var flamefruite1=get_node("Flamefruite")
-onready var flamefruite2=get_node("Flamefruite2")
-onready var flamefruite3=get_node("Flamefruite3")
-onready var flamefruite4=get_node("Flamefruite4")
-onready var flamefruite5=get_node("Flamefruite5")
-onready var flamefruite6=get_node("Flamefruite6")
-onready var flamefruite7=get_node("Flamefruite7")
-onready var flamefruite8=get_node("Flamefruite8")
-onready var flamefruite9=get_node("Flamefruite9")
-onready var flamefruite10=get_node("Flamefruite10")
+onready var flamefruite1=get_node("Flamefruits/Flamefruite")
+onready var flamefruite2=get_node("Flamefruits/Flamefruite2")
+onready var flamefruite3=get_node("Flamefruits/Flamefruite3")
+onready var flamefruite4=get_node("Flamefruits/Flamefruite4")
+onready var flamefruite5=get_node("Flamefruits/Flamefruite5")
+onready var flamefruite6=get_node("Flamefruits/Flamefruite6")
+onready var flamefruite7=get_node("Flamefruits/Flamefruite7")
+onready var flamefruite8=get_node("Flamefruits/Flamefruite8")
+onready var flamefruite9=get_node("Flamefruits/Flamefruite9")
+onready var flamefruite10=get_node("Flamefruits/Flamefruite10")
 
 
 
@@ -37,8 +37,8 @@ func _ready():
 	Global.flamefruit6path=flamefruite6
 	Global.flamefruit7path=flamefruite7
 	Global.flamefruit8path=flamefruite8
-	Global.flamefruit7path=flamefruite9
-	Global.flamefruit8path=flamefruite10
+	Global.flamefruit9path=flamefruite9
+	Global.flamefruit10path=flamefruite10
 
 	
 

@@ -6,33 +6,33 @@
 [ext_resource path="res://images/level_2_test7.png" type="Texture" id=4]
 [ext_resource path="res://Background/level_2_mountains.png" type="Texture" id=5]
 [ext_resource path="res://Background/level_2_test8.png" type="Texture" id=6]
-[ext_resource path="res://Scenes/Chara.tscn" type="PackedScene" id=7]
-[ext_resource path="res://floor.tscn" type="PackedScene" id=8]
-[ext_resource path="res://CaveFloor1.tscn" type="PackedScene" id=9]
-[ext_resource path="res://CaveFloor3.tscn" type="PackedScene" id=10]
-[ext_resource path="res://CaveFloor4.tscn" type="PackedScene" id=11]
-[ext_resource path="res://KaduvFloor.tscn" type="PackedScene" id=12]
-[ext_resource path="res://RockFloor.tscn" type="PackedScene" id=13]
-[ext_resource path="res://FallingRock.tscn" type="PackedScene" id=14]
-[ext_resource path="res://images/kivid/level_2_rock1.png" type="Texture" id=15]
-[ext_resource path="res://images/kivid/level_2_rock4.png" type="Texture" id=16]
-[ext_resource path="res://images/kivid/level_2_rock5.png" type="Texture" id=17]
-[ext_resource path="res://images/kivid/level_2_rock6.png" type="Texture" id=18]
-[ext_resource path="res://images/kivid/level_2_rock7.png" type="Texture" id=19]
-[ext_resource path="res://images/kivid/level_2_rock9.png" type="Texture" id=20]
-[ext_resource path="res://Falling.tscn" type="PackedScene" id=21]
-[ext_resource path="res://Falling.gd" type="Script" id=22]
-[ext_resource path="res://Enemy2.tscn" type="PackedScene" id=23]
-[ext_resource path="res://Enemy3.tscn" type="PackedScene" id=24]
-[ext_resource path="res://Sounds/back/Märt Nigu - Avatud - 4. Avatud IV.ogg" type="AudioStream" id=25]
-[ext_resource path="res://Vanamees.tscn" type="PackedScene" id=26]
-[ext_resource path="res://Flamefruite.tscn" type="PackedScene" id=27]
-[ext_resource path="res://HUD.tscn" type="PackedScene" id=28]
-[ext_resource path="res://Scenes/LevelComplete.tscn" type="PackedScene" id=29]
-[ext_resource path="res://icon.png" type="Texture" id=30]
-[ext_resource path="res://HealthGate.tscn" type="PackedScene" id=31]
-[ext_resource path="res://Pause.tscn" type="PackedScene" id=32]
-[ext_resource path="res://ElderTalk.tscn" type="PackedScene" id=33]
+[ext_resource path="res://floor.tscn" type="PackedScene" id=7]
+[ext_resource path="res://CaveFloor1.tscn" type="PackedScene" id=8]
+[ext_resource path="res://CaveFloor3.tscn" type="PackedScene" id=9]
+[ext_resource path="res://CaveFloor4.tscn" type="PackedScene" id=10]
+[ext_resource path="res://KaduvFloor.tscn" type="PackedScene" id=11]
+[ext_resource path="res://RockFloor.tscn" type="PackedScene" id=12]
+[ext_resource path="res://FallingRock.tscn" type="PackedScene" id=13]
+[ext_resource path="res://images/kivid/level_2_rock1.png" type="Texture" id=14]
+[ext_resource path="res://images/kivid/level_2_rock4.png" type="Texture" id=15]
+[ext_resource path="res://images/kivid/level_2_rock5.png" type="Texture" id=16]
+[ext_resource path="res://images/kivid/level_2_rock6.png" type="Texture" id=17]
+[ext_resource path="res://images/kivid/level_2_rock7.png" type="Texture" id=18]
+[ext_resource path="res://images/kivid/level_2_rock9.png" type="Texture" id=19]
+[ext_resource path="res://Falling.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Falling.gd" type="Script" id=21]
+[ext_resource path="res://Enemy2.tscn" type="PackedScene" id=22]
+[ext_resource path="res://Enemy3.tscn" type="PackedScene" id=23]
+[ext_resource path="res://Sounds/back/Märt Nigu - Avatud - 4. Avatud IV.ogg" type="AudioStream" id=24]
+[ext_resource path="res://Vanamees.tscn" type="PackedScene" id=25]
+[ext_resource path="res://Flamefruite.tscn" type="PackedScene" id=26]
+[ext_resource path="res://HUD.tscn" type="PackedScene" id=27]
+[ext_resource path="res://Scenes/LevelComplete.tscn" type="PackedScene" id=28]
+[ext_resource path="res://icon.png" type="Texture" id=29]
+[ext_resource path="res://HealthGate.tscn" type="PackedScene" id=30]
+[ext_resource path="res://Pause.tscn" type="PackedScene" id=31]
+[ext_resource path="res://ElderTalk.tscn" type="PackedScene" id=32]
+[ext_resource path="res://Scenes/Chara.tscn" type="PackedScene" id=33]
 
 [sub_resource type="PhysicsMaterial" id=1]
 friction = 0.0
@@ -73,7 +73,361 @@ position = Vector2( 2058.82, 838.424 )
 scale = Vector2( 0.618, 0.618 )
 texture = ExtResource( 6 )
 
-[node name="Chara" parent="." instance=ExtResource( 7 )]
+[node name="Floor" type="Node2D" parent="."]
+
+[node name="NormalFloor" type="Node2D" parent="Floor"]
+editor/display_folded = true
+
+[node name="floor" parent="Floor/NormalFloor" instance=ExtResource( 7 )]
+position = Vector2( 489.009, 1643.02 )
+scale = Vector2( 2.96705, 1 )
+
+[node name="floor14" parent="Floor/NormalFloor" instance=ExtResource( 7 )]
+position = Vector2( 1268.55, 1651.95 )
+scale = Vector2( 1.1, 1 )
+
+[node name="floor2" parent="Floor/NormalFloor" instance=ExtResource( 7 )]
+position = Vector2( 514.917, 1125.84 )
+scale = Vector2( 2.26126, 1 )
+
+[node name="floor3" parent="Floor/NormalFloor" instance=ExtResource( 7 )]
+position = Vector2( 1462.34, 1397.5 )
+scale = Vector2( 3.93129, 1 )
+
+[node name="floor4" parent="Floor/NormalFloor" instance=ExtResource( 7 )]
+position = Vector2( 1694.53, 1774.94 )
+scale = Vector2( 2.86478, 1 )
+
+[node name="floor5" parent="Floor/NormalFloor" instance=ExtResource( 7 )]
+position = Vector2( 2242.13, 1456.43 )
+scale = Vector2( 1.91354, 1 )
+
+[node name="floor6" parent="Floor/NormalFloor" instance=ExtResource( 7 )]
+position = Vector2( 2816.04, 1625.86 )
+scale = Vector2( 2.17728, 1 )
+
+[node name="floor7" parent="Floor/NormalFloor" instance=ExtResource( 7 )]
+position = Vector2( 3275.18, 1786.51 )
+scale = Vector2( 3.15195, 1 )
+
+[node name="floor8" parent="Floor/NormalFloor" instance=ExtResource( 7 )]
+position = Vector2( 2844.44, 974.944 )
+scale = Vector2( 1.54908, 1 )
+
+[node name="floor12" parent="Floor/NormalFloor" instance=ExtResource( 7 )]
+position = Vector2( 2588.6, 827.349 )
+scale = Vector2( 1.54908, 1 )
+
+[node name="floor13" parent="Floor/NormalFloor" instance=ExtResource( 7 )]
+position = Vector2( 3483.6, 792.994 )
+scale = Vector2( 1.54908, 1 )
+
+[node name="floor9" parent="Floor/NormalFloor" instance=ExtResource( 7 )]
+position = Vector2( 3010.17, 754.279 )
+scale = Vector2( 1.99478, 1 )
+
+[node name="floor10" parent="Floor/NormalFloor" instance=ExtResource( 7 )]
+position = Vector2( 3360.48, 592.492 )
+scale = Vector2( 1.09192, 0.995075 )
+
+[node name="floor11" parent="Floor/NormalFloor" instance=ExtResource( 7 )]
+position = Vector2( 2666.2, 600.208 )
+scale = Vector2( 1.06935, 1 )
+
+[node name="CaveFloor" type="Node2D" parent="Floor"]
+editor/display_folded = true
+
+[node name="CaveFloor1" parent="Floor/CaveFloor" instance=ExtResource( 8 )]
+position = Vector2( 2568.75, 804.31 )
+rotation = 0.577704
+mode = 3
+physics_material_override = SubResource( 1 )
+gravity_scale = 0.0
+can_sleep = false
+
+[node name="CaveFloor2" parent="Floor/CaveFloor" instance=ExtResource( 8 )]
+position = Vector2( 3503.24, 821.923 )
+rotation = -0.488216
+mode = 3
+physics_material_override = SubResource( 1 )
+gravity_scale = 0.0
+can_sleep = false
+
+[node name="CaveFloor3" parent="Floor/CaveFloor" instance=ExtResource( 9 )]
+position = Vector2( 3651.43, 353.308 )
+rotation = 1.5708
+mode = 3
+physics_material_override = SubResource( 2 )
+gravity_scale = 0.0
+can_sleep = false
+
+[node name="CaveFloor4" parent="Floor/CaveFloor" instance=ExtResource( 10 )]
+position = Vector2( 2330.73, 200.798 )
+rotation = 1.5708
+mode = 3
+physics_material_override = SubResource( 3 )
+gravity_scale = 0.0
+can_sleep = false
+
+[node name="CaveFloor5" parent="Floor/CaveFloor" instance=ExtResource( 10 )]
+position = Vector2( 2680.18, -241.325 )
+rotation = 3.17721
+mode = 3
+physics_material_override = SubResource( 3 )
+gravity_scale = 0.0
+can_sleep = false
+
+[node name="CaveFloor6" parent="Floor/CaveFloor" instance=ExtResource( 10 )]
+position = Vector2( 3474.73, -111.183 )
+rotation = 3.44838
+mode = 3
+physics_material_override = SubResource( 3 )
+gravity_scale = 0.0
+can_sleep = false
+
+[node name="KaduvFloor" parent="Floor" instance=ExtResource( 11 )]
+position = Vector2( 3081.61, 965.508 )
+
+[node name="Rockfloor" type="Node2D" parent="Floor"]
+editor/display_folded = true
+
+[node name="RockFloor" parent="Floor/Rockfloor" instance=ExtResource( 12 )]
+visible = false
+position = Vector2( 2538.98, 803.694 )
+rotation = 0.610388
+
+[node name="RockFloor2" parent="Floor/Rockfloor" instance=ExtResource( 12 )]
+visible = false
+position = Vector2( 2328.12, 341.581 )
+rotation = 1.5708
+
+[node name="RockFloor3" parent="Floor/Rockfloor" instance=ExtResource( 12 )]
+visible = false
+position = Vector2( 3654.42, 430.551 )
+rotation = 1.5708
+
+[node name="RockFloor4" parent="Floor/Rockfloor" instance=ExtResource( 12 )]
+position = Vector2( 3544.13, 811.238 )
+rotation = 2.66437
+
+[node name="Kivid" type="Node2D" parent="."]
+editor/display_folded = true
+
+[node name="TestRock" parent="Kivid" instance=ExtResource( 13 )]
+position = Vector2( 803.963, 1524.65 )
+scale = Vector2( 0.7, 0.7 )
+
+[node name="Sprite2" type="Sprite" parent="Kivid/TestRock"]
+position = Vector2( 0, 9.99951 )
+scale = Vector2( 0.689954, 0.689954 )
+texture = ExtResource( 14 )
+
+[node name="TestRock2" parent="Kivid" instance=ExtResource( 13 )]
+position = Vector2( 934.3, 1388.33 )
+scale = Vector2( 0.8, 0.8 )
+
+[node name="Sprite2" type="Sprite" parent="Kivid/TestRock2"]
+position = Vector2( 0, 10 )
+scale = Vector2( 0.735437, 0.735437 )
+texture = ExtResource( 14 )
+
+[node name="TestRock3" parent="Kivid" instance=ExtResource( 13 )]
+position = Vector2( 765.302, 1243.58 )
+scale = Vector2( 0.8, 0.7 )
+
+[node name="Sprite2" type="Sprite" parent="Kivid/TestRock3"]
+position = Vector2( 0, 11.4286 )
+scale = Vector2( 0.725712, 0.725712 )
+texture = ExtResource( 14 )
+
+[node name="TestRock4" parent="Kivid" instance=ExtResource( 13 )]
+editor/display_folded = true
+position = Vector2( 1972.29, 1627.68 )
+scale = Vector2( 1.33207, 0.94 )
+
+[node name="Sprite2" type="Sprite" parent="Kivid/TestRock4"]
+scale = Vector2( 0.409657, 0.409657 )
+texture = ExtResource( 15 )
+
+[node name="TestRock5" parent="Kivid" instance=ExtResource( 13 )]
+position = Vector2( 2516.18, 1556.98 )
+scale = Vector2( 0.772082, 0.902586 )
+
+[node name="Sprite2" type="Sprite" parent="Kivid/TestRock5"]
+position = Vector2( 0, 8.8634 )
+scale = Vector2( 0.680266, 0.680266 )
+texture = ExtResource( 16 )
+
+[node name="TestRock6" parent="Kivid" instance=ExtResource( 13 )]
+editor/display_folded = true
+position = Vector2( 3037.84, 1484.19 )
+scale = Vector2( 0.732062, 0.782586 )
+
+[node name="Sprite2" type="Sprite" parent="Kivid/TestRock6"]
+position = Vector2( 0, 10.2224 )
+scale = Vector2( 0.707749, 0.707749 )
+texture = ExtResource( 17 )
+
+[node name="TestRock7" parent="Kivid" instance=ExtResource( 13 )]
+editor/display_folded = true
+position = Vector2( 3194.63, 1379.88 )
+scale = Vector2( 1.36638, 0.884961 )
+
+[node name="Sprite2" type="Sprite" parent="Kivid/TestRock7"]
+scale = Vector2( 0.353051, 0.353051 )
+texture = ExtResource( 18 )
+
+[node name="TestRock8" parent="Kivid" instance=ExtResource( 13 )]
+editor/display_folded = true
+position = Vector2( 3321.73, 1247.53 )
+scale = Vector2( 0.905099, 0.884961 )
+
+[node name="Sprite2" type="Sprite" parent="Kivid/TestRock8"]
+position = Vector2( 0, 6.78003 )
+scale = Vector2( 0.678767, 0.678767 )
+texture = ExtResource( 17 )
+
+[node name="TestRock9" parent="Kivid" instance=ExtResource( 13 )]
+position = Vector2( 3074.21, 1137.19 )
+scale = Vector2( 1.9451, 0.884961 )
+
+[node name="Sprite2" type="Sprite" parent="Kivid/TestRock9"]
+scale = Vector2( 0.272401, 0.272401 )
+texture = ExtResource( 19 )
+
+[node name="Falling" parent="." instance=ExtResource( 20 )]
+position = Vector2( 2071.73, 2286.53 )
+scale = Vector2( 1.50685, 1.58729 )
+script = ExtResource( 21 )
+change_level = "res://Scenes/Scene2.tscn"
+
+[node name="Enemies" type="Node2D" parent="."]
+
+[node name="Enemy2" parent="Enemies" instance=ExtResource( 22 )]
+position = Vector2( 2972.52, 111.094 )
+scale = Vector2( 0.586775, 0.586775 )
+
+[node name="Enemy3" parent="Enemies" instance=ExtResource( 23 )]
+position = Vector2( 1581.25, 1709.74 )
+scale = Vector2( 0.520737, 0.500101 )
+hp = 4
+
+[node name="Enemy5" parent="Enemies" instance=ExtResource( 23 )]
+position = Vector2( 2198.47, 1404.21 )
+scale = Vector2( 0.520737, 0.500101 )
+hp = 4
+
+[node name="Enemy6" parent="Enemies" instance=ExtResource( 23 )]
+position = Vector2( 2836.19, 1564.15 )
+scale = Vector2( 0.520737, 0.500101 )
+hp = 4
+
+[node name="Enemy4" parent="Enemies" instance=ExtResource( 23 )]
+position = Vector2( 566.232, 1065.87 )
+scale = Vector2( 0.520737, 0.500101 )
+hp = 4
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 24 )
+volume_db = -30.0
+autoplay = true
+
+[node name="Vanamees" parent="." instance=ExtResource( 25 )]
+position = Vector2( 1601.9, 1292.11 )
+
+[node name="Flamefruits" type="Node2D" parent="."]
+position = Vector2( 1259.94, 1571.93 )
+scale = Vector2( 0.7, 0.7 )
+
+[node name="Flamefruite" parent="Flamefruits" instance=ExtResource( 26 )]
+scale = Vector2( 1, 1 )
+z_index = 2
+
+[node name="Flamefruite3" parent="Flamefruits" instance=ExtResource( 26 )]
+position = Vector2( 1788.36, -150.886 )
+scale = Vector2( 1, 1 )
+
+[node name="Flamefruite2" parent="Flamefruits" instance=ExtResource( 26 )]
+position = Vector2( -708.898, -591.668 )
+scale = Vector2( 1, 1 )
+
+[node name="Flamefruite8" parent="Flamefruits" instance=ExtResource( 26 )]
+position = Vector2( 1013.34, -62.0286 )
+scale = Vector2( 1, 1 )
+
+[node name="Flamefruite5" parent="Flamefruits" instance=ExtResource( 26 )]
+position = Vector2( 2760.91, -411.786 )
+scale = Vector2( 1, 1 )
+
+[node name="Flamefruite6" parent="Flamefruits" instance=ExtResource( 26 )]
+position = Vector2( 2945.87, -589.229 )
+scale = Vector2( 1, 1 )
+
+[node name="Flamefruite7" parent="Flamefruits" instance=ExtResource( 26 )]
+position = Vector2( 2575.04, -762.657 )
+scale = Vector2( 1, 1 )
+
+[node name="Flamefruite9" parent="Flamefruits" instance=ExtResource( 26 )]
+position = Vector2( 2016.76, -1473.49 )
+scale = Vector2( 1, 1 )
+
+[node name="Flamefruite10" parent="Flamefruits" instance=ExtResource( 26 )]
+position = Vector2( 3016.47, -1486.47 )
+scale = Vector2( 1, 1 )
+
+[node name="Flamefruite4" parent="Flamefruits" instance=ExtResource( 26 )]
+position = Vector2( 2539.13, -284.471 )
+scale = Vector2( 1, 1 )
+
+[node name="HUD" parent="." instance=ExtResource( 27 )]
+
+[node name="LevelComplete" parent="." instance=ExtResource( 28 )]
+editor/display_folded = true
+position = Vector2( 3891.41, 1389.07 )
+change_level = "res://Scenes/Scene2.tscn"
+
+[node name="Sprite" type="Sprite" parent="LevelComplete"]
+modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 27.0483, 162.291 )
+scale = Vector2( 6.64636, 1 )
+texture = ExtResource( 29 )
+
+[node name="Area2D" parent="LevelComplete" instance=ExtResource( 30 )]
+position = Vector2( -19.4751, -49.7694 )
+scale = Vector2( 1.42857, 1.42857 )
+
+[node name="RockFloor5" parent="LevelComplete" instance=ExtResource( 12 )]
+position = Vector2( 29.7075, 146.109 )
+scale = Vector2( 0.714286, 1.42857 )
+
+[node name="LevelComplete2" parent="." instance=ExtResource( 28 )]
+editor/display_folded = true
+position = Vector2( 299.312, 1521.69 )
+rotation = 3.14159
+scale = Vector2( 0.8, -0.8 )
+target_spawn_group = "second_spawn"
+
+[node name="Area2D2" parent="LevelComplete2" instance=ExtResource( 30 )]
+position = Vector2( -7.57349, -18.934 )
+rotation = -3.14159
+scale = Vector2( 1.25, -1.25 )
+
+[node name="Menüü" type="CanvasLayer" parent="."]
+editor/display_folded = true
+
+[node name="Pause" parent="Menüü" instance=ExtResource( 31 )]
+visible = false
+
+[node name="ElderTalk" parent="." instance=ExtResource( 32 )]
+position = Vector2( 1535.19, 1274.71 )
+
+[node name="Close cave" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Close cave"]
+position = Vector2( 3015.33, 622.816 )
+shape = SubResource( 4 )
+
+[node name="Chara" parent="." instance=ExtResource( 33 )]
 position = Vector2( 300, 1530 )
 
 [node name="Camera2D" type="Camera2D" parent="Chara"]
@@ -98,361 +452,8 @@ scale = Vector2( 0.758884, 0.740867 )
 texture = ExtResource( 5 )
 centered = false
 
-[node name="Floor" type="Node2D" parent="."]
-
-[node name="NormalFloor" type="Node2D" parent="Floor"]
-editor/display_folded = true
-
-[node name="floor" parent="Floor/NormalFloor" instance=ExtResource( 8 )]
-position = Vector2( 489.009, 1643.02 )
-scale = Vector2( 2.96705, 1 )
-
-[node name="floor14" parent="Floor/NormalFloor" instance=ExtResource( 8 )]
-position = Vector2( 1268.55, 1651.95 )
-scale = Vector2( 1.1, 1 )
-
-[node name="floor2" parent="Floor/NormalFloor" instance=ExtResource( 8 )]
-position = Vector2( 514.917, 1125.84 )
-scale = Vector2( 2.26126, 1 )
-
-[node name="floor3" parent="Floor/NormalFloor" instance=ExtResource( 8 )]
-position = Vector2( 1462.34, 1397.5 )
-scale = Vector2( 3.93129, 1 )
-
-[node name="floor4" parent="Floor/NormalFloor" instance=ExtResource( 8 )]
-position = Vector2( 1694.53, 1774.94 )
-scale = Vector2( 2.86478, 1 )
-
-[node name="floor5" parent="Floor/NormalFloor" instance=ExtResource( 8 )]
-position = Vector2( 2242.13, 1456.43 )
-scale = Vector2( 1.91354, 1 )
-
-[node name="floor6" parent="Floor/NormalFloor" instance=ExtResource( 8 )]
-position = Vector2( 2816.04, 1625.86 )
-scale = Vector2( 2.17728, 1 )
-
-[node name="floor7" parent="Floor/NormalFloor" instance=ExtResource( 8 )]
-position = Vector2( 3275.18, 1786.51 )
-scale = Vector2( 3.15195, 1 )
-
-[node name="floor8" parent="Floor/NormalFloor" instance=ExtResource( 8 )]
-position = Vector2( 2844.44, 974.944 )
-scale = Vector2( 1.54908, 1 )
-
-[node name="floor12" parent="Floor/NormalFloor" instance=ExtResource( 8 )]
-position = Vector2( 2588.6, 827.349 )
-scale = Vector2( 1.54908, 1 )
-
-[node name="floor13" parent="Floor/NormalFloor" instance=ExtResource( 8 )]
-position = Vector2( 3483.6, 792.994 )
-scale = Vector2( 1.54908, 1 )
-
-[node name="floor9" parent="Floor/NormalFloor" instance=ExtResource( 8 )]
-position = Vector2( 3010.17, 754.279 )
-scale = Vector2( 1.99478, 1 )
-
-[node name="floor10" parent="Floor/NormalFloor" instance=ExtResource( 8 )]
-position = Vector2( 3360.48, 592.492 )
-scale = Vector2( 1.09192, 0.995075 )
-
-[node name="floor11" parent="Floor/NormalFloor" instance=ExtResource( 8 )]
-position = Vector2( 2666.2, 600.208 )
-scale = Vector2( 1.06935, 1 )
-
-[node name="CaveFloor" type="Node2D" parent="Floor"]
-editor/display_folded = true
-
-[node name="CaveFloor1" parent="Floor/CaveFloor" instance=ExtResource( 9 )]
-position = Vector2( 2568.75, 804.31 )
-rotation = 0.577704
-mode = 3
-physics_material_override = SubResource( 1 )
-gravity_scale = 0.0
-can_sleep = false
-
-[node name="CaveFloor2" parent="Floor/CaveFloor" instance=ExtResource( 9 )]
-position = Vector2( 3503.24, 821.923 )
-rotation = -0.488216
-mode = 3
-physics_material_override = SubResource( 1 )
-gravity_scale = 0.0
-can_sleep = false
-
-[node name="CaveFloor3" parent="Floor/CaveFloor" instance=ExtResource( 10 )]
-position = Vector2( 3651.43, 353.308 )
-rotation = 1.5708
-mode = 3
-physics_material_override = SubResource( 2 )
-gravity_scale = 0.0
-can_sleep = false
-
-[node name="CaveFloor4" parent="Floor/CaveFloor" instance=ExtResource( 11 )]
-position = Vector2( 2330.73, 200.798 )
-rotation = 1.5708
-mode = 3
-physics_material_override = SubResource( 3 )
-gravity_scale = 0.0
-can_sleep = false
-
-[node name="CaveFloor5" parent="Floor/CaveFloor" instance=ExtResource( 11 )]
-position = Vector2( 2680.18, -241.325 )
-rotation = 3.17721
-mode = 3
-physics_material_override = SubResource( 3 )
-gravity_scale = 0.0
-can_sleep = false
-
-[node name="CaveFloor6" parent="Floor/CaveFloor" instance=ExtResource( 11 )]
-position = Vector2( 3474.73, -111.183 )
-rotation = 3.44838
-mode = 3
-physics_material_override = SubResource( 3 )
-gravity_scale = 0.0
-can_sleep = false
-
-[node name="KaduvFloor" parent="Floor" instance=ExtResource( 12 )]
-position = Vector2( 3081.61, 965.508 )
-
-[node name="Rockfloor" type="Node2D" parent="Floor"]
-editor/display_folded = true
-
-[node name="RockFloor" parent="Floor/Rockfloor" instance=ExtResource( 13 )]
-visible = false
-position = Vector2( 2538.98, 803.694 )
-rotation = 0.610388
-
-[node name="RockFloor2" parent="Floor/Rockfloor" instance=ExtResource( 13 )]
-visible = false
-position = Vector2( 2328.12, 341.581 )
-rotation = 1.5708
-
-[node name="RockFloor3" parent="Floor/Rockfloor" instance=ExtResource( 13 )]
-visible = false
-position = Vector2( 3654.42, 430.551 )
-rotation = 1.5708
-
-[node name="RockFloor4" parent="Floor/Rockfloor" instance=ExtResource( 13 )]
-position = Vector2( 3544.13, 811.238 )
-rotation = 2.66437
-
-[node name="Kivid" type="Node2D" parent="."]
-
-[node name="TestRock" parent="Kivid" instance=ExtResource( 14 )]
-position = Vector2( 803.963, 1524.65 )
-scale = Vector2( 0.7, 0.7 )
-
-[node name="Sprite2" type="Sprite" parent="Kivid/TestRock"]
-position = Vector2( 0, 9.99951 )
-scale = Vector2( 0.689954, 0.689954 )
-texture = ExtResource( 15 )
-
-[node name="TestRock2" parent="Kivid" instance=ExtResource( 14 )]
-position = Vector2( 934.3, 1388.33 )
-scale = Vector2( 0.8, 0.8 )
-
-[node name="Sprite2" type="Sprite" parent="Kivid/TestRock2"]
-position = Vector2( 0, 10 )
-scale = Vector2( 0.735437, 0.735437 )
-texture = ExtResource( 15 )
-
-[node name="TestRock3" parent="Kivid" instance=ExtResource( 14 )]
-position = Vector2( 765.302, 1243.58 )
-scale = Vector2( 0.8, 0.7 )
-
-[node name="Sprite2" type="Sprite" parent="Kivid/TestRock3"]
-position = Vector2( 0, 11.4286 )
-scale = Vector2( 0.725712, 0.725712 )
-texture = ExtResource( 15 )
-
-[node name="TestRock4" parent="Kivid" instance=ExtResource( 14 )]
-editor/display_folded = true
-position = Vector2( 1972.29, 1627.68 )
-scale = Vector2( 1.33207, 0.94 )
-
-[node name="Sprite2" type="Sprite" parent="Kivid/TestRock4"]
-scale = Vector2( 0.409657, 0.409657 )
-texture = ExtResource( 16 )
-
-[node name="TestRock5" parent="Kivid" instance=ExtResource( 14 )]
-position = Vector2( 2516.18, 1556.98 )
-scale = Vector2( 0.772082, 0.902586 )
-
-[node name="Sprite2" type="Sprite" parent="Kivid/TestRock5"]
-position = Vector2( 0, 8.8634 )
-scale = Vector2( 0.680266, 0.680266 )
-texture = ExtResource( 17 )
-
-[node name="TestRock6" parent="Kivid" instance=ExtResource( 14 )]
-editor/display_folded = true
-position = Vector2( 3037.84, 1484.19 )
-scale = Vector2( 0.732062, 0.782586 )
-
-[node name="Sprite2" type="Sprite" parent="Kivid/TestRock6"]
-position = Vector2( 0, 10.2224 )
-scale = Vector2( 0.707749, 0.707749 )
-texture = ExtResource( 18 )
-
-[node name="TestRock7" parent="Kivid" instance=ExtResource( 14 )]
-editor/display_folded = true
-position = Vector2( 3194.63, 1379.88 )
-scale = Vector2( 1.36638, 0.884961 )
-
-[node name="Sprite2" type="Sprite" parent="Kivid/TestRock7"]
-scale = Vector2( 0.353051, 0.353051 )
-texture = ExtResource( 19 )
-
-[node name="TestRock8" parent="Kivid" instance=ExtResource( 14 )]
-editor/display_folded = true
-position = Vector2( 3321.73, 1247.53 )
-scale = Vector2( 0.905099, 0.884961 )
-
-[node name="Sprite2" type="Sprite" parent="Kivid/TestRock8"]
-position = Vector2( 0, 6.78003 )
-scale = Vector2( 0.678767, 0.678767 )
-texture = ExtResource( 18 )
-
-[node name="TestRock9" parent="Kivid" instance=ExtResource( 14 )]
-position = Vector2( 3074.21, 1137.19 )
-scale = Vector2( 1.9451, 0.884961 )
-
-[node name="Sprite2" type="Sprite" parent="Kivid/TestRock9"]
-scale = Vector2( 0.272401, 0.272401 )
-texture = ExtResource( 20 )
-
-[node name="Falling" parent="." instance=ExtResource( 21 )]
-position = Vector2( 2071.73, 2286.53 )
-scale = Vector2( 1.50685, 1.58729 )
-script = ExtResource( 22 )
-change_level = "res://Scenes/Scene2.tscn"
-
-[node name="Enemies" type="Node2D" parent="."]
-
-[node name="Enemy2" parent="Enemies" instance=ExtResource( 23 )]
-position = Vector2( 2972.52, 111.094 )
-scale = Vector2( 0.586775, 0.586775 )
-
-[node name="Enemy3" parent="Enemies" instance=ExtResource( 24 )]
-position = Vector2( 1581.25, 1709.74 )
-scale = Vector2( 0.520737, 0.500101 )
-hp = 4
-
-[node name="Enemy5" parent="Enemies" instance=ExtResource( 24 )]
-position = Vector2( 2198.47, 1404.21 )
-scale = Vector2( 0.520737, 0.500101 )
-hp = 4
-
-[node name="Enemy6" parent="Enemies" instance=ExtResource( 24 )]
-position = Vector2( 2836.19, 1564.15 )
-scale = Vector2( 0.520737, 0.500101 )
-hp = 4
-
-[node name="Enemy4" parent="Enemies" instance=ExtResource( 24 )]
-position = Vector2( 566.232, 1065.87 )
-scale = Vector2( 0.520737, 0.500101 )
-hp = 4
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 25 )
-volume_db = -30.0
-autoplay = true
-
-[node name="Vanamees" parent="." instance=ExtResource( 26 )]
-position = Vector2( 1601.9, 1292.11 )
-
-[node name="Flamefruits" type="Node2D" parent="."]
-editor/display_folded = true
-position = Vector2( 1259.94, 1571.93 )
-scale = Vector2( 0.7, 0.7 )
-
-[node name="Flamefruite" parent="Flamefruits" instance=ExtResource( 27 )]
-scale = Vector2( 1, 1 )
-
-[node name="Flamefruite3" parent="Flamefruits" instance=ExtResource( 27 )]
-position = Vector2( 1788.36, -150.886 )
-scale = Vector2( 1, 1 )
-
-[node name="Flamefruite2" parent="Flamefruits" instance=ExtResource( 27 )]
-position = Vector2( -708.898, -588.071 )
-scale = Vector2( 1, 1 )
-
-[node name="Flamefruite8" parent="Flamefruits" instance=ExtResource( 27 )]
-position = Vector2( 1013.34, -62.0286 )
-scale = Vector2( 1, 1 )
-
-[node name="Flamefruite5" parent="Flamefruits" instance=ExtResource( 27 )]
-position = Vector2( 2760.91, -411.786 )
-scale = Vector2( 1, 1 )
-
-[node name="Flamefruite6" parent="Flamefruits" instance=ExtResource( 27 )]
-position = Vector2( 2945.87, -589.229 )
-scale = Vector2( 1, 1 )
-
-[node name="Flamefruite7" parent="Flamefruits" instance=ExtResource( 27 )]
-position = Vector2( 2575.04, -762.657 )
-scale = Vector2( 1, 1 )
-
-[node name="Flamefruite9" parent="Flamefruits" instance=ExtResource( 27 )]
-position = Vector2( 2016.76, -1473.49 )
-scale = Vector2( 1, 1 )
-
-[node name="Flamefruite10" parent="Flamefruits" instance=ExtResource( 27 )]
-position = Vector2( 3016.47, -1486.47 )
-scale = Vector2( 1, 1 )
-
-[node name="Flamefruite4" parent="Flamefruits" instance=ExtResource( 27 )]
-position = Vector2( 2539.13, -284.471 )
-scale = Vector2( 1, 1 )
-
-[node name="HUD" parent="." instance=ExtResource( 28 )]
-
-[node name="LevelComplete" parent="." instance=ExtResource( 29 )]
-editor/display_folded = true
-position = Vector2( 3891.41, 1389.07 )
-change_level = "res://Scenes/Scene2.tscn"
-
-[node name="Sprite" type="Sprite" parent="LevelComplete"]
-modulate = Color( 0, 0, 0, 1 )
-position = Vector2( 27.0483, 162.291 )
-scale = Vector2( 6.64636, 1 )
-texture = ExtResource( 30 )
-
-[node name="Area2D" parent="LevelComplete" instance=ExtResource( 31 )]
-position = Vector2( -19.4751, -49.7694 )
-scale = Vector2( 1.42857, 1.42857 )
-
-[node name="RockFloor5" parent="LevelComplete" instance=ExtResource( 13 )]
-position = Vector2( 29.7075, 146.109 )
-scale = Vector2( 0.714286, 1.42857 )
-
-[node name="LevelComplete2" parent="." instance=ExtResource( 29 )]
-editor/display_folded = true
-position = Vector2( 299.312, 1521.69 )
-rotation = 3.14159
-scale = Vector2( 0.8, -0.8 )
-target_spawn_group = "second_spawn"
-
-[node name="Area2D2" parent="LevelComplete2" instance=ExtResource( 31 )]
-position = Vector2( -7.57349, -18.934 )
-rotation = -3.14159
-scale = Vector2( 1.25, -1.25 )
-
-[node name="Menüü" type="CanvasLayer" parent="."]
-editor/display_folded = true
-
-[node name="Pause" parent="Menüü" instance=ExtResource( 32 )]
-visible = false
-
-[node name="ElderTalk" parent="." instance=ExtResource( 33 )]
-position = Vector2( 1535.19, 1274.71 )
-
-[node name="Close cave" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Close cave"]
-position = Vector2( 3015.33, 622.816 )
-shape = SubResource( 4 )
-
-[connection signal="hp_changed" from="Chara" to="HUD" method="update_healthbar"]
-[connection signal="mp_changed" from="Chara" to="HUD" method="update_manabar"]
 [connection signal="body_entered" from="ElderTalk" to="Dialoog" method="_on_ElderTalk_body_entered"]
 [connection signal="body_exited" from="ElderTalk" to="Dialoog" method="_on_ElderTalk_body_exited"]
 [connection signal="body_entered" from="Close cave" to="Floor/KaduvFloor" method="_on_Area2D_body_entered"]
+[connection signal="hp_changed" from="Chara" to="HUD" method="update_healthbar"]
+[connection signal="mp_changed" from="Chara" to="HUD" method="update_manabar"]
