@@ -25,15 +25,18 @@ func _physics_process(_delta):
 					if Global.mana>12:
 						Global.mana=12
 					#Flamefruite.hide()
-					isEaten=true
-					for child in get_children():
-						child.queue_free()
+					
 					var t = Timer.new()
-					t.set_wait_time(0.50)
+					t.set_wait_time(1.500)
 					t.set_one_shot(true)
 					self.add_child(t)
 					t.start()
 					yield(t, "timeout")
+					
+					isEaten=true
+					for child in get_children():
+						child.queue_free()
+					
 					onFlamefruit = false
 					if Global.flamefruit0path==self:
 						Global.flamefruit0=false
@@ -57,19 +60,24 @@ func _physics_process(_delta):
 						Global.flamefruit9=false
 					if Global.flamefruit10path==self:
 						Global.flamefruit10=false
-										
+					
 					queue_free()
-
 
 
 func audioMana():
 	var audioPlayer = AudioStreamPlayer.new()
 	self.add_child(audioPlayer)
 	audioPlayer.stream = load("res://Sounds/mana.wav")
+	audioPlayer.set_volume_db(Global.soundFXvolume)
 	audioPlayer.play()
 	print("play mana.wav")
 	print(audioPlayer.stream)
-	
-	
-	
-	
+	var t = Timer.new()
+	t.set_wait_time(0.300)
+	t.set_one_shot(true)
+	self.add_child(t)
+	t.start()
+	yield(t, "timeout")
+
+
+

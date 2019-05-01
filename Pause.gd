@@ -115,7 +115,7 @@ func _on_TextureButton3_pressed():
 func audioMenu():
 	var audioPlayer = AudioStreamPlayer.new()
 	self.add_child(audioPlayer)
-	audioPlayer.stream = load("res://Sounds/mana.wav")
+	audioPlayer.stream = load("res://Sounds/menu.wav")
 	audioPlayer.set_volume_db(Global.soundFXvolume-10)
 	audioPlayer.play()
 	print("play mana.wav")

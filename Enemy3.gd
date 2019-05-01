@@ -34,6 +34,7 @@ func dead():
 		motion = Vector2(0, 0)
 		$EnemyCol.call_deferred('free')
 		$AnimatedSprite.play("dead")
+		audioDeath()
 		$Modulate.start()
 		$Timer.start()
 
@@ -84,6 +85,21 @@ func deadEnemy():
 	
 func _on_Modulate_timeout():
 	$AnimatedSprite.modulate.a-=.1
+
+func audioDeath():
+	var audioPlayer = AudioStreamPlayer.new()
+	self.add_child(audioPlayer)
+	audioPlayer.stream = load("res://Sounds/spiderdeath.wav")
+	audioPlayer.set_volume_db(Global.soundFXvolume)
+	audioPlayer.play()
+	print("play spiderdeath.wav")
+	print(audioPlayer.stream)
+	var t = Timer.new()
+	t.set_wait_time(1)
+	t.set_one_shot(true)
+	self.add_child(t)
+	t.start()
+	yield(t, "timeout")
 
 func fadeAway(color):
 
