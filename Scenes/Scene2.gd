@@ -18,6 +18,7 @@ onready var flamefruite9=get_node("Flamefruits/Flamefruite9")
 onready var flamefruite10=get_node("Flamefruits/Flamefruite10")
 
 
+var audioPlayerBackround = AudioStreamPlayer.new()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -39,6 +40,15 @@ func _ready():
 	Global.flamefruit8path=flamefruite8
 	Global.flamefruit9path=flamefruite9
 	Global.flamefruit10path=flamefruite10
+	
+	#var audioPlayerBackround = AudioStreamPlayer.new()
+	#self.add_child(audioPlayerBackround)
+	Global.audioPlayerBackround.stream = load("res://Sounds/back/Märt Nigu - Avatud - 4. Avatud IV.ogg")
+	Global.audioPlayerBackround.set_volume_db(Global.soundvolume)
+	Global.audioPlayerBackround.play()
+	print("play: Märt Nigu - Avatud - 4. Avatud IV.oggs")
+	
+	
 
 	
 

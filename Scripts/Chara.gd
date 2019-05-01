@@ -224,7 +224,7 @@ func audioShoot():
 	audioPlayer.stream = load("res://Sounds/shoot.wav")
 	audioPlayer.set_volume_db(Global.soundFXvolume)
 	audioPlayer.play()
-	print("play mana.wav")
+	print("play shoot.wav")
 	print(audioPlayer.stream)
 	var t = Timer.new()
 	t.set_wait_time(0.300)

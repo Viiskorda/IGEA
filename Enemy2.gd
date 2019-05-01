@@ -42,6 +42,8 @@ func dead():
 		Global.double_jump=true
 		$EnemyCol.call_deferred('free')
 		$AnimatedSprite.play("dead")
+		audioBossDeath()
+		#audioBack()
 		$Modulate.start()
 		$Timer.start()
 
@@ -141,8 +143,7 @@ func _physics_process(_delta):
 				$RayCast2D.position.y *= -1	
 			
 			if position.x <= Global.charaPosition.x+2 && position.x >= Global.charaPosition.x-1:
-				#print("kohal")
-				
+				# print("kohal")
 				attack()
 		
 			elif position.x <= Global.charaPosition.x+300 && position.x >= Global.charaPosition.x-300:
@@ -166,6 +167,8 @@ func _physics_process(_delta):
 		
 		elif Global.charaPosition.y>1500:
 			position=beginningposition
+			
+		
 		if get_slide_count() > 0:
 			for i in range(get_slide_count()):
 				if "Chara" in get_slide_collision(i).collider.name:
@@ -182,6 +185,26 @@ func fadeAway(color):
 	$AnimatedSprite.modulate.a=1
 	$AnimatedSprite.modulate = Color(color, color, color)
 
+func audioBossDeath():
+	var audioPlayer = AudioStreamPlayer.new()
+	self.add_child(audioPlayer)
+	audioPlayer.stream = load("res://Sounds/bossdeath.wav")
+	audioPlayer.set_volume_db(Global.soundFXvolume)
+	audioPlayer.play()
+	print("play bossdeah.wav")
+	print(audioPlayer.stream)
+	var t = Timer.new()
+	t.set_wait_time(0.400)
+	t.set_one_shot(true)
+	self.add_child(t)
+	t.start()
+	yield(t, "timeout")
+	audioBack()
+	
+func audioBack():
+	Global.audioPlayerBackround.stream = load("res://Sounds/back/Märt Nigu - Avatud - 4. Avatud IV.ogg")
+	Global.audioPlayerBackround.play()
+	print ("play: Märt Nigu - Avatud - 4. Avatud IV.ogg")
 
 
 func _on_Timer_timeout():

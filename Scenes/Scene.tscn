@@ -205,7 +205,6 @@ position = Vector2( 692.99, 459.77 )
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 23 )
 volume_db = -30.0
-autoplay = true
 
 [node name="SpawnPosition" type="Position2D" parent="." groups=[
 "second_spawn",

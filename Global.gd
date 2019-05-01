@@ -52,10 +52,10 @@ var flamefruit8path
 var flamefruit9path
 var flamefruit10path
 
-var soundvolume=-10
+var soundvolume=-20
 var soundFXvolume=-30
 
-
+var audioPlayerBackround = AudioStreamPlayer.new()
 
 
 const SAVE_PATH = "res://save.json"
@@ -63,6 +63,8 @@ const SAVE_PATH = "res://save.json"
 func _ready():
     var root = get_tree().get_root()
     current_scene = root.get_child(root.get_child_count() - 1)
+	
+	
 
 func _physics_process(_delta):
 
@@ -70,6 +72,7 @@ func _physics_process(_delta):
 	pass
 
 func _finished_loading_scene():
+	
 	print(health)
 	print(mana)
 	if spawn_group_name:
@@ -95,7 +98,7 @@ func goto_scene(path, spawn_group_name):
     # The solution is to defer the load to a later time, when
     # we can be sure that no code from the current scene is running:
 	
-	
+	audioBackround()
 	call_deferred("_deferred_goto_scene", path)
 
 
@@ -111,13 +114,20 @@ func _deferred_goto_scene(path):
 
     # Add it to the active scene, as child of root.
     get_tree().get_root().add_child(current_scene)
+	
+	
 
     # Optionally, to make it compatible with the SceneTree.change_scene() API.
     get_tree().set_current_scene(current_scene)
 
     _finished_loading_scene()
 
-
+func audioBackround():
+	
+	self.add_child(audioPlayerBackround)
+	# audioPlayerBackround.stream = load("res://Sounds/back/Märt Nigu - Avatud - 4. Avatud IV.ogg")
+	audioPlayerBackround.set_volume_db(Global.soundvolume)
+	print("backround audio setings")
 
 func save_game():
 	

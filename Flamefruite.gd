@@ -25,7 +25,7 @@ func _physics_process(_delta):
 					if Global.mana>12:
 						Global.mana=12
 					#Flamefruite.hide()
-					
+					$Flamefruite.modulate.a=0
 					var t = Timer.new()
 					t.set_wait_time(1.500)
 					t.set_one_shot(true)

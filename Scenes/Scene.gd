@@ -24,6 +24,10 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+	Global.audioPlayerBackround.stream = load("res://Sounds/back/Märt Nigu - Avatud - 3. Avatud III.ogg")
+	Global.audioPlayerBackround.set_volume_db(Global.soundvolume)
+	Global.audioPlayerBackround.play()
+	print("play: Märt Nigu - Avatud - 3. Avatud III.oggs")
 
 
 func new_game():
