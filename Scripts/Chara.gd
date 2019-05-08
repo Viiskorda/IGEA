@@ -31,6 +31,7 @@ var getDamage = 1
 var lastStep = 2
 var jump_count = 0
 var max_jump_count = 2
+var CharaDirection=0 #0 is idle, 1 is left and 2 is right
 
 
 func _ready():
@@ -45,10 +46,12 @@ func _ready():
 
 func _input(_event):
 	if Input.is_action_pressed("ui_jump"):
+
 		if jump_count == 1:
 			jump_count = 2
 		if jump_count < max_jump_count and Global.double_jump == true:
 			motion.y = JUMP
+
 			jump_count += 1
 			audioJump()
 			on_ground = false
@@ -57,6 +60,7 @@ func _input(_event):
 			motion.y = JUMP
 			audioJump()
 			on_ground = false
+		CharaDirection=0
 # Throw.tscn 
 #
 func throw(x):
@@ -67,7 +71,8 @@ func throw(x):
 	rock.apply_impulse(Vector2(),imp)
 
 func _physics_process(_delta):
-	
+
+
 	Global.charaPosition=position
 	emit_signal("mp_changed", Global.mana)
 	if is_dead == false:
@@ -85,7 +90,7 @@ func _physics_process(_delta):
 		if Input.is_action_pressed('ui_right'):
 			direction=0
 			$LiikuvChara.flip_h=false
-			
+			CharaDirection=1
 			motion.x =SPEED
 			audioStep()
 			$LiikuvChara.play("walk")
@@ -105,7 +110,7 @@ func _physics_process(_delta):
 				motion.x =-SPEED
 				if sign($Position2D.position.x) == 1:
 					$Position2D.position.x *= -1
-				
+			CharaDirection=2	
 			$LiikuvChara.flip_h=true
 			audioStep()
 			$LiikuvChara.play("walk")
@@ -115,8 +120,15 @@ func _physics_process(_delta):
 				throw(-70)
 		elif Input.is_action_pressed('ui_down'):
 			$LiikuvChara.play("kneel")
+		elif !on_ground:
+			print(CharaDirection)
+			if CharaDirection==1:
+				motion.x =SPEED/2
+			if CharaDirection==2:
+				motion.x =-SPEED/2
 		else:
 			$LiikuvChara.play("idle")
+			
 			motion.x=0
 			
 			if Input.is_action_just_pressed('ui_throw') && direction==0:

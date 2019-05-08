@@ -213,7 +213,6 @@ position = Vector2( 3544.13, 811.238 )
 rotation = 2.66437
 
 [node name="Kivid" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="TestRock" parent="Kivid" instance=ExtResource( 13 )]
 position = Vector2( 803.963, 1524.65 )
@@ -244,7 +243,7 @@ texture = ExtResource( 14 )
 
 [node name="TestRock4" parent="Kivid" instance=ExtResource( 13 )]
 editor/display_folded = true
-position = Vector2( 1972.29, 1627.68 )
+position = Vector2( 1972.58, 1620.21 )
 scale = Vector2( 1.33207, 0.94 )
 
 [node name="Sprite2" type="Sprite" parent="Kivid/TestRock4"]
