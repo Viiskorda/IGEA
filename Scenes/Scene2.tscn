@@ -77,6 +77,7 @@ texture = ExtResource( 6 )
 
 [node name="NormalFloor" type="Node2D" parent="Floor"]
 editor/display_folded = true
+visible = false
 
 [node name="floor" parent="Floor/NormalFloor" instance=ExtResource( 7 )]
 position = Vector2( 489.009, 1643.02 )

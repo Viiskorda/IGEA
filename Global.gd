@@ -1,5 +1,7 @@
 extends Node
 
+onready var scene_1=preload("res://Scenes/Scene2.tscn")
+onready var scene_2=preload("res://Scenes/Scene.tscn")
 var current_scene = null
 var spawn_group_name=null
 var health=10
