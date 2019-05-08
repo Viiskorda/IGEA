@@ -58,7 +58,7 @@ var soundvolume=-20
 var soundFXvolume=-30
 
 var audioPlayerBackround = AudioStreamPlayer.new()
-
+var lastScene
 
 const SAVE_PATH = "res://save.json"
 
@@ -90,7 +90,7 @@ func _finished_loading_scene():
 func goto_scene(path, spawn_group_name):
 	self.spawn_group_name=spawn_group_name
 	#get_tree().change_scene(path)
-	
+	lastScene=path
     # This function will usually be called from a signal callback,
     # or some other function in the current scene.
     # Deleting the current scene at this point is
@@ -145,6 +145,49 @@ func save_game():
 	
 	save_file.close()
 	pass
+
+
+
+
+func load_game():
+	var save_file = File.new()
+	if not save_file.file_exists(SAVE_PATH):
+		return
+	save_file.open(SAVE_PATH, File.READ)
+	var data = {}
+	data = parse_json(save_file.get_as_text())
+	for node_path in data.keys():
+		var node = get_node(node_path)
+		
+		for attribute in data[node_path]:
+			if attribute == "pos":
+				node.set_position(Vector2(data[node_path]['pos']['x'], data[node_path]['pos']['y']))
+			else:
+				#node.set(attribute, data[node_path][attribute])
+				health = data[node_path]['Global.health']
+				mana = data[node_path]['Global.mana']
+				bossHealth = data[node_path]['Global.bossHealth']
+				double_jump = data[node_path]['Global.double_jump']
+				
+				enemy1isalive = data[node_path]['Global.enemy1isalive']
+				enemy2isalive = data[node_path]['Global.enemy2isalive']
+				enemy3isalive = data[node_path]['Global.enemy3isalive']
+				enemy4isalive = data[node_path]['Global.enemy4isalive']
+				enemy5isalive = data[node_path]['Global.enemy5isalive']
+				enemy6isalive = data[node_path]['Global.enemy6isalive']
+				
+				flamefruit0 = data[node_path]['Global.flamefruit0']
+				flamefruit1 = data[node_path]['Global.flamefruit1']
+				flamefruit2 = data[node_path]['Global.flamefruit2']
+				flamefruit3 = data[node_path]['Global.flamefruit3']
+				flamefruit4 = data[node_path]['Global.flamefruit4']
+				flamefruit5 = data[node_path]['Global.flamefruit5']
+				flamefruit6 = data[node_path]['Global.flamefruit6']
+				flamefruit7 = data[node_path]['Global.flamefruit7']
+				flamefruit8 = data[node_path]['Global.flamefruit8']
+
+				
+		goto_scene(lastScene,"player")
 
 
 

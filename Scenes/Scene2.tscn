@@ -74,6 +74,7 @@ scale = Vector2( 0.618, 0.618 )
 texture = ExtResource( 6 )
 
 [node name="Floor" type="Node2D" parent="."]
+editor/display_folded = true
 
 [node name="NormalFloor" type="Node2D" parent="Floor"]
 editor/display_folded = true
@@ -303,6 +304,7 @@ script = ExtResource( 21 )
 change_level = "res://Scenes/Scene2.tscn"
 
 [node name="Enemies" type="Node2D" parent="."]
+editor/display_folded = true
 
 [node name="Enemy2" parent="Enemies" instance=ExtResource( 22 )]
 position = Vector2( 2972.52, 111.094 )
@@ -335,6 +337,7 @@ stream = ExtResource( 24 )
 position = Vector2( 1601.9, 1292.11 )
 
 [node name="Flamefruits" type="Node2D" parent="."]
+editor/display_folded = true
 position = Vector2( 1259.94, 1571.93 )
 scale = Vector2( 0.7, 0.7 )
 

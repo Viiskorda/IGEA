@@ -317,7 +317,8 @@ func _on_Timer_timeout():
 				Global.enemy6isalive = data[node_path]['Global.enemy6isalive']
 
 				
-		Global.goto_scene(change_level,target_spawn_group)
+		#Global.goto_scene(change_level,target_spawn_group)
+		Global.load_game()
 	
 func save():
 	var save_dict={

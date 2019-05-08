@@ -8,22 +8,22 @@
 - POOLELI vanamees fadein kui chara kohale jõuab, ning fadeout siis kui ämblik on tapetud kui teistkordne tekst on edastatud
 - POOLELI vanamehe dialoog
 - laskmise tekst
-- kui elu läheb 0, siis viimases save-s ilmub nähtavale\
-- valgusvihud
+- TEHTUD kui elu läheb 0, siis viimases save-s ilmub nähtavale\
+- TEHTUD valgusvihud
 - kui kõik vaenlased on tapetud, alles siis ilmub koobas nähtavale (ehk must pilt selle kohal kaob ära)
 - koopa sisse teha area, millele vastu minnes hakkab boss alles tegutsema ning ümberringi läheb mustaks
-- koopa suu on kinni kuni kõik teised vaenlased on alles
+- TEHTUD koopa suu on kinni kuni kõik teised vaenlased on alles
 - Level2 jõudes on mustpilt hajusate äärtega koopa kohal, ning koopas olles on ülejäänud must hajusate äärtega
 - Doublejump saab koopa altarist, mille peale tuleb popup
-- Loading screen
+- POLE VAJA ENAM Loading screen
 - Chara suremise animatsioon
 - Mana bar neljaks jaotada
-- Tegelased muudavad värvi pihta saamisel/vilguvad
+- TEHTUD Tegelased muudavad värvi pihta saamisel/vilguvad
 - Flamefruit valgus taha
-- Boss haihtub peale animatsiooni
+- TEHTUD Boss haihtub peale animatsiooni
 - Esimeses levelis vastase surmal tekst, kuhu edasi liikuda
 - Värava lähedal elude taastamise tekst
-- Bossi liikumine staatiline, vaadata üle
+- TEHTUD Bossi liikumine staatiline, vaadata üle
 - Mängu kompilleerimine/testida mängu
 - Ebavajalikud failid kustutada ja faile korrastada
 
