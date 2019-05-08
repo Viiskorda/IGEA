@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=2]
+[gd_scene load_steps=41 format=2]
 
 [ext_resource path="res://Scenes/Scene2.gd" type="Script" id=1]
 [ext_resource path="res://DialogTest.tscn" type="PackedScene" id=2]
@@ -33,6 +33,9 @@
 [ext_resource path="res://Pause.tscn" type="PackedScene" id=31]
 [ext_resource path="res://ElderTalk.tscn" type="PackedScene" id=32]
 [ext_resource path="res://Scenes/Chara.tscn" type="PackedScene" id=33]
+[ext_resource path="res://images/closed_cave.png" type="Texture" id=34]
+[ext_resource path="res://Scenes/HideCave.gd" type="Script" id=35]
+[ext_resource path="res://images/boss_duel_black_cave.png" type="Texture" id=36]
 
 [sub_resource type="PhysicsMaterial" id=1]
 friction = 0.0
@@ -75,6 +78,7 @@ texture = ExtResource( 6 )
 
 [node name="Floor" type="Node2D" parent="."]
 editor/display_folded = true
+visible = false
 
 [node name="NormalFloor" type="Node2D" parent="Floor"]
 editor/display_folded = true
@@ -213,6 +217,7 @@ position = Vector2( 3544.13, 811.238 )
 rotation = 2.66437
 
 [node name="Kivid" type="Node2D" parent="."]
+editor/display_folded = true
 
 [node name="TestRock" parent="Kivid" instance=ExtResource( 13 )]
 position = Vector2( 803.963, 1524.65 )
@@ -453,8 +458,20 @@ scale = Vector2( 0.758884, 0.740867 )
 texture = ExtResource( 5 )
 centered = false
 
+[node name="HideCave" type="Sprite" parent="."]
+position = Vector2( 3028.27, 440.047 )
+scale = Vector2( 0.625381, 0.569736 )
+texture = ExtResource( 34 )
+script = ExtResource( 35 )
+
+[node name="blackoutsidecave" type="Sprite" parent="."]
+position = Vector2( 2031.6, 852.722 )
+scale = Vector2( 0.634157, 0.630992 )
+texture = ExtResource( 36 )
+
 [connection signal="body_entered" from="ElderTalk" to="Dialoog" method="_on_ElderTalk_body_entered"]
 [connection signal="body_exited" from="ElderTalk" to="Dialoog" method="_on_ElderTalk_body_exited"]
+[connection signal="body_entered" from="Close cave" to="." method="_on_Close_cave_body_entered"]
 [connection signal="body_entered" from="Close cave" to="Floor/KaduvFloor" method="_on_Area2D_body_entered"]
 [connection signal="hp_changed" from="Chara" to="HUD" method="update_healthbar"]
 [connection signal="mp_changed" from="Chara" to="HUD" method="update_manabar"]

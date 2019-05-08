@@ -48,7 +48,8 @@ func _ready():
 	Global.audioPlayerBackround.play()
 	print("play: Märt Nigu - Avatud - 4. Avatud IV.oggs")
 	
-	
+	$blackoutsidecave.modulate.a=0
+	$HideCave.modulate.a=1
 
 	
 
@@ -84,7 +85,19 @@ func _ready():
 	if Global.enemy6isalive==false:
 		enemy6.queue_free()
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta):
 
-	pass
+
+
+
+
+func _process(delta):
+	if Global.enemy6isalive==false and Global.enemy5isalive==false and Global.enemy4isalive==false and Global.enemy3isalive==false  and Global.enemy1isalive==false:
+
+		$HideCave.modulate.a=0
+	if Global.enemy2isalive==false:
+		$blackoutsidecave.modulate.a=0
+
+
+
+func _on_Close_cave_body_entered(body):
+	$blackoutsidecave.modulate.a=1
