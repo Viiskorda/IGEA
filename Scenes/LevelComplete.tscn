@@ -7,7 +7,6 @@
 extents = Vector2( 10, 88.7282 )
 
 [node name="LevelComplete" type="Area2D"]
-scale = Vector2( 0.7, 0.7 )
 script = ExtResource( 1 )
 change_level = "res://Scenes/Scene.tscn"
 
@@ -15,7 +14,7 @@ change_level = "res://Scenes/Scene.tscn"
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 68.4273, -1.71067 )
+position = Vector2( 139.289, 3.17641 )
 scale = Vector2( 1, 1.51544 )
 shape = SubResource( 1 )
 
