@@ -357,7 +357,9 @@ func save():
 		"Global.flamefruit5" : Global.flamefruit5,
 		"Global.flamefruit6" : Global.flamefruit6,
 		"Global.flamefruit7" : Global.flamefruit7,
-		"Global.flamefruit8" : Global.flamefruit8
+		"Global.flamefruit8" : Global.flamefruit8,
+		"Global.flamefruit9" : Global.flamefruit9,
+		"Global.flamefruit10" : Global.flamefruit10
 		
 	}	
 	return save_dict

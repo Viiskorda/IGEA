@@ -1,5 +1,14 @@
 # IGEA
 
+Helid korda - kõndimise heli liiga vali, stseeni vahetamise heli, otsida paremat viga saamise heli ning sellel on väike viide sees, 
+hüppamine noolega üles ja w
+tekst enter
+shoot space
+healt genereerimine hüppamisega
+dialoogid tekstid suuremaks
+udu
+
+
 10.05
 
 - plönn korda/ helid leida
@@ -10,22 +19,22 @@
 - laskmise tekst
 - TEHTUD kui elu läheb 0, siis viimases save-s ilmub nähtavale\
 - TEHTUD valgusvihud
-- kui kõik vaenlased on tapetud, alles siis ilmub koobas nähtavale (ehk must pilt selle kohal kaob ära)
-- koopa sisse teha area, millele vastu minnes hakkab boss alles tegutsema ning ümberringi läheb mustaks
+- TEHTUD kui kõik vaenlased on tapetud, alles siis ilmub koobas nähtavale (ehk must pilt selle kohal kaob ära)
+- TEHTUD koopa sisse teha area, millele vastu minnes hakkab boss alles tegutsema ning ümberringi läheb mustaks
 - TEHTUD koopa suu on kinni kuni kõik teised vaenlased on alles
-- Level2 jõudes on mustpilt hajusate äärtega koopa kohal, ning koopas olles on ülejäänud must hajusate äärtega
-- Doublejump saab koopa altarist, mille peale tuleb popup
+- TEHTUD Level2 jõudes on mustpilt hajusate äärtega koopa kohal, ning koopas olles on ülejäänud must hajusate äärtega
 - POLE VAJA ENAM Loading screen
 - Chara suremise animatsioon
 - Mana bar neljaks jaotada
 - TEHTUD Tegelased muudavad värvi pihta saamisel/vilguvad
-- Flamefruit valgus taha
 - TEHTUD Boss haihtub peale animatsiooni
 - Esimeses levelis vastase surmal tekst, kuhu edasi liikuda
 - Värava lähedal elude taastamise tekst
 - TEHTUD Bossi liikumine staatiline, vaadata üle
 - Mängu kompilleerimine/testida mängu
 - Ebavajalikud failid kustutada ja faile korrastada
+- Doublejump saab koopa altarist, mille peale tuleb popup
+- Flamefruit valgus taha
 
 
 

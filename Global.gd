@@ -185,6 +185,8 @@ func load_game():
 				flamefruit6 = data[node_path]['Global.flamefruit6']
 				flamefruit7 = data[node_path]['Global.flamefruit7']
 				flamefruit8 = data[node_path]['Global.flamefruit8']
+				flamefruit7 = data[node_path]['Global.flamefruit9']
+				flamefruit8 = data[node_path]['Global.flamefruit10']
 
 				
 		goto_scene(lastScene,"player")

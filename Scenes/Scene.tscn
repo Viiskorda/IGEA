@@ -43,6 +43,7 @@ position = Vector2( -16.0212, -49.9282 )
 scale = Vector2( 1.42857, 1.42857 )
 
 [node name="Background" type="Node2D" parent="."]
+editor/display_folded = true
 
 [node name="level_1_bg_taust_trees" type="Sprite" parent="Background"]
 visible = false
@@ -93,6 +94,7 @@ texture = ExtResource( 10 )
 energy = 1.1
 
 [node name="Characters" type="Node2D" parent="."]
+editor/display_folded = true
 
 [node name="Enemy" parent="Characters" instance=ExtResource( 11 )]
 position = Vector2( 1014.35, 450 )
@@ -186,6 +188,7 @@ scale = Vector2( 0.65, 0.63 )
 texture = ExtResource( 17 )
 
 [node name="Tutorial tekstid" type="Node2D" parent="."]
+editor/display_folded = true
 
 [node name="ShootTut" parent="Tutorial tekstid" instance=ExtResource( 18 )]
 position = Vector2( 426.205, 347.398 )
