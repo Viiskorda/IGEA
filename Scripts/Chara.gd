@@ -250,7 +250,7 @@ func audioShoot():
 func audioDamage():
 	var audioPlayer = AudioStreamPlayer.new()
 	self.add_child(audioPlayer)
-	audioPlayer.stream = load("res://Sounds/damage.wav")
+	audioPlayer.stream = load("res://Sounds/damage3.wav")
 	audioPlayer.set_volume_db(Global.soundFXvolume)
 	audioPlayer.play()
 	print("play damage.wav")
