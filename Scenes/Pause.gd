@@ -28,10 +28,12 @@ func _process(delta):
 		get_tree().paused = true
 		self.show()
 		
+		
 		timer.start()
 	elif Input.is_action_pressed('ui_cancel')&&togglePause==1:
 		get_tree().paused = false
 		self.hide()
 		timer.start()
+		
 
 	

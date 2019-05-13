@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Märt Nigu - Visualiseerimine - 4. Visualiseerimine IV_01.ogg-0ba06393f2048be2912a1db5fb5e68b3.oggstr"
+
+[deps]
+
+source_file="res://Sounds/back/Märt Nigu - Visualiseerimine - 4. Visualiseerimine IV_01.ogg"
+dest_files=[ "res://.import/Märt Nigu - Visualiseerimine - 4. Visualiseerimine IV_01.ogg-0ba06393f2048be2912a1db5fb5e68b3.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

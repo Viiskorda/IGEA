@@ -8,6 +8,11 @@ export(String) var target_spawn_group
 func _ready():
 	$VBoxContainer2/TextureButton.grab_focus()
 	menuItem=1
+	Global.audioBackround()
+	Global.audioPlayerBackround.stream = load("res://Sounds/back/Märt Nigu - Visualiseerimine - 4. Visualiseerimine IV_01.ogg")
+	Global.audioPlayerBackround.set_volume_db(Global.soundvolume)
+	Global.audioPlayerBackround.play()
+	print("play: Märt Nigu - Visualiseerimine - 4. Visualiseerimine IV_01.ogg")
 	
 	
 func _physics_process(_delta):

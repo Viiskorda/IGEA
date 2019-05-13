@@ -1,6 +1,8 @@
 extends Control
 
+
 var menuItem=0
+var audioPlayerBackroundPause = AudioStreamPlayer.new()
 
 export(String, FILE, "*.tscn") var change_level
 export(String) var target_spawn_group
@@ -8,6 +10,7 @@ export(String) var target_spawn_group
 func _ready():
 	$VBoxContainer2/TextureButton2.grab_focus()
 	menuItem = 2
+	
 	
 	
 func _physics_process(_delta):
@@ -34,11 +37,20 @@ func _physics_process(_delta):
 			menuItem = 4
 
 
-func _input(event):	
+func _input(event):
 	if event.is_action_pressed('ui_cancel'):
 		$VBoxContainer2/TextureButton2.grab_focus()
 		get_tree().paused = not get_tree().paused
+		print(visible)
+		if visible == false:
+			audioBackround()
+			print("pausi musa play")
+		else:
+			self.remove_child(audioPlayerBackroundPause)
+				
 		visible= not visible
+		
+		
 
 
 
@@ -47,7 +59,7 @@ func _on_TextureButton_pressed():
 	visible= not visible
 	#get_tree().reload_current_scene()
 	#get_tree().change_scene(change_level)
-
+	self.remove_child(audioPlayerBackroundPause)
 
 
 	Global.health=10
@@ -105,11 +117,14 @@ func _on_TextureButton_pressed():
 	
 
 func _on_TextureButton2_pressed():
+	self.remove_child(audioPlayerBackroundPause)
 	get_tree().paused = not get_tree().paused
 	visible= not visible
+	
 
 func _on_TextureButton3_pressed():
 	#get_tree().change_scene(Global.prevScene.name)
+	self.remove_child(audioPlayerBackroundPause)
 	get_tree().quit()
 
 func audioMenu():
@@ -126,6 +141,15 @@ func audioMenu():
 	self.add_child(t)
 	t.start()
 	yield(t, "timeout")
+	
+func audioBackround():
+	
+	self.add_child(audioPlayerBackroundPause)
+	audioPlayerBackroundPause.stream = load("res://Sounds/back/Märt Nigu - Visualiseerimine - 4. Visualiseerimine IV_01.ogg")
+	audioPlayerBackroundPause.set_volume_db(Global.soundvolume)
+	audioPlayerBackroundPause.play()
+	print("play: Märt Nigu - Visualiseerimine - 4. Visualiseerimine IV_01.ogg")
+	
 
 
 
