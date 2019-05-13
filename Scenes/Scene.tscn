@@ -2,29 +2,29 @@
 
 [ext_resource path="res://Scenes/Scene.gd" type="Script" id=1]
 [ext_resource path="res://Background/level_1_bg_taust_light.png" type="Texture" id=2]
-[ext_resource path="res://Scenes/LevelComplete.tscn" type="PackedScene" id=3]
-[ext_resource path="res://HealthGate.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Scenes/Enemy.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Scenes/Chara.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Background/level_1_mountains.png" type="Texture" id=7]
-[ext_resource path="res://Background/level_1_final10_v2_trees.png" type="Texture" id=8]
-[ext_resource path="res://Background/level_1_mainBG.png" type="Texture" id=9]
-[ext_resource path="res://Background/level_1_ground.png" type="Texture" id=10]
-[ext_resource path="res://floor.tscn" type="PackedScene" id=11]
-[ext_resource path="res://FallingRock.tscn" type="PackedScene" id=12]
-[ext_resource path="res://images/kivid/level_1_final9_kivi.png" type="Texture" id=13]
-[ext_resource path="res://ShootTut.tscn" type="PackedScene" id=14]
-[ext_resource path="res://StartTekst.tscn" type="PackedScene" id=15]
-[ext_resource path="res://Flamefruit Tutorial.tscn" type="PackedScene" id=16]
-[ext_resource path="res://btv_tut.tscn" type="PackedScene" id=17]
-[ext_resource path="res://RockIndi.tscn" type="PackedScene" id=18]
-[ext_resource path="res://Sounds/back/Märt Nigu - Avatud - 3. Avatud III.ogg" type="AudioStream" id=19]
-[ext_resource path="res://HUD.tscn" type="PackedScene" id=20]
-[ext_resource path="res://Dialoog.tscn" type="PackedScene" id=21]
-[ext_resource path="res://Flamefruite.tscn" type="PackedScene" id=22]
-[ext_resource path="res://Falling.tscn" type="PackedScene" id=23]
-[ext_resource path="res://Falling.gd" type="Script" id=24]
-[ext_resource path="res://Pause.tscn" type="PackedScene" id=25]
+[ext_resource path="res://Scenes/Enemy.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Chara.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Background/level_1_mountains.png" type="Texture" id=5]
+[ext_resource path="res://Background/level_1_final10_v2_trees.png" type="Texture" id=6]
+[ext_resource path="res://Background/level_1_mainBG.png" type="Texture" id=7]
+[ext_resource path="res://Background/level_1_ground.png" type="Texture" id=8]
+[ext_resource path="res://floor.tscn" type="PackedScene" id=9]
+[ext_resource path="res://FallingRock.tscn" type="PackedScene" id=10]
+[ext_resource path="res://images/kivid/level_1_final9_kivi.png" type="Texture" id=11]
+[ext_resource path="res://ShootTut.tscn" type="PackedScene" id=12]
+[ext_resource path="res://StartTekst.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Flamefruit Tutorial.tscn" type="PackedScene" id=14]
+[ext_resource path="res://btv_tut.tscn" type="PackedScene" id=15]
+[ext_resource path="res://RockIndi.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Sounds/back/Märt Nigu - Avatud - 3. Avatud III.ogg" type="AudioStream" id=17]
+[ext_resource path="res://HUD.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Dialoog.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Flamefruite.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Falling.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Falling.gd" type="Script" id=22]
+[ext_resource path="res://Pause.tscn" type="PackedScene" id=23]
+[ext_resource path="res://Scenes/LevelComplete.tscn" type="PackedScene" id=24]
+[ext_resource path="res://HealthGate.tscn" type="PackedScene" id=25]
 
 [node name="Scene" type="Node2D"]
 script = ExtResource( 1 )
@@ -38,26 +38,16 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="LevelComplete" parent="." instance=ExtResource( 3 )]
-editor/display_folded = true
-position = Vector2( 1970.21, 423.494 )
-scale = Vector2( 0.7, 0.7 )
-change_level = "res://Scenes/Scene2.tscn"
-
-[node name="Area2D" parent="LevelComplete" instance=ExtResource( 4 )]
-visible = false
-position = Vector2( -16.0212, -49.9282 )
-scale = Vector2( 1.42857, 1.42857 )
-
 [node name="Characters" type="Node2D" parent="."]
+editor/display_folded = true
 
-[node name="Enemy" parent="Characters" instance=ExtResource( 5 )]
+[node name="Enemy" parent="Characters" instance=ExtResource( 3 )]
 position = Vector2( 1014.35, 450 )
 hp = 2
 
 [node name="Chara" parent="Characters" groups=[
 "Persist",
-] instance=ExtResource( 6 )]
+] instance=ExtResource( 4 )]
 position = Vector2( -113.035, 440 )
 
 [node name="Camera2D2" type="Camera2D" parent="Characters/Chara"]
@@ -82,7 +72,7 @@ motion_scale = Vector2( 0.7, 0.7 )
 [node name="Sprite" type="Sprite" parent="Characters/Chara/sky/ParallaxLayer"]
 position = Vector2( -761.815, -892.389 )
 scale = Vector2( 1, 1.25774 )
-texture = ExtResource( 7 )
+texture = ExtResource( 5 )
 centered = false
 __meta__ = {
 "_edit_lock_": true
@@ -97,7 +87,7 @@ motion_scale = Vector2( 0.8, 0.8 )
 [node name="Sprite" type="Sprite" parent="Characters/Chara/Parallaxbacktrees/ParallaxLayer"]
 position = Vector2( -128.979, -536.143 )
 scale = Vector2( 0.76121, 1.23822 )
-texture = ExtResource( 8 )
+texture = ExtResource( 6 )
 centered = false
 __meta__ = {
 "_edit_lock_": true
@@ -112,7 +102,7 @@ motion_scale = Vector2( 0.95, 1 )
 [node name="Sprite" type="Sprite" parent="Characters/Chara/ParallaxBackground4/ParallaxLayer"]
 position = Vector2( -133.381, -471.611 )
 scale = Vector2( 0.764741, 0.797143 )
-texture = ExtResource( 9 )
+texture = ExtResource( 7 )
 centered = false
 __meta__ = {
 "_edit_lock_": true
@@ -126,57 +116,56 @@ position = Vector2( -113.035, 414.082 )
 [node name="Sprite" type="Sprite" parent="Characters/Chara/Parallaxgrass/ParallaxLayer"]
 position = Vector2( -105.177, -527.349 )
 scale = Vector2( 0.757, 0.853374 )
-texture = ExtResource( 10 )
+texture = ExtResource( 8 )
 centered = false
 
 [node name="Sprite2" type="Sprite" parent="Characters/Chara/Parallaxgrass/ParallaxLayer"]
 position = Vector2( 4328.07, -525.209 )
 scale = Vector2( -0.757, 0.853 )
-texture = ExtResource( 10 )
+texture = ExtResource( 8 )
 centered = false
 
 [node name="Floor" type="Node2D" parent="."]
-editor/display_folded = true
 position = Vector2( 94.6757, 540.937 )
 scale = Vector2( 4.1267, 1.58729 )
 
-[node name="floor" parent="Floor" instance=ExtResource( 11 )]
+[node name="floor" parent="Floor" instance=ExtResource( 9 )]
 visible = false
 
-[node name="floor2" parent="Floor" instance=ExtResource( 11 )]
+[node name="floor2" parent="Floor" instance=ExtResource( 9 )]
 visible = false
-position = Vector2( 337.668, 1.00739 )
-scale = Vector2( 1.58458, 1 )
+position = Vector2( 399.022, 1.57596 )
+scale = Vector2( 2.245, 1 )
 
-[node name="TestRock" parent="." instance=ExtResource( 12 )]
+[node name="TestRock" parent="." instance=ExtResource( 10 )]
 editor/display_folded = true
 position = Vector2( 699.232, 506.059 )
 
 [node name="Sprite2" type="Sprite" parent="TestRock"]
 position = Vector2( 0, -10 )
 scale = Vector2( 0.65, 0.63 )
-texture = ExtResource( 13 )
+texture = ExtResource( 11 )
 
 [node name="Tutorial tekstid" type="Node2D" parent="."]
 editor/display_folded = true
 
-[node name="ShootTut" parent="Tutorial tekstid" instance=ExtResource( 14 )]
+[node name="ShootTut" parent="Tutorial tekstid" instance=ExtResource( 12 )]
 position = Vector2( 426.205, 347.398 )
 
-[node name="StartTekst" parent="Tutorial tekstid" instance=ExtResource( 15 )]
+[node name="StartTekst" parent="Tutorial tekstid" instance=ExtResource( 13 )]
 position = Vector2( -62.6521, 335.225 )
 
-[node name="Flamefruit Tutorial" parent="Tutorial tekstid" instance=ExtResource( 16 )]
+[node name="Flamefruit Tutorial" parent="Tutorial tekstid" instance=ExtResource( 14 )]
 position = Vector2( 100, 354.549 )
 
-[node name="Back to village tutorial" parent="Tutorial tekstid" instance=ExtResource( 17 )]
+[node name="Back to village tutorial" parent="Tutorial tekstid" instance=ExtResource( 15 )]
 position = Vector2( -176, 349 )
 
-[node name="RockIndi" parent="." instance=ExtResource( 18 )]
+[node name="RockIndi" parent="." instance=ExtResource( 16 )]
 position = Vector2( 692.99, 459.77 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 19 )
+stream = ExtResource( 17 )
 volume_db = -30.0
 
 [node name="SpawnPosition" type="Position2D" parent="." groups=[
@@ -184,26 +173,37 @@ volume_db = -30.0
 ]]
 position = Vector2( 1954.2, 418.197 )
 
-[node name="HUD" parent="." instance=ExtResource( 20 )]
+[node name="HUD" parent="." instance=ExtResource( 18 )]
 
-[node name="Dialoog" parent="." instance=ExtResource( 21 )]
+[node name="Dialoog" parent="." instance=ExtResource( 19 )]
 
-[node name="Flamefruite" parent="." instance=ExtResource( 22 )]
+[node name="Flamefruite" parent="." instance=ExtResource( 20 )]
 position = Vector2( 175.843, 435.234 )
 
-[node name="Falling" parent="." instance=ExtResource( 23 )]
+[node name="Falling" parent="." instance=ExtResource( 21 )]
 position = Vector2( 803.068, 1365.22 )
 scale = Vector2( 1, 4.265 )
-script = ExtResource( 24 )
+script = ExtResource( 22 )
 change_level = "res://Scenes/Scene.tscn"
 
 [node name="Menüü" type="CanvasLayer" parent="."]
 editor/display_folded = true
 
-[node name="Pause" parent="Menüü" instance=ExtResource( 25 )]
+[node name="Pause" parent="Menüü" instance=ExtResource( 23 )]
 visible = false
 margin_left = -8.0
 margin_top = -2.0
+
+[node name="LevelComplete" parent="." instance=ExtResource( 24 )]
+editor/display_folded = true
+position = Vector2( 1970.21, 423.494 )
+scale = Vector2( 0.7, 0.7 )
+change_level = "res://Scenes/Scene2.tscn"
+
+[node name="Area2D" parent="LevelComplete" instance=ExtResource( 25 )]
+visible = false
+position = Vector2( -16.0212, -49.9282 )
+scale = Vector2( 1.42857, 1.42857 )
 
 [connection signal="hp_changed" from="Characters/Chara" to="HUD" method="update_healthbar"]
 [connection signal="mp_changed" from="Characters/Chara" to="HUD" method="update_manabar"]

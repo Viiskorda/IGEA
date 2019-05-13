@@ -25,16 +25,16 @@
 [ext_resource path="res://Vanamees.tscn" type="PackedScene" id=23]
 [ext_resource path="res://Flamefruite.tscn" type="PackedScene" id=24]
 [ext_resource path="res://HUD.tscn" type="PackedScene" id=25]
-[ext_resource path="res://Scenes/LevelComplete.tscn" type="PackedScene" id=26]
-[ext_resource path="res://icon.png" type="Texture" id=27]
-[ext_resource path="res://HealthGate.tscn" type="PackedScene" id=28]
-[ext_resource path="res://Pause.tscn" type="PackedScene" id=29]
-[ext_resource path="res://ElderTalk.tscn" type="PackedScene" id=30]
-[ext_resource path="res://Scenes/Chara.tscn" type="PackedScene" id=31]
-[ext_resource path="res://Background/level_2_mountains.png" type="Texture" id=32]
-[ext_resource path="res://Background/closed_cave2.png" type="Texture" id=33]
-[ext_resource path="res://Scenes/HideCave.gd" type="Script" id=34]
-[ext_resource path="res://Background/boss_duel_black_cave2.png" type="Texture" id=35]
+[ext_resource path="res://Pause.tscn" type="PackedScene" id=26]
+[ext_resource path="res://ElderTalk.tscn" type="PackedScene" id=27]
+[ext_resource path="res://Scenes/Chara.tscn" type="PackedScene" id=28]
+[ext_resource path="res://Background/level_2_mountains.png" type="Texture" id=29]
+[ext_resource path="res://Background/closed_cave2.png" type="Texture" id=30]
+[ext_resource path="res://Scenes/HideCave.gd" type="Script" id=31]
+[ext_resource path="res://Background/boss_duel_black_cave2.png" type="Texture" id=32]
+[ext_resource path="res://Scenes/LevelComplete.tscn" type="PackedScene" id=33]
+[ext_resource path="res://icon.png" type="Texture" id=34]
+[ext_resource path="res://HealthGate.tscn" type="PackedScene" id=35]
 
 [sub_resource type="PhysicsMaterial" id=1]
 friction = 0.0
@@ -62,13 +62,13 @@ scale = Vector2( 0.618, 0.618 )
 texture = ExtResource( 4 )
 
 [node name="Floor" type="Node2D" parent="."]
+visible = false
 
 [node name="NormalFloor" type="Node2D" parent="Floor"]
-editor/display_folded = true
 
 [node name="floor" parent="Floor/NormalFloor" instance=ExtResource( 5 )]
-position = Vector2( 489.009, 1643.02 )
-scale = Vector2( 2.96705, 1 )
+position = Vector2( 397.404, 1644.53 )
+scale = Vector2( 3.937, 1 )
 
 [node name="floor14" parent="Floor/NormalFloor" instance=ExtResource( 5 )]
 position = Vector2( 1268.55, 1651.95 )
@@ -123,6 +123,8 @@ position = Vector2( 2666.2, 600.208 )
 scale = Vector2( 1.06935, 1 )
 
 [node name="CaveFloor" type="Node2D" parent="Floor"]
+editor/display_folded = true
+visible = false
 
 [node name="CaveFloor1" parent="Floor/CaveFloor" instance=ExtResource( 6 )]
 position = Vector2( 2568.75, 804.31 )
@@ -195,6 +197,7 @@ position = Vector2( 3544.13, 811.238 )
 rotation = 2.66437
 
 [node name="Kivid" type="Node2D" parent="."]
+editor/display_folded = true
 
 [node name="TestRock" parent="Kivid" instance=ExtResource( 11 )]
 position = Vector2( 803.963, 1524.65 )
@@ -319,6 +322,7 @@ stream = ExtResource( 22 )
 position = Vector2( 1601.9, 1292.11 )
 
 [node name="Flamefruits" type="Node2D" parent="."]
+editor/display_folded = true
 position = Vector2( 1259.94, 1571.93 )
 scale = Vector2( 0.7, 0.7 )
 
@@ -364,44 +368,13 @@ scale = Vector2( 1, 1 )
 
 [node name="HUD" parent="." instance=ExtResource( 25 )]
 
-[node name="LevelComplete" parent="." instance=ExtResource( 26 )]
-position = Vector2( 3891.41, 1393.21 )
-scale = Vector2( 0.7, 0.7 )
-change_level = "res://Scenes/Scene2.tscn"
-
-[node name="Sprite" type="Sprite" parent="LevelComplete"]
-visible = false
-modulate = Color( 0, 0, 0, 1 )
-position = Vector2( 27.0483, 162.291 )
-scale = Vector2( 6.64636, 1 )
-texture = ExtResource( 27 )
-
-[node name="Area2D" parent="LevelComplete" instance=ExtResource( 28 )]
-position = Vector2( 17.488, -73.3427 )
-scale = Vector2( 1.42857, 1.42857 )
-
-[node name="RockFloor5" parent="LevelComplete" instance=ExtResource( 10 )]
-position = Vector2( 32.7188, 145.096 )
-scale = Vector2( 0.714286, 1.42857 )
-
-[node name="LevelComplete2" parent="." instance=ExtResource( 26 )]
-position = Vector2( 321.34, 1533.89 )
-rotation = 3.14159
-scale = Vector2( 0.7, -0.7 )
-target_spawn_group = "second_spawn"
-
-[node name="Area2D2" parent="LevelComplete2" instance=ExtResource( 28 )]
-position = Vector2( 1.00067, -66.7019 )
-rotation = -3.14159
-scale = Vector2( 1.25, -1.25 )
-
 [node name="Menüü" type="CanvasLayer" parent="."]
 editor/display_folded = true
 
-[node name="Pause" parent="Menüü" instance=ExtResource( 29 )]
+[node name="Pause" parent="Menüü" instance=ExtResource( 26 )]
 visible = false
 
-[node name="ElderTalk" parent="." instance=ExtResource( 30 )]
+[node name="ElderTalk" parent="." instance=ExtResource( 27 )]
 position = Vector2( 1535.19, 1274.71 )
 
 [node name="Close cave" type="Area2D" parent="."]
@@ -411,7 +384,7 @@ editor/display_folded = true
 position = Vector2( 3015.33, 622.816 )
 shape = SubResource( 4 )
 
-[node name="Chara" parent="." instance=ExtResource( 31 )]
+[node name="Chara" parent="." instance=ExtResource( 28 )]
 position = Vector2( 270, 1550.08 )
 
 [node name="Camera2D" type="Camera2D" parent="Chara"]
@@ -433,24 +406,53 @@ motion_scale = Vector2( 0.7, 0.7 )
 [node name="Mountains2" type="Sprite" parent="Chara/ParallaxBackground/ParallaxLayer"]
 position = Vector2( -369.76, -603.999 )
 scale = Vector2( 0.758884, 0.740867 )
-texture = ExtResource( 32 )
+texture = ExtResource( 29 )
 centered = false
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="HideCave" type="Sprite" parent="."]
-visible = false
 position = Vector2( 3016.21, 459.803 )
 scale = Vector2( 0.625381, 0.569736 )
-texture = ExtResource( 33 )
-script = ExtResource( 34 )
+texture = ExtResource( 30 )
+script = ExtResource( 31 )
 
 [node name="blackoutsidecave" type="Sprite" parent="."]
-visible = false
 position = Vector2( 3003.06, 358.371 )
 scale = Vector2( 0.634157, 0.630992 )
-texture = ExtResource( 35 )
+texture = ExtResource( 32 )
+
+[node name="LevelComplete" parent="." instance=ExtResource( 33 )]
+position = Vector2( 3891.41, 1393.21 )
+scale = Vector2( 0.7, 0.7 )
+change_level = "res://Scenes/Scene2.tscn"
+
+[node name="Sprite" type="Sprite" parent="LevelComplete"]
+visible = false
+modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 27.0483, 162.291 )
+scale = Vector2( 6.64636, 1 )
+texture = ExtResource( 34 )
+
+[node name="Area2D" parent="LevelComplete" instance=ExtResource( 35 )]
+position = Vector2( 17.488, -73.3427 )
+scale = Vector2( 1.42857, 1.42857 )
+
+[node name="RockFloor5" parent="LevelComplete" instance=ExtResource( 10 )]
+position = Vector2( 32.7188, 145.096 )
+scale = Vector2( 0.714286, 1.42857 )
+
+[node name="LevelComplete2" parent="." instance=ExtResource( 33 )]
+position = Vector2( 321.34, 1533.89 )
+rotation = -3.14159
+scale = Vector2( 0.7, -0.7 )
+target_spawn_group = "second_spawn"
+
+[node name="Area2D2" parent="LevelComplete2" instance=ExtResource( 35 )]
+position = Vector2( 1.00067, -66.7019 )
+rotation = -3.14159
+scale = Vector2( 1.25, -1.25 )
 
 [connection signal="body_entered" from="ElderTalk" to="Dialoog" method="_on_ElderTalk_body_entered"]
 [connection signal="body_exited" from="ElderTalk" to="Dialoog" method="_on_ElderTalk_body_exited"]
