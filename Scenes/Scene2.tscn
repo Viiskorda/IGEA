@@ -62,12 +62,9 @@ scale = Vector2( 0.618, 0.618 )
 texture = ExtResource( 4 )
 
 [node name="Floor" type="Node2D" parent="."]
-editor/display_folded = true
-visible = false
 
 [node name="NormalFloor" type="Node2D" parent="Floor"]
 editor/display_folded = true
-visible = false
 
 [node name="floor" parent="Floor/NormalFloor" instance=ExtResource( 5 )]
 position = Vector2( 489.009, 1643.02 )
@@ -126,7 +123,6 @@ position = Vector2( 2666.2, 600.208 )
 scale = Vector2( 1.06935, 1 )
 
 [node name="CaveFloor" type="Node2D" parent="Floor"]
-editor/display_folded = true
 
 [node name="CaveFloor1" parent="Floor/CaveFloor" instance=ExtResource( 6 )]
 position = Vector2( 2568.75, 804.31 )
@@ -180,20 +176,17 @@ can_sleep = false
 position = Vector2( 3081.61, 965.508 )
 
 [node name="Rockfloor" type="Node2D" parent="Floor"]
-editor/display_folded = true
+visible = false
 
 [node name="RockFloor" parent="Floor/Rockfloor" instance=ExtResource( 10 )]
-visible = false
 position = Vector2( 2538.98, 803.694 )
 rotation = 0.610388
 
 [node name="RockFloor2" parent="Floor/Rockfloor" instance=ExtResource( 10 )]
-visible = false
 position = Vector2( 2328.12, 341.581 )
 rotation = 1.5708
 
 [node name="RockFloor3" parent="Floor/Rockfloor" instance=ExtResource( 10 )]
-visible = false
 position = Vector2( 3654.42, 430.551 )
 rotation = 1.5708
 
@@ -447,12 +440,14 @@ __meta__ = {
 }
 
 [node name="HideCave" type="Sprite" parent="."]
+visible = false
 position = Vector2( 3016.21, 459.803 )
 scale = Vector2( 0.625381, 0.569736 )
 texture = ExtResource( 33 )
 script = ExtResource( 34 )
 
 [node name="blackoutsidecave" type="Sprite" parent="."]
+visible = false
 position = Vector2( 3003.06, 358.371 )
 scale = Vector2( 0.634157, 0.630992 )
 texture = ExtResource( 35 )

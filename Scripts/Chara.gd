@@ -120,12 +120,14 @@ func _physics_process(_delta):
 				throw(-70)
 		elif Input.is_action_pressed('ui_down'):
 			$LiikuvChara.play("kneel")
+			motion.x = 0
 		elif !on_ground:
-			print(CharaDirection)
+
 			if CharaDirection==1:
 				motion.x =SPEED/2
 			if CharaDirection==2:
 				motion.x =-SPEED/2
+			CharaDirection=0
 		else:
 			$LiikuvChara.play("idle")
 			
