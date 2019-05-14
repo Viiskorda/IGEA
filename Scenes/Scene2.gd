@@ -1,4 +1,5 @@
 extends Node
+var modulate=0
 onready var enemy2=get_node("Enemies/Enemy2")
 onready var enemy3=get_node("Enemies/Enemy3")
 onready var enemy4=get_node("Enemies/Enemy4")
@@ -85,7 +86,7 @@ func _ready():
 	if Global.enemy6isalive==false:
 		enemy6.queue_free()
 
-
+	$Background/Modulate.start()
 
 
 
@@ -96,8 +97,22 @@ func _process(delta):
 		$HideCave.modulate.a=0
 	if Global.enemy2isalive==false:
 		$blackoutsidecave.modulate.a=0
-
+	
+	if modulate==0:
+		$Background/BG2.modulate.a-=.01
+		$Background/BG2.position.x+=delta
+		
+	elif modulate==1:
+		$Background/BG2.modulate.a+=.01
+		$Background/BG2.position.x-=delta
 
 
 func _on_Close_cave_body_entered(body):
 	$blackoutsidecave.modulate.a=1
+
+
+func _on_Modulate_timeout():
+	if modulate==1:
+		modulate=0
+	else:
+		modulate=1
