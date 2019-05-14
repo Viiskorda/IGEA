@@ -1,5 +1,6 @@
 extends Node
 var modulate=0
+var crystal=false
 onready var enemy2=get_node("Enemies/Enemy2")
 onready var enemy3=get_node("Enemies/Enemy3")
 onready var enemy4=get_node("Enemies/Enemy4")
@@ -87,6 +88,7 @@ func _ready():
 		enemy6.queue_free()
 
 	$Background/Modulate.start()
+	print($Gate2.position)
 
 
 
@@ -105,7 +107,13 @@ func _process(delta):
 	elif modulate==1:
 		$Background/BG2.modulate.a+=.01
 		$Background/BG2.position.x-=delta
-
+	if Global.charaPosition.x>1450 and Global.charaPosition.x<1600 and Global.charaPosition.y<1010:
+		crystal=true
+	if crystal==true:
+		$Crystal.position=Global.charaPosition
+	if Global.charaPosition.x>3700  and Global.charaPosition.y<900:
+		$Crystal.position.x=3900
+		$Crystal.position.y=1400
 
 func _on_Close_cave_body_entered(body):
 	$blackoutsidecave.modulate.a=1

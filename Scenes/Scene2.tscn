@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=2]
+[gd_scene load_steps=45 format=2]
 
 [ext_resource path="res://Scenes/Scene2.gd" type="Script" id=1]
 [ext_resource path="res://DialogTest.tscn" type="PackedScene" id=2]
@@ -37,7 +37,9 @@
 [ext_resource path="res://icon.png" type="Texture" id=35]
 [ext_resource path="res://HealthGate.tscn" type="PackedScene" id=36]
 [ext_resource path="res://images/Level 2_final/level_2_final_kristall.png" type="Texture" id=37]
-[ext_resource path="res://images/Level 2_final/level_2_final_valgusvihud.png" type="Texture" id=38]
+[ext_resource path="res://images/Level 2_final/level_2_final_värav2_empty.png" type="Texture" id=38]
+[ext_resource path="res://images/Level 2_final/level_2_final_värav1_empty.png" type="Texture" id=39]
+[ext_resource path="res://images/Level 2_final/level_2_final_valgusvihud.png" type="Texture" id=40]
 
 [sub_resource type="PhysicsMaterial" id=1]
 friction = 0.0
@@ -462,14 +464,23 @@ position = Vector2( 1.00067, -66.7019 )
 rotation = -3.14159
 scale = Vector2( 1.25, -1.25 )
 
-[node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 1519.95, 1032.32 )
+[node name="Crystal" type="Sprite" parent="."]
+position = Vector2( 1541.95, 1014.32 )
 texture = ExtResource( 37 )
 
+[node name="Gate2" type="Sprite" parent="."]
+position = Vector2( 3900.3, 1355.84 )
+texture = ExtResource( 38 )
+
+[node name="Gate1" type="Sprite" parent="."]
+position = Vector2( 218.905, 1498.36 )
+texture = ExtResource( 39 )
+
 [node name="Light2D" type="Light2D" parent="."]
+visible = false
 position = Vector2( 2064.64, 1303.52 )
 scale = Vector2( 0.6, 0.6 )
-texture = ExtResource( 38 )
+texture = ExtResource( 40 )
 energy = 1.1
 
 [connection signal="timeout" from="Background/Modulate" to="." method="_on_Modulate_timeout"]
