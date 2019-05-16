@@ -89,9 +89,9 @@ func _ready():
 		enemy6.queue_free()
 
 	$Background/Modulate.start()
-
-
-
+	
+	$LevelComplete/GateFire.modulate.a=0
+	$LevelComplete2/GateFire.modulate.a=0
 
 
 func _process(delta):
@@ -118,6 +118,12 @@ func _process(delta):
 	if Global.charaPosition.x>3700  and Global.charaPosition.y<1400:
 		crystalInGate=true
 		print(Global.charaPosition.x)
+		
+	if Global.Gate1onFire==true:
+		$LevelComplete/GateFire.modulate.a=1
+		
+	if Global.Gate2onFire==true:
+		$LevelComplete/GateFire.modulate.a=1
 
 func _on_Close_cave_body_entered(body):
 	$blackoutsidecave.modulate.a=1

@@ -34,13 +34,13 @@
 [ext_resource path="res://Scenes/HideCave.gd" type="Script" id=32]
 [ext_resource path="res://images/Level 2_final/level_2_final_main_cave_boss.png" type="Texture" id=33]
 [ext_resource path="res://Scenes/LevelComplete.tscn" type="PackedScene" id=34]
-[ext_resource path="res://images/Level 2_final/level_2_final_värav2_fire_inside.png" type="Texture" id=35]
-[ext_resource path="res://images/Level 2_final/level_2_final_värav2_empty.png" type="Texture" id=36]
-[ext_resource path="res://images/Level 2_final/level_2_final_värav2_activated.png" type="Texture" id=37]
-[ext_resource path="res://icon.png" type="Texture" id=38]
-[ext_resource path="res://HealthGate.tscn" type="PackedScene" id=39]
-[ext_resource path="res://images/Level 2_final/level_2_final_värav1_fire_inside.png" type="Texture" id=40]
-[ext_resource path="res://images/Level 2_final/level_2_final_värav1_empty.png" type="Texture" id=41]
+[ext_resource path="res://HealthGate.tscn" type="PackedScene" id=35]
+[ext_resource path="res://images/Level 2_final/level_2_final_värav1_fire_inside.png" type="Texture" id=36]
+[ext_resource path="res://images/Level 2_final/level_2_final_värav1_empty.png" type="Texture" id=37]
+[ext_resource path="res://images/Level 2_final/level_2_final_värav2_fire_inside.png" type="Texture" id=38]
+[ext_resource path="res://images/Level 2_final/level_2_final_värav2_empty.png" type="Texture" id=39]
+[ext_resource path="res://images/Level 2_final/level_2_final_värav2_activated.png" type="Texture" id=40]
+[ext_resource path="res://icon.png" type="Texture" id=41]
 [ext_resource path="res://images/Level 2_final/level_2_final_kristall.png" type="Texture" id=42]
 [ext_resource path="res://images/Level 2_final/level_2_final_valgusvihud.png" type="Texture" id=43]
 
@@ -433,80 +433,90 @@ __meta__ = {
 }
 
 [node name="HideCave" type="Sprite" parent="."]
+visible = false
 position = Vector2( 3016.21, 459.803 )
 scale = Vector2( 0.625381, 0.569736 )
 texture = ExtResource( 31 )
 script = ExtResource( 32 )
 
 [node name="blackoutsidecave" type="Sprite" parent="."]
+visible = false
 position = Vector2( 2765.06, 566.371 )
 scale = Vector2( 0.634157, 0.630992 )
 texture = ExtResource( 33 )
 
 [node name="LevelComplete" parent="." instance=ExtResource( 34 )]
-position = Vector2( 3891.41, 1394.3 )
-scale = Vector2( 0.7, 0.7 )
-change_level = "res://Scenes/Scene2.tscn"
-
-[node name="Gate3Fire" type="Sprite" parent="LevelComplete"]
-position = Vector2( 11.2715, -40.5287 )
-scale = Vector2( 1, 1 )
-texture = ExtResource( 35 )
-
-[node name="Gate2Empty" type="Sprite" parent="LevelComplete"]
-position = Vector2( 9.84277, 0.900024 )
-scale = Vector2( 1, 1 )
-texture = ExtResource( 36 )
-
-[node name="Gate2Fire" type="Sprite" parent="LevelComplete"]
-position = Vector2( 9.84277, 2.32837 )
-scale = Vector2( 1, 1 )
-texture = ExtResource( 37 )
-
-[node name="Sprite" type="Sprite" parent="LevelComplete"]
-visible = false
-modulate = Color( 0, 0, 0, 1 )
-position = Vector2( 27.0483, 162.291 )
-scale = Vector2( 6.64636, 1 )
-texture = ExtResource( 38 )
-
-[node name="Area2D" parent="LevelComplete" instance=ExtResource( 39 )]
-position = Vector2( 17.488, -73.3427 )
-scale = Vector2( 1.42857, 1.42857 )
-
-[node name="RockFloor5" parent="LevelComplete" instance=ExtResource( 11 )]
-visible = false
-position = Vector2( 32.7188, 145.096 )
-scale = Vector2( 0.714286, 1.42857 )
-
-[node name="RockFloor6" parent="LevelComplete" instance=ExtResource( 11 )]
-visible = false
-position = Vector2( 238.112, -58.2241 )
-rotation = -1.60126
-scale = Vector2( 0.714286, 1.42857 )
-
-[node name="LevelComplete2" parent="." instance=ExtResource( 34 )]
 position = Vector2( 263.66, 1538.41 )
 rotation = -3.14159
 scale = Vector2( 0.7, -0.7 )
 target_spawn_group = "second_spawn"
 
-[node name="Gate1Fire" type="Sprite" parent="LevelComplete2"]
+[node name="Area2D2" parent="LevelComplete" instance=ExtResource( 35 )]
+position = Vector2( -55.5069, -68.9036 )
+rotation = 3.14159
+scale = Vector2( 1.25, -1.25 )
+levelcomplete = "levelcomplete"
+
+[node name="GateFire" type="Sprite" parent="LevelComplete"]
 position = Vector2( -64.843, -47.9653 )
 rotation = 3.14159
 scale = Vector2( 1, -1 )
-texture = ExtResource( 40 )
+texture = ExtResource( 36 )
 
-[node name="Gate1Empty" type="Sprite" parent="LevelComplete2"]
+[node name="GateEmpty" type="Sprite" parent="LevelComplete"]
 position = Vector2( -64.843, -6.47168 )
 rotation = 3.14159
 scale = Vector2( 1, -1 )
+texture = ExtResource( 37 )
+
+[node name="GateOnFire" type="Sprite" parent="LevelComplete"]
+position = Vector2( -64.843, -6.47168 )
+rotation = 3.14159
+scale = Vector2( 1, -1 )
+texture = ExtResource( 37 )
+
+[node name="LevelComplete2" parent="." instance=ExtResource( 34 )]
+position = Vector2( 3891.41, 1394.3 )
+scale = Vector2( 0.7, 0.7 )
+change_level = "res://Scenes/Scene2.tscn"
+
+[node name="Area2D" parent="LevelComplete2" instance=ExtResource( 35 )]
+position = Vector2( 17.4883, -73.3425 )
+scale = Vector2( 1.42857, 1.42857 )
+levelcomplete = "levelcomplete2"
+
+[node name="GateFire" type="Sprite" parent="LevelComplete2"]
+position = Vector2( 11.2715, -40.5287 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 38 )
+
+[node name="GateEmpty" type="Sprite" parent="LevelComplete2"]
+position = Vector2( 9.84277, 0.900024 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 39 )
+
+[node name="GateOnFire" type="Sprite" parent="LevelComplete2"]
+position = Vector2( 9.84277, 2.32837 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 40 )
+
+[node name="Sprite" type="Sprite" parent="LevelComplete2"]
+visible = false
+modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 27.0483, 162.291 )
+scale = Vector2( 6.64636, 1 )
 texture = ExtResource( 41 )
 
-[node name="Area2D2" parent="LevelComplete2" instance=ExtResource( 39 )]
-position = Vector2( -55.507, -68.9036 )
-rotation = -3.14159
-scale = Vector2( 1.25, -1.25 )
+[node name="RockFloor5" parent="LevelComplete2" instance=ExtResource( 11 )]
+visible = false
+position = Vector2( 32.7188, 145.096 )
+scale = Vector2( 0.714286, 1.42857 )
+
+[node name="RockFloor6" parent="LevelComplete2" instance=ExtResource( 11 )]
+visible = false
+position = Vector2( 238.112, -58.2241 )
+rotation = -1.60126
+scale = Vector2( 0.714286, 1.42857 )
 
 [node name="Crystal" type="Sprite" parent="."]
 position = Vector2( 1541.95, 1014.32 )

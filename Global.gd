@@ -15,6 +15,9 @@ var generateHealt=false
 var firstConversationWithChara=0
 var prevScene
 
+var Gate1onFire=false
+var Gate2onFire=false
+
 var enemy1isalive=true
 
 var enemy2isalive=true
