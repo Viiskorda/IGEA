@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://Scenes/Scene.gd" type="Script" id=1]
 [ext_resource path="res://Background/level_1_bg_taust_light.png" type="Texture" id=2]
@@ -25,6 +25,7 @@
 [ext_resource path="res://Pause.tscn" type="PackedScene" id=23]
 [ext_resource path="res://Scenes/LevelComplete.tscn" type="PackedScene" id=24]
 [ext_resource path="res://HealthGate.tscn" type="PackedScene" id=25]
+[ext_resource path="res://Background/level_1_gate.png" type="Texture" id=26]
 
 [node name="Scene" type="Node2D"]
 script = ExtResource( 1 )
@@ -171,7 +172,7 @@ volume_db = -30.0
 [node name="SpawnPosition" type="Position2D" parent="." groups=[
 "second_spawn",
 ]]
-position = Vector2( 1954.2, 418.197 )
+position = Vector2( 1954.2, 422.197 )
 
 [node name="HUD" parent="." instance=ExtResource( 18 )]
 
@@ -187,7 +188,6 @@ script = ExtResource( 22 )
 change_level = "res://Scenes/Scene.tscn"
 
 [node name="Menüü" type="CanvasLayer" parent="."]
-editor/display_folded = true
 
 [node name="Pause" parent="Menüü" instance=ExtResource( 23 )]
 visible = false
@@ -195,15 +195,16 @@ margin_left = -8.0
 margin_top = -2.0
 
 [node name="LevelComplete" parent="." instance=ExtResource( 24 )]
-editor/display_folded = true
 position = Vector2( 1970.21, 423.494 )
 scale = Vector2( 0.7, 0.7 )
 change_level = "res://Scenes/Scene2.tscn"
 
 [node name="Area2D" parent="LevelComplete" instance=ExtResource( 25 )]
-visible = false
-position = Vector2( -16.0212, -49.9282 )
+position = Vector2( 4.26837, -49.9282 )
 scale = Vector2( 1.42857, 1.42857 )
+
+[node name="Sprite2" type="Sprite" parent="LevelComplete"]
+texture = ExtResource( 26 )
 
 [connection signal="hp_changed" from="Characters/Chara" to="HUD" method="update_healthbar"]
 [connection signal="mp_changed" from="Characters/Chara" to="HUD" method="update_manabar"]

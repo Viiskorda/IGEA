@@ -13,6 +13,7 @@ script = ExtResource( 1 )
 change_level = "res://Scenes/Scene.tscn"
 
 [node name="fire_blue_gate" type="Sprite" parent="."]
+visible = false
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

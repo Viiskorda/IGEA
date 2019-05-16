@@ -89,7 +89,7 @@ func _ready():
 		enemy6.queue_free()
 
 	$Background/Modulate.start()
-	print($Gate2.position)
+
 
 
 
