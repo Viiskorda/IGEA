@@ -3,7 +3,7 @@
 [ext_resource path="res://StartTekst.gd" type="Script" id=1]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 62.0018, 18.3793 )
+extents = Vector2( 44.6841, 18.3793 )
 
 [node name="StartTekst" type="Area2D"]
 script = ExtResource( 1 )
@@ -12,11 +12,5 @@ script = ExtResource( 1 )
 position = Vector2( 0, 16 )
 scale = Vector2( 1, 2.23077 )
 shape = SubResource( 1 )
-
-[node name="Tekst" type="Label" parent="."]
-margin_top = -159.0
-margin_right = 100.0
-margin_bottom = -111.0
-
 [connection signal="body_entered" from="." to="." method="_on_StartTekst_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_StartTekst_body_exited"]

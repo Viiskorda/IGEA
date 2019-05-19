@@ -38,6 +38,7 @@ margin_bottom = 530.0
 texture = ExtResource( 3 )
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="."]
+editor/display_folded = true
 margin_left = 869.0
 margin_top = 420.0
 margin_right = 1302.0
@@ -73,7 +74,6 @@ margin_right = 434.0
 margin_bottom = 347.0
 texture_normal = ExtResource( 9 )
 texture_focused = ExtResource( 7 )
-
 [connection signal="pressed" from="VBoxContainer2/TextureButton" to="." method="_on_TextureButton_pressed"]
 [connection signal="pressed" from="VBoxContainer2/TextureButton3" to="." method="_on_TextureButton3_pressed"]
 [connection signal="pressed" from="VBoxContainer2/TextureButton2" to="." method="_on_TextureButton2_pressed"]

@@ -14,6 +14,7 @@ var double_jump=false
 var generateHealt=false
 var firstConversationWithChara=0
 var prevScene
+var mainDialogue = 1
 
 var Gate1onFire=false
 var Gate2onFire=false

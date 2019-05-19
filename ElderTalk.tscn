@@ -7,4 +7,3 @@ extents = Vector2( 252.485, 97.9851 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
-

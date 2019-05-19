@@ -31,5 +31,4 @@ script = ExtResource( 3 )
 [node name="Timer" type="Timer" parent="Sprite/Polygon2D"]
 wait_time = 0.05
 autostart = true
-
 [connection signal="timeout" from="Sprite/Polygon2D/Timer" to="Sprite/Polygon2D/RichTextLabel" method="_on_Timer_timeout"]
