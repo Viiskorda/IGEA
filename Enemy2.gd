@@ -46,6 +46,7 @@ func dead():
 		#audioBack()
 		$Modulate.start()
 		$Timer.start()
+		Global.mainDialogue = 2
 
 
 func attack():

@@ -37,7 +37,6 @@ func _input(event):
 					set_visible_characters(0)
 			else:
 				set_visible_characters(get_total_character_count())
-				Global.firstConversationDone = true
 
 func _on_Timer_timeout():
 	if start == true:
