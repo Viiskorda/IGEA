@@ -13,10 +13,10 @@ udu
 
 - plönn korda/ helid leida
 - kõndimise heli liiga vali, tulistamise heli, klikkimise heli, seadetes navigeerimise heli, bossile heli, koopa heli\
-- POOLELI jutumull, et esimesest stseenist ei saa välja kõndida\
+- TEHTUD jutumull, et esimesest stseenist ei saa välja kõndida\
 - POOLELI vanamees fadein kui chara kohale jõuab, ning fadeout siis kui ämblik on tapetud kui teistkordne tekst on edastatud
 - POOLELI vanamehe dialoog
-- laskmise tekst
+- TEHTUD laskmise tekst
 - TEHTUD kui elu läheb 0, siis viimases save-s ilmub nähtavale\
 - TEHTUD valgusvihud
 - TEHTUD kui kõik vaenlased on tapetud, alles siis ilmub koobas nähtavale (ehk must pilt selle kohal kaob ära)
@@ -29,7 +29,7 @@ udu
 - TEHTUD Tegelased muudavad värvi pihta saamisel/vilguvad
 - TEHTUD Boss haihtub peale animatsiooni
 - Esimeses levelis vastase surmal tekst, kuhu edasi liikuda
-- Värava lähedal elude taastamise tekst
+- TEHTUD Värava lähedal elude taastamise tekst
 - TEHTUD Bossi liikumine staatiline, vaadata üle
 - Mängu kompilleerimine/testida mängu
 - Ebavajalikud failid kustutada ja faile korrastada
