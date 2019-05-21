@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Dialoogid/Level1/inst_base_big.png" type="Texture" id=1]
 [ext_resource path="res://ferrum.otf" type="DynamicFontData" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Enemy/Monster_1/Walk/Armature_flowmon_walk_duplication2_0.png" type="Texture" id=5]
 [ext_resource path="res://images/Level 2_final/level_2_final_värav1_empty.png" type="Texture" id=6]
 [ext_resource path="res://images/Abilities/slice3.png" type="Texture" id=7]
+[ext_resource path="res://images/Abilities/slice4.png" type="Texture" id=8]
 
 [sub_resource type="DynamicFont" id=1]
 size = 26
@@ -65,6 +66,12 @@ visible = false
 position = Vector2( -7.24176, -155.102 )
 scale = Vector2( 1.92857, 1.92857 )
 texture = ExtResource( 7 )
+
+[node name="Doublejump" type="Sprite" parent="InstructionBase/Polygon2D"]
+visible = false
+position = Vector2( -6.54431, -155.098 )
+scale = Vector2( 1.929, 1.929 )
+texture = ExtResource( 8 )
 
 [node name="Label" type="Label" parent="InstructionBase"]
 margin_left = -77.6765

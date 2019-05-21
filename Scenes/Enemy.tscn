@@ -87,6 +87,5 @@ margin_bottom = -49.6341
 
 [node name="Modulate" type="Timer" parent="."]
 wait_time = 0.2
-
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="timeout" from="Modulate" to="." method="_on_Modulate_timeout"]

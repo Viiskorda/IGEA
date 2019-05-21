@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=2]
+[gd_scene load_steps=52 format=2]
 
 [ext_resource path="res://Scenes/Scene2.gd" type="Script" id=1]
 [ext_resource path="res://DialogTest.tscn" type="PackedScene" id=2]
@@ -43,6 +43,9 @@
 [ext_resource path="res://icon.png" type="Texture" id=41]
 [ext_resource path="res://images/Level 2_final/level_2_final_kristall.png" type="Texture" id=42]
 [ext_resource path="res://images/Level 2_final/level_2_final_valgusvihud.png" type="Texture" id=43]
+[ext_resource path="res://Popup.tscn" type="PackedScene" id=44]
+[ext_resource path="res://Popup.gd" type="Script" id=45]
+[ext_resource path="res://Scenes/InstructionScn2.gd" type="Script" id=46]
 
 [sub_resource type="PhysicsMaterial" id=1]
 friction = 0.0
@@ -56,6 +59,9 @@ friction = 0.0
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 56.7445, 51.4932 )
 
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 896.896, 425.093 )
+
 [node name="Scene2" type="Node"]
 script = ExtResource( 1 )
 
@@ -63,6 +69,7 @@ script = ExtResource( 1 )
 script = ExtResource( 3 )
 
 [node name="Background" type="Node2D" parent="."]
+editor/display_folded = true
 
 [node name="BG" type="Sprite" parent="Background"]
 position = Vector2( 2058.82, 838.424 )
@@ -309,7 +316,6 @@ script = ExtResource( 20 )
 change_level = "res://Scenes/Scene2.tscn"
 
 [node name="Enemies" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="Enemy2" parent="Enemies" instance=ExtResource( 21 )]
 position = Vector2( 2972.52, 111.094 )
@@ -528,10 +534,25 @@ position = Vector2( 2064.64, 1303.52 )
 scale = Vector2( 0.6, 0.6 )
 texture = ExtResource( 43 )
 energy = 1.1
+
+[node name="Popup" parent="." instance=ExtResource( 44 )]
+script = ExtResource( 45 )
+
+[node name="InstructionScn2" type="Node2D" parent="."]
+editor/display_folded = true
+script = ExtResource( 46 )
+
+[node name="DoublejumpInst" type="Area2D" parent="InstructionScn2"]
+editor/display_folded = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InstructionScn2/DoublejumpInst"]
+position = Vector2( 2981.37, 544.361 )
+shape = SubResource( 5 )
 [connection signal="timeout" from="Background/Modulate" to="." method="_on_Modulate_timeout"]
 [connection signal="body_entered" from="ElderTalk" to="Dialoog" method="_on_ElderTalk_body_entered"]
 [connection signal="body_exited" from="ElderTalk" to="Dialoog" method="_on_ElderTalk_body_exited"]
-[connection signal="body_entered" from="Close cave" to="." method="_on_Close_cave_body_entered"]
 [connection signal="body_entered" from="Close cave" to="Floor/KaduvFloor" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Close cave" to="." method="_on_Close_cave_body_entered"]
 [connection signal="hp_changed" from="Chara" to="HUD" method="update_healthbar"]
 [connection signal="mp_changed" from="Chara" to="HUD" method="update_manabar"]
+[connection signal="body_entered" from="InstructionScn2/DoublejumpInst" to="Popup" method="_on_DoublejumpInst_body_entered"]

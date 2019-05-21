@@ -47,6 +47,7 @@ func dead():
 		$Modulate.start()
 		$Timer.start()
 		Global.mainDialogue = 2
+		Global.questDone = 0
 
 
 func attack():

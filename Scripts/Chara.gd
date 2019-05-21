@@ -329,6 +329,10 @@ func _on_Timer_timeout():
 				Global.enemy4isalive = data[node_path]['Global.enemy4isalive']
 				Global.enemy5isalive = data[node_path]['Global.enemy5isalive']
 				Global.enemy6isalive = data[node_path]['Global.enemy6isalive']
+				print(Global.questDone)
+				print(Global.questDone)
+				print(Global.questDone)
+				print(Global.questDone)
 
 				
 		#Global.goto_scene(change_level,target_spawn_group)
@@ -361,9 +365,11 @@ func save():
 		"Global.flamefruit7" : Global.flamefruit7,
 		"Global.flamefruit8" : Global.flamefruit8,
 		"Global.flamefruit9" : Global.flamefruit9,
-		"Global.flamefruit10" : Global.flamefruit10
+		"Global.flamefruit10" : Global.flamefruit10,
 		
-	}	
+		"Global.mainDialogue" : Global.mainDialogue,
+		"Global.questDone" : Global.questDone
+	}
 	return save_dict
 	
 

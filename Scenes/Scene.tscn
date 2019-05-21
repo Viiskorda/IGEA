@@ -158,6 +158,7 @@ scale = Vector2( 0.65, 0.63 )
 texture = ExtResource( 11 )
 
 [node name="Tutorial tekstid" type="Node2D" parent="."]
+editor/display_folded = true
 
 [node name="StartTekst" parent="Tutorial tekstid" instance=ExtResource( 12 )]
 position = Vector2( -48.2584, 344.328 )
@@ -178,6 +179,7 @@ position = Vector2( 439.509, 364.935 )
 shape = SubResource( 1 )
 
 [node name="ShootTut" type="Area2D" parent="Tutorial tekstid"]
+editor/display_folded = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tutorial tekstid/ShootTut"]
 position = Vector2( 1124.75, 360.404 )

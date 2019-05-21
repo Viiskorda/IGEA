@@ -15,6 +15,7 @@ var generateHealt=false
 var firstConversationWithChara=0
 var prevScene
 var mainDialogue = 1
+var questDone = 0
 
 var Gate1onFire=false
 var Gate2onFire=false
@@ -79,8 +80,6 @@ func _physics_process(_delta):
 
 func _finished_loading_scene():
 	
-	print(health)
-	print(mana)
 	if spawn_group_name:
 		var player = get_tree().get_nodes_in_group("player").front()
 		var spawn_target=get_tree().get_nodes_in_group(spawn_group_name).front()
@@ -191,7 +190,6 @@ func load_game():
 				flamefruit8 = data[node_path]['Global.flamefruit8']
 				flamefruit7 = data[node_path]['Global.flamefruit9']
 				flamefruit8 = data[node_path]['Global.flamefruit10']
-
 				
 		goto_scene(lastScene,"player")
 

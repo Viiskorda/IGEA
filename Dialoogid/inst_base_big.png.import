@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Dialogue_2_10.png-9a7659fd44b139aa75b5e81c813447e7.stex"
+path="res://.import/inst_base_big.png-85c74d3358d5d2d29140a0b0284705f6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Dialoogid/Level2/Dialogue_2_10.png"
-dest_files=[ "res://.import/Dialogue_2_10.png-9a7659fd44b139aa75b5e81c813447e7.stex" ]
+source_file="res://Dialoogid/inst_base_big.png"
+dest_files=[ "res://.import/inst_base_big.png-85c74d3358d5d2d29140a0b0284705f6.stex" ]
 
 [params]
 

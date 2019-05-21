@@ -20,21 +20,34 @@ var dialog = [["Player! You have successfully returned home, thank the Gods. Sad
 "For my last wish.. please live a long and wonderful life, my dearest child. Know that you are always loved, no matter what choices you might make or wherever life might take you.", 
 "Granpa.. *sniffle* Don't go! *sniffle*", 
 ".. You will be a wonderful Elder one day.. Farewell, my child..", 
-"Grandpa!! *sniffle* ..I will protect this village.. I swear on my life!! *sniffle*", "*sniffle* .. I should go and restore the barrier and then find the villagers, so they can finally return home. I will make grandpa proud!"]]
+"Grandpa!! *sniffle* ..I will protect this village.. I swear on my life!! *sniffle*", "*sniffle* .. I should go and restore the barrier and then find the villagers, so they can finally return home. I will make grandpa proud!"],
+["You need to kill all the monsters!"], 
+["You need to go to the cave!"]]
 
-func _ready():
+func whenEntered():
 	set_bbcode(dialog[page][line])
 	set_visible_characters(0)
 	set_process_input(true)
 	
 func _input(event):
 	if start == true:
+		print(page)
+		print(line)
+		print(Global.mainDialogue)
+		print(Global.questDone)
 		if Input.is_action_pressed("ui_talk"):
 			if get_visible_characters() > get_total_character_count():
 				if line < dialog[page].size()-1:
 					line += 1
 					set_bbcode(dialog[page][line])
 					set_visible_characters(0)
+				else:
+					get_node("../..").visible = false
+					Global.mainDialogue = 0
+					if Global.questDone == 0:
+						Global.questDone = 1
+					elif Global.questDone == 2:
+						Global.questDone = 3
 			else:
 				set_visible_characters(get_total_character_count())
 
