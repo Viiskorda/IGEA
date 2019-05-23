@@ -59,6 +59,18 @@ var flamefruit8path
 var flamefruit9path
 var flamefruit10path
 
+var popup = [0, 0, 0, 0, 0, 0, 0]
+
+#var movementText = 0
+#var flamefruitText = 0
+#var backToVillageText = 0
+#var jumpText = 0
+#var shootText = 0
+#var gateText = 0
+#var doublejumpText = 0
+
+var currentPopup
+
 var soundvolume=-20
 var soundFXvolume=-30
 

@@ -32,6 +32,8 @@ func _input(event):
 						get_node("../Doublejump").visible = false
 			else:
 				set_visible_characters(get_total_character_count())
+		elif Input.is_action_just_pressed("ui_dont_show"):
+			Global.popup[Global.currentPopup] = 1
 
 func _on_Timer_timeout():
 	if start == true:
