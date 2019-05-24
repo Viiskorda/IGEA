@@ -1,5 +1,15 @@
 # IGEA
 
+Kompileeritud mäng hiljemalt 05.06 kl 21.00. Saata Laurale.
+Video on vaja 8.06.
+
+Aruanne 6.06 23:59.
+
+
+
+
+
+
 Helid korda - kõndimise heli liiga vali, stseeni vahetamise heli, otsida paremat viga saamise heli ning sellel on väike viide sees, 
 hüppamine noolega üles ja w
 tekst enter

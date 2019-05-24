@@ -58,6 +58,7 @@ hp = 2
 [node name="Chara" parent="Characters" groups=[
 "Persist",
 ] instance=ExtResource( 4 )]
+editor/display_folded = true
 position = Vector2( -79.7149, 433.653 )
 
 [node name="Camera2D2" type="Camera2D" parent="Characters/Chara"]
@@ -158,7 +159,6 @@ scale = Vector2( 0.65, 0.63 )
 texture = ExtResource( 11 )
 
 [node name="Tutorial tekstid" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="StartTekst" parent="Tutorial tekstid" instance=ExtResource( 12 )]
 position = Vector2( -48.2584, 344.328 )
@@ -172,7 +172,6 @@ script = null
 position = Vector2( -184.836, 371.009 )
 
 [node name="JumpTut" type="Area2D" parent="Tutorial tekstid"]
-editor/display_folded = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tutorial tekstid/JumpTut"]
 position = Vector2( 439.509, 364.935 )
@@ -238,6 +237,7 @@ scale = Vector2( 1.42857, 1.42857 )
 
 [node name="Sprite2" type="Sprite" parent="LevelComplete"]
 texture = ExtResource( 26 )
+
 [connection signal="hp_changed" from="Characters/Chara" to="HUD" method="update_healthbar"]
 [connection signal="mp_changed" from="Characters/Chara" to="HUD" method="update_manabar"]
 [connection signal="body_entered" from="Tutorial tekstid/StartTekst" to="Popup" method="_on_StartTekst_body_entered"]

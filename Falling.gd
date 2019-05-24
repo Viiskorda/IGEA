@@ -55,6 +55,9 @@ func load_game():
 				Global.flamefruit9 = data[node_path]['Global.flamefruit9']
 				Global.flamefruit10 = data[node_path]['Global.flamefruit10']
 				
+				Global.mainDialogue = data[node_path]['Global.mainDialogue']
+				Global.questDone = data[node_path]['Global.questDone']
+				
 		Global.goto_scene(change_level,target_spawn_group)
 
 

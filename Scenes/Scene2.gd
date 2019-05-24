@@ -90,8 +90,10 @@ func _ready():
 
 	$Background/Modulate.start()
 	
-	$LevelComplete/GateFire.modulate.a=0
+
 	$LevelComplete2/GateFire.modulate.a=0
+	
+
 
 
 func _process(delta):
@@ -105,9 +107,11 @@ func _process(delta):
 	if modulate==0:
 		$Background/BG2.modulate.a-=.01
 		$Background/BG2.position.x+=delta
+		$LevelComplete/GateFire.modulate.a-=.007
 		
 	elif modulate==1:
 		$Background/BG2.modulate.a+=.01
+		$LevelComplete/GateFire.modulate.a+=.007
 		$Background/BG2.position.x-=delta
 	if Global.charaPosition.x>1450 and Global.charaPosition.x<1600 and Global.charaPosition.y<1010:
 		crystal=true
