@@ -94,3 +94,16 @@ func _on_DoublejumpInst_body_entered(body):
 		$InstructionBase.visible = true
 		$InstructionBase/Polygon2D/Doublejump.visible = true
 		Global.currentPopup = 6
+		
+func _on_DoublejumpInst_body_exited(body):
+	Global.popup[6] = 1
+
+
+
+func _on_GameEnd_body_entered(body):
+	$InstructionBase/Polygon2D/PopupText.page = 7
+	$InstructionBase/Polygon2D/PopupText.start = true
+	$InstructionBase/Polygon2D/PopupText.whenEntered()
+	$InstructionBase.visible = true
+
+
