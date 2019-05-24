@@ -4,18 +4,39 @@ Kompileeritud mäng hiljemalt 05.06 kl 21.00. Saata Laurale.
 Video on vaja 8.06.
 
 Aruanne 6.06 23:59.
+Esitlus: powerpoint, 15min rääkimist + gameplay demo, ülevaade kes mida tegi ja kuidas
 
 
+08.06
+
+- oma panus dokumenti (1. juuniks va Indrek, kes teeb lõpuni)
+- plönn korda/ helid leida
+- kõndimise heli liiga vali, tulistamise heli, klikkimise heli, seadetes navigeerimise heli, bossile heli, koopa heli\
+- POOLELI vanamees fadein kui chara kohale jõuab, ning fadeout siis kui ämblik on tapetud kui teistkordne tekst on edastatud, läbipaistvust vähemaks
+- POOLELI vanamehe dialoog
+- Chara suremise animatsioon
+- POOLELI Mana bar neljaks jaotada
+- Animatsioon, et chara kõnnib ise välja stseenist
+- Mängu kompilleerimine/testida mängu
+- POOLELI Doublejump saab koopa altarist, mille peale tuleb popup
+- Flamefruit valgus taha
+- udu/pilved
+- avamenüü korda teha (about teha)
+- teise leveli valgusvihud/fox lights
+- mõlemas levelis väravad/kirstukaaned
+- fade out/fade in kahe leveli vahel
+- mängu lõpp (exit game, menüüsse)
+- elude kaotamise bug (kui jääb aega üle)
 
 
-
+24.05
 
 Helid korda - kõndimise heli liiga vali, stseeni vahetamise heli, otsida paremat viga saamise heli ning sellel on väike viide sees, 
-hüppamine noolega üles ja w
-tekst enter
-shoot space
-healt genereerimine hüppamisega
-dialoogid tekstid suuremaks
+TEHTUD hüppamine noolega üles ja w
+TEHTUD tekst enter
+TEHTUD shoot space
+TEHTUD healt genereerimine hüppamisega
+TEHTUD dialoogid tekstid suuremaks
 udu
 
 
