@@ -93,7 +93,7 @@ func _ready():
 
 	$LevelComplete2/GateFire.modulate.a=0
 	
-
+	$Closecave/DoubleJump.modulate.a=0
 
 
 func _process(delta):
@@ -129,7 +129,10 @@ func _process(delta):
 		
 	if Global.Gate2onFire==true:
 		$LevelComplete/GateFire.modulate.a=1
-
+	
+	if Global.enemy2isalive==false:
+		$Closecave/DoubleJump.modulate.a=1
+	
 func _on_Close_cave_body_entered(body):
 	$blackoutsidecave.modulate.a=1
 
