@@ -120,4 +120,5 @@ position = Vector2( 2.28783, 81.4392 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharaFoot"]
 shape = SubResource( 3 )
+
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

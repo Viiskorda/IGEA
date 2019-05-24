@@ -22,6 +22,9 @@ const DAMAGE_DELAY = 0.5
 const SHOOT = preload("res://Scenes/Shoot.tscn")
 const SAVE_PATH = "res://save.json"
 
+var automaticMoveSceneI=false
+var automaticMoveSceneII=false
+
 var motion=Vector2();
 var Throw=preload("res://Throw.tscn")
 var direction=0
@@ -71,11 +74,19 @@ func throw(x):
 	rock.apply_impulse(Vector2(),imp)
 
 func _physics_process(_delta):
+	if automaticMoveSceneI==true:
+		$LiikuvChara.flip_h=false
+		position.x +=2
+		$LiikuvChara.play("walk")
 
+	if automaticMoveSceneII==true:
+		$LiikuvChara.play("walk")
+		$LiikuvChara.flip_h=true
+		position.x -=2
 
 	Global.charaPosition=position
 	emit_signal("mp_changed", Global.mana)
-	if is_dead == false:
+	if is_dead == false and automaticMoveSceneI==false and automaticMoveSceneII==false:
 	
 		motion.y+=GRAV
 		$HP.text = str(Global.health)
@@ -375,3 +386,13 @@ func save():
 
 
 
+
+
+func _on_AutomaticMove_body_entered(body):
+	if body.name=="Chara":
+		automaticMoveSceneI=true
+
+
+func _on_AutomaticMoveII_body_entered(body):
+	if body.name=="Chara":
+		automaticMoveSceneII=true
