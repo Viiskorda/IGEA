@@ -118,8 +118,8 @@ func _process(delta):
 	if crystal==true:
 		$Crystal.position=Global.charaPosition
 	if crystalInGate==true:
-		$Crystal.position.x=3900
-		$Crystal.position.y=1310
+		$Crystal.position.x=3896
+		$Crystal.position.y=1360
 
 		
 	if Global.charaPosition.x>3700  and Global.charaPosition.y<1400:
