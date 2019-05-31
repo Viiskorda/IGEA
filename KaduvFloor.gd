@@ -28,5 +28,5 @@ func audioKoobas():
 	Global.audioPlayerBackround.stream = load("res://Sounds/back/Ambience_Cave_00.wav")
 	Global.audioPlayerBackround.set_volume_db(Global.soundvolume+5)
 	Global.audioPlayerBackround.play()
-	print ("play: Ambience_Cave_00.wav")
+	#print ("play: Ambience_Cave_00.wav")
 

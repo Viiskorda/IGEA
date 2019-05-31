@@ -41,16 +41,17 @@ func _input(event):
 	if event.is_action_pressed('ui_cancel'):
 		$VBoxContainer2/TextureButton2.grab_focus()
 		get_tree().paused = not get_tree().paused
-		print(visible)
+		#print(visible)
 		if visible == false:
 			audioBackround()
-			print("pausi musa play")
+			#print("pausi musa play")
 		else:
 			self.remove_child(audioPlayerBackroundPause)
 				
 		visible= not visible
 		
-		
+	if event.is_action_pressed('ui_shoot') and Global.CharaStop==true:	
+		visible= not visible
 
 
 
@@ -95,6 +96,8 @@ func _on_TextureButton_pressed():
 	Global.flamefruit6=true
 	Global.flamefruit7=true
 	Global.flamefruit8=true
+	Global.flamefruit9=true
+	Global.flamefruit10=true
 	
 	Global.flamefruit0path
 	Global.flamefruit1path
@@ -105,6 +108,8 @@ func _on_TextureButton_pressed():
 	Global.flamefruit6path
 	Global.flamefruit7path
 	Global.flamefruit8path
+	Global.flamefruit9path
+	Global.flamefruit10path
 	
 	Global.soundvolume=-10
 	Global.soundFXvolume=-30
@@ -133,8 +138,8 @@ func audioMenu():
 	audioPlayer.stream = load("res://Sounds/menu.wav")
 	audioPlayer.set_volume_db(Global.soundFXvolume-10)
 	audioPlayer.play()
-	print("play mana.wav")
-	print(audioPlayer.stream)
+	#print("play mana.wav")
+	#print(audioPlayer.stream)
 	var t = Timer.new()
 	t.set_wait_time(0.300)
 	t.set_one_shot(true)
@@ -148,7 +153,7 @@ func audioBackround():
 	audioPlayerBackroundPause.stream = load("res://Sounds/back/Märt Nigu - Visualiseerimine - 4. Visualiseerimine IV_01.ogg")
 	audioPlayerBackroundPause.set_volume_db(Global.soundvolume)
 	audioPlayerBackroundPause.play()
-	print("play: Märt Nigu - Visualiseerimine - 4. Visualiseerimine IV_01.ogg")
+	#print("play: Märt Nigu - Visualiseerimine - 4. Visualiseerimine IV_01.ogg")
 	
 
 

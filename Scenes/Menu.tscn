@@ -7,7 +7,7 @@
 [ext_resource path="res://images/titles/newgame_s.png" type="Texture" id=5]
 [ext_resource path="res://images/titles/continue.png" type="Texture" id=6]
 [ext_resource path="res://images/Title screen/selection.png" type="Texture" id=7]
-[ext_resource path="res://images/titles/settings_g.png" type="Texture" id=8]
+[ext_resource path="res://Dialoogid/about.png" type="Texture" id=8]
 [ext_resource path="res://images/titles/exit.png" type="Texture" id=9]
 
 [node name="Menu" type="Node"]
@@ -38,7 +38,6 @@ margin_bottom = 530.0
 texture = ExtResource( 3 )
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="."]
-editor/display_folded = true
 margin_left = 869.0
 margin_top = 420.0
 margin_right = 1302.0

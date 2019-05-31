@@ -7,7 +7,7 @@ var color=.8
 var direction = 1
 
 var is_dead = false
-signal deadEnemy
+#signal deadEnemy
 
 
 
@@ -15,10 +15,10 @@ export(int) var hp = 1
 export(int) var grav = 30
 export(int) var speed = 150
 
-func _ready():
-	print(self)
-	print(get_node("Enemy3"))
-	get_tree()
+#func _ready():
+#	#print(self)
+#	#print(get_node("Enemy3"))
+#	get_tree()
 	
 	
 	
@@ -66,8 +66,8 @@ func _physics_process(_delta):
 					Global.collidingWithChara=true
 
 func _on_Timer_timeout():
-	print(self)
-	print(Global.enemy3path)
+	#print(self)
+	#print(Global.enemy3path)
 	if Global.enemy3path==self:
 		Global.enemy3isalive=false
 	if Global.enemy4path==self:
@@ -92,8 +92,8 @@ func audioDeath():
 	audioPlayer.stream = load("res://Sounds/spiderdeath.wav")
 	audioPlayer.set_volume_db(Global.soundFXvolume)
 	audioPlayer.play()
-	print("play spiderdeath.wav")
-	print(audioPlayer.stream)
+	#print("play spiderdeath.wav")
+	#print(audioPlayer.stream)
 	var t = Timer.new()
 	t.set_wait_time(1)
 	t.set_one_shot(true)

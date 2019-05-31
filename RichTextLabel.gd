@@ -31,10 +31,10 @@ func whenEntered():
 	
 func _input(event):
 	if start == true:
-		print(page)
-		print(line)
-		print(Global.mainDialogue)
-		print(Global.questDone)
+		#print(page)
+		#print(line)
+		#print(Global.mainDialogue)
+		#print(Global.questDone)
 		if Input.is_action_pressed("ui_talk"):
 			if get_visible_characters() > get_total_character_count():
 				if line < dialog[page].size()-1:

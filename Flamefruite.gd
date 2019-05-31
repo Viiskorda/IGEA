@@ -4,15 +4,26 @@ var onFlamefruit = false
 
 var isEaten=false
 
-func _ready():
-	pass # Replace with function body.
+var fmmodulate=0
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+
+func _ready():
+	$Modulate.start()
 
 func _physics_process(_delta):
 	if isEaten==false:
+		#print(fmmodulate)
+		if fmmodulate==0:
+			$fmbg.modulate.a-=.005
+
+			
+		elif fmmodulate==1:
+			$fmbg.modulate.a+=.005
+
+		
+		
+		
+		
 		var bodies= get_overlapping_bodies()
 		for body in bodies:
 		
@@ -26,6 +37,7 @@ func _physics_process(_delta):
 						Global.mana=12
 					#Flamefruite.hide()
 					$Flamefruite.modulate.a=0
+					$fmbg.modulate.a=0
 					var t = Timer.new()
 					t.set_wait_time(1.500)
 					t.set_one_shot(true)
@@ -70,8 +82,8 @@ func audioMana():
 	audioPlayer.stream = load("res://Sounds/mana.wav")
 	audioPlayer.set_volume_db(Global.soundFXvolume)
 	audioPlayer.play()
-	print("play mana.wav")
-	print(audioPlayer.stream)
+	#print("play mana.wav")
+	#print(audioPlayer.stream)
 	var t = Timer.new()
 	t.set_wait_time(0.300)
 	t.set_one_shot(true)
@@ -80,4 +92,12 @@ func audioMana():
 	yield(t, "timeout")
 
 
+
+
+
+func _on_Modulated_timeout():
+	if fmmodulate==1:
+		fmmodulate=0
+	else:
+		fmmodulate=1
 

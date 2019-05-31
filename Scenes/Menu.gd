@@ -12,13 +12,13 @@ func _ready():
 	Global.audioPlayerBackround.stream = load("res://Sounds/back/Märt Nigu - Visualiseerimine - 4. Visualiseerimine IV_01.ogg")
 	Global.audioPlayerBackround.set_volume_db(Global.soundvolume)
 	Global.audioPlayerBackround.play()
-	print("play: Märt Nigu - Visualiseerimine - 4. Visualiseerimine IV_01.ogg")
+	#print("play: Märt Nigu - Visualiseerimine - 4. Visualiseerimine IV_01.ogg")
 	
 	
 func _physics_process(_delta):
 	if Input.is_action_pressed('ui_cancel'):
 		get_tree().paused = false
-		print("cancel")
+		#print("cancel")
 	
 	
 	if $VBoxContainer2/TextureButton.is_hovered()==true:
@@ -63,8 +63,8 @@ func audioMenu():
 	audioPlayer.stream = load("res://Sounds/menu.wav")
 	audioPlayer.set_volume_db(Global.soundFXvolume-10)
 	audioPlayer.play()
-	print("play mana.wav")
-	print(audioPlayer.stream)
+	#print("play mana.wav")
+	#print(audioPlayer.stream)
 	var t = Timer.new()
 	t.set_wait_time(0.300)
 	t.set_one_shot(true)

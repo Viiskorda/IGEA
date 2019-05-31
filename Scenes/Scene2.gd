@@ -49,7 +49,7 @@ func _ready():
 	Global.audioPlayerBackround.stream = load("res://Sounds/back/Märt Nigu - Avatud - 4. Avatud IV.ogg")
 	Global.audioPlayerBackround.set_volume_db(Global.soundvolume)
 	Global.audioPlayerBackround.play()
-	print("play: Märt Nigu - Avatud - 4. Avatud IV.oggs")
+	#print("play: Märt Nigu - Avatud - 4. Avatud IV.oggs")
 	
 	$blackoutsidecave.modulate.a=0
 	$HideCave.modulate.a=1
@@ -124,7 +124,7 @@ func _process(delta):
 		
 	if Global.charaPosition.x>3700  and Global.charaPosition.y<1400:
 		crystalInGate=true
-		print(Global.charaPosition.x)
+		#print(Global.charaPosition.x)
 		
 	if Global.Gate1onFire==true:
 		$LevelComplete/GateFire.modulate.a=1

@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Flamefruite.gd" type="Script" id=1]
-[ext_resource path="res://images/Flamefruit.png" type="Texture" id=2]
+[ext_resource path="res://images/transparem2nt.png" type="Texture" id=2]
+[ext_resource path="res://images/Flamefruit.png" type="Texture" id=3]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 20.4042
@@ -11,12 +12,30 @@ height = 12.8119
 scale = Vector2( 0.7, 0.7 )
 script = ExtResource( 1 )
 
-[node name="Flamefruite" type="Sprite" parent="."]
-position = Vector2( -1.89126, 3.27295 )
-scale = Vector2( 0.65116, 0.65116 )
-texture = ExtResource( 2 )
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2( -2.16142, 11.7074 )
 shape = SubResource( 1 )
 
+[node name="fmbg" type="Sprite" parent="."]
+modulate = Color( 0.337255, 0.858824, 1, 0.631373 )
+position = Vector2( 2.68798, 6.56352 )
+scale = Vector2( 1.31636, 1.57963 )
+texture = ExtResource( 2 )
+
+[node name="Light2D" type="Light2D" parent="."]
+visible = false
+position = Vector2( -0.131874, 8.6951 )
+scale = Vector2( 0.959284, 0.874094 )
+texture = ExtResource( 2 )
+color = Color( 0.293884, 0.708894, 0.835938, 1 )
+
+[node name="Flamefruite" type="Sprite" parent="."]
+position = Vector2( -1.89126, 3.27295 )
+scale = Vector2( 0.65116, 0.65116 )
+texture = ExtResource( 3 )
+
+[node name="Modulate" type="Timer" parent="."]
+wait_time = 2.0
+
+[connection signal="timeout" from="Modulate" to="." method="_on_Modulated_timeout"]

@@ -37,6 +37,7 @@ var max_jump_count = 2
 var CharaDirection=0 #0 is idle, 1 is left and 2 is right
 
 
+
 func _ready():
 	emit_signal("hp_changed", Global.health)
 	emit_signal("mp_changed", Global.mana)
@@ -58,7 +59,7 @@ func _input(_event):
 			jump_count += 1
 			audioJump()
 			on_ground = false
-			print(jump_count)
+			#print(jump_count)
 		elif on_ground == true:
 			motion.y = JUMP
 			audioJump()
@@ -83,10 +84,15 @@ func _physics_process(_delta):
 		$LiikuvChara.play("walk")
 		$LiikuvChara.flip_h=true
 		position.x -=2
+		
+	if Global.CharaStop==true:
+		motion.x=0
+		
+		
 
 	Global.charaPosition=position
 	emit_signal("mp_changed", Global.mana)
-	if is_dead == false and automaticMoveSceneI==false and automaticMoveSceneII==false:
+	if is_dead == false and automaticMoveSceneI==false and automaticMoveSceneII==false and Global.CharaStop==false:
 	
 		motion.y+=GRAV
 		$HP.text = str(Global.health)
@@ -204,7 +210,7 @@ func audioStep():
 		if lastStep == 2:
 			lastStep = 0
 			audioPlayer.stream = load("res://Sounds/step1.wav")
-			print("step1.wav")
+			#print("step1.wav")
 			audioPlayer.set_volume_db(Global.soundFXvolume-10)
 			audioPlayer.play()
 			var t = Timer.new()
@@ -217,7 +223,7 @@ func audioStep():
 		elif lastStep == 1: 
 			lastStep = 0
 			audioPlayer.stream = load("res://Sounds/step2.wav")
-			print("step2.wav")
+			#print("step2.wav")
 			audioPlayer.set_volume_db(Global.soundFXvolume-10)
 			audioPlayer.play()
 			var t = Timer.new()
@@ -234,8 +240,8 @@ func audioJump():
 	audioPlayer.stream = load("res://Sounds/jump.wav")
 	audioPlayer.set_volume_db(Global.soundFXvolume+10)
 	audioPlayer.play()
-	print("play jump.wav")
-	print(audioPlayer.stream)
+	#print("play jump.wav")
+	#print(audioPlayer.stream)
 	var t = Timer.new()
 	t.set_wait_time(0.500)
 	t.set_one_shot(true)
@@ -249,8 +255,8 @@ func audioShoot():
 	audioPlayer.stream = load("res://Sounds/shoot.wav")
 	audioPlayer.set_volume_db(Global.soundFXvolume)
 	audioPlayer.play()
-	print("play shoot.wav")
-	print(audioPlayer.stream)
+	#print("play shoot.wav")
+	#print(audioPlayer.stream)
 	var t = Timer.new()
 	t.set_wait_time(0.300)
 	t.set_one_shot(true)
@@ -264,8 +270,8 @@ func audioDamage():
 	audioPlayer.stream = load("res://Sounds/damage3.wav")
 	audioPlayer.set_volume_db(Global.soundFXvolume)
 	audioPlayer.play()
-	print("play damage.wav")
-	print(audioPlayer.stream)
+	#print("play damage.wav")
+	#print(audioPlayer.stream)
 	var t = Timer.new()
 	t.set_wait_time(0.400)
 	t.set_one_shot(true)
@@ -284,6 +290,7 @@ func dead():
 		Global.collidingWithChara=false
 		$HP.text = str(Global.health)
 		if Global.health <= 0:
+			$LiikuvChara.modulate.a=.9
 			is_dead = true
 			motion = Vector2(0, 0)
 			$LiikuvChara.play("dead")
@@ -340,10 +347,8 @@ func _on_Timer_timeout():
 				Global.enemy4isalive = data[node_path]['Global.enemy4isalive']
 				Global.enemy5isalive = data[node_path]['Global.enemy5isalive']
 				Global.enemy6isalive = data[node_path]['Global.enemy6isalive']
-				print(Global.questDone)
-				print(Global.questDone)
-				print(Global.questDone)
-				print(Global.questDone)
+
+				#print(Global.questDone)
 
 				
 		#Global.goto_scene(change_level,target_spawn_group)

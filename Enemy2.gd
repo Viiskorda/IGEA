@@ -18,7 +18,7 @@ func _ready():
 
 		$AnimatedSprite.modulate.a=0
 		var attackRandomly= attackRandomly()
-		print(attackRandomly)
+		#print(attackRandomly)
 		beginningposition=position
 
 	
@@ -33,7 +33,7 @@ func dead():
 	fadeAway(color)
 	#color-=.1
 	
-	print(Global.bossHealth)
+	#print(Global.bossHealth)
 	if Global.bossHealth <= 0:
 		
 		is_dead = true
@@ -53,7 +53,7 @@ func dead():
 func attack():
 	direction=0
 	temp=position.y
-	print(temp)
+	#print(temp)
 	if Global.bossHealth<3:
 		$AnimatedSprite.play("attack4")
 	elif Global.bossHealth<5:
@@ -79,7 +79,7 @@ func attack():
 	
 
 func spit():
-	print("ptüi")
+	#print("ptüi")
 	var shoot = SHOOT.instance()
 	get_parent().add_child(shoot)
 	shoot.position = $Position2D.global_position
@@ -99,7 +99,7 @@ func _physics_process(_delta):
 #			$AnimatedSprite.flip_h = true
 			
 		if position.y>750:
-			print("liiga all!!!")
+			#print("liiga all!!!")
 			directiony = abs(directiony) * -1
 			$RayCast2D.position.y *= -10	
 		
@@ -193,8 +193,8 @@ func audioBossDeath():
 	audioPlayer.stream = load("res://Sounds/bossdeath.wav")
 	audioPlayer.set_volume_db(Global.soundFXvolume)
 	audioPlayer.play()
-	print("play bossdeah.wav")
-	print(audioPlayer.stream)
+	#print("play bossdeah.wav")
+	#print(audioPlayer.stream)
 	var t = Timer.new()
 	t.set_wait_time(0.400)
 	t.set_one_shot(true)
@@ -206,7 +206,7 @@ func audioBossDeath():
 func audioBack():
 	Global.audioPlayerBackround.stream = load("res://Sounds/back/Märt Nigu - Avatud - 4. Avatud IV.ogg")
 	Global.audioPlayerBackround.play()
-	print ("play: Märt Nigu - Avatud - 4. Avatud IV.ogg")
+	#print ("play: Märt Nigu - Avatud - 4. Avatud IV.ogg")
 
 
 func _on_Timer_timeout():
