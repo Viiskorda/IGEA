@@ -7,6 +7,7 @@ Aruanne 6.06 23:59.
 Esitlus: powerpoint, 15min rääkimist + gameplay demo, ülevaade kes mida tegi ja kuidas
 
 
+
 08.06
 
 - oma panus dokumenti (1. juuniks va Indrek, kes teeb lõpuni)
@@ -14,19 +15,28 @@ Esitlus: powerpoint, 15min rääkimist + gameplay demo, ülevaade kes mida tegi 
 - kõndimise heli liiga vali, tulistamise heli, klikkimise heli, seadetes navigeerimise heli, bossile heli, koopa heli\
 - POOLELI vanamees fadein kui chara kohale jõuab, ning fadeout siis kui ämblik on tapetud kui teistkordne tekst on edastatud, läbipaistvust vähemaks
 - POOLELI vanamehe dialoog
-- Chara suremise animatsioon
-- POOLELI Mana bar neljaks jaotada
-- Animatsioon, et chara kõnnib ise välja stseenist
 - Mängu kompilleerimine/testida mängu
-- POOLELI Doublejump saab koopa altarist, mille peale tuleb popup
-- Flamefruit valgus taha
+- POOLELI Doublejump saab koopa altarist, mille peale tuleb popup - popup võiks ise ära kaduda teatud aja tagant
 - udu/pilved
-- avamenüü korda teha (about teha)
+- POOLELI avamenüü korda teha (about teha) - about valik tehtud, aga selle funktsionaalsus
 - teise leveli valgusvihud/fox lights
-- mõlemas levelis väravad/kirstukaaned
-- fade out/fade in kahe leveli vahel
+- mõlemas levelis väravad/kirstukaaned - mis sellega oli?
 - mängu lõpp (exit game, menüüsse)
 - elude kaotamise bug (kui jääb aega üle)
+
+31.05 Parandust vajavad asjad:
+1. Kui vajutada About, siis ilmub tekst. peab saama ka menüüsse tagasi minna.
+2. Kui Chara läheb vaenlasele pihta, siis läheb 2x elud maha
+3. Hüppamise viga. Teadmata põhjustel hüpe ei ole täielik kivide läheduses
+4. Kui Chara sureb Bossiga võideldes, siis järgmine kord kui Chara Bossini jõuab on Boss juba aktiveeritud. Peab aktiveeruma alles siis, kui Chara on värava juures
+5. Kui on mängu lõpp, siis menüüst New Game valides mäng läheb katki
+
+
+- TEHTUD fade out/fade in kahe leveli vahel
+- TEHTUD Chara suremise animatsioon
+- TEHTUD ehk tagasi pandud varasem versioon Mana bar neljaks jaotada
+- TEHTUD Animatsioon, et chara kõnnib ise välja stseenist
+- TEHTUD Flamefruit valgus taha
 
 
 24.05
