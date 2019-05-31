@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=2]
+[gd_scene load_steps=56 format=2]
 
 [ext_resource path="res://Scenes/Scene2.gd" type="Script" id=1]
 [ext_resource path="res://DialogTest.tscn" type="PackedScene" id=2]
@@ -42,11 +42,12 @@
 [ext_resource path="res://images/Level 2_final/level_2_final_värav2_activated.png" type="Texture" id=40]
 [ext_resource path="res://icon.png" type="Texture" id=41]
 [ext_resource path="res://images/Level 2_final/level_2_final_kristall.png" type="Texture" id=42]
-[ext_resource path="res://images/Level 2_final/level_2_final_valgusvihud.png" type="Texture" id=43]
-[ext_resource path="res://Popup.tscn" type="PackedScene" id=44]
-[ext_resource path="res://Popup.gd" type="Script" id=45]
-[ext_resource path="res://Pause.tscn" type="PackedScene" id=46]
-[ext_resource path="res://Scenes/InstructionScn2.gd" type="Script" id=47]
+[ext_resource path="res://images/transparem2nt.png" type="Texture" id=43]
+[ext_resource path="res://images/Level 2_final/level_2_final_valgusvihud.png" type="Texture" id=44]
+[ext_resource path="res://Popup.tscn" type="PackedScene" id=45]
+[ext_resource path="res://Popup.gd" type="Script" id=46]
+[ext_resource path="res://Pause.tscn" type="PackedScene" id=47]
+[ext_resource path="res://Scenes/InstructionScn2.gd" type="Script" id=48]
 
 [sub_resource type="PhysicsMaterial" id=1]
 friction = 0.0
@@ -443,20 +444,17 @@ __meta__ = {
 }
 
 [node name="HideCave" type="Sprite" parent="."]
-visible = false
 position = Vector2( 3016.21, 459.803 )
 scale = Vector2( 0.625381, 0.569736 )
 texture = ExtResource( 31 )
 script = ExtResource( 32 )
 
 [node name="blackoutsidecave" type="Sprite" parent="."]
-visible = false
 position = Vector2( 2765.06, 566.371 )
 scale = Vector2( 0.634157, 0.630992 )
 texture = ExtResource( 33 )
 
 [node name="LevelComplete" parent="." instance=ExtResource( 34 )]
-editor/display_folded = true
 position = Vector2( 263.66, 1538.41 )
 rotation = -3.14159
 scale = Vector2( 0.7, -0.7 )
@@ -531,23 +529,28 @@ scale = Vector2( 0.714286, 1.42857 )
 position = Vector2( 1541.95, 1014.32 )
 texture = ExtResource( 42 )
 
+[node name="crystalbg" type="Sprite" parent="Crystal"]
+position = Vector2( 4.9274, -17.9175 )
+scale = Vector2( 1.25533, 1.49273 )
+texture = ExtResource( 43 )
+
 [node name="Light2D" type="Light2D" parent="."]
 visible = false
 position = Vector2( 2064.64, 1303.52 )
 scale = Vector2( 0.6, 0.6 )
-texture = ExtResource( 43 )
+texture = ExtResource( 44 )
 energy = 1.1
 
-[node name="Popup" parent="." instance=ExtResource( 44 )]
-script = ExtResource( 45 )
+[node name="Popup" parent="." instance=ExtResource( 45 )]
+script = ExtResource( 46 )
 
 [node name="Menüü" type="CanvasLayer" parent="."]
 
-[node name="Pause" parent="Menüü" instance=ExtResource( 46 )]
+[node name="Pause" parent="Menüü" instance=ExtResource( 47 )]
 visible = false
 
 [node name="InstructionScn2" type="Node2D" parent="."]
-script = ExtResource( 47 )
+script = ExtResource( 48 )
 
 [node name="DoublejumpInst" type="Area2D" parent="InstructionScn2"]
 editor/display_folded = true
@@ -569,14 +572,18 @@ editor/display_folded = true
 position = Vector2( 201.797, 1647.73 )
 shape = SubResource( 7 )
 
+[node name="Crystalmodulate" type="Timer" parent="."]
+wait_time = 1.5
+
 [connection signal="timeout" from="Background/Modulate" to="." method="_on_Modulate_timeout"]
 [connection signal="body_entered" from="ElderTalk" to="Dialoog" method="_on_ElderTalk_body_entered"]
 [connection signal="body_exited" from="ElderTalk" to="Dialoog" method="_on_ElderTalk_body_exited"]
-[connection signal="body_entered" from="Closecave" to="Floor/KaduvFloor" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="Closecave" to="." method="_on_Close_cave_body_entered"]
+[connection signal="body_entered" from="Closecave" to="Floor/KaduvFloor" method="_on_Area2D_body_entered"]
 [connection signal="hp_changed" from="Chara" to="HUD" method="update_healthbar"]
 [connection signal="mp_changed" from="Chara" to="HUD" method="update_manabar"]
 [connection signal="body_entered" from="InstructionScn2/DoublejumpInst" to="Popup" method="_on_DoublejumpInst_body_entered"]
 [connection signal="body_exited" from="InstructionScn2/DoublejumpInst" to="Popup" method="_on_DoublejumpInst_body_exited"]
 [connection signal="body_entered" from="InstructionScn2/GameEnd" to="Popup" method="_on_GameEnd_body_entered"]
 [connection signal="body_entered" from="AutomaticMoveII" to="Chara" method="_on_AutomaticMoveII_body_entered"]
+[connection signal="timeout" from="Crystalmodulate" to="." method="_on_Crystalmodulate_timeout"]

@@ -2,6 +2,8 @@ extends Node
 var modulate=0
 var crystal=false
 var crystalInGate=false
+var crystalmodulate=0
+
 onready var enemy2=get_node("Enemies/Enemy2")
 onready var enemy3=get_node("Enemies/Enemy3")
 onready var enemy4=get_node("Enemies/Enemy4")
@@ -94,9 +96,20 @@ func _ready():
 	$LevelComplete2/GateFire.modulate.a=0
 	
 	$Closecave/DoubleJump.modulate.a=0
-
+  
+	$Crystalmodulate.start()
 
 func _process(delta):
+	
+	if crystalmodulate==0:
+		$Crystal/crystalbg.modulate.a-=.005
+
+		
+	elif crystalmodulate==1:
+		$Crystal/crystalbg.modulate.a+=.005
+
+	
+	
 	if Global.enemy6isalive==false and Global.enemy5isalive==false and Global.enemy4isalive==false and Global.enemy3isalive==false  and Global.enemy1isalive==false:
 
 		$HideCave.modulate.a=0
@@ -144,3 +157,10 @@ func _on_Modulate_timeout():
 		modulate=0
 	else:
 		modulate=1
+
+
+func _on_Crystalmodulate_timeout():
+	if crystalmodulate==1:
+		crystalmodulate=0
+	else:
+		crystalmodulate=1

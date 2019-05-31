@@ -13,12 +13,14 @@ func _ready():
 func _physics_process(_delta):
 	if isEaten==false:
 		#print(fmmodulate)
-		if fmmodulate==0:
-			$fmbg.modulate.a-=.005
-
-			
-		elif fmmodulate==1:
-			$fmbg.modulate.a+=.005
+		
+		if onFlamefruit==false:
+			if fmmodulate==0:
+				$fmbg.modulate.a-=.005
+	
+				
+			elif fmmodulate==1:
+				$fmbg.modulate.a+=.005
 
 		
 		

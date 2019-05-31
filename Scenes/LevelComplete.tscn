@@ -23,7 +23,6 @@ shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
 pause_mode = 2
-visible = false
 modulate = Color( 0, 0, 0, 1 )
 position = Vector2( -76.1616, 319.866 )
 scale = Vector2( 97.1179, 41.6115 )

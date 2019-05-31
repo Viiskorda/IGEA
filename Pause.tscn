@@ -6,7 +6,7 @@
 [ext_resource path="res://images/titles/continue.png" type="Texture" id=4]
 [ext_resource path="res://images/Title screen/selection.png" type="Texture" id=5]
 [ext_resource path="res://images/titles/newgame.png" type="Texture" id=6]
-[ext_resource path="res://images/titles/settings_g.png" type="Texture" id=7]
+[ext_resource path="res://Dialoogid/about.png" type="Texture" id=7]
 [ext_resource path="res://images/titles/exit.png" type="Texture" id=8]
 
 [node name="Pause" type="Control"]
