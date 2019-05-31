@@ -23,9 +23,9 @@
 [ext_resource path="res://Falling.tscn" type="PackedScene" id=21]
 [ext_resource path="res://Falling.gd" type="Script" id=22]
 [ext_resource path="res://Pause.tscn" type="PackedScene" id=23]
-[ext_resource path="res://Scenes/LevelComplete.tscn" type="PackedScene" id=24]
-[ext_resource path="res://HealthGate.tscn" type="PackedScene" id=25]
-[ext_resource path="res://Background/level_1_gate.png" type="Texture" id=26]
+[ext_resource path="res://Background/level_1_gate.png" type="Texture" id=24]
+[ext_resource path="res://Scenes/LevelComplete.tscn" type="PackedScene" id=25]
+[ext_resource path="res://HealthGate.tscn" type="PackedScene" id=26]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 60.3117, 82.7986 )
@@ -225,17 +225,19 @@ visible = false
 margin_left = -8.0
 margin_top = -2.0
 
-[node name="LevelComplete" parent="." instance=ExtResource( 24 )]
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 1970.21, 423.494 )
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 24 )
+
+[node name="LevelComplete" parent="." instance=ExtResource( 25 )]
 position = Vector2( 1970.21, 423.494 )
 scale = Vector2( 0.7, 0.7 )
 change_level = "res://Scenes/Scene2.tscn"
 
-[node name="Area2D" parent="LevelComplete" instance=ExtResource( 25 )]
+[node name="Area2D" parent="LevelComplete" instance=ExtResource( 26 )]
 position = Vector2( 4.26837, -49.9282 )
 scale = Vector2( 1.42857, 1.42857 )
-
-[node name="Sprite2" type="Sprite" parent="LevelComplete"]
-texture = ExtResource( 26 )
 
 [node name="AutomaticMove" type="Area2D" parent="."]
 

@@ -112,10 +112,11 @@ func _process(delta):
 	
 	if Global.enemy6isalive==false and Global.enemy5isalive==false and Global.enemy4isalive==false and Global.enemy3isalive==false  and Global.enemy1isalive==false:
 
-		$HideCave.modulate.a=0
+		$HideCave.modulate.a-=0.01
 		Global.questDone = 2
 	if Global.enemy2isalive==false:
-		$blackoutsidecave.modulate.a=0
+		if $blackoutsidecave.modulate.a>0:
+			$blackoutsidecave.modulate.a-=0.01
 	
 	if modulate==0:
 		$Background/BG2.modulate.a-=.01
@@ -145,11 +146,12 @@ func _process(delta):
 	if Global.Gate2onFire==true:
 		$LevelComplete/GateFire.modulate.a=1
 	
-	if Global.enemy2isalive==false:
-		$Closecave/DoubleJump.modulate.a=1
+	if Global.double_jump==true and $Closecave/DoubleJump.modulate.a<3:
+		$Closecave/DoubleJump.modulate.a+=.01
 	
 func _on_Close_cave_body_entered(body):
-	$blackoutsidecave.modulate.a=1
+	if Global.double_jump==false:
+		$blackoutsidecave.modulate.a=1
 
 
 func _on_Modulate_timeout():

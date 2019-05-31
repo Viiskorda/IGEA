@@ -1,20 +1,17 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scripts/LevelComplete.gd" type="Script" id=1]
-[ext_resource path="res://Background/level_1_gate.png" type="Texture" id=2]
-[ext_resource path="res://icon.png" type="Texture" id=3]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://Background/level_1_gate.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 10, 88.7282 )
 
 [node name="LevelComplete" type="Area2D"]
 pause_mode = 2
+z_index = 3
 script = ExtResource( 1 )
 change_level = "res://Scenes/Scene.tscn"
-
-[node name="fire_blue_gate" type="Sprite" parent="."]
-visible = false
-texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 139.289, 3.17641 )
@@ -26,6 +23,10 @@ pause_mode = 2
 modulate = Color( 0, 0, 0, 1 )
 position = Vector2( -76.1616, 319.866 )
 scale = Vector2( 97.1179, 41.6115 )
+texture = ExtResource( 2 )
+
+[node name="fire_blue_gate" type="Sprite" parent="."]
+visible = false
 texture = ExtResource( 3 )
 
 [node name="Timer" type="Timer" parent="."]

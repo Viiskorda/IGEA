@@ -39,7 +39,7 @@ func dead():
 		is_dead = true
 		Global.firstConversationWithChara=2
 		motion = Vector2(0, 0)
-		Global.double_jump=true
+		
 		$EnemyCol.call_deferred('free')
 		$AnimatedSprite.play("dead")
 		audioBossDeath()
@@ -218,3 +218,4 @@ func _on_Attack_timeout():
 	
 func _on_Modulate_timeout():
 	$AnimatedSprite.modulate.a-=.1
+	Global.double_jump=true
