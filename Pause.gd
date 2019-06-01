@@ -62,7 +62,7 @@ func _on_TextureButton_pressed():
 	#get_tree().change_scene(change_level)
 	self.remove_child(audioPlayerBackroundPause)
 
-
+	Global.CharaStop=false
 	Global.health=10
 	Global.mana=3
 	Global.collidingWithChara=false

@@ -46,10 +46,11 @@ func _ready():
 	emit_signal("top_camera", Etop_camera)
 
 	add_to_group('Persist')
+	Global.CharaStop=false
 
 
 func _input(_event):
-	if Input.is_action_pressed("ui_jump"):
+	if Input.is_action_pressed("ui_jump")  and Global.CharaStop==false:
 
 		if jump_count == 1:
 			jump_count = 2
@@ -85,14 +86,14 @@ func _physics_process(_delta):
 		$LiikuvChara.flip_h=true
 		position.x -=2
 		
-	if Global.CharaStop==true:
-		motion.x=0
-		
+
 		
 
 	Global.charaPosition=position
 	emit_signal("mp_changed", Global.mana)
-	if is_dead == false and automaticMoveSceneI==false and automaticMoveSceneII==false and Global.CharaStop==false:
+	
+
+	if is_dead == false and automaticMoveSceneI==false and automaticMoveSceneII==false:
 	
 		motion.y+=GRAV
 		$HP.text = str(Global.health)
@@ -104,7 +105,7 @@ func _physics_process(_delta):
 			Global.generateHealt=false
 						
 		
-		if Input.is_action_pressed('ui_right'):
+		if Input.is_action_pressed('ui_right') and Global.CharaStop==false:
 			direction=0
 			$LiikuvChara.flip_h=false
 			CharaDirection=1
@@ -119,7 +120,7 @@ func _physics_process(_delta):
 			if Input.is_action_just_pressed('ui_throw'):
 				throw(20)
 		
-		elif Input.is_action_pressed('ui_left'):
+		elif Input.is_action_pressed('ui_left')  and Global.CharaStop==false:
 			if position.x < -150:
 				motion.x = 0
 			else:
@@ -135,7 +136,7 @@ func _physics_process(_delta):
 			
 			if Input.is_action_just_pressed('ui_throw'):
 				throw(-70)
-		elif Input.is_action_pressed('ui_down'):
+		elif Input.is_action_pressed('ui_down')  and Global.CharaStop==false:
 			$LiikuvChara.play("kneel")
 			motion.x = 0
 		elif !on_ground:
@@ -180,7 +181,7 @@ func _physics_process(_delta):
 		
 		
 		
-		if Input.is_action_just_pressed("ui_shoot"):
+		if Input.is_action_just_pressed("ui_shoot")  and Global.CharaStop==false:
 			if Global.mana>0:
 				var shoot = SHOOT.instance()
 				Global.mana -= 1
@@ -206,6 +207,9 @@ func _physics_process(_delta):
 				elif "Enemy" in get_slide_collision(i).collider.name:
 					dead()
 				Global.collidingWithChara=false
+	if Global.CharaStop==true:
+
+		motion.x=0
 
 func audioStep():
 	if on_ground == true:

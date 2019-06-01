@@ -65,7 +65,7 @@ extents = Vector2( 56.7445, 51.4932 )
 extents = Vector2( 896.896, 425.093 )
 
 [sub_resource type="RectangleShape2D" id=6]
-extents = Vector2( 58.0189, 38.9706 )
+extents = Vector2( 106.477, 73.87 )
 
 [sub_resource type="RectangleShape2D" id=7]
 extents = Vector2( 53.2653, 28.9318 )
@@ -569,7 +569,7 @@ shape = SubResource( 5 )
 [node name="GameEnd" type="Area2D" parent="InstructionScn2"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InstructionScn2/GameEnd"]
-position = Vector2( 3899.21, 1335.32 )
+position = Vector2( 3903.72, 1407.49 )
 shape = SubResource( 6 )
 
 [node name="AutomaticMoveII" type="Area2D" parent="."]
@@ -585,8 +585,8 @@ wait_time = 1.5
 [connection signal="timeout" from="Background/Modulate" to="." method="_on_Modulate_timeout"]
 [connection signal="body_entered" from="ElderTalk" to="Dialoog" method="_on_ElderTalk_body_entered"]
 [connection signal="body_exited" from="ElderTalk" to="Dialoog" method="_on_ElderTalk_body_exited"]
-[connection signal="body_entered" from="Closecave" to="Floor/KaduvFloor" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="Closecave" to="." method="_on_Close_cave_body_entered"]
+[connection signal="body_entered" from="Closecave" to="Floor/KaduvFloor" method="_on_Area2D_body_entered"]
 [connection signal="hp_changed" from="Chara" to="HUD" method="update_healthbar"]
 [connection signal="mp_changed" from="Chara" to="HUD" method="update_manabar"]
 [connection signal="body_entered" from="InstructionScn2/DoublejumpInst" to="Popup" method="_on_DoublejumpInst_body_entered"]
