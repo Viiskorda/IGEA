@@ -232,7 +232,6 @@ position = Vector2( 3544.13, 811.238 )
 rotation = 2.66437
 
 [node name="Kivid" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="TestRock" parent="Kivid" instance=ExtResource( 12 )]
 position = Vector2( 803.963, 1524.65 )
