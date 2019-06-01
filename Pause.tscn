@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Pause.gd" type="Script" id=1]
 [ext_resource path="res://images/Title screen/title_screen_background.png" type="Texture" id=2]
-[ext_resource path="res://images/Title screen/name.png" type="Texture" id=3]
+[ext_resource path="res://Dialoogid/name_final.png" type="Texture" id=3]
 [ext_resource path="res://images/titles/continue.png" type="Texture" id=4]
 [ext_resource path="res://images/Title screen/selection.png" type="Texture" id=5]
 [ext_resource path="res://images/titles/newgame.png" type="Texture" id=6]
@@ -24,17 +24,17 @@ texture = ExtResource( 2 )
 centered = false
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-margin_left = 694.0
-margin_top = 97.0
-margin_right = 1600.0
-margin_bottom = 865.0
-rect_scale = Vector2( 0.6, 0.6 )
+margin_left = 740.0
+margin_top = 100.0
+margin_right = 1568.63
+margin_bottom = 705.3
+rect_scale = Vector2( 0.8, 0.8 )
 alignment = 1
 
 [node name="TextureRect" type="TextureRect" parent="VBoxContainer"]
-margin_top = 238.0
-margin_right = 906.0
-margin_bottom = 530.0
+margin_top = 201.0
+margin_right = 828.0
+margin_bottom = 404.0
 texture = ExtResource( 3 )
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="."]
