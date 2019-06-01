@@ -200,8 +200,12 @@ func _physics_process(_delta):
 		# If enemy collides with Chara then Chara looses life
 		if get_slide_count() > 0:
 			for i in range(get_slide_count()):
-				if "Enemy" in get_slide_collision(i).collider.name or Global.collidingWithChara==true:
+				
+				if Global.collidingWithChara==true:
 					dead()
+				elif "Enemy" in get_slide_collision(i).collider.name:
+					dead()
+				Global.collidingWithChara=false
 
 func audioStep():
 	if on_ground == true:
@@ -282,12 +286,13 @@ func audioDamage():
 	
 func dead():
 	if getDamage == 1 :
+		getDamage = 0
 		Global.health -= 1
 		$LiikuvChara.modulate.a=0.5
 		position.y-=1
 		audioDamage()
 		emit_signal("hp_changed", Global.health)
-		Global.collidingWithChara=false
+		
 		$HP.text = str(Global.health)
 		if Global.health <= 0:
 			$LiikuvChara.modulate.a=.9
@@ -297,8 +302,10 @@ func dead():
 			$CollisionShape2D.disabled = true
 			$Timer.start()
 		else:
+			
 			wait()
 			fadeAway()
+		
 
 
 func fadeAway():
@@ -312,7 +319,7 @@ func fadeAway():
 	$LiikuvChara.modulate.a=1
 	
 func wait():
-	getDamage = 0
+	
 	var t = Timer.new()
 	t.set_wait_time(DAMAGE_DELAY)
 	t.set_one_shot(true)
