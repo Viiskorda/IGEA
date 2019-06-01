@@ -30,7 +30,7 @@ custom_constants/separation = 16
 alignment = 1
 
 [node name="TextureRect" type="TextureRect" parent="VBoxContainer"]
-margin_top = 200.0
+margin_top = 201.0
 margin_right = 828.0
 margin_bottom = 404.0
 texture = ExtResource( 3 )

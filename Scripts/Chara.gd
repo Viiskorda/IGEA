@@ -50,7 +50,7 @@ func _ready():
 
 
 func _input(_event):
-	if Input.is_action_pressed("ui_jump")  and Global.CharaStop==false:
+	if _event.is_action_pressed("ui_jump")  and Global.CharaStop==false :
 
 		if jump_count == 1:
 			jump_count = 2
@@ -170,15 +170,7 @@ func _physics_process(_delta):
 			
 
 		
-		
-		
-#		if is_on_floor():
-#			if Input.is_action_just_pressed('ui_jump'):
-#				motion.y=JUMP
-#
-#		else:
-#			$LiikuvChara.play("jump")
-		
+
 		
 		
 		if Input.is_action_just_pressed("ui_shoot")  and Global.CharaStop==false:
