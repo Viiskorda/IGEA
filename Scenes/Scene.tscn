@@ -52,6 +52,7 @@ __meta__ = {
 }
 
 [node name="Characters" type="Node2D" parent="."]
+editor/display_folded = true
 
 [node name="Enemy" parent="Characters" instance=ExtResource( 3 )]
 position = Vector2( 1536.5, 427.145 )
@@ -160,6 +161,7 @@ scale = Vector2( 0.65, 0.63 )
 texture = ExtResource( 11 )
 
 [node name="Tutorial tekstid" type="Node2D" parent="."]
+editor/display_folded = true
 
 [node name="StartTekst" parent="Tutorial tekstid" instance=ExtResource( 12 )]
 position = Vector2( -48.2584, 344.328 )
@@ -231,6 +233,7 @@ scale = Vector2( 0.7, 0.7 )
 texture = ExtResource( 24 )
 
 [node name="LevelComplete" parent="." instance=ExtResource( 25 )]
+editor/display_folded = true
 position = Vector2( 1970.21, 423.494 )
 scale = Vector2( 0.7, 0.7 )
 change_level = "res://Scenes/Scene2.tscn"
@@ -240,11 +243,11 @@ position = Vector2( 4.26837, -49.9282 )
 scale = Vector2( 1.42857, 1.42857 )
 
 [node name="AutomaticMove" type="Area2D" parent="."]
+editor/display_folded = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AutomaticMove"]
 position = Vector2( 2069.25, 652.14 )
 shape = SubResource( 4 )
-
 [connection signal="hp_changed" from="Characters/Chara" to="HUD" method="update_healthbar"]
 [connection signal="mp_changed" from="Characters/Chara" to="HUD" method="update_manabar"]
 [connection signal="body_entered" from="Tutorial tekstid/StartTekst" to="Popup" method="_on_StartTekst_body_entered"]

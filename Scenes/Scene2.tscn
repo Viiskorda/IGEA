@@ -232,6 +232,7 @@ position = Vector2( 3544.13, 811.238 )
 rotation = 2.66437
 
 [node name="Kivid" type="Node2D" parent="."]
+editor/display_folded = true
 
 [node name="TestRock" parent="Kivid" instance=ExtResource( 12 )]
 position = Vector2( 803.963, 1524.65 )
@@ -453,6 +454,7 @@ texture = ExtResource( 31 )
 script = ExtResource( 32 )
 
 [node name="blackoutsidecave" type="Sprite" parent="."]
+visible = false
 position = Vector2( 2765.06, 566.371 )
 scale = Vector2( 0.634157, 0.630992 )
 texture = ExtResource( 33 )
@@ -464,6 +466,8 @@ scale = Vector2( 0.7, 0.7 )
 texture = ExtResource( 34 )
 
 [node name="LevelComplete" parent="." instance=ExtResource( 35 )]
+editor/display_folded = true
+visible = false
 position = Vector2( 263.66, 1538.41 )
 rotation = -3.14159
 scale = Vector2( 0.7, -0.7 )
@@ -492,6 +496,7 @@ texture = ExtResource( 34 )
 
 [node name="LevelComplete2" parent="." instance=ExtResource( 35 )]
 editor/display_folded = true
+visible = false
 position = Vector2( 3891.41, 1394.3 )
 scale = Vector2( 0.7, 0.7 )
 change_level = "res://Scenes/Scene2.tscn"
@@ -532,6 +537,7 @@ rotation = -1.60126
 scale = Vector2( 0.714286, 1.42857 )
 
 [node name="Crystal" type="Sprite" parent="."]
+editor/display_folded = true
 position = Vector2( 1541.95, 1014.32 )
 texture = ExtResource( 42 )
 
@@ -556,6 +562,7 @@ script = ExtResource( 46 )
 visible = false
 
 [node name="InstructionScn2" type="Node2D" parent="."]
+editor/display_folded = true
 script = ExtResource( 48 )
 
 [node name="DoublejumpInst" type="Area2D" parent="InstructionScn2"]
@@ -580,7 +587,6 @@ shape = SubResource( 7 )
 
 [node name="Crystalmodulate" type="Timer" parent="."]
 wait_time = 1.5
-
 [connection signal="timeout" from="Background/Modulate" to="." method="_on_Modulate_timeout"]
 [connection signal="body_entered" from="ElderTalk" to="Dialoog" method="_on_ElderTalk_body_entered"]
 [connection signal="body_exited" from="ElderTalk" to="Dialoog" method="_on_ElderTalk_body_exited"]

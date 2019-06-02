@@ -31,6 +31,8 @@ func _input(event):
 					get_node("../..").visible = false
 					if Global.enemy2isalive == false:
 						get_node("../Doublejump").visible = false
+					if page == 7:
+						get_tree().change_scene("res://Scenes/Menu.tscn")
 			else:
 				set_visible_characters(get_total_character_count())
 		elif Input.is_action_just_pressed("ui_dont_show"):
