@@ -9,7 +9,7 @@ func _ready():
 	#print("play: Märt Nigu - Visualiseerimine - 4. Visualiseerimine IV_01.ogg")
 	var root = get_tree().get_root()
 	Global.current_scene = root.get_child(root.get_child_count() - 1)
-	
+
 	
 func _physics_process(_delta):
 	if Input.is_action_pressed('ui_cancel'):
