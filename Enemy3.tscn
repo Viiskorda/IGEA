@@ -85,7 +85,7 @@ position = Vector2( -4.28705, -16 )
 scale = Vector2( 1.62963, 1.62963 )
 frames = SubResource( 2 )
 animation = "walk"
-frame = 30
+frame = 22
 playing = true
 
 [node name="Timer" type="Timer" parent="."]
@@ -94,6 +94,5 @@ one_shot = true
 
 [node name="Modulate" type="Timer" parent="."]
 wait_time = 0.2
-
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="timeout" from="Modulate" to="." method="_on_Modulate_timeout"]

@@ -15,11 +15,11 @@ func _physics_process(_delta):
 	
 	$AnimatedSprite.play("idle")
 	if Global.charaPosition.x  < 1700 and Global.charaPosition.x  > 1200 and Global.charaPosition.y  < 1320:
-		if $AnimatedSprite.modulate.a<1:
+		if $AnimatedSprite.modulate.a<0.5:
 			$AnimatedSprite.modulate.a += .01
 		Global.firstConversationWithChara=1
 	elif Global.firstConversationWithChara>1:
-		$AnimatedSprite.modulate.a = 1
+		$AnimatedSprite.modulate.a = 0.5
 	else:
 		if $AnimatedSprite.modulate.a>0:
 			$AnimatedSprite.modulate.a -= .01

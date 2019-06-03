@@ -2,6 +2,7 @@ extends Node
 
 onready var scene_1=preload("res://Scenes/Scene2.tscn")
 onready var scene_2=preload("res://Scenes/Scene.tscn")
+
 var current_scene = null
 var spawn_group_name=null
 var health=10
@@ -122,8 +123,6 @@ func goto_scene(path, spawn_group_name):
 
 
 func _deferred_goto_scene(path):
-	print(current_scene.get_name())
-	print(current_scene)
 	# It is now safe to remove the current scene
 	current_scene.free()
 	

@@ -340,7 +340,7 @@ scale = Vector2( 0.520737, 0.500101 )
 hp = 4
 
 [node name="Enemy5" parent="Enemies" instance=ExtResource( 22 )]
-position = Vector2( 2125.45, 1413.95 )
+position = Vector2( 2125.45, 1403.95 )
 scale = Vector2( 0.520737, 0.500101 )
 hp = 4
 
@@ -408,7 +408,7 @@ scale = Vector2( 1, 1 )
 [node name="HUD" parent="." instance=ExtResource( 26 )]
 
 [node name="ElderTalk" parent="." instance=ExtResource( 27 )]
-position = Vector2( 1535.19, 1184.71 )
+position = Vector2( 1414.81, 1207.48 )
 
 [node name="Closecave" type="Area2D" parent="."]
 
@@ -541,8 +541,8 @@ rotation = -1.60126
 scale = Vector2( 0.714286, 1.42857 )
 
 [node name="Crystal" type="Sprite" parent="."]
-editor/display_folded = true
 position = Vector2( 1541.95, 1014.32 )
+scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 42 )
 
 [node name="crystalbg" type="Sprite" parent="Crystal"]
@@ -583,12 +583,14 @@ visible = false
 script = ExtResource( 50 )
 
 [node name="DoublejumpInst" type="Area2D" parent="InstructionScn2"]
+editor/display_folded = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InstructionScn2/DoublejumpInst"]
 position = Vector2( 2981.37, 544.361 )
 shape = SubResource( 5 )
 
 [node name="GameEnd" type="Area2D" parent="InstructionScn2"]
+editor/display_folded = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InstructionScn2/GameEnd"]
 position = Vector2( 3903.72, 1407.49 )
@@ -628,7 +630,6 @@ texture = ExtResource( 53 )
 position = Vector2( 1608.04, 2075.12 )
 scale = Vector2( 1.11713, 0.668963 )
 texture = ExtResource( 54 )
-
 [connection signal="timeout" from="Background/Modulate" to="." method="_on_Modulate_timeout"]
 [connection signal="body_entered" from="ElderTalk" to="Dialoog" method="_on_ElderTalk_body_entered"]
 [connection signal="body_exited" from="ElderTalk" to="Dialoog" method="_on_ElderTalk_body_exited"]

@@ -29,8 +29,6 @@ func _input(event):
 					set_visible_characters(0)
 				else:
 					get_node("../..").visible = false
-					if Global.enemy2isalive == false:
-						get_node("../Doublejump").visible = false
 					if page == 7:
 						get_tree().change_scene("res://Scenes/Menu.tscn")
 			else:
@@ -41,8 +39,3 @@ func _input(event):
 func _on_Timer_timeout():
 	if start == true:
 		set_visible_characters(get_visible_characters()+1)
-
-
-#func _on_Timer2_timeout():
-#	if start == true && Global.currentPopup == 6:
-#		get_node("../..").visible = false
