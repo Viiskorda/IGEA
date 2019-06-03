@@ -98,7 +98,7 @@ func _on_DoublejumpInst_body_entered(body):
 func _on_DoublejumpInst_body_exited(body):
 	$InstructionBase/Polygon2D/PopupText.start = false
 	$InstructionBase.visible = false
-	$InstructionBase/Polygon2D/Gate.visible = false
+	$InstructionBase/Polygon2D/Doublejump.visible = false
 
 
 func _on_GameEnd_body_entered(body):

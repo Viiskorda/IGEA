@@ -77,7 +77,6 @@ script = ExtResource( 1 )
 script = ExtResource( 3 )
 
 [node name="Background" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="BG" type="Sprite" parent="Background"]
 position = Vector2( 2058.82, 838.424 )
@@ -407,7 +406,6 @@ scale = Vector2( 1, 1 )
 position = Vector2( 1535.19, 1184.71 )
 
 [node name="Closecave" type="Area2D" parent="."]
-editor/display_folded = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Closecave"]
 position = Vector2( 3015.33, 622.816 )
@@ -448,6 +446,7 @@ __meta__ = {
 }
 
 [node name="HideCave" type="Sprite" parent="."]
+visible = false
 position = Vector2( 3016.21, 459.803 )
 scale = Vector2( 0.625381, 0.569736 )
 texture = ExtResource( 31 )
@@ -557,18 +556,17 @@ energy = 1.1
 script = ExtResource( 46 )
 
 [node name="Menüü" type="CanvasLayer" parent="."]
+editor/display_folded = true
 
 [node name="Pause" parent="Menüü" instance=ExtResource( 47 )]
 visible = false
 
 [node name="InstructionScn2" type="Node2D" parent="."]
-editor/display_folded = true
 script = ExtResource( 48 )
 
 [node name="DoublejumpInst" type="Area2D" parent="InstructionScn2"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InstructionScn2/DoublejumpInst"]
-visible = false
 position = Vector2( 2981.37, 544.361 )
 shape = SubResource( 5 )
 
