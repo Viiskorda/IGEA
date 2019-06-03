@@ -41,3 +41,8 @@ func _input(event):
 func _on_Timer_timeout():
 	if start == true:
 		set_visible_characters(get_visible_characters()+1)
+
+
+func _on_Timer2_timeout():
+	if start == true && Global.currentPopup == 6:
+		get_node("../..").visible = false

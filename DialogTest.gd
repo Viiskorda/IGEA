@@ -3,6 +3,7 @@ extends CanvasLayer
 
 func _on_ElderTalk_body_entered(body):
 	print(Global.questDone)
+	Global.ElderTalk = true
 	if Global.questDone == 1:
 		$Sprite/Polygon2D/RichTextLabel.page = 2
 		$Sprite/Polygon2D/RichTextLabel.line = 0

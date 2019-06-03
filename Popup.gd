@@ -96,8 +96,9 @@ func _on_DoublejumpInst_body_entered(body):
 		Global.currentPopup = 6
 		
 func _on_DoublejumpInst_body_exited(body):
-	Global.popup[6] = 1
-
+	$InstructionBase/Polygon2D/PopupText.start = false
+	$InstructionBase.visible = false
+	$InstructionBase/Polygon2D/Gate.visible = false
 
 
 func _on_GameEnd_body_entered(body):

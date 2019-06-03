@@ -61,6 +61,7 @@ var flamefruit10path
 
 var popup = [0, 0, 0, 0, 0, 0, 0]
 var CharaStop=false
+var ElderTalk = true
 
 #var movementText = 0
 #var flamefruitText = 0

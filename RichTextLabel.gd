@@ -20,7 +20,8 @@ var dialog = [["Player! You have successfully returned home, thank the Gods. Sad
 "For my last wish.. please live a long and wonderful life, my dearest child. Know that you are always loved, no matter what choices you might make or wherever life might take you.", 
 "Granpa.. *sniffle* Don't go! *sniffle*", 
 ".. You will be a wonderful Elder one day.. Farewell, my child..", 
-"Grandpa!! *sniffle* ..I will protect this village.. I swear on my life!! *sniffle*", "*sniffle* .. I should go and restore the barrier and then find the villagers, so they can finally return home. I will make grandpa proud!"],
+"Grandpa!! *sniffle* ..I will protect this village.. I swear on my life!! *sniffle*",
+"*sniffle* .. I should go and restore the barrier and then find the villagers, so they can finally return home. I will make grandpa proud!"],
 ["You need to kill all the monsters!"], 
 ["You need to go to the cave!"]]
 
@@ -39,6 +40,10 @@ func _input(event):
 			if get_visible_characters() > get_total_character_count():
 				if line < dialog[page].size()-1:
 					line += 1
+					if ((line == 3 || line == 5) && page == 0) || ((line == 3 || line == 5 || line == 7 || line == 8) && page == 1):
+						Global.ElderTalk = false
+					else:
+						Global.ElderTalk = true
 					set_bbcode(dialog[page][line])
 					set_visible_characters(0)
 				else:

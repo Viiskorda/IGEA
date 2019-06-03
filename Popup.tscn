@@ -72,6 +72,10 @@ position = Vector2( -6.54431, -155.098 )
 scale = Vector2( 1.929, 1.929 )
 texture = ExtResource( 8 )
 
+[node name="Timer2" type="Timer" parent="InstructionBase/Polygon2D"]
+wait_time = 8.0
+autostart = true
+
 [node name="Label" type="Label" parent="InstructionBase"]
 margin_left = -77.6765
 margin_top = 108.0
@@ -79,5 +83,5 @@ margin_right = 86.3235
 margin_bottom = 127.0
 custom_fonts/font = SubResource( 2 )
 text = "Press 'ENTER' to continue"
-
 [connection signal="timeout" from="InstructionBase/Polygon2D/Timer" to="InstructionBase/Polygon2D/PopupText" method="_on_Timer_timeout"]
+[connection signal="timeout" from="InstructionBase/Polygon2D/Timer2" to="InstructionBase/Polygon2D/PopupText" method="_on_Timer2_timeout"]
