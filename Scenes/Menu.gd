@@ -6,12 +6,16 @@ export(String, FILE, "*.tscn") var change_level
 export(String) var target_spawn_group
 
 func _ready():
+	print(change_level)
+	print(target_spawn_group)
 	$VBoxContainer2/TextureButton.grab_focus()
 	menuItem=1
 	Global.audioBackround()
 	Global.audioPlayerBackround.stream = load("res://Sounds/back/Märt Nigu - Visualiseerimine - 4. Visualiseerimine IV_01.ogg")
 	Global.audioPlayerBackround.set_volume_db(Global.soundvolume)
 	Global.audioPlayerBackround.play()
+	var root = get_tree().get_root()
+	Global.current_scene = root.get_child(root.get_child_count() - 1)
 	#print("play: Märt Nigu - Visualiseerimine - 4. Visualiseerimine IV_01.ogg")
 	
 	
@@ -50,11 +54,10 @@ func _on_TextureButton_pressed():
 	
 
 func _on_TextureButton2_pressed():
-	get_tree().quit()
+	get_tree().change_scene("res://About.tscn")
 
 func _on_TextureButton3_pressed():
 	get_tree().change_scene(Global.prevScene.name)
-
 
 
 func audioMenu():
@@ -104,3 +107,7 @@ func audioMenu():
 
 
 
+
+
+func _on_TextureButton4_pressed():
+	get_tree().quit()

@@ -30,11 +30,6 @@ func _physics_process(_delta):
 		if menuItem != 3:
 			audioMenu()
 			menuItem = 3
-	if $VBoxContainer2/TextureButton4.is_hovered()==true:
-		$VBoxContainer2/TextureButton4.grab_focus()
-		if menuItem != 4:
-			audioMenu()
-			menuItem = 4
 
 
 func _input(event):
@@ -155,11 +150,3 @@ func audioBackround():
 	audioPlayerBackroundPause.play()
 	#print("play: Märt Nigu - Visualiseerimine - 4. Visualiseerimine IV_01.ogg")
 	
-
-
-
-
-
-
-
-
