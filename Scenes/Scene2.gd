@@ -101,6 +101,16 @@ func _ready():
 
 func _process(delta):
 	
+	if $pilv/pilv4.position.x>4200:
+		$pilv/pilv4.position.x=0
+	if $pilv/pilv3.position.x>4200:
+		$pilv/pilv3.position.x=0
+	if $pilv/pilv2.position.x>4200:
+		$pilv/pilv2.position.x=0
+	if $pilv/pilv1.position.x>4200:
+		$pilv/pilv1.position.x=0
+	
+		
 	if crystalmodulate==0:
 		$Crystal/crystalbg.modulate.a-=.005
 
@@ -122,11 +132,33 @@ func _process(delta):
 		$Background/BG2.modulate.a-=.01
 		$Background/BG2.position.x+=delta
 		$LevelComplete/GateFire.modulate.a-=.007
+		$pilv/pilv1.position.x+=delta*1
+		$pilv/pilv2.position.x+=delta*2
+		$pilv/pilv3.position.x+=delta*10
+		$pilv/pilv4.position.x+=delta*5
+		$pilv/pilv5.position.x+=delta*10
+		$pilv/pilv1.rotate(deg2rad(delta/4))
+		$pilv/pilv2.rotate(deg2rad(-delta/3))
+		$pilv/pilv3.rotate(deg2rad(delta/2))
+		$pilv/pilv4.rotate(deg2rad(-delta/4))
+		$pilv/pilv5.rotate(deg2rad(delta/2))
 		
 	elif modulate==1:
 		$Background/BG2.modulate.a+=.01
 		$LevelComplete/GateFire.modulate.a+=.007
 		$Background/BG2.position.x-=delta
+		$pilv/pilv1.position.x+=delta*1
+		$pilv/pilv2.position.x+=delta*2
+		$pilv/pilv3.position.x+=delta*10
+		$pilv/pilv4.position.x+=delta*5
+		$pilv/pilv5.position.x+=delta*10
+		$pilv/pilv1.rotate(deg2rad(delta/4))
+		$pilv/pilv2.rotate(deg2rad(-delta/3))
+		$pilv/pilv3.rotate(deg2rad(delta/2))
+		$pilv/pilv4.rotate(deg2rad(-delta/4))
+		$pilv/pilv5.rotate(deg2rad(delta/2))
+		
+		
 	if Global.charaPosition.x>1450 and Global.charaPosition.x<1600 and Global.charaPosition.y<1010:
 		crystal=true
 	if crystal==true:
