@@ -6,23 +6,28 @@ Video on vaja 8.06.
 Aruanne 6.06 23:59.
 Esitlus: powerpoint, 15min rääkimist + gameplay demo, ülevaade kes mida tegi ja kuidas
 
-
+Teha veel:
+- plönn korda/ helid leida
+- kõndimise heli liiga vali, tulistamise heli, klikkimise heli, seadetes navigeerimise heli, bossile heli, koopa heli\
+- Mängu kompilleerimine/testida mängu
+- teise leveli valgusvihud/fox lights
+- mõlemas levelis väravad/kirstukaaned - mis sellega oli?
 
 08.06
 
 - oma panus dokumenti (1. juuniks va Indrek, kes teeb lõpuni)
 - plönn korda/ helid leida
 - kõndimise heli liiga vali, tulistamise heli, klikkimise heli, seadetes navigeerimise heli, bossile heli, koopa heli\
-- POOLELI vanamees fadein kui chara kohale jõuab, ning fadeout siis kui ämblik on tapetud kui teistkordne tekst on edastatud, läbipaistvust vähemaks
-- POOLELI vanamehe dialoog
+- TEHTUD vanamees fadein kui chara kohale jõuab, ning fadeout siis kui ämblik on tapetud kui teistkordne tekst on edastatud, läbipaistvust vähemaks
+- TEHTUD vanamehe dialoog
 - Mängu kompilleerimine/testida mängu
-- POOLELI Doublejump saab koopa altarist, mille peale tuleb popup - popup võiks ise ära kaduda teatud aja tagant
-- udu/pilved
-- POOLELI avamenüü korda teha (about teha) - about valik tehtud, aga selle funktsionaalsus
+- TEHTUD Doublejump saab koopa altarist, mille peale tuleb popup - popup võiks ise ära kaduda teatud aja tagant
+- TEHTUD udu/pilved
+- TEHTUD avamenüü korda teha (about teha) - about valik tehtud, aga selle funktsionaalsus
 - teise leveli valgusvihud/fox lights
 - mõlemas levelis väravad/kirstukaaned - mis sellega oli?
-- mängu lõpp (exit game, menüüsse)
-- elude kaotamise bug (kui jääb aega üle)
+- TEHTUD mängu lõpp (exit game, menüüsse)
+- TEHTUD elude kaotamise bug (kui jääb aega üle)
 
 31.05 Parandust vajavad asjad:
 1. Kui vajutada About, siis ilmub tekst. peab saama ka menüüsse tagasi minna.
