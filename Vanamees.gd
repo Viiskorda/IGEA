@@ -23,19 +23,3 @@ func _physics_process(_delta):
 	else:
 		if $AnimatedSprite.modulate.a>0:
 			$AnimatedSprite.modulate.a -= .01
-
-		
-	
-	
-	
-func _if_chara_is_near(body):
-		if "Chara" in body.name:
-			if Global.firstConversationWithChara==1:
-				#Esimene jutuajamine Charaga
-				pass
-			if Global.firstConversationWithChara==2:
-				#Teine jutuajamine Charaga
-				pass
-			
-
-			

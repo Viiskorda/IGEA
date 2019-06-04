@@ -17,6 +17,7 @@ var firstConversationWithChara=0
 var prevScene
 var mainDialogue = 1
 var questDone = 0
+var CharaGotTheCrystal=false
 
 var Gate1onFire=false
 var Gate2onFire=false

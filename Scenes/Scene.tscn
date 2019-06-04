@@ -239,7 +239,7 @@ scale = Vector2( 0.7, 0.7 )
 texture = ExtResource( 24 )
 
 [node name="LevelComplete" parent="." instance=ExtResource( 25 )]
-position = Vector2( 1970.21, 423.494 )
+position = Vector2( 1975.72, 423.494 )
 scale = Vector2( 0.7, 0.7 )
 change_level = "res://Scenes/Scene2.tscn"
 
@@ -255,6 +255,7 @@ position = Vector2( 2069.25, 652.14 )
 shape = SubResource( 4 )
 
 [node name="background" type="Node2D" parent="."]
+editor/display_folded = true
 
 [node name="foxlight1" type="Sprite" parent="background"]
 position = Vector2( 887.115, 269.791 )

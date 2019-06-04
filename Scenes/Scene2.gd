@@ -56,6 +56,7 @@ func _ready():
 	
 	$blackoutsidecave.modulate.a=0
 	$HideCave.modulate.a=1
+	$LevelComplete2/crystalbg2.modulate.a=0
 
 	
 
@@ -186,15 +187,17 @@ func _process(delta):
 		
 		
 	if Global.charaPosition.x>1450 and Global.charaPosition.x<1600 and Global.charaPosition.y<1010:
+		Global.CharaGotTheCrystal=true
 		crystal=true
 	if crystal==true:
 		$Crystal.position=Global.charaPosition
 	if crystalInGate==true:
-		$Crystal.position.x=3896
-		$Crystal.position.y=1360
+		$LevelComplete2/crystalbg2.modulate.a=1
+		$Crystal.modulate.a=0
+		
 
 		
-	if Global.charaPosition.x>3700  and Global.charaPosition.y<1400:
+	if Global.charaPosition.x>3700  and Global.charaPosition.y<1400 and crystal==true:
 		crystalInGate=true
 		#print(Global.charaPosition.x)
 		
