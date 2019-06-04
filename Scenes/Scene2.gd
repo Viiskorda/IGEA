@@ -1,5 +1,6 @@
 extends Node
 var modulate=0
+var modulate2=0
 var crystal=false
 var crystalInGate=false
 var crystalmodulate=0
@@ -91,6 +92,7 @@ func _ready():
 		enemy6.queue_free()
 
 	$Background/Modulate.start()
+	$Background/Modulate2.start()
 	
 
 	$LevelComplete2/GateFire.modulate.a=0
@@ -102,13 +104,13 @@ func _ready():
 func _process(delta):
 	
 	if $pilv/pilv4.position.x>4200:
-		$pilv/pilv4.position.x=0
+		$pilv/pilv4.position.x=-300
 	if $pilv/pilv3.position.x>4200:
-		$pilv/pilv3.position.x=0
+		$pilv/pilv3.position.x=-300
 	if $pilv/pilv2.position.x>4200:
-		$pilv/pilv2.position.x=0
+		$pilv/pilv2.position.x=-300
 	if $pilv/pilv1.position.x>4200:
-		$pilv/pilv1.position.x=0
+		$pilv/pilv1.position.x=-300
 	
 		
 	if crystalmodulate==0:
@@ -129,9 +131,19 @@ func _process(delta):
 			$blackoutsidecave.modulate.a-=0.01
 	
 	if modulate==0:
-		$Background/BG2.modulate.a-=.01
-		$Background/BG2.position.x+=delta
+		$Background/foxlight1.modulate.a-=.001
+		$Background/foxlight1.position.x+=delta
+		$Background/foxlight2.modulate.a-=.005
+		$Background/foxlight2.position.x+=delta
+	if modulate2==0:		
+		$Background/foxlight3.modulate.a-=.002
+		$Background/foxlight3.position.y+=delta
+		$Background/foxlight4.modulate.a-=.005
+		$Background/foxlight4.position.y+=delta		
+		
+		
 		$LevelComplete/GateFire.modulate.a-=.007
+		
 		$pilv/pilv1.position.x+=delta*1
 		$pilv/pilv2.position.x+=delta*2
 		$pilv/pilv3.position.x+=delta*10
@@ -143,10 +155,24 @@ func _process(delta):
 		$pilv/pilv4.rotate(deg2rad(-delta/4))
 		$pilv/pilv5.rotate(deg2rad(delta/2))
 		
-	elif modulate==1:
-		$Background/BG2.modulate.a+=.01
+	if modulate==1:
+		$Background/foxlight1.modulate.a+=.001
+		$Background/foxlight1.position.x-=delta
+		$Background/foxlight2.modulate.a+=.005
+		$Background/foxlight2.position.x-=delta
+	if modulate==1:
+		$Background/foxlight3.modulate.a+=.002
+		$Background/foxlight3.position.y-=delta
+		$Background/foxlight4.modulate.a+=.005
+		$Background/foxlight4.position.y-=delta
+
+
 		$LevelComplete/GateFire.modulate.a+=.007
-		$Background/BG2.position.x-=delta
+		
+		
+		
+		
+		
 		$pilv/pilv1.position.x+=delta*1
 		$pilv/pilv2.position.x+=delta*2
 		$pilv/pilv3.position.x+=delta*10
@@ -191,6 +217,13 @@ func _on_Modulate_timeout():
 		modulate=0
 	else:
 		modulate=1
+
+
+func _on_Modulate2_timeout():
+	if modulate2==1:
+		modulate2=0
+	else:
+		modulate2=1
 
 
 func _on_Crystalmodulate_timeout():

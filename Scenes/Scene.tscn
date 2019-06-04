@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://Scenes/Scene.gd" type="Script" id=1]
 [ext_resource path="res://Background/level_1_bg_taust_light.png" type="Texture" id=2]
@@ -26,6 +26,9 @@
 [ext_resource path="res://Background/level_1_gate.png" type="Texture" id=24]
 [ext_resource path="res://Scenes/LevelComplete.tscn" type="PackedScene" id=25]
 [ext_resource path="res://HealthGate.tscn" type="PackedScene" id=26]
+[ext_resource path="res://Background/new/Foxlights_1.png" type="Texture" id=27]
+[ext_resource path="res://Background/new/Foxlights_2.png" type="Texture" id=28]
+[ext_resource path="res://Background/new/Foxlights_3.png" type="Texture" id=29]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 60.3117, 82.7986 )
@@ -41,6 +44,9 @@ extents = Vector2( 89.3171, 140.928 )
 
 [node name="Scene" type="Node2D"]
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Light2D" type="Light2D" parent="."]
 position = Vector2( 896.654, 382.555 )
@@ -52,7 +58,6 @@ __meta__ = {
 }
 
 [node name="Characters" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="Enemy" parent="Characters" instance=ExtResource( 3 )]
 position = Vector2( 1536.5, 427.145 )
@@ -248,6 +253,21 @@ editor/display_folded = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AutomaticMove"]
 position = Vector2( 2069.25, 652.14 )
 shape = SubResource( 4 )
+
+[node name="background" type="Node2D" parent="."]
+
+[node name="foxlight1" type="Sprite" parent="background"]
+position = Vector2( 893.388, 269.791 )
+texture = ExtResource( 27 )
+
+[node name="foxlight2" type="Sprite" parent="background"]
+position = Vector2( 893.388, 269.791 )
+texture = ExtResource( 28 )
+
+[node name="foxlight3" type="Sprite" parent="background"]
+position = Vector2( 893.388, 269.791 )
+texture = ExtResource( 29 )
+
 [connection signal="hp_changed" from="Characters/Chara" to="HUD" method="update_healthbar"]
 [connection signal="mp_changed" from="Characters/Chara" to="HUD" method="update_manabar"]
 [connection signal="body_entered" from="Tutorial tekstid/StartTekst" to="Popup" method="_on_StartTekst_body_entered"]
