@@ -64,6 +64,19 @@ var flamefruit10path
 var popup = [0, 0, 0, 0, 0, 0, 0]
 var CharaStop=false
 var ElderTalk = true
+var DiaEnd = false
+var EnemiesKilled = 0
+var MissionsVisible = false
+var mission1 = false
+var mission2 = false
+var mission3 = false
+var mission4 = false
+var modulate1 = 0.2
+var modulate2 = 0.2
+var modulate3 = 0.2
+var m1Tekst = "0/1"
+var m2Tekst = "0/1"
+var m3Tekst = "0/1"
 
 #var movementText = 0
 #var flamefruitText = 0
@@ -209,6 +222,17 @@ func load_game():
 				mainDialogue = data[node_path]['Global.mainDialogue']
 				questDone = data[node_path]['Global.questDone']
 				
+				EnemiesKilled = data[node_path]['Global.EnemiesKilled']
+				mission1 = data[node_path]['Global.mission1']
+				mission2= data[node_path]['Global.mission2']
+				mission3 = data[node_path]['Global.mission3']
+				mission4 = data[node_path]['Global.mission4']
+				modulate1 = data[node_path]['Global.modulate1']
+				modulate2 = data[node_path]['Global.modulate2']
+				modulate3 = data[node_path]['Global.modulate3']
+				m1Tekst = data[node_path]['Global.m1Tekst']
+				m2Tekst = data[node_path]['Global.m2Tekst']
+				m3Tekst = data[node_path]['Global.m3Tekst']
 		goto_scene(lastScene,"player")
 
 

@@ -1,5 +1,7 @@
 extends KinematicBody2D
 
+signal enemyDead
+
 const FLOOR = Vector2(0, -1)
 
 var motion = Vector2()
@@ -30,6 +32,7 @@ func dead():
 	color-=.2
 	
 	if hp <= 0:
+		emit_signal("enemyDead")
 		is_dead = true
 		motion = Vector2(0, 0)
 		$EnemyCol.call_deferred('free')

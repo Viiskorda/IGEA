@@ -387,7 +387,18 @@ func save():
 		"Global.flamefruit10" : Global.flamefruit10,
 		
 		"Global.mainDialogue" : Global.mainDialogue,
-		"Global.questDone" : Global.questDone
+		"Global.questDone" : Global.questDone,
+		"Global.EnemiesKilled" : Global.EnemiesKilled,
+		"Global.mission1" : Global.mission1,
+		"Global.mission2" : Global.mission2,
+		"Global.mission3" : Global.mission3,
+		"Global.mission4" : Global.mission4,
+		"Global.modulate1" : Global.modulate1,
+		"Global.modulate2" : Global.modulate2,
+		"Global.modulate3" : Global.modulate3,
+		"Global.m1Tekst" : Global.m1Tekst,
+		"Global.m2Tekst" : Global.m2Tekst,
+		"Global.m3Tekst" : Global.m3Tekst
 	}
 	return save_dict
 	

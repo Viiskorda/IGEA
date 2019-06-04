@@ -1,8 +1,8 @@
 [gd_scene load_steps=66 format=2]
 
 [ext_resource path="res://Scenes/Scene2.gd" type="Script" id=1]
-[ext_resource path="res://DialogTest.tscn" type="PackedScene" id=2]
-[ext_resource path="res://DialogTest.gd" type="Script" id=3]
+[ext_resource path="res://Missions.tscn" type="PackedScene" id=2]
+[ext_resource path="res://DialogTest.tscn" type="PackedScene" id=3]
 [ext_resource path="res://images/Level 2_final/level_2_final_main_sansfox.png" type="Texture" id=4]
 [ext_resource path="res://Background/new/level_2_final_foxlights_1.png" type="Texture" id=5]
 [ext_resource path="res://Background/new/level_2_final_foxlights_2.png" type="Texture" id=6]
@@ -83,8 +83,9 @@ extents = Vector2( 53.2653, 28.9318 )
 [node name="Scene2" type="Node"]
 script = ExtResource( 1 )
 
-[node name="Dialoog" parent="." instance=ExtResource( 2 )]
-script = ExtResource( 3 )
+[node name="Missions" parent="." instance=ExtResource( 2 )]
+
+[node name="Dialoog" parent="." instance=ExtResource( 3 )]
 
 [node name="Background" type="Node2D" parent="."]
 editor/display_folded = true
@@ -93,6 +94,9 @@ editor/display_folded = true
 position = Vector2( 2058.82, 838.424 )
 scale = Vector2( 0.618, 0.618 )
 texture = ExtResource( 4 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="foxlight1" type="Sprite" parent="Background"]
 position = Vector2( 1836.82, 1282.42 )
@@ -124,8 +128,6 @@ editor/display_folded = true
 visible = false
 
 [node name="NormalFloor" type="Node2D" parent="Floor"]
-editor/display_folded = true
-visible = false
 
 [node name="floor" parent="Floor/NormalFloor" instance=ExtResource( 9 )]
 position = Vector2( 397.404, 1644.53 )
@@ -189,7 +191,6 @@ position = Vector2( 2666.2, 600.208 )
 scale = Vector2( 1.06935, 1 )
 
 [node name="CaveFloor" type="Node2D" parent="Floor"]
-editor/display_folded = true
 visible = false
 
 [node name="CaveFloor1" parent="Floor/CaveFloor" instance=ExtResource( 10 )]
@@ -438,6 +439,7 @@ scale = Vector2( 1, 1 )
 position = Vector2( 1414.81, 1207.48 )
 
 [node name="Closecave" type="Area2D" parent="."]
+editor/display_folded = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Closecave"]
 position = Vector2( 3015.33, 622.816 )
@@ -448,7 +450,8 @@ position = Vector2( 3021.67, 627.693 )
 texture = ExtResource( 31 )
 
 [node name="Chara" parent="." instance=ExtResource( 32 )]
-position = Vector2( 270, 1558.01 )
+editor/display_folded = true
+position = Vector2( 270, 1550.08 )
 z_index = 2
 
 [node name="Camera2D" type="Camera2D" parent="Chara"]
@@ -477,7 +480,7 @@ __meta__ = {
 }
 
 [node name="HideCave" type="Sprite" parent="."]
-position = Vector2( 3016.21, 463.033 )
+position = Vector2( 3016.21, 459.803 )
 scale = Vector2( 0.625381, 0.569736 )
 texture = ExtResource( 34 )
 script = ExtResource( 35 )
@@ -514,6 +517,13 @@ scale = Vector2( 1, -1 )
 z_index = -1
 texture = ExtResource( 40 )
 
+[node name="GateOnFire" type="Sprite" parent="LevelComplete"]
+visible = false
+position = Vector2( -64.843, -6.47168 )
+rotation = 3.14159
+scale = Vector2( 1, -1 )
+texture = ExtResource( 37 )
+
 [node name="LevelComplete2" parent="." instance=ExtResource( 38 )]
 editor/display_folded = true
 position = Vector2( 3891.41, 1394.3 )
@@ -527,17 +537,14 @@ levelcomplete = "levelcomplete2"
 
 [node name="GateFire" type="Sprite" parent="LevelComplete2"]
 position = Vector2( 11.2715, -40.5287 )
-z_index = -2
 texture = ExtResource( 41 )
 
 [node name="GateEmpty" type="Sprite" parent="LevelComplete2"]
 position = Vector2( 9.84277, 0.900024 )
-z_index = -2
 texture = ExtResource( 42 )
 
 [node name="GateOnFire" type="Sprite" parent="LevelComplete2"]
 position = Vector2( 9.84277, 2.32837 )
-z_index = -2
 texture = ExtResource( 43 )
 
 [node name="Sprite" type="Sprite" parent="LevelComplete2"]
@@ -553,7 +560,8 @@ position = Vector2( 32.7188, 145.096 )
 scale = Vector2( 0.714286, 1.42857 )
 
 [node name="RockFloor6" parent="LevelComplete2" instance=ExtResource( 14 )]
-position = Vector2( 111.188, -66.6913 )
+visible = false
+position = Vector2( 238.112, -58.2241 )
 rotation = -1.60126
 scale = Vector2( 0.714286, 1.42857 )
 
@@ -579,7 +587,7 @@ __meta__ = {
 }
 
 [node name="lights" type="Node2D" parent="."]
-visible = false
+editor/display_folded = true
 position = Vector2( 565.794, 1418.51 )
 scale = Vector2( 0.6, 0.6 )
 __meta__ = {
@@ -619,15 +627,18 @@ editor/display_folded = true
 visible = false
 
 [node name="InstructionScn2" type="Node2D" parent="."]
+editor/display_folded = true
 script = ExtResource( 54 )
 
 [node name="DoublejumpInst" type="Area2D" parent="InstructionScn2"]
+editor/display_folded = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InstructionScn2/DoublejumpInst"]
 position = Vector2( 2981.37, 544.361 )
 shape = SubResource( 5 )
 
 [node name="GameEnd" type="Area2D" parent="InstructionScn2"]
+editor/display_folded = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InstructionScn2/GameEnd"]
 position = Vector2( 3903.72, 1407.49 )
@@ -644,6 +655,7 @@ shape = SubResource( 7 )
 wait_time = 1.5
 
 [node name="pilv" type="Node2D" parent="."]
+editor/display_folded = true
 
 [node name="pilv1" type="Sprite" parent="pilv"]
 position = Vector2( 642.484, 2048.19 )
@@ -668,12 +680,17 @@ position = Vector2( 1608.04, 2075.12 )
 scale = Vector2( 1.11713, 0.668963 )
 texture = ExtResource( 58 )
 
+[connection signal="MissionOneV" from="Dialoog" to="Missions" method="_on_Dialoog_MissionOneV"]
 [connection signal="timeout" from="Background/Modulate" to="." method="_on_Modulate_timeout"]
 [connection signal="timeout" from="Background/Modulate2" to="." method="_on_Modulate2_timeout"]
+[connection signal="enemyDead" from="Enemies/Enemy3" to="Missions" method="_on_Enemy3_enemyDead"]
+[connection signal="enemyDead" from="Enemies/Enemy5" to="Missions" method="_on_Enemy5_enemyDead"]
+[connection signal="enemyDead" from="Enemies/Enemy6" to="Missions" method="_on_Enemy6_enemyDead"]
+[connection signal="enemyDead" from="Enemies/Enemy4" to="Missions" method="_on_Enemy4_enemyDead"]
 [connection signal="body_entered" from="ElderTalk" to="Dialoog" method="_on_ElderTalk_body_entered"]
 [connection signal="body_exited" from="ElderTalk" to="Dialoog" method="_on_ElderTalk_body_exited"]
-[connection signal="body_entered" from="Closecave" to="." method="_on_Close_cave_body_entered"]
 [connection signal="body_entered" from="Closecave" to="Floor/KaduvFloor" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Closecave" to="." method="_on_Close_cave_body_entered"]
 [connection signal="hp_changed" from="Chara" to="HUD" method="update_healthbar"]
 [connection signal="mp_changed" from="Chara" to="HUD" method="update_manabar"]
 [connection signal="body_entered" from="InstructionScn2/DoublejumpInst" to="Popup" method="_on_DoublejumpInst_body_entered"]

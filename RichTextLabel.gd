@@ -1,5 +1,6 @@
 extends RichTextLabel
 
+signal MissionsVisible
 
 var start = false
 var page = 0
@@ -48,8 +49,11 @@ func _input(event):
 					set_visible_characters(0)
 				else:
 					get_node("../..").visible = false
+					if Global.mainDialogue == 2:
+						Global.DiaEnd = true
 					Global.mainDialogue = 0
 					if Global.questDone == 0:
+						emit_signal("MissionsVisible")
 						Global.questDone = 1
 					elif Global.questDone == 2:
 						Global.questDone = 3

@@ -57,6 +57,17 @@ func load_game():
 				
 				Global.mainDialogue = data[node_path]['Global.mainDialogue']
 				Global.questDone = data[node_path]['Global.questDone']
+				Global.EnemiesKilled = data[node_path]['Global.EnemiesKilled']
+				Global.mission1 = data[node_path]['Global.mission1']
+				Global.mission2= data[node_path]['Global.mission2']
+				Global.mission3 = data[node_path]['Global.mission3']
+				Global.mission4 = data[node_path]['Global.mission4']
+				Global.modulate1 = data[node_path]['Global.modulate1']
+				Global.modulate2 = data[node_path]['Global.modulate2']
+				Global.modulate3 = data[node_path]['Global.modulate3']
+				Global.m1Tekst = data[node_path]['Global.m1Tekst']
+				Global.m2Tekst = data[node_path]['Global.m2Tekst']
+				Global.m3Tekst = data[node_path]['Global.m3Tekst']
 				
 		Global.goto_scene(change_level,target_spawn_group)
 

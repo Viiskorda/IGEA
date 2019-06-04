@@ -123,7 +123,7 @@ func _process(delta):
 
 	
 	
-	if Global.enemy6isalive==false and Global.enemy5isalive==false and Global.enemy4isalive==false and Global.enemy3isalive==false:
+	if Global.enemy6isalive==false and Global.enemy5isalive==false and Global.enemy4isalive==false and Global.enemy3isalive==false  and Global.enemy1isalive==false:
 
 		$HideCave.modulate.a-=0.01
 		Global.questDone = 2
@@ -199,6 +199,7 @@ func _process(delta):
 		
 	if Global.charaPosition.x>3700  and Global.charaPosition.y<1400 and crystal==true:
 		crystalInGate=true
+		Global.mission4 = true
 		#print(Global.charaPosition.x)
 		
 	if Global.Gate1onFire==true:
