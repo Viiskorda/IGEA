@@ -1,7 +1,7 @@
 [gd_scene load_steps=2 format=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 303.204, 10 )
+extents = Vector2( 637.585, 10 )
 
 [node name="RockFloor" type="RigidBody2D"]
 mode = 1
