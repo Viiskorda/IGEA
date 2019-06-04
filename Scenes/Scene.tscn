@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://Scenes/Scene.gd" type="Script" id=1]
 [ext_resource path="res://Background/level_1_bg_taust_light.png" type="Texture" id=2]
@@ -17,19 +17,18 @@
 [ext_resource path="res://Sounds/back/Märt Nigu - Avatud - 3. Avatud III.ogg" type="AudioStream" id=15]
 [ext_resource path="res://HUD.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Popup.tscn" type="PackedScene" id=17]
-[ext_resource path="res://Popup.gd" type="Script" id=18]
-[ext_resource path="res://Missions.tscn" type="PackedScene" id=19]
-[ext_resource path="res://Flamefruite.tscn" type="PackedScene" id=20]
-[ext_resource path="res://Falling.tscn" type="PackedScene" id=21]
-[ext_resource path="res://Falling.gd" type="Script" id=22]
-[ext_resource path="res://Pause.tscn" type="PackedScene" id=23]
-[ext_resource path="res://Background/new/Level1_gate.png" type="Texture" id=24]
-[ext_resource path="res://Background/new/Level1_gate_light.png" type="Texture" id=25]
-[ext_resource path="res://Scenes/LevelComplete.tscn" type="PackedScene" id=26]
-[ext_resource path="res://HealthGate.tscn" type="PackedScene" id=27]
-[ext_resource path="res://Background/new/Foxlights_1.png" type="Texture" id=28]
-[ext_resource path="res://Background/new/Foxlights_2.png" type="Texture" id=29]
-[ext_resource path="res://Background/new/Foxlights_3.png" type="Texture" id=30]
+[ext_resource path="res://Missions.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Flamefruite.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Falling.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Falling.gd" type="Script" id=21]
+[ext_resource path="res://Pause.tscn" type="PackedScene" id=22]
+[ext_resource path="res://Background/new/Level1_gate.png" type="Texture" id=23]
+[ext_resource path="res://Background/new/Level1_gate_light.png" type="Texture" id=24]
+[ext_resource path="res://Scenes/LevelComplete.tscn" type="PackedScene" id=25]
+[ext_resource path="res://HealthGate.tscn" type="PackedScene" id=26]
+[ext_resource path="res://Background/new/Foxlights_1.png" type="Texture" id=27]
+[ext_resource path="res://Background/new/Foxlights_2.png" type="Texture" id=28]
+[ext_resource path="res://Background/new/Foxlights_3.png" type="Texture" id=29]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 60.3117, 82.7986 )
@@ -69,7 +68,6 @@ hp = 2
 ] instance=ExtResource( 4 )]
 editor/display_folded = true
 position = Vector2( -79.7149, 441.653 )
-z_index = -2
 
 [node name="Camera2D2" type="Camera2D" parent="Characters/Chara"]
 position = Vector2( 1.11111, 0 )
@@ -147,13 +145,14 @@ texture = ExtResource( 8 )
 centered = false
 
 [node name="Floor" type="Node2D" parent="."]
+editor/display_folded = true
+visible = false
 position = Vector2( 94.6757, 540.937 )
 scale = Vector2( 4.1267, 1.58729 )
 
 [node name="floor" parent="Floor" instance=ExtResource( 9 )]
 
 [node name="floor2" parent="Floor" instance=ExtResource( 9 )]
-visible = false
 position = Vector2( 399.022, 1.57596 )
 scale = Vector2( 2.245, 1 )
 
@@ -167,6 +166,7 @@ scale = Vector2( 0.65, 0.63 )
 texture = ExtResource( 11 )
 
 [node name="Tutorial tekstid" type="Node2D" parent="."]
+editor/display_folded = true
 
 [node name="Flamefruit Tutorial" parent="Tutorial tekstid" instance=ExtResource( 12 )]
 position = Vector2( 134.507, 382.811 )
@@ -210,23 +210,22 @@ position = Vector2( 1954.2, 422.197 )
 [node name="HUD" parent="." instance=ExtResource( 16 )]
 
 [node name="Popup" parent="." instance=ExtResource( 17 )]
-script = ExtResource( 18 )
 
-[node name="Missions" parent="." instance=ExtResource( 19 )]
+[node name="Missions" parent="." instance=ExtResource( 18 )]
 
-[node name="Flamefruite" parent="." instance=ExtResource( 20 )]
+[node name="Flamefruite" parent="." instance=ExtResource( 19 )]
 position = Vector2( 175.843, 435.234 )
 
-[node name="Falling" parent="." instance=ExtResource( 21 )]
+[node name="Falling" parent="." instance=ExtResource( 20 )]
 position = Vector2( 803.068, 1365.22 )
 scale = Vector2( 1, 4.265 )
-script = ExtResource( 22 )
+script = ExtResource( 21 )
 change_level = "res://Scenes/Scene.tscn"
 
 [node name="Menüü" type="CanvasLayer" parent="."]
 editor/display_folded = true
 
-[node name="Pause" parent="Menüü" instance=ExtResource( 23 )]
+[node name="Pause" parent="Menüü" instance=ExtResource( 22 )]
 visible = false
 margin_left = -8.0
 margin_top = -2.0
@@ -234,26 +233,25 @@ margin_top = -2.0
 [node name="Sprite2" type="Sprite" parent="."]
 position = Vector2( 1970.21, 423.494 )
 scale = Vector2( 0.7, 0.7 )
-texture = ExtResource( 24 )
+texture = ExtResource( 23 )
 
 [node name="Sprite3" type="Sprite" parent="."]
 position = Vector2( 1970.04, 398.038 )
 scale = Vector2( 0.7, 0.7 )
-texture = ExtResource( 25 )
+texture = ExtResource( 24 )
 
-[node name="LevelComplete" parent="." instance=ExtResource( 26 )]
+[node name="LevelComplete" parent="." instance=ExtResource( 25 )]
 editor/display_folded = true
 position = Vector2( 1975.72, 423.494 )
 scale = Vector2( 0.7, 0.7 )
 change_level = "res://Scenes/Scene2.tscn"
 
-[node name="Area2D" parent="LevelComplete" instance=ExtResource( 27 )]
+[node name="Area2D" parent="LevelComplete" instance=ExtResource( 26 )]
 position = Vector2( 4.26837, -49.9282 )
 scale = Vector2( 1.42857, 1.42857 )
 z_index = -2
 
 [node name="AutomaticMove" type="Area2D" parent="."]
-editor/display_folded = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AutomaticMove"]
 position = Vector2( 2069.25, 652.14 )
@@ -265,21 +263,19 @@ editor/display_folded = true
 [node name="foxlight1" type="Sprite" parent="background"]
 position = Vector2( 887.115, 269.791 )
 scale = Vector2( 0.802921, 1 )
-texture = ExtResource( 28 )
+texture = ExtResource( 27 )
 
 [node name="foxlight2" type="Sprite" parent="background"]
 position = Vector2( 883.979, 269.791 )
 scale = Vector2( 0.800681, 1 )
-texture = ExtResource( 29 )
+texture = ExtResource( 28 )
 
 [node name="foxlight3" type="Sprite" parent="background"]
 position = Vector2( 883.978, 269.791 )
 scale = Vector2( 0.802921, 1 )
-texture = ExtResource( 30 )
+texture = ExtResource( 29 )
 
 [node name="Modulate" type="Timer" parent="."]
-
-[connection signal="enemyDead" from="Characters/Enemy" to="Missions" method="_on_Enemy_enemyDead"]
 [connection signal="hp_changed" from="Characters/Chara" to="HUD" method="update_healthbar"]
 [connection signal="mp_changed" from="Characters/Chara" to="HUD" method="update_manabar"]
 [connection signal="body_entered" from="Tutorial tekstid/Flamefruit Tutorial" to="Popup" method="_on_Flamefruit_Tutorial_body_entered"]

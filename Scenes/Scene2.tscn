@@ -1,4 +1,4 @@
-[gd_scene load_steps=67 format=2]
+[gd_scene load_steps=66 format=2]
 
 [ext_resource path="res://Scenes/Scene2.gd" type="Script" id=1]
 [ext_resource path="res://Missions.tscn" type="PackedScene" id=2]
@@ -51,14 +51,13 @@
 [ext_resource path="res://Background/new/level_2_final_valgusvihk_2.png" type="Texture" id=49]
 [ext_resource path="res://Background/new/level_2_final_valgusvihk_3.png" type="Texture" id=50]
 [ext_resource path="res://Popup.tscn" type="PackedScene" id=51]
-[ext_resource path="res://Popup.gd" type="Script" id=52]
-[ext_resource path="res://Pause.tscn" type="PackedScene" id=53]
-[ext_resource path="res://Scenes/InstructionScn2.gd" type="Script" id=54]
-[ext_resource path="res://Scenes/GameEnd.gd" type="Script" id=55]
-[ext_resource path="res://Background/new/Pilv_1.png" type="Texture" id=56]
-[ext_resource path="res://Background/new/Pilv_2.png" type="Texture" id=57]
-[ext_resource path="res://Background/new/Pilv_3_2.png" type="Texture" id=58]
-[ext_resource path="res://Background/new/Pilv_4.png" type="Texture" id=59]
+[ext_resource path="res://Pause.tscn" type="PackedScene" id=52]
+[ext_resource path="res://Scenes/InstructionScn2.gd" type="Script" id=53]
+[ext_resource path="res://Scenes/GameEnd.gd" type="Script" id=54]
+[ext_resource path="res://Background/new/Pilv_1.png" type="Texture" id=55]
+[ext_resource path="res://Background/new/Pilv_2.png" type="Texture" id=56]
+[ext_resource path="res://Background/new/Pilv_3_2.png" type="Texture" id=57]
+[ext_resource path="res://Background/new/Pilv_4.png" type="Texture" id=58]
 
 [sub_resource type="PhysicsMaterial" id=1]
 friction = 0.0
@@ -76,7 +75,7 @@ extents = Vector2( 56.7445, 51.4932 )
 extents = Vector2( 896.896, 425.093 )
 
 [sub_resource type="RectangleShape2D" id=6]
-extents = Vector2( 106.477, 73.87 )
+extents = Vector2( 141.088, 116.406 )
 
 [sub_resource type="RectangleShape2D" id=7]
 extents = Vector2( 53.2653, 28.9318 )
@@ -129,6 +128,7 @@ editor/display_folded = true
 visible = false
 
 [node name="NormalFloor" type="Node2D" parent="Floor"]
+editor/display_folded = true
 
 [node name="floor" parent="Floor/NormalFloor" instance=ExtResource( 9 )]
 position = Vector2( 397.404, 1644.53 )
@@ -192,7 +192,7 @@ position = Vector2( 2666.2, 600.208 )
 scale = Vector2( 1.06935, 1 )
 
 [node name="CaveFloor" type="Node2D" parent="Floor"]
-visible = false
+editor/display_folded = true
 
 [node name="CaveFloor1" parent="Floor/CaveFloor" instance=ExtResource( 10 )]
 position = Vector2( 2568.75, 804.31 )
@@ -246,7 +246,7 @@ can_sleep = false
 position = Vector2( 3081.61, 965.508 )
 
 [node name="Rockfloor" type="Node2D" parent="Floor"]
-visible = false
+editor/display_folded = true
 
 [node name="RockFloor" parent="Floor/Rockfloor" instance=ExtResource( 14 )]
 position = Vector2( 2538.98, 803.694 )
@@ -526,7 +526,6 @@ scale = Vector2( 1, -1 )
 texture = ExtResource( 37 )
 
 [node name="LevelComplete2" parent="." instance=ExtResource( 38 )]
-editor/display_folded = true
 position = Vector2( 3891.41, 1394.3 )
 scale = Vector2( 0.7, 0.7 )
 change_level = "res://Scenes/Scene2.tscn"
@@ -560,13 +559,11 @@ scale = Vector2( 6.64636, 1 )
 texture = ExtResource( 44 )
 
 [node name="RockFloor5" parent="LevelComplete2" instance=ExtResource( 14 )]
-visible = false
 position = Vector2( 32.7188, 145.096 )
 scale = Vector2( 0.714286, 1.42857 )
 
 [node name="RockFloor6" parent="LevelComplete2" instance=ExtResource( 14 )]
-visible = false
-position = Vector2( 238.112, -58.2241 )
+position = Vector2( 100.968, -58.2241 )
 rotation = -1.60126
 scale = Vector2( 0.714286, 1.42857 )
 
@@ -624,17 +621,15 @@ __meta__ = {
 }
 
 [node name="Popup" parent="." instance=ExtResource( 51 )]
-script = ExtResource( 52 )
 
 [node name="Menüü" type="CanvasLayer" parent="."]
 editor/display_folded = true
 
-[node name="Pause" parent="Menüü" instance=ExtResource( 53 )]
+[node name="Pause" parent="Menüü" instance=ExtResource( 52 )]
 visible = false
 
 [node name="InstructionScn2" type="Node2D" parent="."]
-editor/display_folded = true
-script = ExtResource( 54 )
+script = ExtResource( 53 )
 
 [node name="DoublejumpInst" type="Area2D" parent="InstructionScn2"]
 editor/display_folded = true
@@ -644,10 +639,10 @@ position = Vector2( 2981.37, 544.361 )
 shape = SubResource( 5 )
 
 [node name="GameEnd" type="Area2D" parent="InstructionScn2"]
-script = ExtResource( 55 )
+script = ExtResource( 54 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InstructionScn2/GameEnd"]
-position = Vector2( 3903.72, 1407.49 )
+position = Vector2( 3902.72, 1368.49 )
 shape = SubResource( 6 )
 disabled = true
 
@@ -667,26 +662,25 @@ editor/display_folded = true
 [node name="pilv1" type="Sprite" parent="pilv"]
 position = Vector2( 642.484, 2048.19 )
 scale = Vector2( 1.09273, 1 )
-texture = ExtResource( 56 )
+texture = ExtResource( 55 )
 
 [node name="pilv2" type="Sprite" parent="pilv"]
 position = Vector2( 2544.21, 2109.33 )
 scale = Vector2( 1.17082, 0.743998 )
-texture = ExtResource( 57 )
+texture = ExtResource( 56 )
 
 [node name="pilv3" type="Sprite" parent="pilv"]
 position = Vector2( 3546, 1918.9 )
-texture = ExtResource( 58 )
+texture = ExtResource( 57 )
 
 [node name="pilv5" type="Sprite" parent="pilv"]
 position = Vector2( 509.948, 2515.58 )
-texture = ExtResource( 58 )
+texture = ExtResource( 57 )
 
 [node name="pilv4" type="Sprite" parent="pilv"]
 position = Vector2( 1608.04, 2075.12 )
 scale = Vector2( 1.11713, 0.668963 )
-texture = ExtResource( 59 )
-
+texture = ExtResource( 58 )
 [connection signal="gameEnd" from="." to="InstructionScn2/GameEnd" method="_on_Scene2_gameEnd"]
 [connection signal="MissionOneV" from="Dialoog" to="Missions" method="_on_Dialoog_MissionOneV"]
 [connection signal="timeout" from="Background/Modulate" to="." method="_on_Modulate_timeout"]

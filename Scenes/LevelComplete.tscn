@@ -5,7 +5,7 @@
 [ext_resource path="res://Background/level_1_gate.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 10, 88.7282 )
+extents = Vector2( 10, 444.247 )
 
 [node name="LevelComplete" type="Area2D"]
 pause_mode = 2
@@ -41,7 +41,6 @@ wait_time = 0.2
 [node name="FadeOut" type="Timer" parent="."]
 wait_time = 0.1
 one_shot = true
-
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="timeout" from="Modulate" to="." method="_on_Modulate_timeout"]
 [connection signal="timeout" from="FadeOut" to="." method="_on_FadeOut_timeout"]

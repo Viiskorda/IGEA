@@ -45,8 +45,7 @@ func _physics_process(delta):
 	if level1gatefiremodulate==0:
 		$Sprite3.modulate.a-=.007
 	if level1gatefiremodulate==1:
-		$Sprite3.modulate.a+=.007	
-		
+		$Sprite3.modulate.a+=.007
 
 func _on_Modulate_timeout():
 	if level1gatefiremodulate==1:

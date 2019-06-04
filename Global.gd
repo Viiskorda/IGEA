@@ -77,6 +77,7 @@ var modulate3 = 0.2
 var m1Tekst = "0/1"
 var m2Tekst = "0/1"
 var m3Tekst = "0/1"
+var BossDead = false
 
 #var movementText = 0
 #var flamefruitText = 0

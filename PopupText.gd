@@ -10,8 +10,8 @@ var popups = [["[center]I should head back to village. I've been away on the pil
 ["[center]You've encountered a monster! \nPress 'SPACE' to shoot with your Fire Ball ability.\n Each shot costs 1 mana point.[/center]"],
 ["[center]Press 'A' to move left and 'D' to move right.[/center]"],
 ["[center]Did you end up losing some lives? Need to save your progress?\n Press 'E' to restore your lives near posts like these.\nYou can have 10 lives at a time.\nTo save your progress you simply need to walk past the post.[/center]"],
-["[center]You've acquired a new Ability!\n\nNow you can double jump by pressing 'W' while midair. Not all Abilities require mana to be used, but they need to be equiped to work. You can change your equiped Abilites in your Inventory (Inventory not available on this demo).[/center]"],
-["[center]Thank you for playing! This is the end of demo.\n\nThis game was created by 4 IT students over the course of 4 months.\n\nWe hope you enjoyed the fruits of our labour![/center]"]]
+["[center]You've acquired a new Ability!\n\nNow you can double jump by pressing 'W' while midair. Not all Abilities require mana to be used, but they need to be equiped to work. You can change your equiped Abilites in your Inventory (Inventory not available in this demo).[/center]"],
+["[center]Thank you for playing! This is the end of the demo.\n\nThis game was created by 4 IT students over the course of 4 months.\n\nWe hope you enjoyed the fruits of our labour![/center]"]]
 
 
 func whenEntered():
@@ -30,7 +30,7 @@ func _input(event):
 				else:
 					get_node("../..").visible = false
 					if page == 7:
-						get_tree().change_scene("res://Scenes/Menu.tscn")
+						get_tree().quit()
 			else:
 				set_visible_characters(get_total_character_count())
 		elif Input.is_action_just_pressed("ui_dont_show"):

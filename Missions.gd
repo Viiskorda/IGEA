@@ -1,7 +1,7 @@
 extends CanvasLayer
 
 func _ready():
-	$Node2D/Enemy/EnemyText.text = str(Global.EnemiesKilled) + "/5"
+	$Node2D/Enemy/EnemyText.text = str(Global.EnemiesKilled) + "/4"
 	$Node2D/Boss.modulate.a = Global.modulate1
 	$Node2D/Crystal.modulate.a = Global.modulate2
 	$Node2D/Gate.modulate.a = Global.modulate3
@@ -10,31 +10,35 @@ func _ready():
 	$Node2D/Crystal/CrystalText.text = Global.m2Tekst
 	$Node2D/Gate/GateText.text = Global.m3Tekst
 
-func _on_Enemy_enemyDead():
-	Global.EnemiesKilled += 1
-	$Node2D/Enemy/EnemyText.text = str(Global.EnemiesKilled) + "/5"
-
 func _on_Enemy3_enemyDead():
+	$Node2D.visible = true
+	Global.MissionsVisible = true
 	Global.EnemiesKilled += 1
-	$Node2D/Enemy/EnemyText.text = str(Global.EnemiesKilled) + "/5"
+	$Node2D/Enemy/EnemyText.text = str(Global.EnemiesKilled) + "/4"
 
 
 func _on_Enemy5_enemyDead():
+	$Node2D.visible = true
+	Global.MissionsVisible = true
 	Global.EnemiesKilled += 1
-	$Node2D/Enemy/EnemyText.text = str(Global.EnemiesKilled) + "/5"
+	$Node2D/Enemy/EnemyText.text = str(Global.EnemiesKilled) + "/4"
 
 
 func _on_Enemy6_enemyDead():
+	$Node2D.visible = true
+	Global.MissionsVisible = true
 	Global.EnemiesKilled += 1
-	$Node2D/Enemy/EnemyText.text = str(Global.EnemiesKilled) + "/5"
+	$Node2D/Enemy/EnemyText.text = str(Global.EnemiesKilled) + "/4"
 
 
 func _on_Enemy4_enemyDead():
+	$Node2D.visible = true
+	Global.MissionsVisible = true
 	Global.EnemiesKilled += 1
-	$Node2D/Enemy/EnemyText.text = str(Global.EnemiesKilled) + "/5"
+	$Node2D/Enemy/EnemyText.text = str(Global.EnemiesKilled) + "/4"
 
 func _physics_process(delta):
-	if Global.EnemiesKilled == 5 && Global.mission1 == false:
+	if Global.EnemiesKilled == 4 && Global.mission1 == false:
 		$Node2D/Boss.modulate.a = 1
 		Global.modulate1 = 1
 		Global.mission1 == true

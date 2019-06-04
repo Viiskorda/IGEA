@@ -1,7 +1,5 @@
 extends KinematicBody2D
 
-signal enemyDead
-
 const FLOOR = Vector2(0, -1)
 
 var motion = Vector2()
@@ -31,12 +29,7 @@ func dead():
 		$AnimatedSprite.play("dead")
 		audioDeath()
 		$Modulate.start()
-		print("sain")
-		print("sain")
-		print("sain")
-		print("sain")
 		Global.enemy1isalive=false
-		emit_signal("enemyDead")
 		$Timer.start()
 
 func _physics_process(_delta):

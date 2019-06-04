@@ -1,5 +1,7 @@
 extends CanvasLayer
 
+var timer = 0
+
 func _on_StartTekst_body_entered(body):
 	if Global.popup[0] == 0:
 		$InstructionBase/Polygon2D/PopupText.page = 4
@@ -87,7 +89,7 @@ func _on_GateTut_body_exited(body):
 
 
 func _on_DoublejumpInst_body_entered(body):
-	if Global.enemy2isalive == false && Global.popup[6] == 0:
+	if Global.BossDead == true && Global.popup[6] == 0:
 		$InstructionBase/Polygon2D/PopupText.page = 6
 		$InstructionBase/Polygon2D/PopupText.whenEntered()
 		$InstructionBase/Polygon2D/PopupText.start = true
@@ -101,7 +103,6 @@ func _on_DoublejumpInst_body_exited(body):
 	$InstructionBase/Polygon2D/Doublejump.visible = false
 	Global.popup[6] = 1
 
-
 func _on_GameEnd_body_entered(body):
 	if Global.CharaGotTheCrystal==true:
 		$InstructionBase/Polygon2D/PopupText.page = 7
@@ -109,5 +110,3 @@ func _on_GameEnd_body_entered(body):
 		$InstructionBase/Polygon2D/PopupText.whenEntered()
 		$InstructionBase.visible = true
 		Global.CharaStop=true
-
-

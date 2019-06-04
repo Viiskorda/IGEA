@@ -35,7 +35,7 @@ func dead():
 	
 	#print(Global.bossHealth)
 	if Global.bossHealth <= 0:
-		
+		Global.BossDead = true
 		is_dead = true
 		Global.firstConversationWithChara=2
 		motion = Vector2(0, 0)
