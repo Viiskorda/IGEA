@@ -11,19 +11,19 @@
 [ext_resource path="res://floor.tscn" type="PackedScene" id=9]
 [ext_resource path="res://FallingRock.tscn" type="PackedScene" id=10]
 [ext_resource path="res://images/kivid/level_1_final9_kivi.png" type="Texture" id=11]
-[ext_resource path="res://StartTekst.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Flamefruit Tutorial.tscn" type="PackedScene" id=13]
-[ext_resource path="res://btv_tut.tscn" type="PackedScene" id=14]
-[ext_resource path="res://RockIndi.tscn" type="PackedScene" id=15]
-[ext_resource path="res://Sounds/back/Märt Nigu - Avatud - 3. Avatud III.ogg" type="AudioStream" id=16]
-[ext_resource path="res://HUD.tscn" type="PackedScene" id=17]
-[ext_resource path="res://Popup.tscn" type="PackedScene" id=18]
-[ext_resource path="res://Popup.gd" type="Script" id=19]
-[ext_resource path="res://Flamefruite.tscn" type="PackedScene" id=20]
-[ext_resource path="res://Falling.tscn" type="PackedScene" id=21]
-[ext_resource path="res://Falling.gd" type="Script" id=22]
-[ext_resource path="res://Pause.tscn" type="PackedScene" id=23]
-[ext_resource path="res://Background/level_1_gate.png" type="Texture" id=24]
+[ext_resource path="res://Flamefruit Tutorial.tscn" type="PackedScene" id=12]
+[ext_resource path="res://btv_tut.tscn" type="PackedScene" id=13]
+[ext_resource path="res://RockIndi.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Sounds/back/Märt Nigu - Avatud - 3. Avatud III.ogg" type="AudioStream" id=15]
+[ext_resource path="res://HUD.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Popup.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Popup.gd" type="Script" id=18]
+[ext_resource path="res://Flamefruite.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Falling.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Falling.gd" type="Script" id=21]
+[ext_resource path="res://Pause.tscn" type="PackedScene" id=22]
+[ext_resource path="res://Background/new/Level1_gate.png" type="Texture" id=23]
+[ext_resource path="res://Background/new/Level1_gate_light.png" type="Texture" id=24]
 [ext_resource path="res://Scenes/LevelComplete.tscn" type="PackedScene" id=25]
 [ext_resource path="res://HealthGate.tscn" type="PackedScene" id=26]
 [ext_resource path="res://Background/new/Foxlights_1.png" type="Texture" id=27]
@@ -58,9 +58,10 @@ __meta__ = {
 }
 
 [node name="Characters" type="Node2D" parent="."]
+editor/display_folded = true
 
 [node name="Enemy" parent="Characters" instance=ExtResource( 3 )]
-position = Vector2( 1536.5, 427.145 )
+position = Vector2( 1538.23, 438.505 )
 hp = 2
 
 [node name="Chara" parent="Characters" groups=[
@@ -166,17 +167,12 @@ scale = Vector2( 0.65, 0.63 )
 texture = ExtResource( 11 )
 
 [node name="Tutorial tekstid" type="Node2D" parent="."]
-editor/display_folded = true
 
-[node name="StartTekst" parent="Tutorial tekstid" instance=ExtResource( 12 )]
-position = Vector2( -48.2584, 344.328 )
-script = null
-
-[node name="Flamefruit Tutorial" parent="Tutorial tekstid" instance=ExtResource( 13 )]
+[node name="Flamefruit Tutorial" parent="Tutorial tekstid" instance=ExtResource( 12 )]
 position = Vector2( 134.507, 382.811 )
 script = null
 
-[node name="Back to village tutorial" parent="Tutorial tekstid" instance=ExtResource( 14 )]
+[node name="Back to village tutorial" parent="Tutorial tekstid" instance=ExtResource( 13 )]
 position = Vector2( -184.836, 371.009 )
 
 [node name="JumpTut" type="Area2D" parent="Tutorial tekstid"]
@@ -198,11 +194,11 @@ editor/display_folded = true
 position = Vector2( 1826.26, 349.068 )
 shape = SubResource( 3 )
 
-[node name="RockIndi" parent="." instance=ExtResource( 15 )]
+[node name="RockIndi" parent="." instance=ExtResource( 14 )]
 position = Vector2( 692.99, 459.77 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 16 )
+stream = ExtResource( 15 )
 volume_db = -30.0
 
 [node name="SpawnPosition" type="Position2D" parent="." groups=[
@@ -210,24 +206,24 @@ volume_db = -30.0
 ]]
 position = Vector2( 1954.2, 422.197 )
 
-[node name="HUD" parent="." instance=ExtResource( 17 )]
+[node name="HUD" parent="." instance=ExtResource( 16 )]
 
-[node name="Popup" parent="." instance=ExtResource( 18 )]
-script = ExtResource( 19 )
+[node name="Popup" parent="." instance=ExtResource( 17 )]
+script = ExtResource( 18 )
 
-[node name="Flamefruite" parent="." instance=ExtResource( 20 )]
+[node name="Flamefruite" parent="." instance=ExtResource( 19 )]
 position = Vector2( 175.843, 435.234 )
 
-[node name="Falling" parent="." instance=ExtResource( 21 )]
+[node name="Falling" parent="." instance=ExtResource( 20 )]
 position = Vector2( 803.068, 1365.22 )
 scale = Vector2( 1, 4.265 )
-script = ExtResource( 22 )
+script = ExtResource( 21 )
 change_level = "res://Scenes/Scene.tscn"
 
 [node name="Menüü" type="CanvasLayer" parent="."]
 editor/display_folded = true
 
-[node name="Pause" parent="Menüü" instance=ExtResource( 23 )]
+[node name="Pause" parent="Menüü" instance=ExtResource( 22 )]
 visible = false
 margin_left = -8.0
 margin_top = -2.0
@@ -235,10 +231,14 @@ margin_top = -2.0
 [node name="Sprite2" type="Sprite" parent="."]
 position = Vector2( 1970.21, 423.494 )
 scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 23 )
+
+[node name="Sprite3" type="Sprite" parent="."]
+position = Vector2( 1970.04, 398.038 )
+scale = Vector2( 0.7, 0.7 )
 texture = ExtResource( 24 )
 
 [node name="LevelComplete" parent="." instance=ExtResource( 25 )]
-editor/display_folded = true
 position = Vector2( 1970.21, 423.494 )
 scale = Vector2( 0.7, 0.7 )
 change_level = "res://Scenes/Scene2.tscn"
@@ -257,21 +257,24 @@ shape = SubResource( 4 )
 [node name="background" type="Node2D" parent="."]
 
 [node name="foxlight1" type="Sprite" parent="background"]
-position = Vector2( 893.388, 269.791 )
+position = Vector2( 887.115, 269.791 )
+scale = Vector2( 0.802921, 1 )
 texture = ExtResource( 27 )
 
 [node name="foxlight2" type="Sprite" parent="background"]
-position = Vector2( 893.388, 269.791 )
+position = Vector2( 883.979, 269.791 )
+scale = Vector2( 0.800681, 1 )
 texture = ExtResource( 28 )
 
 [node name="foxlight3" type="Sprite" parent="background"]
-position = Vector2( 893.388, 269.791 )
+position = Vector2( 883.978, 269.791 )
+scale = Vector2( 0.802921, 1 )
 texture = ExtResource( 29 )
+
+[node name="Modulate" type="Timer" parent="."]
 
 [connection signal="hp_changed" from="Characters/Chara" to="HUD" method="update_healthbar"]
 [connection signal="mp_changed" from="Characters/Chara" to="HUD" method="update_manabar"]
-[connection signal="body_entered" from="Tutorial tekstid/StartTekst" to="Popup" method="_on_StartTekst_body_entered"]
-[connection signal="body_exited" from="Tutorial tekstid/StartTekst" to="Popup" method="_on_StartTekst_body_exited"]
 [connection signal="body_entered" from="Tutorial tekstid/Flamefruit Tutorial" to="Popup" method="_on_Flamefruit_Tutorial_body_entered"]
 [connection signal="body_exited" from="Tutorial tekstid/Flamefruit Tutorial" to="Popup" method="_on_Flamefruit_Tutorial_body_exited"]
 [connection signal="body_entered" from="Tutorial tekstid/Back to village tutorial" to="Popup" method="_on_Back_to_village_tutorial_body_entered"]
@@ -283,3 +286,4 @@ texture = ExtResource( 29 )
 [connection signal="body_entered" from="Tutorial tekstid/GateTut" to="Popup" method="_on_GateTut_body_entered"]
 [connection signal="body_exited" from="Tutorial tekstid/GateTut" to="Popup" method="_on_GateTut_body_exited"]
 [connection signal="body_entered" from="AutomaticMove" to="Characters/Chara" method="_on_AutomaticMove_body_entered"]
+[connection signal="timeout" from="Modulate" to="." method="_on_Modulate_timeout"]

@@ -1,5 +1,6 @@
 extends Node2D
 var manascore
+var level1gatefiremodulate=0
 
 onready var enemy=get_node("Characters/Enemy")
 onready var flamefruite0=get_node("Flamefruite")
@@ -9,6 +10,7 @@ onready var flamefruite0=get_node("Flamefruite")
 func _ready():
 #	Global.prevScene=Global.current_scene
 #	print(Global.prevScene.name)
+	$Modulate.start()
 	Global.enemy1path=enemy
 	#print("test")
 	#print(Global.enemy1path.name)
@@ -40,4 +42,14 @@ func game_over():
 	$Menu.game_over()
 	
 func _physics_process(delta):
-	pass
+	if level1gatefiremodulate==0:
+		$Sprite3.modulate.a-=.007
+	if level1gatefiremodulate==1:
+		$Sprite3.modulate.a+=.007	
+		
+
+func _on_Modulate_timeout():
+	if level1gatefiremodulate==1:
+		level1gatefiremodulate=0
+	else:
+		level1gatefiremodulate=1

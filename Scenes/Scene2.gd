@@ -136,9 +136,9 @@ func _process(delta):
 		$Background/foxlight2.modulate.a-=.005
 		$Background/foxlight2.position.x+=delta
 	if modulate2==0:		
-		$Background/foxlight3.modulate.a-=.002
+		$Background/foxlight3.modulate.a-=.01
 		$Background/foxlight3.position.y+=delta
-		$Background/foxlight4.modulate.a-=.005
+		$Background/foxlight4.modulate.a-=.008
 		$Background/foxlight4.position.y+=delta		
 		
 		
@@ -160,10 +160,10 @@ func _process(delta):
 		$Background/foxlight1.position.x-=delta
 		$Background/foxlight2.modulate.a+=.005
 		$Background/foxlight2.position.x-=delta
-	if modulate==1:
-		$Background/foxlight3.modulate.a+=.002
+	if modulate2==1:
+		$Background/foxlight3.modulate.a+=.01
 		$Background/foxlight3.position.y-=delta
-		$Background/foxlight4.modulate.a+=.005
+		$Background/foxlight4.modulate.a+=.008
 		$Background/foxlight4.position.y-=delta
 
 
