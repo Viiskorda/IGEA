@@ -1,4 +1,7 @@
 extends Node
+
+signal gameEnd
+
 var modulate=0
 var modulate2=0
 var crystal=false
@@ -189,6 +192,7 @@ func _process(delta):
 	if Global.charaPosition.x>1450 and Global.charaPosition.x<1600 and Global.charaPosition.y<1010:
 		Global.CharaGotTheCrystal=true
 		crystal=true
+		emit_signal("gameEnd")
 	if crystal==true:
 		$Crystal.position=Global.charaPosition
 	if crystalInGate==true:
