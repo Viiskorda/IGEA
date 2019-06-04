@@ -123,7 +123,7 @@ func _process(delta):
 
 	
 	
-	if Global.enemy6isalive==false and Global.enemy5isalive==false and Global.enemy4isalive==false and Global.enemy3isalive==false  and Global.enemy1isalive==false:
+	if Global.enemy6isalive==false and Global.enemy5isalive==false and Global.enemy4isalive==false and Global.enemy3isalive==false:
 
 		$HideCave.modulate.a-=0.01
 		Global.questDone = 2

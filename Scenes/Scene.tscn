@@ -58,19 +58,18 @@ __meta__ = {
 }
 
 [node name="Characters" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="Enemy" parent="Characters" instance=ExtResource( 3 )]
-position = Vector2( 1538.23, 438.505 )
+position = Vector2( 1528.26, 445.98 )
 hp = 2
 
 [node name="Chara" parent="Characters" groups=[
 "Persist",
 ] instance=ExtResource( 4 )]
-position = Vector2( -79.7149, 433.653 )
+position = Vector2( -79.715, 444.563 )
 
 [node name="Camera2D2" type="Camera2D" parent="Characters/Chara"]
-position = Vector2( 1.11111, 0 )
+position = Vector2( 1.11111, -1.12753 )
 offset = Vector2( 100, 0 )
 current = true
 zoom = Vector2( 0.75, 0.75 )
@@ -204,7 +203,7 @@ volume_db = -30.0
 [node name="SpawnPosition" type="Position2D" parent="." groups=[
 "second_spawn",
 ]]
-position = Vector2( 1954.2, 422.197 )
+position = Vector2( 1954.2, 426.727 )
 
 [node name="HUD" parent="." instance=ExtResource( 16 )]
 
@@ -255,21 +254,21 @@ position = Vector2( 2069.25, 652.14 )
 shape = SubResource( 4 )
 
 [node name="background" type="Node2D" parent="."]
-editor/display_folded = true
+visible = false
 
 [node name="foxlight1" type="Sprite" parent="background"]
-position = Vector2( 887.115, 269.791 )
-scale = Vector2( 0.802921, 1 )
+position = Vector2( 887.115, 226.658 )
+scale = Vector2( 0.802921, 1.16272 )
 texture = ExtResource( 27 )
 
 [node name="foxlight2" type="Sprite" parent="background"]
-position = Vector2( 883.979, 269.791 )
-scale = Vector2( 0.800681, 1 )
+position = Vector2( 883.979, 225.281 )
+scale = Vector2( 0.800681, 1.16527 )
 texture = ExtResource( 28 )
 
 [node name="foxlight3" type="Sprite" parent="background"]
-position = Vector2( 883.978, 269.791 )
-scale = Vector2( 0.802921, 1 )
+position = Vector2( 882.098, 220.73 )
+scale = Vector2( 0.802921, 1.12967 )
 texture = ExtResource( 29 )
 
 [node name="Modulate" type="Timer" parent="."]

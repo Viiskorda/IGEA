@@ -102,11 +102,11 @@ func _on_DoublejumpInst_body_exited(body):
 
 
 func _on_GameEnd_body_entered(body):
-	$InstructionBase/Polygon2D/PopupText.page = 7
-	$InstructionBase/Polygon2D/PopupText.start = true
-	$InstructionBase/Polygon2D/PopupText.whenEntered()
-	$InstructionBase.visible = true
 	if Global.CharaGotTheCrystal==true:
+		$InstructionBase/Polygon2D/PopupText.page = 7
+		$InstructionBase/Polygon2D/PopupText.start = true
+		$InstructionBase/Polygon2D/PopupText.whenEntered()
+		$InstructionBase.visible = true
 		Global.CharaStop=true
 
 
