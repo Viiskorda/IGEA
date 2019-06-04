@@ -168,7 +168,6 @@ scale = Vector2( 0.65, 0.63 )
 texture = ExtResource( 11 )
 
 [node name="Tutorial tekstid" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="Flamefruit Tutorial" parent="Tutorial tekstid" instance=ExtResource( 12 )]
 position = Vector2( 134.507, 382.811 )
@@ -192,7 +191,6 @@ position = Vector2( 1124.75, 360.404 )
 shape = SubResource( 2 )
 
 [node name="GateTut" type="Area2D" parent="Tutorial tekstid"]
-editor/display_folded = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tutorial tekstid/GateTut"]
 position = Vector2( 1826.26, 349.068 )

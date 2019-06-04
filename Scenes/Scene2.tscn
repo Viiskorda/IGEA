@@ -357,7 +357,6 @@ script = ExtResource( 23 )
 change_level = "res://Scenes/Scene2.tscn"
 
 [node name="Enemies" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="Enemy2" parent="Enemies" instance=ExtResource( 24 )]
 position = Vector2( 2972.52, 111.094 )
@@ -646,7 +645,6 @@ shape = SubResource( 6 )
 disabled = true
 
 [node name="AutomaticMoveII" type="Area2D" parent="."]
-editor/display_folded = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AutomaticMoveII"]
 position = Vector2( 201.797, 1647.73 )
