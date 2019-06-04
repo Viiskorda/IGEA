@@ -357,6 +357,7 @@ script = ExtResource( 23 )
 change_level = "res://Scenes/Scene2.tscn"
 
 [node name="Enemies" type="Node2D" parent="."]
+editor/display_folded = true
 
 [node name="Enemy2" parent="Enemies" instance=ExtResource( 24 )]
 position = Vector2( 2972.52, 111.094 )
@@ -451,7 +452,7 @@ texture = ExtResource( 31 )
 
 [node name="Chara" parent="." instance=ExtResource( 32 )]
 editor/display_folded = true
-position = Vector2( 270, 1550.08 )
+position = Vector2( 270, 1556.08 )
 z_index = 2
 
 [node name="Camera2D" type="Camera2D" parent="Chara"]
@@ -533,18 +534,22 @@ change_level = "res://Scenes/Scene2.tscn"
 [node name="Area2D" parent="LevelComplete2" instance=ExtResource( 39 )]
 position = Vector2( 17.4883, -73.3425 )
 scale = Vector2( 1.42857, 1.42857 )
+z_index = -2
 levelcomplete = "levelcomplete2"
 
 [node name="GateFire" type="Sprite" parent="LevelComplete2"]
 position = Vector2( 11.2715, -40.5287 )
+z_index = -2
 texture = ExtResource( 41 )
 
 [node name="GateEmpty" type="Sprite" parent="LevelComplete2"]
 position = Vector2( 9.84277, 0.900024 )
+z_index = -2
 texture = ExtResource( 42 )
 
 [node name="GateOnFire" type="Sprite" parent="LevelComplete2"]
 position = Vector2( 9.84277, 2.32837 )
+z_index = -2
 texture = ExtResource( 43 )
 
 [node name="Sprite" type="Sprite" parent="LevelComplete2"]
@@ -571,6 +576,7 @@ scale = Vector2( 0.896664, 1.06624 )
 texture = ExtResource( 45 )
 
 [node name="Crystal" type="Sprite" parent="."]
+editor/display_folded = true
 position = Vector2( 1541.95, 1014.32 )
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 46 )
@@ -627,6 +633,7 @@ editor/display_folded = true
 visible = false
 
 [node name="InstructionScn2" type="Node2D" parent="."]
+editor/display_folded = true
 script = ExtResource( 54 )
 
 [node name="DoublejumpInst" type="Area2D" parent="InstructionScn2"]
@@ -645,6 +652,7 @@ shape = SubResource( 6 )
 disabled = true
 
 [node name="AutomaticMoveII" type="Area2D" parent="."]
+editor/display_folded = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AutomaticMoveII"]
 position = Vector2( 201.797, 1647.73 )

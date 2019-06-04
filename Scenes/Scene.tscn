@@ -68,7 +68,8 @@ hp = 2
 "Persist",
 ] instance=ExtResource( 4 )]
 editor/display_folded = true
-position = Vector2( -79.7149, 433.653 )
+position = Vector2( -79.7149, 441.653 )
+z_index = -2
 
 [node name="Camera2D2" type="Camera2D" parent="Characters/Chara"]
 position = Vector2( 1.11111, 0 )
@@ -146,12 +147,10 @@ texture = ExtResource( 8 )
 centered = false
 
 [node name="Floor" type="Node2D" parent="."]
-editor/display_folded = true
 position = Vector2( 94.6757, 540.937 )
 scale = Vector2( 4.1267, 1.58729 )
 
 [node name="floor" parent="Floor" instance=ExtResource( 9 )]
-visible = false
 
 [node name="floor2" parent="Floor" instance=ExtResource( 9 )]
 visible = false
@@ -243,6 +242,7 @@ scale = Vector2( 0.7, 0.7 )
 texture = ExtResource( 25 )
 
 [node name="LevelComplete" parent="." instance=ExtResource( 26 )]
+editor/display_folded = true
 position = Vector2( 1975.72, 423.494 )
 scale = Vector2( 0.7, 0.7 )
 change_level = "res://Scenes/Scene2.tscn"
@@ -250,6 +250,7 @@ change_level = "res://Scenes/Scene2.tscn"
 [node name="Area2D" parent="LevelComplete" instance=ExtResource( 27 )]
 position = Vector2( 4.26837, -49.9282 )
 scale = Vector2( 1.42857, 1.42857 )
+z_index = -2
 
 [node name="AutomaticMove" type="Area2D" parent="."]
 editor/display_folded = true

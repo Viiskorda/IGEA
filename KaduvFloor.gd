@@ -1,9 +1,11 @@
 extends StaticBody2D
-var CharaIsInCave=0
 
+var CharaIsInCave
 
 func _ready():
 	$CollisionShape2D.call_deferred("set_disabled", false) #koobas on vaikimisi kinni
+	CharaIsInCave=0
+	Global.BossIsFreed=false
 
 func _on_Area2D_body_entered(body):
 	$CollisionShape2D.call_deferred("set_disabled", false)
@@ -18,7 +20,7 @@ func _process(delta):
 		$CollisionShape2D.call_deferred("set_disabled", true)
 	elif CharaIsInCave==1:
 		$CollisionShape2D.call_deferred("set_disabled", false)
-	elif Global.enemy6isalive==false and Global.enemy5isalive==false and Global.enemy4isalive==false and Global.enemy3isalive==false  and Global.enemy1isalive==false:
+	elif Global.enemy6isalive==false and Global.enemy5isalive==false and Global.enemy4isalive==false and Global.enemy3isalive==false:
 		$CollisionShape2D.call_deferred("set_disabled", true)
 		
 
