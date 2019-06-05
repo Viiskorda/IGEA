@@ -125,6 +125,7 @@ wait_time = 3.0
 
 [node name="Floor" type="Node2D" parent="."]
 editor/display_folded = true
+visible = false
 
 [node name="NormalFloor" type="Node2D" parent="Floor"]
 editor/display_folded = true
@@ -480,14 +481,12 @@ __meta__ = {
 }
 
 [node name="HideCave" type="Sprite" parent="."]
-visible = false
 position = Vector2( 3016.21, 459.803 )
 scale = Vector2( 0.625381, 0.569736 )
 texture = ExtResource( 34 )
 script = ExtResource( 35 )
 
 [node name="blackoutsidecave" type="Sprite" parent="."]
-visible = false
 position = Vector2( 2765.06, 566.371 )
 scale = Vector2( 0.634157, 0.630992 )
 texture = ExtResource( 36 )
@@ -527,6 +526,7 @@ scale = Vector2( 1, -1 )
 texture = ExtResource( 37 )
 
 [node name="LevelComplete2" parent="." instance=ExtResource( 38 )]
+editor/display_folded = true
 position = Vector2( 3891.41, 1394.3 )
 scale = Vector2( 0.7, 0.7 )
 change_level = "res://Scenes/Scene2.tscn"
