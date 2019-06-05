@@ -64,6 +64,7 @@ margin_right = 434.0
 margin_bottom = 405.0
 texture_normal = ExtResource( 7 )
 texture_focused = ExtResource( 5 )
+
 [connection signal="pressed" from="VBoxContainer2/TextureButton2" to="." method="_on_TextureButton2_pressed"]
 [connection signal="pressed" from="VBoxContainer2/TextureButton" to="." method="_on_TextureButton_pressed"]
 [connection signal="pressed" from="VBoxContainer2/TextureButton3" to="." method="_on_TextureButton3_pressed"]

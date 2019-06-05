@@ -20,7 +20,6 @@ shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
 pause_mode = 2
-visible = false
 modulate = Color( 0, 0, 0, 1 )
 position = Vector2( -76.1616, 319.866 )
 scale = Vector2( 97.1179, 41.6115 )
@@ -41,6 +40,7 @@ wait_time = 0.2
 [node name="FadeOut" type="Timer" parent="."]
 wait_time = 0.1
 one_shot = true
+
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="timeout" from="Modulate" to="." method="_on_Modulate_timeout"]
 [connection signal="timeout" from="FadeOut" to="." method="_on_FadeOut_timeout"]
