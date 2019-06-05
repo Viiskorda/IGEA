@@ -624,6 +624,7 @@ __meta__ = {
 [node name="Popup" parent="." instance=ExtResource( 51 )]
 
 [node name="Menüü" type="CanvasLayer" parent="."]
+editor/display_folded = true
 
 [node name="Pause" parent="Menüü" instance=ExtResource( 52 )]
 visible = false

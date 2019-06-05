@@ -85,5 +85,6 @@ text = "Press 'ENTER' to continue"
 [node name="Timer" type="Timer" parent="."]
 wait_time = 5.0
 autostart = true
+
 [connection signal="timeout" from="InstructionBase/Polygon2D/Timer" to="InstructionBase/Polygon2D/PopupText" method="_on_Timer_timeout"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
