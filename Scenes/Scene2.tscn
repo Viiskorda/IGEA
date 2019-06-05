@@ -125,7 +125,6 @@ wait_time = 3.0
 
 [node name="Floor" type="Node2D" parent="."]
 editor/display_folded = true
-visible = false
 
 [node name="NormalFloor" type="Node2D" parent="Floor"]
 editor/display_folded = true
@@ -481,12 +480,14 @@ __meta__ = {
 }
 
 [node name="HideCave" type="Sprite" parent="."]
+visible = false
 position = Vector2( 3016.21, 459.803 )
 scale = Vector2( 0.625381, 0.569736 )
 texture = ExtResource( 34 )
 script = ExtResource( 35 )
 
 [node name="blackoutsidecave" type="Sprite" parent="."]
+visible = false
 position = Vector2( 2765.06, 566.371 )
 scale = Vector2( 0.634157, 0.630992 )
 texture = ExtResource( 36 )
@@ -681,6 +682,7 @@ texture = ExtResource( 57 )
 position = Vector2( 1608.04, 2075.12 )
 scale = Vector2( 1.11713, 0.668963 )
 texture = ExtResource( 58 )
+
 [connection signal="gameEnd" from="." to="InstructionScn2/GameEnd" method="_on_Scene2_gameEnd"]
 [connection signal="MissionOneV" from="Dialoog" to="Missions" method="_on_Dialoog_MissionOneV"]
 [connection signal="timeout" from="Background/Modulate" to="." method="_on_Modulate_timeout"]
@@ -691,8 +693,8 @@ texture = ExtResource( 58 )
 [connection signal="enemyDead" from="Enemies/Enemy4" to="Missions" method="_on_Enemy4_enemyDead"]
 [connection signal="body_entered" from="ElderTalk" to="Dialoog" method="_on_ElderTalk_body_entered"]
 [connection signal="body_exited" from="ElderTalk" to="Dialoog" method="_on_ElderTalk_body_exited"]
-[connection signal="body_entered" from="Closecave" to="." method="_on_Close_cave_body_entered"]
 [connection signal="body_entered" from="Closecave" to="Floor/KaduvFloor" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Closecave" to="." method="_on_Close_cave_body_entered"]
 [connection signal="hp_changed" from="Chara" to="HUD" method="update_healthbar"]
 [connection signal="mp_changed" from="Chara" to="HUD" method="update_manabar"]
 [connection signal="body_entered" from="InstructionScn2/DoublejumpInst" to="Popup" method="_on_DoublejumpInst_body_entered"]
