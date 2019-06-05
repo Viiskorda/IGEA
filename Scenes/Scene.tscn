@@ -173,7 +173,6 @@ scale = Vector2( 0.65, 0.63 )
 texture = ExtResource( 11 )
 
 [node name="Tutorial tekstid" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="Flamefruit Tutorial" parent="Tutorial tekstid" instance=ExtResource( 12 )]
 position = Vector2( 134.507, 382.811 )
@@ -253,7 +252,6 @@ texture = ExtResource( 25 )
 
 [node name="LevelComplete" parent="." instance=ExtResource( 26 )]
 editor/display_folded = true
-visible = false
 position = Vector2( 1975.72, 423.494 )
 scale = Vector2( 0.7, 0.7 )
 change_level = "res://Scenes/Scene2.tscn"

@@ -467,12 +467,13 @@ editor_draw_limits = true
 editor_draw_drag_margin = true
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="Chara"]
+editor/display_folded = true
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="Chara/ParallaxBackground"]
 motion_scale = Vector2( 0.7, 0.7 )
 
 [node name="Mountains2" type="Sprite" parent="Chara/ParallaxBackground/ParallaxLayer"]
-position = Vector2( -171.431, 84.707 )
+position = Vector2( -171.431, -0.293011 )
 scale = Vector2( 0.815702, 0.669773 )
 texture = ExtResource( 33 )
 centered = false
@@ -564,7 +565,7 @@ position = Vector2( 32.7188, 145.096 )
 scale = Vector2( 0.714286, 1.42857 )
 
 [node name="RockFloor6" parent="LevelComplete2" instance=ExtResource( 14 )]
-position = Vector2( 100.968, -58.2241 )
+position = Vector2( 100.968, -179.653 )
 rotation = -1.60126
 scale = Vector2( 0.714286, 1.42857 )
 
@@ -630,7 +631,6 @@ editor/display_folded = true
 visible = false
 
 [node name="InstructionScn2" type="Node2D" parent="."]
-editor/display_folded = true
 script = ExtResource( 53 )
 
 [node name="DoublejumpInst" type="Area2D" parent="InstructionScn2"]
@@ -641,7 +641,6 @@ position = Vector2( 2981.37, 544.361 )
 shape = SubResource( 5 )
 
 [node name="GameEnd" type="Area2D" parent="InstructionScn2"]
-editor/display_folded = true
 script = ExtResource( 54 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InstructionScn2/GameEnd"]
