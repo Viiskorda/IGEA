@@ -499,6 +499,7 @@ texture = ExtResource( 37 )
 
 [node name="LevelComplete" parent="." instance=ExtResource( 38 )]
 editor/display_folded = true
+visible = false
 position = Vector2( 263.66, 1538.41 )
 rotation = -3.14159
 scale = Vector2( 0.7, -0.7 )
@@ -526,6 +527,8 @@ scale = Vector2( 1, -1 )
 texture = ExtResource( 37 )
 
 [node name="LevelComplete2" parent="." instance=ExtResource( 38 )]
+editor/display_folded = true
+visible = false
 position = Vector2( 3891.41, 1394.3 )
 scale = Vector2( 0.7, 0.7 )
 change_level = "res://Scenes/Scene2.tscn"
@@ -623,7 +626,6 @@ __meta__ = {
 [node name="Popup" parent="." instance=ExtResource( 51 )]
 
 [node name="Menüü" type="CanvasLayer" parent="."]
-editor/display_folded = true
 
 [node name="Pause" parent="Menüü" instance=ExtResource( 52 )]
 visible = false
@@ -694,10 +696,11 @@ texture = ExtResource( 58 )
 [connection signal="enemyDead" from="Enemies/Enemy4" to="Missions" method="_on_Enemy4_enemyDead"]
 [connection signal="body_entered" from="ElderTalk" to="Dialoog" method="_on_ElderTalk_body_entered"]
 [connection signal="body_exited" from="ElderTalk" to="Dialoog" method="_on_ElderTalk_body_exited"]
-[connection signal="body_entered" from="Closecave" to="Floor/KaduvFloor" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="Closecave" to="." method="_on_Close_cave_body_entered"]
+[connection signal="body_entered" from="Closecave" to="Floor/KaduvFloor" method="_on_Area2D_body_entered"]
 [connection signal="hp_changed" from="Chara" to="HUD" method="update_healthbar"]
 [connection signal="mp_changed" from="Chara" to="HUD" method="update_manabar"]
+[connection signal="missions" from="Menüü/Pause" to="Missions" method="_on_Pause_missions"]
 [connection signal="body_entered" from="InstructionScn2/DoublejumpInst" to="Popup" method="_on_DoublejumpInst_body_entered"]
 [connection signal="body_exited" from="InstructionScn2/DoublejumpInst" to="Popup" method="_on_DoublejumpInst_body_exited"]
 [connection signal="body_entered" from="InstructionScn2/GameEnd" to="Popup" method="_on_GameEnd_body_entered"]

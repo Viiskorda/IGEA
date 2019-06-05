@@ -61,3 +61,9 @@ func _physics_process(delta):
 func _on_Dialoog_MissionOneV():
 	$Node2D.visible = true
 	Global.MissionsVisible = true
+
+
+func _on_Pause_missions():
+	print("asfdkaspfaspfasopfjmaspofpsafjpa")
+	$Node2D.visible = false
+	Global.MissionsVisible = false

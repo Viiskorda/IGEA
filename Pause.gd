@@ -1,5 +1,6 @@
 extends Control
 
+signal missions
 
 var menuItem=0
 var audioPlayerBackroundPause = AudioStreamPlayer.new()
@@ -109,7 +110,7 @@ func _on_TextureButton_pressed():
 	Global.soundvolume=-10
 	Global.soundFXvolume=-30
 
-
+	emit_signal("missions")
 
 	Global.goto_scene(change_level,target_spawn_group)
 	#get_tree().change_scene("Scenes/Scene.tscn")
