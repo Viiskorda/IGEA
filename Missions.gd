@@ -64,6 +64,5 @@ func _on_Dialoog_MissionOneV():
 
 
 func _on_Pause_missions():
-	print("asfdkaspfaspfasopfjmaspofpsafjpa")
 	$Node2D.visible = false
 	Global.MissionsVisible = false

@@ -109,6 +109,26 @@ func _on_TextureButton_pressed():
 	
 	Global.soundvolume=-10
 	Global.soundFXvolume=-30
+	
+	Global.popup = [0, 0, 0, 0, 0, 0, 0]
+	Global.CharaStop=false
+	Global.ElderTalk = true
+	Global.DiaEnd = false
+	Global.EnemiesKilled = 0
+	Global.MissionsVisible = false
+	Global.mission1 = false
+	Global.mission2 = false
+	Global.mission3 = false
+	Global.mission4 = false
+	Global.modulate1 = 0.2
+	Global.modulate2 = 0.2
+	Global.modulate3 = 0.2
+	Global.m1Tekst = "0/1"
+	Global.m2Tekst = "0/1"
+	Global.m3Tekst = "0/1"
+	Global.BossDead = false
+	Global.mainDialogue = 1
+	Global.questDone = 0
 
 	emit_signal("missions")
 
