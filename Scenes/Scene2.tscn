@@ -660,7 +660,6 @@ shape = SubResource( 7 )
 wait_time = 1.5
 
 [node name="pilv" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="pilv1" type="Sprite" parent="pilv"]
 position = Vector2( 642.484, 2048.19 )

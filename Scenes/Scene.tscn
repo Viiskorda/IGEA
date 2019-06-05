@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=2]
+[gd_scene load_steps=40 format=2]
 
 [ext_resource path="res://Scenes/Scene.gd" type="Script" id=1]
 [ext_resource path="res://Background/level_1_bg_taust_light.png" type="Texture" id=2]
@@ -30,6 +30,11 @@
 [ext_resource path="res://Background/new/Foxlights_1.png" type="Texture" id=28]
 [ext_resource path="res://Background/new/Foxlights_2.png" type="Texture" id=29]
 [ext_resource path="res://Background/new/Foxlights_3.png" type="Texture" id=30]
+[ext_resource path="res://Background/new/Pilv_1.png" type="Texture" id=31]
+[ext_resource path="res://Background/new/Pilv_2.png" type="Texture" id=32]
+[ext_resource path="res://Background/new/Pilv_3_2.png" type="Texture" id=33]
+[ext_resource path="res://Background/new/Pilv_4.png" type="Texture" id=34]
+[ext_resource path="res://Background/new/Pilv_3.png" type="Texture" id=35]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 60.3117, 82.7986 )
@@ -50,7 +55,7 @@ __meta__ = {
 }
 
 [node name="Light2D" type="Light2D" parent="."]
-position = Vector2( 896.654, 382.555 )
+position = Vector2( 896.654, 328.775 )
 scale = Vector2( 0.757342, 0.757342 )
 texture = ExtResource( 2 )
 energy = 1.1
@@ -59,6 +64,7 @@ __meta__ = {
 }
 
 [node name="Characters" type="Node2D" parent="."]
+editor/display_folded = true
 
 [node name="Enemy" parent="Characters" instance=ExtResource( 3 )]
 position = Vector2( 1538.23, 438.505 )
@@ -167,6 +173,7 @@ scale = Vector2( 0.65, 0.63 )
 texture = ExtResource( 11 )
 
 [node name="Tutorial tekstid" type="Node2D" parent="."]
+editor/display_folded = true
 
 [node name="Flamefruit Tutorial" parent="Tutorial tekstid" instance=ExtResource( 12 )]
 position = Vector2( 134.507, 382.811 )
@@ -246,6 +253,7 @@ texture = ExtResource( 25 )
 
 [node name="LevelComplete" parent="." instance=ExtResource( 26 )]
 editor/display_folded = true
+visible = false
 position = Vector2( 1975.72, 423.494 )
 scale = Vector2( 0.7, 0.7 )
 change_level = "res://Scenes/Scene2.tscn"
@@ -263,7 +271,7 @@ position = Vector2( 2069.25, 652.14 )
 shape = SubResource( 4 )
 
 [node name="background" type="Node2D" parent="."]
-editor/display_folded = true
+visible = false
 
 [node name="foxlight1" type="Sprite" parent="background"]
 position = Vector2( 887.115, 269.791 )
@@ -281,6 +289,28 @@ scale = Vector2( 0.802921, 1 )
 texture = ExtResource( 30 )
 
 [node name="Modulate" type="Timer" parent="."]
+
+[node name="pilv" type="Node2D" parent="."]
+
+[node name="pilv1" type="Sprite" parent="pilv"]
+position = Vector2( -125.656, 1009.3 )
+texture = ExtResource( 31 )
+
+[node name="pilv2" type="Sprite" parent="pilv"]
+position = Vector2( 656.654, 1029.57 )
+texture = ExtResource( 32 )
+
+[node name="pilv3" type="Sprite" parent="pilv"]
+position = Vector2( 1345.74, 1118.74 )
+texture = ExtResource( 33 )
+
+[node name="pilv4" type="Sprite" parent="pilv"]
+position = Vector2( 2046.98, 1033.62 )
+texture = ExtResource( 34 )
+
+[node name="pilv5" type="Sprite" parent="pilv"]
+position = Vector2( 170.244, 1086.32 )
+texture = ExtResource( 35 )
 
 [connection signal="hp_changed" from="Characters/Chara" to="HUD" method="update_healthbar"]
 [connection signal="mp_changed" from="Characters/Chara" to="HUD" method="update_manabar"]

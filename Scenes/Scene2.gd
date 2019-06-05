@@ -106,7 +106,8 @@ func _ready():
 	$Crystalmodulate.start()
 
 func _process(delta):
-	
+	if $pilv/pilv5.position.x>4200:
+		$pilv/pilv5.position.x=-300	
 	if $pilv/pilv4.position.x>4200:
 		$pilv/pilv4.position.x=-300
 	if $pilv/pilv3.position.x>4200:
