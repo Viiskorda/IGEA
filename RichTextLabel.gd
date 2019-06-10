@@ -16,13 +16,9 @@ var dialog = [["Player! You have successfully returned home, thank the Gods. Sad
 "The Holy Altar in the Northern Caverns won't let you enter before all the monsters have been cleared. From there, you will receive a new power. A Skill rightfully yours as a Daughter of the Azure Tribe. Return to me once you've received the skill."], 
 ["My child, I am so glad to see you safe! I did not expect the Guardian to attack you. It must be because you went to receive the power earlier than usual. Keep this in mind on your journey - powerful guardians protect Altars all around the world, be sure you're ready to face one before visiting an altar.", 
 "Now that you've acquired the skill to jump higher thanks to magic you can reach the Holy Crystal above me. Take it to the Gate located on the east side of the village.", 
-"And now for my last wish that you promised to fulfill..",
-"(What? I thought this already was his last wish?)",
-"For my last wish.. please live a long and wonderful life, my dearest child. Know that you are always loved, no matter what choices you might make or wherever life might take you.", 
-"Granpa.. *sniffle* Don't go! *sniffle*", 
+"You can leave it to me!",
 ".. You will be a wonderful Elder one day.. Farewell, my child..", 
-"Grandpa!! *sniffle* ..I will protect this village.. I swear on my life!! *sniffle*",
-"*sniffle* .. I should go and restore the barrier and then find the villagers, so they can finally return home. I will make grandpa proud!"],
+"Grandpa!! sniffle ..I will protect this village.. I swear on my life!! sniffle"],
 ["You need to kill all the monsters!"], 
 ["You need to go to the cave!"]]
 
@@ -41,7 +37,7 @@ func _input(event):
 			if get_visible_characters() > get_total_character_count():
 				if line < dialog[page].size()-1:
 					line += 1
-					if ((line == 3 || line == 5) && page == 0) || ((line == 3 || line == 5 || line == 7 || line == 8) && page == 1):
+					if ((line == 3 || line == 5) && page == 0) || ((line == 2 || line == 4 || line == 6 || line == 7) && page == 1):
 						Global.ElderTalk = false
 					else:
 						Global.ElderTalk = true
